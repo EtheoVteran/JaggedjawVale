@@ -733,17 +733,12 @@
 			admin_ticket_log("[key_name_admin(usr)] has modified the bodyparts of [src] to [result]")
 			set_species(newtype)
 
-/mob/living/carbon/human/MouseDrop_T(atom/dragged, mob/living/user)
-	if(istype(dragged, /mob/living))
-		var/mob/living/target = dragged
-		if(stat == CONSCIOUS)
-			var/has_grab = FALSE
-			var/obj/item/grabbing/grab = get_active_held_item()
-			if(istype(grab) && grab.grabbed == target)
-				has_grab = TRUE
-			// If the target is grabbed and can be firemanned, we fireman carry them
-			if(has_grab && can_be_firemanned(target))
-				fireman_carry(target)
+/mob/living/carbon/human/MouseDrop_T(mob/living/target, mob/living/user)
+	if(pulling == target && stat == CONSCIOUS)
+		if(user.grab_state && user.voremode)
+			if(ismob(user.pulling))
+				vore_attackby(target, user)
+				user.vore_attackby(user, target, src) // User, Pulled, Predator target (which can be user, pulling, or src)
 				return TRUE
 	else if(istype(dragged, /obj/item/bodypart/head/dullahan/))
 		var/obj/item/bodypart/head/dullahan/item_head = dragged

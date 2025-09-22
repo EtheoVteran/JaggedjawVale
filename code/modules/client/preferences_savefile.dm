@@ -713,6 +713,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["customizer_entries"] >> customizer_entries
 	validate_customizer_entries()
 
+	//load_vore_prefs(S)
+
 	return TRUE
 
 /datum/preferences/proc/save_character()
@@ -835,11 +837,12 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["familiar_ooc_notes"] , familiar_prefs.familiar_ooc_notes)
 	WRITE_FILE(S["familiar_ooc_extra"] , familiar_prefs.familiar_ooc_extra)
 	WRITE_FILE(S["familiar_ooc_extra_link"] , familiar_prefs.familiar_ooc_extra_link)
-
-	WRITE_FILE(S["loadout_1_hex"], loadout_1_hex)
-	WRITE_FILE(S["loadout_2_hex"], loadout_2_hex)
-	WRITE_FILE(S["loadout_3_hex"], loadout_3_hex)
-
+	//Caustic edit
+	//save_vore_prefs(S)
+	save_sizecat(S)
+	save_extra_virtue(S)
+	save_pickupable(S)
+	//Caustic edit end
 	return TRUE
 
 

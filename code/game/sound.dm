@@ -2,7 +2,7 @@
 	var/list/played_loops = list() //uses dlink to link to the sound
 
 
-/proc/playsound(atom/source, soundin, vol as num, vary, extrarange as num, falloff, frequency = null, channel, pressure_affected = FALSE, ignore_walls = TRUE, soundping = FALSE, repeat, animal_pref = FALSE)
+/proc/playsound(atom/source, soundin, vol as num, vary, extrarange as num, falloff, frequency = null, channel, pressure_affected = FALSE, ignore_walls = TRUE, soundping = FALSE, repeat, animal_pref = FALSE, preference )
 	if(isarea(source))
 		CRASH("playsound(): source is an area")
 
@@ -73,9 +73,16 @@
 			if(animal_pref)
 				if(M.client?.prefs?.mute_animal_emotes)
 					continue
-			var/is_muffled = (M in muffled_listeners)
-			if(M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S, repeat, is_muffled))
+			if(M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S, repeat, preference))
 				. += M
+	//This never runs because muffled listeners will always be empty and instead muffling runs on playsound_local
+	/*for(var/mob/M as anything in muffled_listeners)
+		if(get_dist(M, turf_source) <= maxdistance)
+			if(animal_pref)
+				if(M.client?.prefs?.mute_animal_emotes)
+					continue
+			if(M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S, repeat, muffled = TRUE))
+				. += M*/ 
 
 
 /proc/ping_sound(atom/A)
@@ -104,7 +111,7 @@
 	. = ..()
 	animate(src, alpha = 0, time = duration, easing = EASE_IN)
 */
-/mob/proc/playsound_local(atom/turf_source, soundin, vol as num, vary, frequency, falloff, channel, pressure_affected = TRUE, sound/S, repeat, muffled)
+/mob/proc/playsound_local(atom/turf_source, soundin, vol as num, vary, frequency, falloff, channel, pressure_affected = TRUE, sound/S, repeat, muffled, preference)
 	if(!client || !can_hear())
 		return FALSE
 
@@ -135,6 +142,14 @@
 	var/vol2use = vol
 	if(client.prefs)
 		vol2use = vol * (client.prefs.mastervol * 0.01)
+		if(preference)
+			switch(preference)
+				if("digestion_noises")
+					if(!client.prefs.digestion_noises)
+						return
+				if("eating_noises")
+					if(!client.prefs.eating_noises)
+						return
 	vol2use = min(vol2use, 100)
 
 	S.volume = vol2use
