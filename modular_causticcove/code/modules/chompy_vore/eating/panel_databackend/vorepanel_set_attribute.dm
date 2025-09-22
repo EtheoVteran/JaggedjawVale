@@ -822,25 +822,25 @@
 			host.vore_selected.clear_preview(host) //Clears the stomach overlay. This is a failsafe but shouldn't occur.
 			. = TRUE
 		if("b_fullscreen_color")
-			var/newcolor = tgui_color_picker(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color)
+			var/newcolor = input(host, "Choose a color.", host.vore_selected.belly_fullscreen_color) as color|null 
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color = newcolor
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_fullscreen_color2")
-			var/newcolor2 = tgui_color_picker(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color2)
+			var/newcolor2 = input(host, "Choose a color.", host.vore_selected.belly_fullscreen_color2) as color|null 
 			if(newcolor2)
 				host.vore_selected.belly_fullscreen_color2 = newcolor2
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_fullscreen_color3")
-			var/newcolor3 = tgui_color_picker(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color3)
+			var/newcolor3 = input(host, "Choose a color.", host.vore_selected.belly_fullscreen_color3) as color|null 
 			if(newcolor3)
 				host.vore_selected.belly_fullscreen_color3 = newcolor3
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_fullscreen_color4")
-			var/newcolor4 = tgui_color_picker(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color4)
+			var/newcolor4 = input(host , "Choose a color.", host.vore_selected.belly_fullscreen_color4) as color|null 
 			if(newcolor4)
 				host.vore_selected.belly_fullscreen_color4 = newcolor4
 				host.vore_selected.update_internal_overlay()

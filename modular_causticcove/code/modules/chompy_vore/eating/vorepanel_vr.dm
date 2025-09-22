@@ -618,7 +618,7 @@
 			var/belly_choice = params["attribute"]
 			if(!(belly_choice in host.vore_icon_bellies))
 				return FALSE
-			var/newcolor = tgui_color_picker(ui.user, "Choose a color.", "", host.vore_sprite_color[belly_choice])
+			var/newcolor =  input(ui.user, "Choose a color.", host.vore_sprite_color[belly_choice]) as color|null 
 			if(!newcolor)
 				return FALSE
 			host.vore_sprite_color[belly_choice] = newcolor
