@@ -6,7 +6,7 @@
 	if(cmode)
 		return FALSE
 	voremode = !voremode
-	init_vore()
+	//init_vore()
 	if(voremode)
 		to_chat(src, span_info("I feel voracious."))
 	else

@@ -5,7 +5,20 @@
 		transform = matrix(actualview[1]/15, 0, 0, 0, actualview[2]/15, 0)
 
 /obj/screen/fullscreen
+	icon = 'icons/mob/screen_full.dmi'
+	icon_state = "default"
+	screen_loc = "CENTER-7,CENTER-7"
+	layer = FULLSCREEN_LAYER
+	plane = PLANE_FULLSCREEN
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	var/view = 7
+	var/severity = 0
+	var/show_when_dead = FALSE
+
+/obj/screen/fullscreen/proc/should_show_to(mob/mymob)
+	if(!show_when_dead && mymob.stat == DEAD)
+		return FALSE
+	return TRUE
 
 /obj/item
 	//Vorestuff
@@ -20,3 +33,4 @@
 	var/cleandesc
 	var/gurgled_color
 	var/digestable = TRUE
+

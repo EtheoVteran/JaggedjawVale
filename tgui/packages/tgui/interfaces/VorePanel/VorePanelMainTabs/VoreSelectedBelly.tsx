@@ -21,7 +21,6 @@ export const VoreSelectedBelly = (props: {
   activeVoreTab: number;
   belly: selectedData;
   show_pictures: BooleanLike;
-  host_mobtype: hostMob;
   icon_overflow: BooleanLike;
   vore_words: Record<string, string[]>;
   editMode: boolean;
@@ -32,7 +31,6 @@ export const VoreSelectedBelly = (props: {
     activeVoreTab,
     belly,
     show_pictures,
-    host_mobtype,
     icon_overflow,
     vore_words,
     editMode,
@@ -87,7 +85,6 @@ export const VoreSelectedBelly = (props: {
     <VoreSelectedBellyVisuals
       editMode={editMode}
       bellyVisualData={belly_visual_data}
-      hostMobtype={host_mobtype}
     />
   );
   tabs[5] = belly_interaction_data && (
@@ -133,7 +130,7 @@ export const VoreSelectedBelly = (props: {
       </Stack.Item>
       <Stack.Item grow>
         <Section noTopPadding fill scrollable>
-          {tabs[activeVoreTab] || 'Error'}
+          {tabs[activeVoreTab]}
         </Section>
       </Stack.Item>
     </Stack>

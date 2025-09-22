@@ -23,7 +23,6 @@ export const VoreBellySelectionAndCustomization = (props: {
   our_bellies: bellyData[];
   selected: selectedData | null;
   show_pictures: BooleanLike;
-  host_mobtype: hostMob;
   icon_overflow: BooleanLike;
   vore_words: Record<string, string[]>;
   toggleEditMode: React.Dispatch<React.SetStateAction<boolean>>;
@@ -39,7 +38,6 @@ export const VoreBellySelectionAndCustomization = (props: {
     our_bellies,
     selected,
     show_pictures,
-    host_mobtype,
     icon_overflow,
     vore_words,
     toggleEditMode,
@@ -188,7 +186,6 @@ export const VoreBellySelectionAndCustomization = (props: {
               vore_words={vore_words}
               belly={selected}
               show_pictures={show_pictures}
-              host_mobtype={host_mobtype}
               icon_overflow={icon_overflow}
               editMode={editMode}
             />

@@ -42,13 +42,12 @@ export const VorePanel = () => {
 
   const tabs: (React.JSX.Element | null | undefined)[] = [];
 
-  tabs[0] = our_bellies && selected && host_mobtype && (
+  tabs[0] = our_bellies && selected && (
     <VoreBellySelectionAndCustomization
       activeVoreTab={active_vore_tab}
       our_bellies={our_bellies}
       selected={selected}
       show_pictures={show_pictures}
-      host_mobtype={host_mobtype}
       icon_overflow={icon_overflow}
       vore_words={vore_words}
       toggleEditMode={setEditMode}
@@ -137,7 +136,7 @@ export const VorePanel = () => {
               </Tabs.Tab>
             </Tabs>
           </Stack.Item>
-          <Stack.Item grow>{tabs[active_tab] || 'Error'}</Stack.Item>
+          <Stack.Item grow>{tabs[active_tab]}</Stack.Item>
         </Stack>
       </Window.Content>
     </Window>
