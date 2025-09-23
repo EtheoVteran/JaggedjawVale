@@ -810,11 +810,11 @@
 		return TRUE // Not in our X anymore, update UI
 	var/list/available_options = list("Examine", "Eject", "Launch", "Move", "Transfer")
 	if(ishuman(target))
-		available_options += "Transform"
+		//available_options += "Transform"
 		available_options += "Health Check"
 	// Add Reforming
-	if(isobserver(target))
-		available_options += "Reform"
+	/*if(isobserver(target))
+		available_options += "Reform"*/
 
 	if(isliving(target))
 		var/mob/living/datarget = target
