@@ -88,17 +88,6 @@ export const VorePanel = () => {
                       Save Prefs
                     </Button>
                   </Stack.Item>
-                  <Stack.Item>
-                    <Button
-                      icon="download"
-                      onClick={() => {
-                        act('saveprefs');
-                        act('exportpanel');
-                      }}
-                    >
-                      Save Prefs & Export Selected Belly
-                    </Button>
-                  </Stack.Item>
                 </Stack>
               </NoticeBox>
             )) ||
