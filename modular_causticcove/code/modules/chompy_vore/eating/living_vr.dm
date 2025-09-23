@@ -746,21 +746,21 @@
 		to_chat(src, span_notice("You pause for a moment to examine [I] and realize it's not even worth the energy to chew.")) //If it ain't ore or the type of sheets we can eat, bugger off!
 */
 
-/mob/living/proc/toggle_stuffing_mode()
+/*/mob/living/verb/toggle_stuffing_mode() <-- Pains me so fucking much to comment this out but this is for later
 	set name = "Toggle feeding mode"
 	set category = "Abilities.Vore"
 	set desc = "Switch whether you will try to feed other people food whole or normally, bite by bite."
 
 	stuffing_feeder = !stuffing_feeder
-	to_chat(src, span_notice("You will [stuffing_feeder ? "now" : "no longer"] try to feed food whole."))
+	to_chat(src, span_notice("You will [stuffing_feeder ? "now" : "no longer"] try to feed food whole."))*/
 
-/mob/living/proc/switch_scaling()
+/*/mob/living/proc/switch_scaling()
 	set name = "Switch scaling mode"
 	set category = "Preferences.Game"
 	set desc = "Switch sharp/fuzzy scaling for current mob."
 	appearance_flags ^= PIXEL_SCALE
 	fuzzy = !fuzzy
-	update_transform()
+	update_transform()*/
 
 /*/mob/living/proc/center_offset()
 	set name = "Switch center offset mode"
@@ -1069,7 +1069,7 @@
 
 	return message
 
-/mob/living/proc/vore_check_reagents()
+/mob/living/verb/vore_check_reagents()
 	set name = "Check Belly Liquid (Vore)"
 	set category = "Abilities.Vore"
 	set desc = "Check the amount of liquid in your belly."
@@ -1085,7 +1085,7 @@
 			total_report += span_info("  -[R.name]: [R.volume]u")
 	to_chat(src, total_report)
 
-/mob/living/proc/vore_transfer_reagents()
+/mob/living/verb/vore_transfer_reagents()
 	set name = "Transfer Liquid (Vore)"
 	set category = "Abilities.Vore"
 	set desc = "Transfer liquid from an organ to another or stomach, or into another person or container."

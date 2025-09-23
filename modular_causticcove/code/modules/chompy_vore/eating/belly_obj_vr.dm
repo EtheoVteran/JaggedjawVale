@@ -238,11 +238,11 @@
 	var/tmp/static/list/reagent_choices = list(		// List of reagents people can chose, maybe one day expand so it covers criterias like dogborgs who can make meds, booze, etc - Jack
 	REAGENT_WATER,
 	REAGENT_MILK,
-	REAGENT_CREAM,
-	REAGENT_HONEY,
+	/*REAGENT_CREAM,
+	REAGENT_HONEY,*/
 	//REAGENT_CHERRYJELLY,
-	REAGENT_STOMACID,
-	REAGENT_DIETSTOMACID,
+	/*REAGENT_STOMACID,
+	REAGENT_DIETSTOMACID,*/
 /*	REAGENT_CLEANER,
 	REAGENT_LUBE,
 	REAGENT_BIOMASS,
@@ -556,7 +556,7 @@
 		if(special_entrance_sound) // Custom sound set by mob's init_vore or ingame varedits.
 			soundfile = special_entrance_sound
 		if(soundfile)
-			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = "eating_noises", volume_channel = VOLUME_CHANNEL_VORE)
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = "eating_noises")
 			recent_sound = TRUE
 
 	if(reagents.total_volume >= 5 && !isliving(thing) && (item_digest_mode == IM_DIGEST || item_digest_mode == IM_DIGEST_PARALLEL))
@@ -848,7 +848,7 @@
 	items_preserved.Cut()
 
 	//Determines privacy
-	var/privacy_range = world.view
+	/*var/privacy_range = world.view
 	//var/privacy_volume = 100
 	switch(eating_privacy_local) //Third case of if("loud") not defined, as it'd just leave privacy_range and volume untouched
 		if("default")
@@ -858,17 +858,17 @@
 		if("subtle")
 			privacy_range = 1
 			//privacy_volume = 25
-
+	*/
 	//Print notifications/sound if necessary
 	if(!silent && count)
-		owner.visible_message(span_notice(span_green(span_bold("[owner] [release_verb] everything from their [lowertext(name)]!"))), range = privacy_range)
+		owner.visible_message(span_notice(span_green(span_bold("[owner] [release_verb] everything from their [lowertext(name)]!"))))
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = GLOB.classic_release_sounds[release_sound]
 		else
 			soundfile = GLOB.fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = "eating_noises", volume_channel = VOLUME_CHANNEL_VORE)
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = "eating_noises")
 
 	return count
 
@@ -927,9 +927,9 @@
 
 
 	//Determines privacy
-	var/privacy_range = world.view
+	/*var/privacy_range = world.view*/
 	//var/privacy_volume = 100
-	switch(eating_privacy_local) //Third case of if("loud") not defined, as it'd just leave privacy_range and volume untouched
+	/*switch(eating_privacy_local) //Third case of if("loud") not defined, as it'd just leave privacy_range and volume untouched
 		if("default")
 			if(owner.eating_privacy_global)
 				privacy_range = 1
@@ -937,22 +937,22 @@
 		if("subtle")
 			privacy_range = 1
 			//privacy_volume = 25
-
+	*/
 	//Print notifications/sound if necessary
 	if(isobserver(M))
 		silent = TRUE
 	if(!silent)
 		if(isitem(M))
-			owner.visible_message(span_notice(span_green(span_bold(belly_format_string(trash_eater_out, M, item=M)))),range = privacy_range) //double dip. prey = item, item = prey. sanity check in case they use %prey in the message.
+			owner.visible_message(span_notice(span_green(span_bold(belly_format_string(trash_eater_out, M, item=M)))) ) //double dip. prey = item, item = prey. sanity check in case they use %prey in the message.
 		else
-			owner.visible_message(span_notice(span_green(span_bold("[owner] [release_verb] [M] from their [lowertext(name)]!"))),range = privacy_range)
+			owner.visible_message(span_notice(span_green(span_bold("[owner] [release_verb] [M] from their [lowertext(name)]!"))) )
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = GLOB.classic_release_sounds[release_sound]
 		else
 			soundfile = GLOB.fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = "eating_noises", volume_channel = VOLUME_CHANNEL_VORE)
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = "eating_noises")
 	//Should fix your view not following you out of mobs sometimes!
 	if(ismob(M))
 		var/mob/ourmob = M

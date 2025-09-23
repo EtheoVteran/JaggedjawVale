@@ -194,3 +194,9 @@ GLOBAL_LIST_EMPTY(icon_state_lists)
 		return 1
 	else
 		return 0
+
+/mob/living/proc/getActualFuckingHealth()
+	return health
+
+/mob/living/carbon/human/getActualFuckingHealth()
+	return getMaxHealth() - ((getBruteLoss() + getFireLoss() + getToxLoss() + getOxyLoss()))

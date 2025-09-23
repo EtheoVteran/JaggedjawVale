@@ -21,7 +21,7 @@
 		l.adjust_nutrition(thismuch)
 	target.death()		// To make sure all on-death procs get properly called
 	if(target)
-		if(target.client.prefs.digestion_noises)
+		if(target.client && target.client.prefs.digestion_noises)
 			if(!fancy_vore)
 				SEND_SOUND(target, sound(get_sfx("classic_death_sounds")))
 			else

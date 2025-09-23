@@ -30,7 +30,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	//Person just died in guts!
 	if(L.stat == DEAD)
 		if(!L.digestion_in_progress)
-			if(L.client.prefs.digestion_noises)
+			if(L.client && L.client.prefs.digestion_noises)
 				if(!B.fancy_vore)
 					SEND_SOUND(L, sound(get_sfx("classic_death_sounds")))
 				else
@@ -60,7 +60,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			return
 
 	// Deal digestion damage (and feed the pred)
-	var/old_health = L.health
+	var/old_health = L.getActualFuckingHealth()
 	var/old_brute = L.getBruteLoss()
 	var/old_burn = L.getFireLoss()
 	var/old_oxy = L.getOxyLoss()
@@ -72,7 +72,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	L.adjustToxLoss(B.digest_tox)
 	L.adjustCloneLoss(B.digest_clone)
 	// Send a message when a prey-thing enters hard crit.
-	if(iscarbon(L) && old_health > 0 && L.health <= 0)
+	if(iscarbon(L) && old_health > 0 && L.getActualFuckingHealth() <= 0)
 		to_chat(B.owner, span_notice("You feel [L] go still within your [lowertext(B.name)]."))
 	var/actual_brute = L.getBruteLoss() - old_brute
 	var/actual_burn = L.getFireLoss() - old_burn
@@ -84,7 +84,6 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		damage_gain = damage_gain * 0.5
 	var/offset = (1 + ((L.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 	var/difference = B.owner.size_multiplier() / L.size_multiplier()
-
 	if(B.health_impacts_size)
 		B.owner.handle_belly_update()
 
@@ -98,6 +97,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			B.owner_adjust_nutrition(offset * (4.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier()) //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
 	else
 		B.owner_adjust_nutrition(offset * (4.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier())
+	if((L.getActualFuckingHealth()) <= -100)
+		B.handle_digestion_death(L)
 	if(L.stat != oldstat)
 		return list("to_update" = TRUE)
 
@@ -184,7 +185,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	if(L.stat == DEAD || !L.permit_healbelly) //healpref check
 		return null // Can't heal the dead with healbelly
 	//var/mob/living/carbon/human/H = L
-	if(B.owner.nutrition > 90 && (L.health < L.getMaxHealth()))
+	if(B.owner.nutrition > 90 && (L.getActualFuckingHealth() < L.getMaxHealth()))
 		L.adjustBruteLoss(-2.5)
 		L.adjustFireLoss(-2.5)
 		L.adjustToxLoss(-5)
@@ -374,7 +375,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 
 /datum/digest_mode/digest/consider_healthbar(mob/living/L, old_health, mob/living/reciever)
 
-	if(old_health <= L.health)
+	if(old_health <= L.getActualFuckingHealth())
 		return
 
 	var/old_percent
@@ -382,10 +383,10 @@ GLOBAL_LIST_INIT(digest_modes, list())
 
 	if(ishuman(L))
 		old_percent = ((old_health + 50) / (L.getMaxHealth() + 50)) * 100
-		new_percent = ((L.health + 50) / (L.getMaxHealth() + 50)) * 100
+		new_percent = ((L.getActualFuckingHealth() + 50) / (L.getMaxHealth() + 50)) * 100
 	else
 		old_percent = (old_health / L.getMaxHealth()) * 100
-		new_percent = (L.health / L.getMaxHealth()) * 100
+		new_percent = (L.getActualFuckingHealth() / L.getMaxHealth()) * 100
 
 	var/lets_announce = FALSE
 	if(new_percent <= 95 && old_percent > 95)
@@ -405,7 +406,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 
 /datum/digest_mode/heal/consider_healthbar(mob/living/L, old_health, mob/living/reciever)
 
-	if(old_health >= L.health)
+	if(old_health >= L.getActualFuckingHealth())
 		return
 
 	var/old_percent
@@ -413,10 +414,10 @@ GLOBAL_LIST_INIT(digest_modes, list())
 
 	if(ishuman(L))
 		old_percent = ((old_health + 50) / (L.getMaxHealth() + 50)) * 100
-		new_percent = ((L.health + 50) / (L.getMaxHealth() + 50)) * 100
+		new_percent = ((L.getActualFuckingHealth() + 50) / (L.getMaxHealth() + 50)) * 100
 	else
 		old_percent = (old_health / L.getMaxHealth()) * 100
-		new_percent = (L.health / L.getMaxHealth()) * 100
+		new_percent = (L.getActualFuckingHealth() / L.getMaxHealth()) * 100
 
 	var/lets_announce = FALSE
 	if(new_percent >= 100 && old_percent < 100)

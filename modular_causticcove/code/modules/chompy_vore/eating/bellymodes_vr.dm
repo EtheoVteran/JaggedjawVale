@@ -93,7 +93,7 @@
 /////////////////////////// Make any noise ///////////////////////////
 	if(digestion_noise_chance && prob(digestion_noise_chance))
 		for(var/mob/M in contents)
-			if(M && M.client.prefs.digestion_noises)
+			if(M && M.client && M.client.prefs.digestion_noises)
 				SEND_SOUND(M, prey_digest)
 		play_sound = pred_digest
 
@@ -102,7 +102,7 @@
 			updateVRPanels()
 		if(play_sound)
 			for(var/mob/M in hearers(VORE_SOUND_RANGE, get_turf(owner))) //so we don't fill the whole room with the sound effect
-				if(!M.client.prefs.digestion_noises)
+				if(M.client && !M.client.prefs.digestion_noises)
 					continue
 				if(isturf(M.loc) || (M.loc != src)) //to avoid people on the inside getting the outside sounds and their direct sounds + built in sound pref check
 					if(fancy_vore)
@@ -129,7 +129,7 @@
 
 	if(play_sound)
 		for(var/mob/M in hearers(VORE_SOUND_RANGE, get_turf(owner))) //so we don't fill the whole room with the sound effect
-			if(!M.client.prefs.digestion_noises)
+			if(!M.client || !M.client.prefs.digestion_noises)
 				continue
 			if(isturf(M.loc) || (M.loc != src)) //to avoid people on the inside getting the outside sounds and their direct sounds + built in sound pref check
 				if(fancy_vore)
@@ -241,6 +241,8 @@
 /obj/belly/proc/prey_loop()
 	for(var/mob/living/M in belly_surrounding) //contents changed to belly_surrounding to loop sound for indirect viewers too
 		//We don't bother executing any other code if the prey doesn't want to hear the noises.
+		if(!M.client)
+			return
 		if(!M.client.prefs.digestion_noises)
 			M.stop_sound_channel(CHANNEL_PREYLOOP) // sanity just in case, because byond is whack and you can't trust it
 			continue
