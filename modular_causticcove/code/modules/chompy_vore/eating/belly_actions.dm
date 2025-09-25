@@ -20,14 +20,8 @@
 			*/
 		l.adjust_nutrition(thismuch)
 	target.death()		// To make sure all on-death procs get properly called
-	if(target)
-		if(target.client && target.client.prefs.digestion_noises)
-			if(!fancy_vore)
-				SEND_SOUND(target, sound(get_sfx("classic_death_sounds")))
-			else
-				SEND_SOUND(target, sound(get_sfx("fancy_death_prey")))
 		//target.mind?.vore_death = TRUE
-		handle_digestion_death(target)
+	handle_digestion_death(target)
 	return TRUE
 
 /*/obj/belly/proc/instant_break_bone(mob/user, mob/living/target)

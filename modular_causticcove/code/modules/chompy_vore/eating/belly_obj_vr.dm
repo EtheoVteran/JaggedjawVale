@@ -1015,17 +1015,17 @@
 		M.release_vore_contents(include_absorbed = TRUE, silent = TRUE)
 
 	//Drop all items into the belly.
-	if(CONFIG_GET(flag/items_survive_digestion))
-		var/Itemlist = M.get_equipped_items(TRUE)
-		Itemlist += M.held_items
-		for(var/obj/item/W in Itemlist)
-			M.dropItemToGround(W,TRUE)
-			if(contaminates)
-				W.gurgle_contaminate(contents, contamination_flavor, contamination_color) //We do an initial contamination pass to get stuff like IDs wet.
-			if(item_digest_mode == IM_HOLD)
-				items_preserved |= W
-			else if(item_digest_mode == IM_DIGEST_FOOD && !(istype(W,/obj/item/reagent_containers/food) || istype(W,/obj/item/organ)))
-				items_preserved |= W
+	//if(CONFIG_GET(flag/items_survive_digestion))
+	var/Itemlist = M.get_equipped_items(TRUE)
+	Itemlist += M.held_items
+	for(var/obj/item/W in Itemlist)
+		M.dropItemToGround(W,TRUE)
+		if(contaminates)
+			W.gurgle_contaminate(contents, contamination_flavor, contamination_color) //We do an initial contamination pass to get stuff ike IDs wet.
+		if(item_digest_mode == IM_HOLD)
+			items_preserved |= W
+		else if(item_digest_mode == IM_DIGEST_FOOD && !(istype(W,/obj/item/reagent_containers/food) || istype(W,/obj/item/organ)))
+			items_preserved |= W
 
 	//Reagent transfer
 	if(ishuman(owner))
@@ -1080,14 +1080,25 @@
 		M.enabled = FALSE
 		M.forceMove(hasMMI)
 	else*/
+	var/sfx
+	if(!fancy_vore)
+		sfx = sound(get_sfx("classic_death_sounds"))
+	else
+		sfx = sound(get_sfx("fancy_death_prey"))
 	var/mob/dead/observer/G = M.ghostize(TRUE) // Make sure they're out, so we can copy attack logs and such.
 	if(G)
 		G.forceMove(owner)
+		if(G.client && G.client.prefs.digestion_noises)
+			SEND_SOUND(G, sfx)
 	M.x = 1
 	M.y = 1
 	M.z = 1
 	M.alpha = 0 
 	owner.handle_belly_update()
+	M.reset_view(null)
+	playsound(src, sfx, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = "digestion_noises")
+	
+	
 
 // Handle a mob being absorbed
 /obj/belly/proc/absorb_living(mob/living/M)
