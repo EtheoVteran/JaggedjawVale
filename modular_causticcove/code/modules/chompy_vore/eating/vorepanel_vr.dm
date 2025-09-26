@@ -19,7 +19,7 @@
 		return
 
 	if(!isliving(src))
-		init_vore(TRUE)
+		return
 
 	if(!vorePanel)
 		if(!isnewplayer(src))
