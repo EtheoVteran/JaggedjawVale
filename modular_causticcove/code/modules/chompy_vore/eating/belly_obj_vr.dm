@@ -1080,6 +1080,7 @@
 		M.enabled = FALSE
 		M.forceMove(hasMMI)
 	else*/
+	M.reset_view(null)
 	var/sfx
 	if(!fancy_vore)
 		sfx = sound(get_sfx("classic_death_sounds"))
@@ -1090,12 +1091,13 @@
 		G.forceMove(owner)
 		if(G.client && G.client.prefs.digestion_noises)
 			SEND_SOUND(G, sfx)
+	M.clear_fullscreen("belly")
+	M.previewing_belly = null
 	M.x = 1
 	M.y = 1
 	M.z = 1
 	M.alpha = 0 
 	owner.handle_belly_update()
-	M.reset_view(null)
 	playsound(src, sfx, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = "digestion_noises")
 	
 	
