@@ -1188,7 +1188,7 @@
 	if(digested == FALSE)
 		items_preserved |= item
 	else
-		owner_adjust_nutrition((nutrition_percent / 100) * 5 * digested)
+		owner_adjust_nutrition((nutrition_percent / 100) * 5 * digested * 10)
 		digested = TRUE
 	return digested
 
