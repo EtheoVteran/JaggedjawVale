@@ -102,7 +102,7 @@
 				reagent_name = lowertext(REAGENT_WATER)
 			gen_amount = 1
 			gen_cost = 1
-			reagentid = REAGENT_ID_WATER
+			reagentid = REAGENT_WATER
 			reagentcolor = "#0064C877"
 		if(REAGENT_MILK)
 			generated_reagents = list(REAGENT_ID_MILK = 1)
@@ -110,7 +110,7 @@
 				reagent_name = lowertext(REAGENT_MILK)
 			gen_amount = 1
 			gen_cost = 5
-			reagentid = REAGENT_ID_MILK
+			reagentid = REAGENT_MILK
 			reagentcolor = "#DFDFDF"
 		if(REAGENT_CREAM)
 			generated_reagents = list(REAGENT_ID_CREAM = 1)
@@ -268,10 +268,8 @@
 
 /obj/belly/deserialize(var/list/data)
 	..()
-	if(!GLOB.chemical_reagents_list[reagentid])
-		to_chat(owner, span_warning("Belly reagent with ID \"[reagentid]\" not found, please reselect your liquid reagent"))
-		reagentid = REAGENT_ID_WATER
-		generated_reagents = list(REAGENT_ID_WATER = 1)
+	reagent_chosen = reagentid
+	ReagentSwitch()
 	STOP_PROCESSING(SSbellies, src)
 	STOP_PROCESSING(SSobj, src)
 	if(speedy_mob_processing)
