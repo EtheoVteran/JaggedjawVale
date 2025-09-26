@@ -457,7 +457,7 @@ GLOBAL_LIST_INIT(contamination_colors, list("green",
 #define REAGENT_CREAM "Cream"
 #define REAGENT_ID_CREAM "cream"
 #define REAGENT_TEA "Tea"
-#define REAGENT_ID_TEA "tea"
+#define REAGENT_ID_TEA /datum/reagent/consumable/caffeine/tea
 #define REAGENT_ICETEA "Iced Tea"
 #define REAGENT_ID_ICETEA "icetea"
 #define REAGENT_MINTTEA "Mint Tea"
@@ -475,7 +475,7 @@ GLOBAL_LIST_INIT(contamination_colors, list("green",
 #define REAGENT_CHAITEA "Chai Tea"
 #define REAGENT_ID_CHAITEA "chaitea"
 #define REAGENT_COFFEE "Coffee"
-#define REAGENT_ID_COFFEE "coffee"
+#define REAGENT_ID_COFFEE /datum/reagent/consumable/caffeine/coffee
 #define REAGENT_CAFELATTE "Cafe Latte"
 #define REAGENT_ID_CAFELATTE "cafe_latte"
 #define REAGENT_HOTCOCO "Hot Chocolate"
@@ -495,6 +495,9 @@ GLOBAL_LIST_INIT(contamination_colors, list("green",
 
 #define REAGENT_NUMBENZYME "Numbing Enzyme"
 #define REAGENT_ID_NUMBENZYME "numbenzyme"
+
+#define REAGENT_PARAPOISON "Paralytic venom"
+#define REAGENT_ID_PARAPOISON /datum/reagent/toxin/spidervenom_paralytic
 
 #define CHEM_VORE 4 // vore belly interactions
 #define CHEM_INGEST 2

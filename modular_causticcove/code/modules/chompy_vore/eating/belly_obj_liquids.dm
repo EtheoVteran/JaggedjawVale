@@ -100,7 +100,7 @@
 			generated_reagents = list(REAGENT_ID_WATER = 1)
 			if(reagent_name in our_reagents)
 				reagent_name = lowertext(REAGENT_WATER)
-			gen_amount = 1
+			gen_amount = 2
 			gen_cost = 1
 			reagentid = REAGENT_WATER
 			reagentcolor = "#0064C877"
@@ -112,39 +112,31 @@
 			gen_cost = 5
 			reagentid = REAGENT_MILK
 			reagentcolor = "#DFDFDF"
-		if(REAGENT_CREAM)
-			generated_reagents = list(REAGENT_ID_CREAM = 1)
+		if(REAGENT_COFFEE)
+			generated_reagents = list(REAGENT_ID_COFFEE = 1)
 			if(reagent_name in our_reagents)
-				reagent_name = lowertext(REAGENT_CREAM)
-			gen_amount = 1
-			gen_cost = 5
-			reagentid = REAGENT_ID_CREAM
-			reagentcolor = "#DFD7AF"
-		if(REAGENT_HONEY)
-			generated_reagents = list(REAGENT_ID_HONEY = 1)
-			if(reagent_name in our_reagents)
-				reagent_name = lowertext(REAGENT_HONEY)
+				reagent_name = lowertext(REAGENT_COFFEE)
 			gen_amount = 1
 			gen_cost = 10
-			reagentid = REAGENT_ID_HONEY
-			reagentcolor = "#FFFF00"
-			reagentcolor = "#801E28"
-		if(REAGENT_STOMACID)
-			generated_reagents = list(REAGENT_ID_STOMACID = 1)
+			reagentid = REAGENT_COFFEE
+			reagentcolor = "#482000"
+		if(REAGENT_TEA)
+			generated_reagents = list(REAGENT_ID_TEA = 1)
 			if(reagent_name in our_reagents)
-				reagent_name = lowertext(REAGENT_STOMACID)
+				reagent_name = lowertext(REAGENT_TEA)
 			gen_amount = 1
-			gen_cost = 1
-			reagentid = REAGENT_ID_STOMACID
-			reagentcolor = "#664330"
-		if(REAGENT_DIETSTOMACID)
-			generated_reagents = list(REAGENT_ID_DIETSTOMACID = 1)
+			gen_cost = 10
+			reagentid = REAGENT_TEA
+			reagentcolor = "#508141"
+		if(REAGENT_PARAPOISON)
+			generated_reagents = list(REAGENT_ID_PARAPOISON = 1)
 			if(reagent_name in our_reagents)
-				reagent_name = lowertext(REAGENT_DIETSTOMACID)
+				reagent_name = lowertext(REAGENT_PARAPOISON)
 			gen_amount = 1
-			gen_cost = 1
-			reagentid = REAGENT_ID_DIETSTOMACID
-			reagentcolor = "#664330"
+			gen_cost = 10
+			reagentid = REAGENT_PARAPOISON
+			reagentcolor = "#508141"
+		
 
 
 /////////////////////// FULLNESS MESSAGES //////////////////////
