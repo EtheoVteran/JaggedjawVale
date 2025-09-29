@@ -117,7 +117,7 @@
 			if(reagent_name in our_reagents)
 				reagent_name = lowertext(REAGENT_COFFEE)
 			gen_amount = 1
-			gen_cost = 10
+			gen_cost = 5
 			reagentid = REAGENT_COFFEE
 			reagentcolor = "#482000"
 		if(REAGENT_TEA)
@@ -125,7 +125,7 @@
 			if(reagent_name in our_reagents)
 				reagent_name = lowertext(REAGENT_TEA)
 			gen_amount = 1
-			gen_cost = 10
+			gen_cost = 5
 			reagentid = REAGENT_TEA
 			reagentcolor = "#508141"
 		if(REAGENT_PARAPOISON)
@@ -133,10 +133,17 @@
 			if(reagent_name in our_reagents)
 				reagent_name = lowertext(REAGENT_PARAPOISON)
 			gen_amount = 1
-			gen_cost = 10
+			gen_cost = 250
 			reagentid = REAGENT_PARAPOISON
 			reagentcolor = "#508141"
-		
+		if(REAGENT_HONEY)
+			generated_reagents = list(REAGENT_ID_HONEY = 1)
+			if(reagent_name in our_reagents)
+				reagent_name = lowertext(REAGENT_HONEY)
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = REAGENT_HONEY
+			reagentcolor = "#d3a308"
 
 
 /////////////////////// FULLNESS MESSAGES //////////////////////

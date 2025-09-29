@@ -238,6 +238,11 @@
 	var/tmp/static/list/reagent_choices = list(		// List of reagents people can chose, maybe one day expand so it covers criterias like dogborgs who can make meds, booze, etc - Jack
 	REAGENT_WATER,
 	REAGENT_MILK,
+	REAGENT_COFFEE,
+	REAGENT_TEA,
+	REAGENT_HONEY,
+	REAGENT_PARAPOISON,
+
 	/*REAGENT_CREAM,
 	REAGENT_HONEY,*/
 	//REAGENT_CHERRYJELLY,

@@ -485,7 +485,7 @@ GLOBAL_LIST_INIT(contamination_colors, list("green",
 #define REAGENT_BEER "Beer"
 #define REAGENT_ID_BEER "beer"
 #define REAGENT_HONEY "Honey"
-#define REAGENT_ID_HONEY "honey"
+#define REAGENT_ID_HONEY /datum/reagent/consumable/honey
 
 
 #define REAGENT_STOMACID "Digestive acid"
