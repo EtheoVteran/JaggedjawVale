@@ -712,7 +712,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	S["customizer_entries"] >> customizer_entries
 	validate_customizer_entries()
-
+	if(parent.prefs_vr)
+		parent.prefs_vr.load_vore()
 	//load_vore_prefs(S)
 
 	return TRUE

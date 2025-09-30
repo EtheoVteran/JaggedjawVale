@@ -1025,8 +1025,8 @@
 	Itemlist += M.held_items
 	for(var/obj/item/W in Itemlist)
 		M.dropItemToGround(W,TRUE)
-		if(contaminates)
-			W.gurgle_contaminate(contents, contamination_flavor, contamination_color) //We do an initial contamination pass to get stuff ike IDs wet.
+		/*	W.gurgle_contaminate(contents, contamination_flavor, contamination_color) //We do an initial contamination pass to get stuff ike IDs wet.
+		*/
 		if(item_digest_mode == IM_HOLD)
 			items_preserved |= W
 		else if(item_digest_mode == IM_DIGEST_FOOD && !(istype(W,/obj/item/reagent_containers/food) || istype(W,/obj/item/organ)))
