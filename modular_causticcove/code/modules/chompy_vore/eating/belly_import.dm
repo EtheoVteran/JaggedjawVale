@@ -1050,7 +1050,7 @@
 
 		if(isnum(belly_data["custom_max_volume"]))
 			var/new_custom_max_volume = belly_data["custom_max_volume"]
-			new_belly.custom_max_volume = CLAMP(new_custom_max_volume, 10, 300)
+			new_belly.custom_max_volume = CLAMP(new_custom_max_volume, 1, 1000)
 
 		if(isnum(belly_data["vorefootsteps_sounds"]))
 			var/new_vorefootsteps_sounds = belly_data["vorefootsteps_sounds"]

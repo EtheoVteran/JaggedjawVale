@@ -1114,7 +1114,7 @@
 	if(!RTB)
 		return FALSE
 
-	var/transfer_amount = tgui_input_list(user, "How much to transfer?", "Transfer Amount", list(5,10,25,50,100))
+	var/transfer_amount = tgui_input_list(user, "How much to transfer?", "Transfer Amount", list(1,5,10,25,50,100,200,500,1000))
 	if(!transfer_amount)
 		return FALSE
 

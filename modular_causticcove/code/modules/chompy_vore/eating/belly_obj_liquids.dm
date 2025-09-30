@@ -101,7 +101,7 @@
 			if(reagent_name in our_reagents)
 				reagent_name = lowertext(REAGENT_WATER)
 			gen_amount = 2
-			gen_cost = 1
+			gen_cost = 0
 			reagentid = REAGENT_WATER
 			reagentcolor = "#0064C877"
 		if(REAGENT_MILK)
@@ -144,6 +144,54 @@
 			gen_cost = 10
 			reagentid = REAGENT_HONEY
 			reagentcolor = "#d3a308"
+		if(REAGENT_SPACEDRUGS)
+			generated_reagents = list(REAGENT_ID_SPACEDRUGS = 1)
+			if(reagent_name in our_reagents)
+				reagent_name = lowertext(REAGENT_SPACEDRUGS)
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = REAGENT_SPACEDRUGS
+			reagentcolor = "#60A584"
+		if(REAGENT_POT_MANA)
+			generated_reagents = list(REAGENT_ID_POT_MANA = 1)
+			if(reagent_name in our_reagents)
+				reagent_name = lowertext(REAGENT_POT_MANA)
+			gen_amount = 1
+			gen_cost = 15
+			reagentid = REAGENT_POT_MANA
+			reagentcolor = "#000042"
+		if(REAGENT_POT_HEALTH)
+			generated_reagents = list(REAGENT_ID_POT_HEALTH = 1)
+			if(reagent_name in our_reagents)
+				reagent_name = lowertext(REAGENT_POT_HEALTH)
+			gen_amount = 1
+			gen_cost = 20
+			reagentid = REAGENT_POT_HEALTH
+			reagentcolor = "#ff0000"
+		if(REAGENT_JUICE_JACKBERRY)
+			generated_reagents = list(REAGENT_ID_JUICE_JACKBERRY = 1)
+			if(reagent_name in our_reagents)
+				reagent_name = lowertext(REAGENT_JUICE_JACKBERRY)
+			gen_amount = 1
+			gen_cost = 5
+			reagentid = REAGENT_JUICE_JACKBERRY
+			reagentcolor = "#F1EBDB"
+		if(REAGENT_JUICE_APPLE)
+			generated_reagents = list(REAGENT_ID_JUICE_APPLE = 1)
+			if(reagent_name in our_reagents)
+				reagent_name = lowertext(REAGENT_JUICE_APPLE)
+			gen_amount = 1
+			gen_cost = 5
+			reagentid = REAGENT_JUICE_APPLE
+			reagentcolor = "#D7B086"
+		if(REAGENT_JUICE_TOMATO)
+			generated_reagents = list(REAGENT_ID_JUICE_TOMATO = 1)
+			if(reagent_name in our_reagents)
+				reagent_name = lowertext(REAGENT_JUICE_TOMATO)
+			gen_amount = 1
+			gen_cost = 5
+			reagentid = REAGENT_JUICE_TOMATO
+			reagentcolor = "#FF6347"
 
 
 /////////////////////// FULLNESS MESSAGES //////////////////////

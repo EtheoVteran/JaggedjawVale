@@ -452,12 +452,34 @@ GLOBAL_LIST_INIT(contamination_colors, list("green",
 #define REAGENT_ID_WATER /datum/reagent/water
 #define REAGENT_MILK "Milk"
 #define REAGENT_ID_MILK /datum/reagent/consumable/milk
+#define REAGENT_TEA "Tea"
+#define REAGENT_ID_TEA /datum/reagent/consumable/caffeine/tea
+#define REAGENT_COFFEE "Coffee"
+#define REAGENT_ID_COFFEE /datum/reagent/consumable/caffeine/coffee
+#define REAGENT_PARAPOISON "Paralytic venom"
+#define REAGENT_ID_PARAPOISON /datum/reagent/toxin/spidervenom_paralytic
+#define REAGENT_HONEY "Honey"
+#define REAGENT_ID_HONEY /datum/reagent/consumable/honey
+#define REAGENT_SPACEDRUGS "Druggy venom"
+#define REAGENT_ID_SPACEDRUGS /datum/reagent/drug/space_drugs
+#define REAGENT_POT_MANA "Mana potion"
+#define REAGENT_ID_POT_MANA /datum/reagent/medicine/manapot
+#define REAGENT_POT_HEALTH "Health potion"
+#define REAGENT_ID_POT_HEALTH /datum/reagent/medicine/healthpot
+
+#define REAGENT_JUICE_JACKBERRY "Jackberry juice"
+#define REAGENT_ID_JUICE_JACKBERRY /datum/reagent/consumable/juice/jackberry
+#define REAGENT_JUICE_APPLE "Apple juice"
+#define REAGENT_ID_JUICE_APPLE /datum/reagent/consumeable/juice/apple
+#define REAGENT_JUICE_TOMATO "Tomato juice"
+#define REAGENT_ID_JUICE_TOMATO /datum/reagent/consumable/juice/tomato
+
+
+
 #define REAGENT_CHOCOLATEMILK  "Chocolate Milk"
 #define REAGENT_ID_CHOCOLATEMILK "chocolate_milk"
 #define REAGENT_CREAM "Cream"
 #define REAGENT_ID_CREAM "cream"
-#define REAGENT_TEA "Tea"
-#define REAGENT_ID_TEA /datum/reagent/consumable/caffeine/tea
 #define REAGENT_ICETEA "Iced Tea"
 #define REAGENT_ID_ICETEA "icetea"
 #define REAGENT_MINTTEA "Mint Tea"
@@ -474,8 +496,6 @@ GLOBAL_LIST_INIT(contamination_colors, list("green",
 #define REAGENT_ID_GREENTEA "greentea"
 #define REAGENT_CHAITEA "Chai Tea"
 #define REAGENT_ID_CHAITEA "chaitea"
-#define REAGENT_COFFEE "Coffee"
-#define REAGENT_ID_COFFEE /datum/reagent/consumable/caffeine/coffee
 #define REAGENT_CAFELATTE "Cafe Latte"
 #define REAGENT_ID_CAFELATTE "cafe_latte"
 #define REAGENT_HOTCOCO "Hot Chocolate"
@@ -484,8 +504,6 @@ GLOBAL_LIST_INIT(contamination_colors, list("green",
 #define REAGENT_ID_ALE "ale"
 #define REAGENT_BEER "Beer"
 #define REAGENT_ID_BEER "beer"
-#define REAGENT_HONEY "Honey"
-#define REAGENT_ID_HONEY /datum/reagent/consumable/honey
 
 
 #define REAGENT_STOMACID "Digestive acid"
@@ -496,8 +514,6 @@ GLOBAL_LIST_INIT(contamination_colors, list("green",
 #define REAGENT_NUMBENZYME "Numbing Enzyme"
 #define REAGENT_ID_NUMBENZYME "numbenzyme"
 
-#define REAGENT_PARAPOISON "Paralytic venom"
-#define REAGENT_ID_PARAPOISON /datum/reagent/toxin/spidervenom_paralytic
 
 #define CHEM_VORE 4 // vore belly interactions
 #define CHEM_INGEST 2

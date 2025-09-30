@@ -70,7 +70,7 @@
 			var/new_custom_vol = text2num(params["val"])
 			if(!isnum(new_custom_vol))
 				return FALSE
-			host.vore_selected.custom_max_volume = CLAMP(new_custom_vol, 10, 300)
+			host.vore_selected.custom_max_volume = CLAMP(new_custom_vol, 1, 1000)
 			. = TRUE
 		if("b_liq_sloshing")
 			if(!host.vore_selected.vorefootsteps_sounds)

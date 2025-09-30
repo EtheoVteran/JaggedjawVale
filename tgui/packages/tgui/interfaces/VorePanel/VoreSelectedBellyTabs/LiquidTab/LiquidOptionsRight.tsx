@@ -33,8 +33,8 @@ export const LiquidOptionsRight = (props: {
           subAction="b_liq_reagent_capacity"
           editMode={editMode}
           value={liq_reagent_capacity}
-          minValue={10}
-          maxValue={300}
+          minValue={1}
+          maxValue={1000}
           unit="u"
           tooltip="Choose the amount of liquid the belly can contain at most. Ranges from 10 to 300."
         />
