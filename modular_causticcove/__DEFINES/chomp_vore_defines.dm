@@ -576,11 +576,11 @@ GLOBAL_LIST_INIT(slosh, list(
 #define BELLIES_MESSAGE_COMBINED 1024 * 10 + 18
 #define FLAVOR_MAX 400
 
-// General Examine Messages
+/*// General Examine Messages
 #define GENERAL_EXAMINE_NUTRI "en"
 #define GENERAL_EXAMINE_WEIGHT "ew"
 
-#define VPPREF_MESSAGE_SANITY(type) ASSERT(type == GENERAL_EXAMINE_NUTRI || type == GENERAL_EXAMINE_WEIGHT)
+#define VPPREF_MESSAGE_SANITY(type) ASSERT(type == GENERAL_EXAMINE_NUTRI || type == GENERAL_EXAMINE_WEIGHT)*/
 
 
 #define VORE_VERSION	2	//This is a Define so you don't have to worry about magic numbers.
