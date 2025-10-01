@@ -2846,6 +2846,7 @@
 #include "modular_causticcove\__DEFINES\values.dm"
 #include "modular_causticcove\code\datums\loadout.dm"
 #include "modular_causticcove\code\game\objects\items\clothes\stockings.dm"
+#include "modular_causticcove\code\game\objects\items\weapons\ranged\arquebus.dm"
 #include "modular_causticcove\code\modules\baycode_port_helpers\baycode_port_helpers.dm"
 #include "modular_causticcove\code\modules\baycode_port_helpers\chemcolour.dm"
 #include "modular_causticcove\code\modules\baycode_port_helpers\hud.dm"
