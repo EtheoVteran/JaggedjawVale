@@ -120,10 +120,13 @@
 			if(iscarbon(src))
 				var/mob/living/carbon/C = src
 				if(!HAS_TRAIT(C, TRAIT_NOHUNGER))
-					if(C.nutrition <= 0)
-						if(C.hydration <= 0)
-							C.heart_attack()
-							return FALSE
+					//Cove edit start
+					if(!istype(loc, /obj/belly))
+					//Cove edit end
+						if(C.nutrition <= 0)
+							if(C.hydration <= 0)
+								C.heart_attack()
+								return FALSE
 
 	if(ishuman(src) && mind && added > 0)
 		var/mob/living/carbon/human/H = src

@@ -170,8 +170,6 @@
 
 	var/slowdown
 
-	var/last_integ_sound
-
 	var/last_dir_change = 0
 
 	var/list/death_trackers = list()

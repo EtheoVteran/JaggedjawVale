@@ -12,7 +12,7 @@
 	outfit_female = null
 	display_order = JDO_WRETCH
 	show_in_credits = FALSE
-	min_pq = 10
+	min_pq = null //10
 	max_pq = null
 
 	obsfuscated_job = TRUE
@@ -44,6 +44,7 @@
 		/datum/advclass/wretch/plaguebearer,
 		/datum/advclass/wretch/pyromaniac,
 		/datum/advclass/wretch/vigilante,
+		/datum/advclass/wretch/shrine_defiler,
 		/datum/advclass/wretch/blackoakwyrm
 	)
 
@@ -83,23 +84,22 @@
 	if (!my_crime)
 		my_crime = "crimes against the Crown"
 	add_bounty(H.real_name, race, gender, descriptor_height, descriptor_body, descriptor_voice, bounty_total, FALSE, my_crime, bounty_poster)
-	to_chat(H, span_danger("You are playing an Antagonist role. By choosing to spawn as a Wretch, you are expected to actively create conflict with other players. Failing to play this role with the appropriate gravitas may result in punishment for Low Roleplay standards."))
-	
+	to_chat(H, span_danger("You are NOT an Antagonistic role. You are at most a 'soft-antag'. You are an outcast, an outlaw or a heretic. You are unwanted by society and potentially wanted with a bounty. Play this role in good faith and understand that sowing too much chaos will lead to consequences. This role does not give you the go ahead to attack others without warning, frag or spam skeletons in town. Your goal as a wretch is to pursue your personal goals and reach the end of the week alive and not in captivity. Remember this is HRP. ")) //Caustic Cove Edit
+
 /proc/update_wretch_slots()
 	var/datum/job/wretch_job = SSjob.GetJob("Wretch")
 	if(!wretch_job)
 		return
 
 	var/player_count = length(GLOB.joined_player_list)
-	var/slots = 5
+	var/slots = 8 //Caustic edit, static 8 slots
 	
 	//Add 1 slot for every 10 players over 30. Less than 40 players, 5 slots. 40 or more players, 6 slots. 50 or more players, 7 slots - etc.
 	if(player_count > 40)
 		var/extra = floor((player_count - 40) / 10)
 		slots += extra
 
-	//5 slots minimum, 10 maximum.
-	slots = min(slots, 10)
+	slots = min(slots, 8) //Caustic edit, static 8 slots
 
 	wretch_job.total_positions = slots
 	wretch_job.spawn_positions = slots

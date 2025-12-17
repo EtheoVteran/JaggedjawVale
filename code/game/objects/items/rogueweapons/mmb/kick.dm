@@ -5,7 +5,7 @@
 	chargetime = 0
 	chargedrain = 0
 	noaa = FALSE
-	swingdelay = 5
+	swingdelay = 4
 	misscost = 20
 	unarmed = TRUE
 	animname = "kick"
@@ -33,15 +33,9 @@
 	// play the attack animation even when kicking non-mobs
 	if(mmb_intent) // why this would be null and not INTENT_KICK i have no clue, but the check already existed
 		do_attack_animation_simple(A, visual_effect_icon = mmb_intent.animname)
-
-	var/atom/target = A
-	if(isturf(A))
-		for(var/mob/living/M in A)
-			target = M
-			break
 	// but the rest of the logic is pretty much mob-only
-	if(ismob(target) && mmb_intent)
-		var/mob/living/M = target
+	if(ismob(A) && mmb_intent)
+		var/mob/living/M = A
 		sleep(mmb_intent.swingdelay)
 		if(M.has_status_effect(/datum/status_effect/buff/clash) && ishuman(M))
 			var/mob/living/carbon/human/HT = M
@@ -62,11 +56,14 @@
 		else
 			M.onkick(src)
 	else
-		target.onkick(src)
+		A.onkick(src)
 	OffBalance(3 SECONDS)
 	return TRUE
 
 /mob/living/proc/can_kick(atom/A, do_message = TRUE)
+	if(stat == DEAD || stat == UNCONSCIOUS || stat == SOFT_CRIT)
+		to_chat(src, span_warning("I attempt to kick, but my muscles fail me."))
+		return FALSE
 	if(get_num_legs() < 2)
 		return FALSE
 	if(!A.Adjacent(src))

@@ -55,7 +55,7 @@
 	if(prefs)
 		prefs.masked_examine = !prefs.masked_examine
 		prefs.save_preferences()
-		if(prefs.masked_examine)
+		if(!prefs.masked_examine)
 			to_chat(src, "Your character information will be viewable when masked.")
 		else
 			to_chat(src, "Your character information will no longer be viewable when masked.")
@@ -147,14 +147,6 @@
 			to_chat(src, "You will no longer see the language icon in front of a language.")
 		else
 			to_chat(src, "You will now see the language icon in front of a language.")
-
-/client/verb/toggle_redflash()
-	set category = "Options"
-	set name = "Toggle Red Screen Flash"
-	if(prefs)
-		prefs.no_redflash = !prefs.no_redflash
-		prefs.save_preferences()
-		to_chat(src, "You will see the red flashing effect [prefs.no_redflash ? "less" : "more"] frequently.")
 
 /client/verb/toggle_lobby_music()
 	set name = "Toggle Lobby Music"

@@ -4,8 +4,8 @@
 	typepath = /datum/round_event/matthios_hoard
 	weight = 10
 	earliest_start = 5 MINUTES
-	max_occurrences = 1
-	min_players = 20
+	max_occurrences = 0
+	min_players = 15 //Bandit/Thief stuff. May need to observe and study to see player interactions.
 
 	tags = list(
 		TAG_LOOT,

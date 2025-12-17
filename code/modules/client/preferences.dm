@@ -85,9 +85,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/facial_hair_color = "000"		//Facial hair color
 	var/skin_tone = "caucasian1"		//Skin color
 	var/eye_color = "000"				//Eye color
-	var/vampire_skin = null
-	var/vampire_eyes = null
-	var/vampire_hair = null
 	var/extra_language = "None" // Extra language
 	var/voice_color = "a0a0a0"
 	var/voice_pitch = 1
@@ -144,7 +141,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/no_autopunctuate = FALSE
 	var/no_language_fonts = FALSE
 	var/no_language_icon = FALSE
-	var/no_redflash = FALSE
 
 	var/lastclass
 
@@ -172,16 +168,12 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/crt = FALSE
 	var/grain = TRUE
 	var/dnr_pref = FALSE
-	var/qsr_pref = FALSE
 
 	var/list/customizer_entries = list()
 	var/list/list/body_markings = list()
 	var/update_mutant_colors = TRUE
 
 	var/headshot_link
-	var/lich_headshot_link
-	var/vampire_headshot_link
-	var/werewolf_headshot_link //not used but setting up for the future
 	var/chatheadshot = FALSE
 	var/ooc_extra
 	var/song_artist
@@ -194,11 +186,19 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/datum/loadout_item/loadout
 	var/datum/loadout_item/loadout2
 	var/datum/loadout_item/loadout3
+	//Cove edit start
+	var/datum/loadout_item/loadout4
+	var/datum/loadout_item/loadout5
+	//Cove edit end
 
 	var/loadout_1_hex
 	var/loadout_2_hex
 	var/loadout_3_hex
 
+	///Caustic edit
+	var/loadout_4_hex
+	var/loadout_5_hex
+	///Caustic edit end
 	var/flavortext
 
 	var/ooc_notes
@@ -335,7 +335,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "</td>"
 
 			dat += "<td style='width:33%;text-align:right'>"
-			dat += "<a href='?_src_=prefs;preference=changelog;task=menu'>Changelog</a>"
 			dat += "</td>"
 			dat += "</tr>"
 
@@ -349,6 +348,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "</td>"
 
 			dat += "<td style='width:33%;text-align:right'>"
+			///Caustic edit
+			dat += "<a href='?_src_=prefs;preference=epilepsy;task=menu'>[epilepsy ? "Epileptic mode" : "Normal mode"]</a>"
+			///Caustic edit end
 			dat += "</td>"
 			dat += "</tr>"
 
@@ -461,17 +463,23 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<b>Second Virtue:</b> <a href='?_src_=prefs;preference=virtuetwo;task=input'>[virtuetwo]</a><BR>"
 			else
 				virtuetwo = GLOB.virtues[/datum/virtue/none]
+			dat += get_extra_virtue_htmlpick()
 			dat += "<b>Vice:</b> <a href='?_src_=prefs;preference=charflaw;task=input'>[charflaw]</a><BR>"
 			var/datum/faith/selected_faith = GLOB.faithlist[selected_patron?.associated_faith]
 			dat += "<b>Faith:</b> <a href='?_src_=prefs;preference=faith;task=input'>[selected_faith?.name || "FUCK!"]</a><BR>"
 			dat += "<b>Patron:</b> <a href='?_src_=prefs;preference=patron;task=input'>[selected_patron?.name || "FUCK!"]</a><BR>"
 			dat += "<b>Dominance:</b> <a href='?_src_=prefs;preference=domhand'>[domhand == 1 ? "Left-handed" : "Right-handed"]</a><BR>"
+			//Caustic edit
+			dat += "<b>Size Category:</b> <a href='?_src_=prefs;preference=sizecat;task=input'>[sizecat]</a><BR>"
+			dat += "<b>Pickup able:</b> <a href='?_src_=prefs;preference=pickupable'>[pickupable == 1 ? "Yes" : "No"]</a><BR>"
+			//Caustic edit end
 			dat += "<b>Food Preferences:</b> <a href='?_src_=prefs;preference=culinary;task=menu'>Change</a><BR>"
 
 			var/musicname = (combat_music.shortname ? combat_music.shortname : combat_music.name)
 			dat += "<b>Combat Music:</b> <a href='?_src_=prefs;preference=combat_music;task=input'>[musicname || "FUCK!"]</a><BR>"
 
 			dat += "<b>Unrevivable:</b> <a href='?_src_=prefs;preference=dnr;task=input'>[dnr_pref ? "Yes" : "No"]</a><BR>"
+
 			dat += "<b>Be a Familiar:</b><a href='?_src_=prefs;preference=familiar_prefs;task=input'>Familiar Preferences</a>"
 			dat += "<br><b>Nickname Color: </b> </b><a href='?_src_=prefs;preference=highlight_color;task=input'>Change</a>"
 			dat += "<br><b>Voice Color: </b><a href='?_src_=prefs;preference=voice;task=input'>Change</a>"
@@ -570,12 +578,27 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<a href='?_src_=prefs;preference=loadout2hex;task=input'>(C)</a>"
 
 			dat += "<br><b>Loadout Item III:</b> <a href='?_src_=prefs;preference=loadout_item3;task=input'>[loadout3 ? loadout3.name : "None"]</a>"
+
 			if (loadout_3_hex)
 				dat += "<a href='?_src_=prefs;preference=loadout3hex;task=input'><span style='border: 1px solid #161616; background-color: [loadout_3_hex ? loadout_3_hex : "#FFFFFF"];'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>"
 			else
 				dat += "<a href='?_src_=prefs;preference=loadout3hex;task=input'>(C)</a>"
-			dat += "</td>"
 
+			//Cove edit start
+			dat += "<br><b>Loadout Item IV:</b> <a href='?_src_=prefs;preference=loadout_item4;task=input'>[loadout4 ? loadout4.name : "None"]</a>"
+			if (loadout_4_hex)
+				dat += "<a href='?_src_=prefs;preference=loadout4hex;task=input'><span style='border: 1px solid #161616; background-color: [loadout_4_hex ? loadout_4_hex : "#FFFFFF"];'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>"
+			else
+				dat += "<a href='?_src_=prefs;preference=loadout4hex;task=input'>(C)</a>"
+
+			dat += "<br><b>Loadout Item V:</b> <a href='?_src_=prefs;preference=loadout_item5;task=input'>[loadout5 ? loadout5.name : "None"]</a>"
+			if (loadout_5_hex)
+				dat += "<a href='?_src_=prefs;preference=loadout5hex;task=input'><span style='border: 1px solid #161616; background-color: [loadout_5_hex ? loadout_5_hex : "#FFFFFF"];'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>"
+			else
+				dat += "<a href='?_src_=prefs;preference=loadout5hex;task=input'>(C)</a>"
+			//Cove edit end
+
+			dat += "</td>"
 			dat += "</tr></table>"
 //			-----------END OF BODY TABLE-----------
 			dat += "</td>"
@@ -676,8 +699,10 @@ GLOBAL_LIST_EMPTY(chosen_names)
 //			dat += "<b>Play Lobby Music:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Enabled":"Disabled"]</a><br>"
 
 
-			dat += "</td><td width='400px' height='500px' valign='top'>"
+			dat += "</td><td width='300px' height='300px' valign='top'>"
+
 			dat += "<h2>Special Role Settings</h2>"
+
 			if(is_banned_from(user.ckey, ROLE_SYNDICATE))
 				dat += "<font color=red><b>I am banned from antagonist roles.</b></font><br>"
 				src.be_special = list()
@@ -1273,32 +1298,11 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 				dat += "<b>[capitalize(i)]:</b> <font color=red> \[IN [days_remaining] DAYS]</font><br>"
 			else
 				dat += "<b>[capitalize(i)]:</b> <a href='?_src_=prefs;preference=antag;task=be_special;be_special_type=[i]'>[(i in be_special) ? "Enabled" : "Disabled"]</a><br>"
-	dat += "<br><br>Antag appearances will update when you close and reopen the Special Roles window"
-	dat += "<br><b>Lich Headshot:</b> <a href='?_src_=prefs;preference=lich_headshot;task=input'>Change</a>"
-	if(lich_headshot_link != null)
-		dat += "<br><img src='[lich_headshot_link]' width='100px' height='100px'>"
-	dat += "<br><b>Vampire Headshot:</b> <a href='?_src_=prefs;preference=vampire_headshot;task=input'>Change</a>"
-	if(vampire_headshot_link != null)
-		dat += "<br><img src='[vampire_headshot_link]' width='100px' height='100px'>"
-	dat += "<br><b>Vampire Skin Color: </b>"
-	if (!isnull(vampire_skin))
-		dat += "<a href='?_src_=prefs;preference=vampire_skin;task=input'> <span style='border: 1px solid #161616; background-color: [vampire_skin ? vampire_skin : "#FFFFFF"];'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a> <a href='?_src_=prefs;preference=vampire_skin_clear;task=input'>clear</a>"
-	else
-		dat += "<a href='?_src_=prefs;preference=vampire_skin;task=input'>(C)</a>"
-	dat += "<br><b>Vampire Eye Color:</b>"
-	if (!isnull(vampire_eyes))
-		dat += "<a href='?_src_=prefs;preference=vampire_eyes;task=input'> <span style='border: 1px solid #161616; background-color: [vampire_eyes ? vampire_eyes : "#FFFFFF"];'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=vampire_eyes_clear;task=input'>clear</a></a>"
-	else
-		dat += "<a href='?_src_=prefs;preference=vampire_eyes;task=input'>(C)</a>"
-	dat += "<br><b>Vampire Hair Color:</b> "
-	if (!isnull(vampire_hair))
-		dat += "<a href='?_src_=prefs;preference=vampire_hair;task=input'> <span style='border: 1px solid #161616; background-color: [vampire_hair ? vampire_hair : "#FFFFFF"];'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=vampire_hair_clear;task=input'>clear</a></a>"
-	else
-		dat += "<a href='?_src_=prefs;preference=vampire_hair;task=input'>(C)</a>"
-	dat += "<BR><b>Quicksilver Resistant:</b> <a href='?_src_=prefs;preference=qsr;task=input'>[qsr_pref ? "Yes" : "No"]</a>"
+
+
 	dat += "</body>"
 
-	var/datum/browser/noclose/popup = new(user, "antag_setup", "<div align='center'>Special Role</div>", 400, 800) //no reason not to reuse the occupation window, as it's cleaner that way
+	var/datum/browser/noclose/popup = new(user, "antag_setup", "<div align='center'>Special Role</div>", 250, 300) //no reason not to reuse the occupation window, as it's cleaner that way
 	popup.set_window_options("can_close=0")
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
@@ -1389,6 +1393,10 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 				SetAntag(user)
 	else if(href_list["preference"] == "tgui_ui_prefs")
 		tgui_pref = !tgui_pref
+	///Caustic edit
+	else if(href_list["preference"] == "epilepsy")
+		epilepsy = !epilepsy
+	///Caustic edit end
 	else if(href_list["preference"] == "triumphs")
 		user.show_triumphs_list()
 
@@ -1420,10 +1428,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		return
 	else if(href_list["preference"] == "triumph_buy_menu")
 		SStriumphs.startup_triumphs_menu(user.client)
-
-	else if(href_list["preference"] == "changelog")
-		user.client.changelog()
-		return TRUE
 
 	else if(href_list["preference"] == "keybinds")
 		switch(href_list["task"])
@@ -1828,42 +1832,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					headshot_link = new_headshot_link
 					to_chat(user, "<span class='notice'>Successfully updated headshot picture</span>")
 					log_game("[user] has set their Headshot image to '[headshot_link]'.")
-				if("lich_headshot")
-					to_chat(user, "<span class='notice'>Please use a relatively SFW image of the head and shoulder area to maintain immersion level. Lastly, ["<span class='bold'>do not use a real life photo or use any image that is less than serious.</span>"]</span>")
-					to_chat(user, "<span class='notice'>If the photo doesn't show up properly in-game, ensure that it's a direct image link that opens properly in a browser.</span>")
-					to_chat(user, "<span class='notice'>Keep in mind that the photo will be downsized to 325x325 pixels, so the more square the photo, the better it will look.</span>")
-					var/new_lich_headshot_link = tgui_input_text(user, "Input the Lich headshot link (https, hosts: gyazo, discord, lensdump, imgbox, catbox):", "Lich Headshot", lich_headshot_link,  encode = FALSE)
-					if(new_lich_headshot_link == null)
-						return
-					if(new_lich_headshot_link == "")
-						lich_headshot_link = null
-						ShowChoices(user)
-						return
-					if(!valid_headshot_link(user, new_lich_headshot_link))
-						lich_headshot_link = null
-						ShowChoices(user)
-						return
-					lich_headshot_link = new_lich_headshot_link
-					to_chat(user, "<span class='notice'>Successfully updated lich headshot picture</span>")
-					log_game("[user] has set their lich Headshot image to '[lich_headshot_link]'.")
-				if("vampire_headshot")
-					to_chat(user, "<span class='notice'>Please use a relatively SFW image of the head and shoulder area to maintain immersion level. Lastly, ["<span class='bold'>do not use a real life photo or use any image that is less than serious.</span>"]</span>")
-					to_chat(user, "<span class='notice'>If the photo doesn't show up properly in-game, ensure that it's a direct image link that opens properly in a browser.</span>")
-					to_chat(user, "<span class='notice'>Keep in mind that the photo will be downsized to 325x325 pixels, so the more square the photo, the better it will look.</span>")
-					var/new_vampire_headshot_link = tgui_input_text(user, "Input the vampire headshot link (https, hosts: gyazo, discord, lensdump, imgbox, catbox):", "Vampire Headshot", vampire_headshot_link,  encode = FALSE)
-					if(new_vampire_headshot_link == null)
-						return
-					if(new_vampire_headshot_link == "")
-						vampire_headshot_link = null
-						ShowChoices(user)
-						return
-					if(!valid_headshot_link(user, new_vampire_headshot_link))
-						vampire_headshot_link = null
-						ShowChoices(user)
-						return
-					vampire_headshot_link = new_vampire_headshot_link
-					to_chat(user, "<span class='notice'>Successfully updated vampire headshot picture</span>")
-					log_game("[user] has set their vampire Headshot image to '[vampire_headshot_link]'.")
 				if("legacyhelp")
 					var/list/dat = list()
 					dat += "This slot was around since before major Flavortext / OOC changes.<br>"
@@ -2112,6 +2080,51 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							to_chat(user, "<font color='yellow'><b>[loadout3.name]</b></font>")
 							if(loadout3.desc)
 								to_chat(user, "[loadout3.desc]")
+				//Cove edit start
+				if("loadout_item4")
+					var/list/loadouts_available = list("None")
+					for (var/path as anything in GLOB.loadout_items)
+						var/datum/loadout_item/loadout4 = GLOB.loadout_items[path]
+						var/donoritem = loadout4.donoritem
+						if(donoritem && !loadout4.donator_ckey_check(user.ckey))
+							continue
+						if (!loadout4.name)
+							continue
+						loadouts_available[loadout4.name] = loadout4
+
+					var/loadout_input4 = tgui_input_list(user, "Choose your character's loadout item. RMB a tree, statue or clock to collect. I cannot stress this enough. YOU DON'T SPAWN WITH THESE. YOU HAVE TO MANUALLY PICK THEM UP!!", "LOADOUT THAT YOU GET FROM A TREE OR STATUE OR CLOCK", loadouts_available) 
+					if(loadout_input4)
+						if(loadout_input4 == "None")
+							loadout4 = null
+							to_chat(user, "Who needs stuff anyway?")
+						else
+							loadout4 = loadouts_available[loadout_input4]
+							to_chat(user, "<font color='yellow'><b>[loadout4.name]</b></font>")
+							if(loadout4.desc)
+								to_chat(user, "[loadout4.desc]")
+				if("loadout_item5")
+					var/list/loadouts_available = list("None")
+					for (var/path as anything in GLOB.loadout_items)
+						var/datum/loadout_item/loadout5 = GLOB.loadout_items[path]
+						var/donoritem = loadout5.donoritem
+						if(donoritem && !loadout5.donator_ckey_check(user.ckey))
+							continue
+						if (!loadout5.name)
+							continue
+						loadouts_available[loadout5.name] = loadout5
+
+					var/loadout_input5 = tgui_input_list(user, "Choose your character's loadout item. RMB a tree, statue or clock to collect. I cannot stress this enough. YOU DON'T SPAWN WITH THESE. YOU HAVE TO MANUALLY PICK THEM UP!!", "LOADOUT THAT YOU GET FROM A TREE OR STATUE OR CLOCK", loadouts_available) 
+					if(loadout_input5)
+						if(loadout_input5 == "None")
+							loadout5 = null
+							to_chat(user, "Who needs stuff anyway?")
+						else
+							loadout5 = loadouts_available[loadout_input5]
+							to_chat(user, "<font color='yellow'><b>[loadout5.name]</b></font>")
+							if(loadout5.desc)
+								to_chat(user, "[loadout5.desc]")
+				//Cove edit end
+
 				if("loadout1hex")
 					var/choice = input(user, "Choose a color.", "Loadout Item One Colour") as null|anything in colorlist
 					if (choice && colorlist[choice])
@@ -2139,24 +2152,28 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					else
 						loadout_3_hex = null
 						to_chat(user, "The colour for your <b>third</b> loadout item has been cleared.")
-				if("vampire_hair")
-					var/new_vampirehair = input(user, "Choose your character's vampire hair color:", "Character Preference","#"+vampire_hair) as color|null
-					if(new_vampirehair)
-						vampire_hair = new_vampirehair
-				if("vampire_eyes")
-					var/new_vampireeyes = input(user, "Choose your character's vampire eye color:", "Character Preference","#"+vampire_eyes) as color|null
-					if(new_vampireeyes)
-						vampire_eyes = new_vampireeyes
-				if("vampire_skin")
-					var/new_vampireskin = input(user, "Choose your character's vampire skin color:", "Character Preference","#"+vampire_skin) as color|null
-					if(new_vampireskin)
-						vampire_skin = new_vampireskin
-				if("vampire_hair_clear")
-					vampire_hair = null
-				if("vampire_eyes_clear")
-					vampire_eyes = null
-				if("vampire_skin_clear")
-					vampire_skin = null
+
+				///Caustic edit
+				if("loadout4hex")
+					var/choice = input(user, "Choose a color.", "Loadout Item Four Colour") as null|anything in colorlist
+					if (choice && colorlist[choice])
+						loadout_4_hex = colorlist[choice]
+						if (loadout4)
+							to_chat(user, "The colour for your [loadout4::name] has been set to <b>[choice]</b>.")
+					else
+						loadout_4_hex = null
+						to_chat(user, "The colour for your <b>fourth</b> loadout item has been cleared.")
+				if("loadout5hex")
+					var/choice = input(user, "Choose a color.", "Loadout Item Five Colour") as null|anything in colorlist
+					if (choice && colorlist[choice])
+						loadout_5_hex = colorlist[choice]
+						if (loadout5)
+							to_chat(user, "The colour for your [loadout5::name] has been set to <b>[choice]</b>.")
+					else
+						loadout_5_hex = null
+						to_chat(user, "The colour for your <b>fifth</b> loadout item has been cleared.")
+				///Caustic edit end
+
 				if("species")
 					var/list/species = list()
 					for(var/A in GLOB.roundstart_races)
@@ -2181,15 +2198,14 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 
 				if("dnr")
 					dnr_pref = !dnr_pref
-				if("qsr")
-					qsr_pref = !qsr_pref
+
 				if("virtue")
 					var/list/virtue_choices = list()
 					for (var/path as anything in GLOB.virtues)
 						var/datum/virtue/V = GLOB.virtues[path]
 						if (!V.name)
 							continue
-						if ((V.name == virtue.name || V.name == virtuetwo.name) && !istype(V, /datum/virtue/none))
+						if ((V.name == virtue.name || V.name == virtuetwo.name || V.name == extravirtue.name) && !istype(V, /datum/virtue/none))
 							continue
 						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/inhumen))
 							continue
@@ -2210,7 +2226,9 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						var/datum/virtue/V = GLOB.virtues[path]
 						if (!V.name)
 							continue
-						if ((V.name == virtue.name || V.name == virtuetwo.name) && !istype(V, /datum/virtue/none))
+						if ((V.name == virtue.name || V.name == virtuetwo.name || V.name == extravirtue.name) && !istype(V, /datum/virtue/none))
+							continue
+						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/inhumen))
 							continue
 						if(length(pref_species.restricted_virtues) && (V.type in pref_species.restricted_virtues))
 							continue
@@ -2227,7 +2245,8 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					/*	if (statpack.type != /datum/statpack/wildcard/virtuous)
 							statpack = new /datum/statpack/wildcard/virtuous
 							to_chat(user, span_purple("Your statpack has been set to virtuous (no stats) due to selecting a virtue.")) */
-
+				if("extravirtue")
+					get_extra_virtue_input(user)
 				if("charflaw")
 					var/list/coom = GLOB.character_flaws.Copy()
 					var/result = tgui_input_list(user, "What burden will you bear?", "FLAWS",coom)
@@ -2249,7 +2268,10 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					if(new_body_size)
 						new_body_size = clamp(new_body_size * 0.01, BODY_SIZE_MIN, BODY_SIZE_MAX)
 						features["body_size"] = new_body_size
-
+				//Caustic edit
+				if("sizecat")
+					select_sizecat(user)
+				//Caustic edit end
 				if("taur_color")
 					var/new_taur_color = color_pick_sanitized(user, "Choose your character's taur color:", "Character Preference", "#"+taur_color)
 					if(new_taur_color)
@@ -2668,6 +2690,10 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						current_tab = text2num(href_list["tab"])
 				if("lore_primer")
 					LorePopup(user)
+				//Caustic edit
+				if("pickupable")
+					pickupable = !pickupable
+				//Caustic edit end
 
 	ShowChoices(user)
 	return 1
@@ -2679,7 +2705,10 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		return loadout_2_hex
 	if (loadout3 && (item_path == loadout3.path) && loadout_3_hex)
 		return loadout_3_hex
-
+	if (loadout4 && (item_path == loadout4.path) && loadout_4_hex)
+		return loadout_4_hex
+	if (loadout5 && (item_path == loadout5.path) && loadout_5_hex)
+		return loadout_5_hex
 	return FALSE
 
 /datum/preferences/proc/copy_to(mob/living/carbon/human/character, icon_updates = 1, roundstart_checks = TRUE, character_setup = FALSE, antagonist = FALSE)
@@ -2757,9 +2786,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 	character.hair_color = hair_color
 	character.facial_hair_color = facial_hair_color
 	character.skin_tone = skin_tone
-	character.vampire_skin = vampire_skin
-	character.vampire_eyes = vampire_eyes
-	character.vampire_hair = vampire_hair
 	character.hairstyle = hairstyle
 	character.facial_hairstyle = facial_hairstyle
 	character.detail = detail
@@ -2775,10 +2801,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 	character.dna.real_name = character.real_name
 
 	character.headshot_link = headshot_link
-
-	character.lich_headshot_link = lich_headshot_link
-
-	character.vampire_headshot_link = vampire_headshot_link
 
 	character.statpack = statpack
 
@@ -2810,7 +2832,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 			for(var/X in L)
 				ADD_TRAIT(character, curse2trait(X), TRAIT_GENERIC)
 
-	if(taur_type)
+	if(taur_type && pref_species.allowed_taur_types.len != 0)
 		character.Taurize(taur_type, "#[taur_color]")
 	else if(character_setup)
 		// This should only ever ~do~ anything for previews

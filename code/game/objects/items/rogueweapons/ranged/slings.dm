@@ -5,15 +5,12 @@
 	chargedrain = 2
 	charging_slowdown = 3
 
-/datum/intent/swing/sling/can_charge(atom/clicked_object) //checks for arms and spare empty hand removed since it can fire with one hand
-	if(mastermob)
-		if(istype(clicked_object, /obj/item/quiver) && istype(mastermob.get_active_held_item(), /obj/item/gun/ballistic))
-			return FALSE
+/datum/intent/swing/sling/can_charge() //checks for arms and spare empty hand removed since it can fire with one hand
 	return TRUE
 
 /datum/intent/swing/sling/prewarning()
 	if(mastermob)
-		mastermob.visible_message(span_warning("[mastermob] swings [masteritem]!"))
+		mastermob.visible_message(span_warning("[mastermob] swings the [masteritem]!"))
 		playsound(mastermob, pick('sound/combat/Ranged/sling-draw-01.ogg'), 100, FALSE)
 
 /datum/intent/swing/sling/get_chargetime() //determines swing length. damage is in /obj/item/gun/ballistic/revolver/grenadelauncher/sling/process_fire
@@ -35,15 +32,12 @@
 	chargedrain = 2
 	charging_slowdown = 3
 
-/datum/intent/arc/sling/can_charge(atom/clicked_object) //checks for arms and spare empty hand removed since it can fire with one hand
-	if(mastermob)
-		if(istype(clicked_object, /obj/item/quiver) && istype(mastermob.get_active_held_item(), /obj/item/gun/ballistic))
-			return FALSE
+/datum/intent/arc/sling/can_charge() //checks for arms and spare empty hand removed since it can fire with one hand
 	return TRUE
 
 /datum/intent/arc/sling/prewarning()
 	if(mastermob)
-		mastermob.visible_message(span_warning("[mastermob] swings [masteritem] in an arc!"))
+		mastermob.visible_message(span_warning("[mastermob] swings the [masteritem] in an arc!"))
 		playsound(mastermob, pick('sound/combat/Ranged/sling-draw-01.ogg'), 100, FALSE)
 
 /datum/intent/arc/sling/get_chargetime() //same calculations as swing but with a greater base for throwing through teammates

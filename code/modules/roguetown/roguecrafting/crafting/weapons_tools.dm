@@ -329,7 +329,7 @@
 	sellprice = 8
 
 /datum/crafting_recipe/roguetown/survival/woodstaff
-	name = "wood staff (x3)"
+	name = "wood staff"
 	category = "Tools"
 	result = list(
 		/obj/item/rogueweapon/woodstaff,
@@ -347,18 +347,6 @@
 	reqs = list(/obj/item/grown/log/tree = 1)
 	skillcraft = /datum/skill/craft/carpentry
 	craftdiff = 1
-
-/datum/crafting_recipe/roguetown/survival/shillelagh
-	name = "shillelagh (x3)"
-	category = "Tools"
-	result = list(
-		/obj/item/rogueweapon/woodstaff/polearm,
-		/obj/item/rogueweapon/woodstaff/polearm,
-		/obj/item/rogueweapon/woodstaff/polearm,
-		)
-	reqs = list(/obj/item/grown/log/tree = 1)
-	skillcraft = /datum/skill/craft/carpentry
-	craftdiff = 0
 
 /datum/crafting_recipe/roguetown/survival/quarterstaff_iron
 	name = "iron-reinforced quarterstaff"

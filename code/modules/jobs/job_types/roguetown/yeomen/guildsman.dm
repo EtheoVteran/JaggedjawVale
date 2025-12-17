@@ -5,8 +5,8 @@
 	flag = GUILDSMAN
 	department_flag = YEOMEN
 	faction = "Station"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 6
+	spawn_positions = 6
 	advclass_cat_rolls = list(CTAG_GUILDSMEN = 20)
 
 	allowed_races = ACCEPTED_RACES
@@ -19,7 +19,7 @@
 	selection_color = JCOLOR_YEOMAN
 	display_order = JDO_GUILDSMAN
 	give_bank_account = TRUE
-	min_pq = 0
+	min_pq = null //0
 	max_pq = null
 	round_contrib_points = 3
 	advjob_examine = TRUE // So that everyone know which subjob they have picked
@@ -108,13 +108,13 @@
 	outfit = /datum/outfit/job/roguetown/guildsman/artificer
 
 	category_tags = list(CTAG_GUILDSMEN)
-	traits_applied = list(TRAIT_ARCYNE_T2)
+	traits_applied = list(TRAIT_ARCYNE_T1)
 	subclass_stats = list(
 		STATKEY_INT = 3,
 		STATKEY_WIL = 2,
 		STATKEY_STR = 1,
 		STATKEY_CON = 1,
-		STATKEY_PER = 1
+		STATKEY_PER = 2
 	)
 	subclass_skills = list(
 		/datum/skill/combat/axes = SKILL_LEVEL_APPRENTICE,
@@ -128,7 +128,6 @@
 		/datum/skill/craft/blacksmithing = SKILL_LEVEL_APPRENTICE, // Artificer makes for a crappy substitute blacksmith but have the same spread
 		/datum/skill/craft/armorsmithing = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/craft/weaponsmithing = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/craft/alchemy = SKILL_LEVEL_APPRENTICE,	//For the Alchemical mortar only, which is required for explosives. Feel free to remove if the recipe changes.
 		/datum/skill/magic/arcane = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/lockpicking = SKILL_LEVEL_EXPERT,
@@ -136,6 +135,7 @@
 		/datum/skill/craft/traps = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/craft/ceramics = SKILL_LEVEL_JOURNEYMAN,	//Just for basic pottery/glass stuff.
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE //Caustic edit
 	)
 
 /datum/outfit/job/roguetown/guildsman/artificer/pre_equip(mob/living/carbon/human/H)

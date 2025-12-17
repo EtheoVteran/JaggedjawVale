@@ -5,9 +5,9 @@
 	var/random_deserter_cloak = rand(1,4)
 	switch(random_deserter_cloak)
 		if(1)
-			cloak = /obj/item/clothing/cloak/tabard/stabard/bog
+			cloak = /obj/item/clothing/cloak/stabard/bog
 		if(2)
-			cloak = /obj/item/clothing/cloak/tabard/stabard/dungeon
+			cloak = /obj/item/clothing/cloak/stabard/dungeon
 		if(3)
 			cloak = /obj/item/clothing/suit/roguetown/armor/longcoat/brown
 
@@ -87,6 +87,9 @@
 	aggressive=1
 	rude = TRUE
 	mode = NPC_AI_IDLE
+	//Well trained soldiers.
+	smart_combatant = TRUE
+	special_attacker = TRUE
 	faction = list("viking", "station")
 	ambushable = FALSE
 	cmode = 1

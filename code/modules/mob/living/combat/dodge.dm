@@ -15,8 +15,6 @@
 	if(intenty)
 		if(!intenty.candodge)
 			return FALSE
-	if(HAS_TRAIT(src, TRAIT_NODEF))
-		return FALSE
 	if(candodge)
 		var/list/dirry = list()
 		var/dx = x - user.x

@@ -21,8 +21,8 @@
 		"Court Magician"
 	)
 
-	base_antags = 1
-	maximum_antags = 2
+	base_antags = 1 
+	maximum_antags = 1 //CC Edit: Reduces to 1. Was 2.
 
 	earliest_start = 0 SECONDS
 

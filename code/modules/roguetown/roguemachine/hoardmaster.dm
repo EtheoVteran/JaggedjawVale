@@ -98,8 +98,6 @@
 	switch(usr.advjob)
 		if("Brigand")
 			unlocked_cats+="Brigand"
-		if("Demolisher")
-			unlocked_cats+="Demolisher"
 		if("Sellsword")
 			unlocked_cats+="Sellsword"
 		if("Sawbones")

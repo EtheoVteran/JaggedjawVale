@@ -1,6 +1,6 @@
 /datum/advclass/mercenary/atgervi
 	name = "Atgervi"
-	tutorial = "You are a Varangian of the Gronn Highlands. Warrior-Traders most known for their exploits into the Raneshen Empire, which will be forever remembered by historians."
+	tutorial = "You are a Varangian of the Gronn Highlands. Warrior-Traders whose exploits into the Raneshen Empire will be forever remembered by historians."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/mercenary/atgervi
@@ -20,12 +20,12 @@
 		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/combat/axes = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/axes = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/bows = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/combat/swords = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/combat/shields = SKILL_LEVEL_EXPERT,	
+		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,	
 		/datum/skill/combat/polearms = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
@@ -37,10 +37,31 @@
 /datum/outfit/job/roguetown/mercenary/atgervi
 	allowed_patrons = ALL_INHUMEN_PATRONS
 
-/datum/outfit/job/roguetown/mercenary/atgervi/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/mercenary/atgervi/pre_equip(mob/living/carbon/human/H) //CC Edit: Gives Varangians more weapon options.
 	..()
 	to_chat(H, span_warning("You are a Varangian of the Gronn Highlands. Warrior-Traders whose exploits into the Raneshen Empire will be forever remembered by historians."))
-	H.mind?.current.faction += "[H.name]_faction"
+	//CC EDIT
+	if (H.mind)
+		var/weapons = list("Greataxe", "Bearded Axe & Kite Shield", "Shortsword & Kite Shield")
+		var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+		switch(weapon_choice)
+			if("Greataxe")
+				H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
+				r_hand = /obj/item/rogueweapon/greataxe/steel
+				backr = /obj/item/rogueweapon/scabbard/gwstrap
+			if("Bearded Axe & Kite Shield")
+				H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/shields, 4, TRUE)
+				beltl = /obj/item/rogueweapon/stoneaxe/woodcut/steel/atgervi
+				backr = /obj/item/rogueweapon/shield/atgervi
+			if ("Shortsword & Kite Shield")
+				H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/shields, 4, TRUE)
+				r_hand = /obj/item/rogueweapon/sword/short/falchion
+				backr = /obj/item/rogueweapon/shield/atgervi
+				beltl = /obj/item/rogueweapon/scabbard/sword
+	// END CC EDIT
+	H.mind.current.faction += "[H.name]_faction"
 	head = /obj/item/clothing/head/roguetown/helmet/bascinet/atgervi
 	gloves = /obj/item/clothing/gloves/roguetown/angle/atgervi
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/atgervi
@@ -48,12 +69,10 @@
 	pants = /obj/item/clothing/under/roguetown/trou/leather/atgervi
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/atgervi
-	backr = /obj/item/rogueweapon/shield/atgervi
 	backl = /obj/item/storage/backpack/rogue/satchel/black
-	beltr = /obj/item/rogueweapon/stoneaxe/woodcut/steel/atgervi
 	belt = /obj/item/storage/belt/rogue/leather
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/chainmantle //They didn't have neck protection before.
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T2, passive_gain = CLERIC_REGEN_WEAK, devotion_limit = CLERIC_REQ_2)	//Capped to T1 miracles.
@@ -66,7 +85,7 @@
 
 /datum/advclass/mercenary/atgervi/shaman
 	name = "Atgervi Shaman"
-	tutorial = "You are a Shaman of the Fjall, The Northern Empty. Shamans are savage combatants who commune with the Ecclesical Beast Gods through ritualistic violence, rather than idle prayer."
+	tutorial = "You are a Shaman of the Fjall, The Northern Empty. Savage combatants who commune with the Ecclesical Beast gods through ritualistic violence, rather than idle prayer."
 	outfit = /datum/outfit/job/roguetown/mercenary/atgervishaman
 	subclass_languages = list(/datum/language/gronnic)
 	cmode_music = 'sound/music/combat_shaman2.ogg'
@@ -97,7 +116,7 @@
 /datum/outfit/job/roguetown/mercenary/atgervishaman/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.set_blindness(0)
-	to_chat(H, span_warning("You are a Shaman of the Fjall, The Northern Empty. Shamans are savage combatants who commune with the Ecclesical Beast gods through ritualistic violence, rather than idle prayer."))
+	to_chat(H, span_warning("You are a Shaman of the Fjall, The Northern Empty. Savage combatants who commune with the Ecclesical Beast gods through ritualistic violence, rather than idle prayer."))
 	H.mind?.current.faction += "[H.name]_faction"
 	H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 
@@ -125,34 +144,34 @@
 
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/atgervi
-	name = "varangian hauberk"
-	desc = "The pride of the Highland mercenaries, this hauberk is a well crafted blend of chain and leather woven into a dense, protective coat."
+	name = "vagarian hauberk"
+	desc = "The pride of the Hammerhold mercenaries a well crafted blend of chain and leather into a dense protective coat."
 	icon_state = "atgervi_raider_mail"
 	item_state = "atgervi_raider_mail"
 	max_integrity = 400
 
 /obj/item/clothing/suit/roguetown/armor/leather/heavy/atgervi
 	name = "shamanic coat"
-	desc = "A furred, protective coat. Often made by hand, it embodies the second trial of the Iskarn Shamans: To honor the leopard is to desire for more."
+	desc = "A furred protective coat, Often made by hand it embodies the second trial of the Iskarn Shamans. To honor the leopard is too desire for more."
 	icon_state = "atgervi_shaman_coat"
 	item_state = "atgervi_shaman_coat"
 
 /obj/item/clothing/under/roguetown/trou/leather/atgervi
 	name = "fur pants"
-	desc = "Thick fur pants made to endure the coldest winds, offering a share of protection from the fangs and claws of beasts and men alike."
+	desc = "Thick fur pants made to endure the coldest winds, offering a share of protection from fang and claw of beast or men alike."
 	icon_state = "atgervi_pants"
 	item_state = "atgervi_pants"
 	
 /obj/item/clothing/gloves/roguetown/angle/atgervi
 	name = "fur-lined leather gloves"
-	desc = "Dense, padded gloves made for the harshest of climates and the wildest of beasts encountered in the untamed highlands."
+	desc = "Thick, padded gloves made for the harshest of climates, and wildest of beasts encountered in the untamed lands."
 	icon_state = "atgervi_raider_gloves"
 	item_state = "atgervi_raider_gloves"
 	color = "#ffffff"
 
 /obj/item/clothing/gloves/roguetown/plate/atgervi
 	name = "beast claws"
-	desc = "A menacing pair of plated claws, whose forging methods are a closely protected tradition of the Shamans. The four claws embodying the Four Great Beasts, decorated with symbols of the Gods they praise and the Gods they reject."
+	desc = "A menacing pair of plated claws, A closely protected tradition of the Shamans. The four claws embodying the four great beasts. Decorated with symbols of the gods they praise and the Gods they reject."
 	icon_state = "atgervi_shaman_gloves"
 	item_state = "atergvi_shaman_gloves"
 
@@ -162,7 +181,7 @@
 	icon_state = "atgervi_raider"
 	item_state = "atgervi_raider"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
-	body_parts_covered = FULL_HEAD|NECK
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/atgervi.dmi'
 	bloody_icon = 'icons/effects/blood64.dmi'
 	block2add = null
@@ -171,7 +190,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/leather/saiga/atgervi
 	name = "moose hood"
-	desc = "A deceptively strong moosehide hood with a pair of large heavy antlers. It is the reward of the fourth trial of the Iskarn Shamans: To slay a Grinning Moose in the final hunt alone - and fashion a hood from its head."
+	desc = "A deceptively strong hood of hide with a pair of large heavy antlers. It is the reward of the fourth trial of the Iskarn Shamans, To slay a Grinning moose in the final hunt alone and fashion a hood from it's head."
 	icon_state = "atgervi_shaman"
 	item_state = "atgervi_shaman"
 	flags_inv = HIDEEARS|HIDEFACE
@@ -185,13 +204,13 @@
 
 /obj/item/clothing/shoes/roguetown/boots/leather/atgervi
 	name = "atgervi leather boots"
-	desc = "A pair of strong leather boots, designed to endure both the heat of battle and the frigid cold of the Northern Empty."
+	desc = "A pair of strong leather boots, designed to endure battle and the chill of the frozen north both."
 	icon_state = "atgervi_boots"
 	item_state = "atgervi_boots"
 
 /obj/item/rogueweapon/shield/atgervi
 	name = "kite shield"
-	desc = "A large, but light wooden shield with a steel boss in the center to deflect blows more easily."
+	desc = "A large but light wooden shield with a steel boss in the center to deflect blows more easily."
 	icon_state = "atgervi_shield"
 	item_state = "atgervi_shield"
 	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
@@ -214,7 +233,7 @@
 
 /obj/item/rogueweapon/stoneaxe/woodcut/steel/atgervi
 	name = "Bearded Axe"
-	desc = "A large axe easily wielded in one hand or two, with a large, hooked axehead, designed for the brutal ripping and tearing of flesh and armor alike."
+	desc = "A large axe easily wielded in one hand or two, With a large hooked axehead to tearing into flesh and armor and ripping it away brutally."
 	icon_state = "atgervi_axe"
 	item_state = "atgervi_axe"
 	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'

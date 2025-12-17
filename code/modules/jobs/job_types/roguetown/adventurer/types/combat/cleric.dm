@@ -18,7 +18,6 @@
 		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/staves = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/combat/polearms = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
@@ -93,7 +92,7 @@
 	H.cmode_music = 'sound/music/combat_holy.ogg' // left in bc i feel like monk players want their darktide TRAIT_DODGEEXPERT
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
-			cloak = /obj/item/clothing/cloak/tabard/psydontabard
+			cloak = /obj/item/clothing/cloak/psydontabard
 			mask = /obj/item/clothing/head/roguetown/roguehood/psydon
 		if(/datum/patron/divine/astrata)
 			mask = /obj/item/clothing/head/roguetown/roguehood/astrata
@@ -143,7 +142,6 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/pestra
 		if(/datum/patron/divine/ravox)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
-			ADD_TRAIT(H, TRAIT_BATTLEMASTER, TRAIT_GENERIC) //This will have no reprecussions I'm sure
 		if(/datum/patron/divine/malum)
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum
 		if(/datum/patron/divine/eora)
@@ -214,7 +212,7 @@
 	H.cmode_music = 'sound/music/cmode/church/combat_reckoning.ogg'
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
-			cloak = /obj/item/clothing/cloak/tabard/psydontabard
+			cloak = /obj/item/clothing/cloak/psydontabard
 			if(H.mind)
 				var/helmets = list("Armet","Buckethelm")
 				var/helmet_choice = input(H, "Choose your HELMET.", "WALK IN HIS LIGHT.") as anything in helmets
@@ -231,27 +229,27 @@
 					if("Cuirass")
 						armor = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate
 		if(/datum/patron/divine/astrata)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/astrata
+			cloak = /obj/item/clothing/cloak/templar/astrata
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/astratan
 			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 		if(/datum/patron/divine/noc)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/noc
+			cloak = /obj/item/clothing/cloak/templar/noc
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
 			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 		if(/datum/patron/divine/abyssor)
-			cloak = /obj/item/clothing/cloak/tabard/abyssortabard
+			cloak = /obj/item/clothing/cloak/abyssortabard
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/abyssorgreathelm
 			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 		if(/datum/patron/divine/dendor)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/dendor
+			cloak = /obj/item/clothing/cloak/templar/dendor
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
 			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 		if(/datum/patron/divine/necra)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/necra
+			cloak = /obj/item/clothing/cloak/templar/necra
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/necrahelm
 			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 		if (/datum/patron/divine/malum)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/malum
+			cloak = /obj/item/clothing/cloak/templar/malum
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
 			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 		if (/datum/patron/divine/eora)
@@ -343,7 +341,6 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/pestra
 		if(/datum/patron/divine/ravox)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/ravox
-			ADD_TRAIT(H, TRAIT_BATTLEMASTER, TRAIT_GENERIC)
 		if(/datum/patron/divine/malum)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/malum
 		if(/datum/patron/divine/eora)
@@ -419,19 +416,19 @@
 	H.mind?.AddSpell(new /obj/effect/proc_holder/spell/invoked/mockery)
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/psydon
+			cloak = /obj/item/clothing/cloak/templar/psydon
 		if(/datum/patron/divine/astrata)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/astrata
+			cloak = /obj/item/clothing/cloak/templar/astrata
 		if(/datum/patron/divine/noc)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/noc
+			cloak = /obj/item/clothing/cloak/templar/noc
 		if(/datum/patron/divine/abyssor)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/abyssor
+			cloak = /obj/item/clothing/cloak/templar/abyssor
 		if(/datum/patron/divine/dendor)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/dendor
+			cloak = /obj/item/clothing/cloak/templar/dendor
 		if(/datum/patron/divine/necra)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/necra
+			cloak = /obj/item/clothing/cloak/templar/necra
 		if (/datum/patron/divine/malum)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/malum
+			cloak = /obj/item/clothing/cloak/templar/malum
 		if (/datum/patron/divine/eora)
 			cloak = /obj/item/clothing/cloak/templar/eora
 		if (/datum/patron/divine/ravox)
@@ -488,7 +485,6 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/pestra
 		if(/datum/patron/divine/ravox)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
-			ADD_TRAIT(H, TRAIT_BATTLEMASTER, TRAIT_GENERIC)
 		if(/datum/patron/divine/malum)
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum
 		if(/datum/patron/divine/eora)
@@ -556,7 +552,7 @@
 	H.cmode_music = 'sound/music/cmode/church/combat_reckoning.ogg'
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
-			cloak = /obj/item/clothing/cloak/tabard/psydontabard
+			cloak = /obj/item/clothing/cloak/psydontabard
 			head = /obj/item/clothing/head/roguetown/roguehood/psydon
 		if(/datum/patron/divine/astrata)
 			head = /obj/item/clothing/head/roguetown/roguehood/astrata
@@ -628,7 +624,6 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/pestra
 		if(/datum/patron/divine/ravox)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
-			ADD_TRAIT(H, TRAIT_BATTLEMASTER, TRAIT_GENERIC)
 		if(/datum/patron/divine/malum)
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum
 		if(/datum/patron/divine/eora)

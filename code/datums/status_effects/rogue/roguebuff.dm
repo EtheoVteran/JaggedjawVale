@@ -507,73 +507,16 @@
 // Lesser miracle effect end
 
 /atom/movable/screen/alert/status_effect/buff/healing/campfire
-	name = "Camp Rest"
-	desc = "The warmth of a fire and a bed soothes my ails."
-	icon_state = "buff"
-
-/atom/movable/screen/alert/status_effect/buff/campfire_stamina
 	name = "Warming Respite"
-	desc = "A break by the fire restores some of my energy."
+	desc = "The warmth of a fire soothes my ails."
 	icon_state = "buff"
 
-
-#define CAMPFIRE_BASE_FILTER "campfire_stamina"
-
-/datum/status_effect/buff/campfire_stamina
-	id = "stamina_campfire"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/campfire_stamina
-	duration = 5 SECONDS
-	examine_text = "SUBJECTPRONOUN is enjoying a brief respite."
-	var/healing_on_tick = 5
-	var/outline_colour = "#7e6a3e"
-	var/tech_healing_modifier = 1
-
-/datum/status_effect/buff/campfire_stamina/on_apply()
-	var/filter = owner.get_filter(CAMPFIRE_BASE_FILTER)
-	if (!filter)
-		owner.add_filter(CAMPFIRE_BASE_FILTER, 2, list("type" = "outline", "color" = outline_colour, "alpha" = 60, "size" = 1))
-	return TRUE
-
-/datum/status_effect/buff/campfire_stamina/tick()
-	if(owner.construct)
-		return
-	var/stamheal = healing_on_tick
-	if(!owner.cmode)
-		stamheal *= 2
-	owner.energy_add(stamheal)
-
-/datum/status_effect/buff/campfire_stamina/on_remove()
-	owner.remove_filter(CAMPFIRE_BASE_FILTER)
-
-/datum/status_effect/buff/campfire
+/datum/status_effect/buff/healing/campfire
 	id = "healing_campfire"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/healing/campfire
 	examine_text = null
-	var/healing_on_tick = 2
-	duration = 6 SECONDS
-
-/datum/status_effect/buff/campfire/tick()
-	if(owner.cmode)
-		return
-	if(owner.construct)
-		return
-	var/obj/effect/temp_visual/heal/H = new /obj/effect/temp_visual/heal_rogue/campfire(get_turf(owner))
-	H.color = "#c7aa5c"
-	if(owner.blood_volume < BLOOD_VOLUME_OKAY)
-		owner.blood_volume = min(owner.blood_volume+healing_on_tick, BLOOD_VOLUME_OKAY)
-	var/list/wCount = owner.get_wounds()
-	if(length(wCount))
-		owner.heal_wounds(healing_on_tick, list(/datum/wound/slash, /datum/wound/puncture, /datum/wound/bite, /datum/wound/bruise, /datum/wound/dynamic, /datum/wound/dislocation))
-		owner.update_damage_overlays()
-	owner.adjustBruteLoss(-healing_on_tick, 0)
-	owner.adjustFireLoss(-healing_on_tick, 0)
-	owner.adjustOxyLoss(-healing_on_tick, 0)
-	owner.adjustToxLoss(-healing_on_tick, 0)
-	owner.adjustOrganLoss(ORGAN_SLOT_BRAIN, -healing_on_tick)
-	owner.adjustCloneLoss(-healing_on_tick, 0)
-
-#undef CAMPFIRE_BASE_FILTER
-
+	duration = 10 SECONDS
+	block_combat_mode = TRUE
 
 #define BLOODHEAL_DUR_SCALE_PER_LEVEL 3 SECONDS
 #define BLOODHEAL_RESTORE_DEFAULT 5
@@ -648,7 +591,7 @@
 		if(owner.blood_volume < BLOOD_VOLUME_NORMAL)
 			owner.blood_volume = min(owner.blood_volume + (healing_on_tick + 10), BLOOD_VOLUME_NORMAL)
 		if(wCount.len > 0)
-			owner.heal_wounds(healing_on_tick, list(/datum/wound/slash, /datum/wound/puncture, /datum/wound/bite, /datum/wound/bruise, /datum/wound/dynamic))
+			owner.heal_wounds(healing_on_tick, list(/datum/wound/slash, /datum/wound/puncture, /datum/wound/bite, /datum/wound/bruise))
 			owner.update_damage_overlays()
 		owner.adjustBruteLoss(-healing_on_tick, 0)
 		owner.adjustFireLoss(-healing_on_tick, 0)
@@ -1261,11 +1204,10 @@
 /datum/status_effect/buff/clash/on_remove()
 	. = ..()
 	owner.apply_status_effect(/datum/status_effect/debuff/clashcd)
-	// Optional balance lever -- stamina drain if we let Riposte expire without anything happening.
-	/*var/newdur = world.time - dur
+	var/newdur = world.time - dur
 	var/mob/living/carbon/human/H = owner
 	if(newdur > (initial(duration) - 0.2 SECONDS))	//Not checking exact duration to account for lag and any other tick / timing inconsistencies.
-		H.bad_guard(span_warning("I held my focus for too long. It's left me drained."))*/
+		H.bad_guard(span_warning("I held my focus for too long. It's left me drained."))
 	UnregisterSignal(owner, COMSIG_ATOM_BULLET_ACT)
 	UnregisterSignal(owner, COMSIG_MOB_ATTACKED_BY_HAND)
 	UnregisterSignal(owner, COMSIG_MOB_ITEM_ATTACK)
@@ -1406,124 +1348,125 @@
 	if(istype(human))
 		human.pain_threshold -= 50
 
-/datum/status_effect/buff/magic/knowledge
+/datum/status_effect/buff/magicknowledge
 	id = "intelligence"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/magic/knowledge
+	alert_type = /atom/movable/screen/alert/status_effect/buff/knowledge
 	effectedstats = list("intelligence" = 2)
 	duration = 10 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/magic/knowledge
+/atom/movable/screen/alert/status_effect/buff/knowledge
 	name = "runic cunning"
 	desc = "I am magically astute."
 	icon_state = "buff"
 
-/datum/status_effect/buff/magic/strength
+/datum/status_effect/buff/magicstrength
 	id = "strength"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/magic/strength
+	alert_type = /atom/movable/screen/alert/status_effect/buff/strength
 	effectedstats = list("strength" = 3)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/magic/strength
+/atom/movable/screen/alert/status_effect/buff/strength
 	name = "arcane reinforced strength"
 	desc = "I am magically strengthened."
 	icon_state = "buff"
 
-/datum/status_effect/buff/magic/strength/lesser
+/datum/status_effect/buff/magicstrength/lesser
 	id = "lesser strength"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/magic/strength/lesser
+	alert_type = /atom/movable/screen/alert/status_effect/buff/strength/lesser
 	effectedstats = list("strength" = 1)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/magic/strength/lesser
+/atom/movable/screen/alert/status_effect/buff/strength/lesser
 	name = "lesser arcane strength"
 	desc = "I am magically strengthened."
 	icon_state = "buff"
 
 
-/datum/status_effect/buff/magic/speed
+/datum/status_effect/buff/magicspeed
 	id = "speed"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/magic/speed
+	alert_type = /atom/movable/screen/alert/status_effect/buff/speed
 	effectedstats = list("speed" = 3)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/magic/speed
+/atom/movable/screen/alert/status_effect/buff/speed
 	name = "arcane swiftness"
 	desc = "I am magically swift."
 	icon_state = "buff"
 
-/datum/status_effect/buff/magic/speed/lesser
+/datum/status_effect/buff/magicspeed/lesser
 	id = "lesser speed"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/magic/speed/lesser
+	alert_type = /atom/movable/screen/alert/status_effect/buff/speed/lesser
 	effectedstats = list("speed" = 1)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/magic/speed/lesser
+/atom/movable/screen/alert/status_effect/buff/speed/lesser
 	name = "arcane swiftness"
 	desc = "I am magically swift."
 	icon_state = "buff"
 
-/datum/status_effect/buff/magic/willpower
+/datum/status_effect/buff/magicwillpower
 	id = "willpower"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/magic/willpower
+	alert_type = /atom/movable/screen/alert/status_effect/buff/willpower
 	effectedstats = list("willpower" = 3)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/magic/willpower
+/atom/movable/screen/alert/status_effect/buff/willpower
 	name = "arcane willpower"
 	desc = "I am magically resilient."
 	icon_state = "buff"
 
-/datum/status_effect/buff/magic/willpower/lesser
+/datum/status_effect/buff/magicwillpower/lesser
 	id = "lesser willpower"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/magic/willpower/lesser
+	alert_type = /atom/movable/screen/alert/status_effect/buff/willpower/lesser
 	effectedstats = list("willpower" = 1)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/magic/willpower/lesser
+/atom/movable/screen/alert/status_effect/buff/willpower/lesser
 	name = "lesser arcane willpower"
 	desc = "I am magically resilient."
 	icon_state = "buff"
 
-/datum/status_effect/buff/magic/constitution
+
+/datum/status_effect/buff/magicconstitution
 	id = "constitution"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/magic/constitution
+	alert_type = /atom/movable/screen/alert/status_effect/buff/constitution
 	effectedstats = list("constitution" = 3)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/magic/constitution
+/atom/movable/screen/alert/status_effect/buff/constitution
 	name = "arcane constitution"
 	desc = "I feel reinforced by magick."
 	icon_state = "buff"
 
-/datum/status_effect/buff/magic/constitution/lesser
+/datum/status_effect/buff/magicconstitution/lesser
 	id = "lesser constitution"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/magic/constitution/lesser
+	alert_type = /atom/movable/screen/alert/status_effect/buff/constitution/lesser
 	effectedstats = list("constitution" = 1)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/magic/constitution/lesser
+/atom/movable/screen/alert/status_effect/buff/constitution/lesser
 	name = "lesser arcane constitution"
 	desc = "I feel reinforced by magick."
 	icon_state = "buff"
 
-/datum/status_effect/buff/magic/perception
+/datum/status_effect/buff/magicperception
 	id = "perception"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/magic/perception
+	alert_type = /atom/movable/screen/alert/status_effect/buff/perception
 	effectedstats = list("perception" = 3)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/magic/perception
+/atom/movable/screen/alert/status_effect/buff/perception
 	name = "arcane perception"
 	desc = "I can see everything."
 	icon_state = "buff"
 
-/datum/status_effect/buff/magic/perception/lesser
+/datum/status_effect/buff/magicperception/lesser
 	id = "lesser perception"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/magic/perception/lesser
+	alert_type = /atom/movable/screen/alert/status_effect/buff/perception/lesser
 	effectedstats = list("perception" = 1)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/magic/perception/lesser
+/atom/movable/screen/alert/status_effect/buff/perception/lesser
 	name = "lesser arcane perception"
 	desc = "I can see somethings."
 	icon_state = "buff"
@@ -1601,27 +1544,6 @@
 	effectedstats = list(STATKEY_SPD = 3, STATKEY_WIL = 1, STATKEY_CON = 1)
 	status_type = STATUS_EFFECT_REPLACE
 
-/atom/movable/screen/alert/status_effect/buff/vampire_float
-	name = "Float"
-	desc = "My body is floating off the ground."
-	icon_state = "vampire_float"
-
-/datum/status_effect/buff/vampire_float
-	id = "vampire_float"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/vampire_float
-	duration = 2 MINUTES
-
-/datum/status_effect/buff/vampire_float/on_apply()
-	. = ..()
-	to_chat(owner, span_warning("I am hovering off the ground."))
-	owner.movement_type = FLYING
-
-
-
-/datum/status_effect/buff/vampire_float/on_remove()
-	. = ..()
-	to_chat(owner, span_warning("I fall back to the ground."))
-	owner.movement_type = GROUND
 /datum/status_effect/buff/ravox_vow
 	id = "ravox_vow"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/ravox_vow

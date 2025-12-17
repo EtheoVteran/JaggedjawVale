@@ -266,6 +266,51 @@
 	created_item = /obj/item/listenstone
 	craftdiff = 5
 
+//Caustic edit
+// ------------ GUNS (Ported from Ratwood) ----------------
+/datum/anvil_recipe/engineering/arquebus
+	name = "Arquebus (+1 bronze, +1 cog, +1 wood)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/ingot/bronze, /obj/item/roguegear, /obj/item/grown/log/tree/small) //Expensive!
+	created_item = /obj/item/gun/ballistic/arquebus
+	craftdiff = 5
+
+/datum/anvil_recipe/engineering/pistol
+	name = "Arquebus Pistol (+1 cog, +1 wood)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/roguegear, /obj/item/grown/log/tree/small) //A little cheaper!
+	created_item = /obj/item/gun/ballistic/arquebus_pistol
+	craftdiff = 5
+
+/datum/anvil_recipe/engineering/powderbag
+	name = "Powder Flask (+1 Cured Hide, +1 Infernal ash, +1 Coal)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/natural/hide/cured, /obj/item/magic/infernal/ash, /obj/item/rogueore/coal) //Expensive bag to not blow up
+	created_item = /obj/item/powderflask
+	craftdiff = 3
+
+/datum/anvil_recipe/engineering/bulletpouch
+	name = "Bullet Pouch (+1 Cured Leather)"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/natural/hide/cured) //Bag of bullets
+	created_item = /obj/item/quiver/bulletpouch
+	craftdiff = 0
+
+/datum/anvil_recipe/engineering/leadbullets
+	name = "Firearm Bullets (x10)"
+	req_bar = /obj/item/ingot/iron
+	created_item = /obj/item/ammo_casing/caseless/rogue/bullet
+	createditem_num = 10
+	craftdiff = 2
+
+/datum/anvil_recipe/engineering/ramrod
+	name = "Replacement Firearm Ramrod"
+	req_bar = /obj/item/ingot/iron
+	created_item = /obj/item/ramrod
+	createditem_num = 1
+	craftdiff = 2
+//Caustic edit end
+
 //combat gear
 /datum/anvil_recipe/engineering/artificerarmor
 	name = "Artificer armor (+3 ancient alloy ingot)(+2 Bronze gear)"

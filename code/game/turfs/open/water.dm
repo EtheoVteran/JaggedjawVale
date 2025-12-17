@@ -195,7 +195,7 @@
 				playsound(AM, pick('sound/foley/watermove (1).ogg','sound/foley/watermove (2).ogg'), 100, FALSE)
 			if(istype(oldLoc, type) && (get_dir(src, oldLoc) != SOUTH))
 				water_overlay.layer = ABOVE_MOB_LAYER
-				water_overlay.plane = GAME_PLANE_HIGHEST
+				water_overlay.plane = water_overlay.plane = GAME_PLANE_HIGHEST
 			else
 				spawn(6)
 					if(AM.loc == src)
@@ -327,7 +327,9 @@
 
 /turf/open/water/get_slowdown(mob/user)
 	var/returned = slowdown
+	returned = returned - (user.get_skill_level(/datum/skill/misc/swimming))
 	if(ishuman(user))
+		returned = max(returned, 0.5)
 		var/mob/living/carbon/human/H = user
 		var/ac = H.highest_ac_worn()
 		switch(ac)
@@ -507,6 +509,7 @@
 	slowdown = 5
 	wash_in = TRUE
 	swim_skill = TRUE
+	var/river_processing
 	swimdir = TRUE
 
 /turf/open/water/river/flow
@@ -538,12 +541,12 @@
 /turf/open/water/river/Entered(atom/movable/AM, atom/oldLoc)
 	. = ..()
 	if(isliving(AM))
-		START_PROCESSING(SSrivers, src)
+		if(!river_processing)
+			river_processing = addtimer(CALLBACK(src, PROC_REF(process_river)), 5, TIMER_STOPPABLE)
 
 /turf/open/water/river/get_heuristic_slowdown(mob/traverser, travel_dir)
-	var/const/UPSTREAM_PENALTY = 4
-	var/const/DOWNSTREAM_BONUS = -1
-	var/const/SIDESTREAM_PENALTY = 2
+	var/const/UPSTREAM_PENALTY = 2
+	var/const/DOWNSTREAM_BONUS = -2
 	. = ..()
 	if(traverser.is_floor_hazard_immune())
 		return
@@ -554,10 +557,9 @@
 		. += DOWNSTREAM_BONUS // faster!
 	else if(travel_dir == GLOB.reverse_dir[dir]) // upriver
 		. += UPSTREAM_PENALTY // slower
-	else 
-		. += SIDESTREAM_PENALTY // sidestream walking isn't free, bro
 
 /turf/open/water/river/proc/process_river()
+	river_processing = null
 	for(var/atom/movable/A in contents)
 		for(var/obj/structure/S in src)
 			if(S.obj_flags & BLOCK_Z_OUT_DOWN)

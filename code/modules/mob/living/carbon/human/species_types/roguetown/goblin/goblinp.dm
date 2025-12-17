@@ -62,6 +62,9 @@
 		OFFSET_FACE_F = list(0,-5), OFFSET_BELT_F = list(0,-4), OFFSET_BACK_F = list(0,-5), \
 		OFFSET_NECK_F = list(0,-5), OFFSET_MOUTH_F = list(0,-5), OFFSET_PANTS_F = list(0,0), \
 		OFFSET_SHIRT_F = list(0,0), OFFSET_ARMOR_F = list(0,0), OFFSET_UNDIES_F = list(0,-4), \
+		//Caustic Edit
+		OFFSET_BUTT = list(0,-4),\
+		//Caustic End
 		)
 	race_bonus = list(STAT_SPEED = 1)
 	enflamed_icon = "widefire"
@@ -82,6 +85,10 @@
 		/datum/customizer/organ/vagina/human_anthro,
 		/datum/customizer/organ/ears/goblin,
 		/datum/customizer/organ/horns/tusks,
+		//Caustic edit
+		/datum/customizer/organ/belly/human,
+		/datum/customizer/organ/butt/human,
+		//Caustic edit end
 		)
 	languages = list(
 		/datum/language/common,

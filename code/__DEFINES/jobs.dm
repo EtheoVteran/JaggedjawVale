@@ -292,7 +292,9 @@
 #define JDO_GRENZELHOFT 31.1
 #define JDO_DESERT_RIDER 31.2
 #define JDO_VET 31.4
-
+//Caustic edit
+#define JDO_WILDSOUL 32.2
+//Caustic edit end
 #define JDO_VAGRANT 33
 #define JDO_ORPHAN 34
 
@@ -391,7 +393,8 @@
 	/datum/job/roguetown/mercenary/desert_rider,\
 	/datum/job/roguetown/mercenary/grenzelhoft,\
 	/datum/job/roguetown/bandit,\
-	/datum/job/roguetown/wretch
+	/datum/job/roguetown/wretch,\
+	/datum/job/roguetown/wildsoul //caustic edit
 
 #define GARRISON_ROLES \
 	/datum/job/roguetown/bogguardsman,\

@@ -117,25 +117,18 @@
 		return
 	if(user.incapacitated())
 		return
-	if(!user.mind)
-		return
 	if(user.has_status_effect(/datum/status_effect/debuff/specialcd))
 		return
-
-	user.face_atom(target)
 
 	var/obj/item/rogueweapon/W = user.get_active_held_item()
 	if(istype(W, /obj/item/rogueweapon) && W.special)
 		var/skillreq = W.associated_skill
 		if(W.special.custom_skill)
 			skillreq = W.special.custom_skill
-		if(!HAS_TRAIT(user, TRAIT_BATTLEMASTER))
-			if(user.get_skill_level(skillreq) < SKILL_LEVEL_JOURNEYMAN)
-				to_chat(user, span_info("I'm not knowledgeable enough in the arts of this weapon to use this."))
-				return
-		if(W.special.check_range(user, target))
-			if(W.special.apply_cost(user))
-				W.special.deploy(user, W, target)
+		if(user.get_skill_level(skillreq) < SKILL_LEVEL_JOURNEYMAN)
+			to_chat(user, span_info("I'm not knowledgeable enough in the arts of this weapon to use this."))
+			return
+		W.special.deploy(user, W, target)
 
 /datum/rmb_intent/swift
 	name = "swift"
@@ -149,9 +142,8 @@
 
 /datum/rmb_intent/feint
 	name = "feint"
-	desc = "(RMB WHILE IN COMBAT MODE) A deceptive half-attack with no follow-through, meant to force your opponent to open their guard. Will fail on targets that are relaxed and less alert."
+	desc = "(RMB WHILE DEFENSE IS ACTIVE) A deceptive half-attack with no follow-through, meant to force your opponent to open their guard. Useless against someone who is dodging."
 	icon_state = "rmbfeint"
-	var/feintdur = 7.5 SECONDS
 
 /datum/rmb_intent/feint/special_attack(mob/living/user, atom/target)
 	if(!isliving(target))
@@ -160,12 +152,10 @@
 		return
 	if(user.incapacitated())
 		return
-	if(!user.mind)
-		return
 	if(user.has_status_effect(/datum/status_effect/debuff/feintcd))
 		return
 	var/mob/living/L = target
-	user.visible_message(span_danger("[user] feints an attack at [target]!"))
+	user.visible_message(span_notice("[user] attempts to feint an attack at [target]!"))
 	var/perc = 50
 	var/obj/item/I = user.get_active_held_item()
 	var/ourskill = 0
@@ -174,7 +164,7 @@
 	if(I)
 		if(I.associated_skill)
 			ourskill = user.get_skill_level(I.associated_skill)
-		if(L.mind)
+		if(L.skills)
 			I = L.get_active_held_item()
 			if(I?.associated_skill)
 				theirskill = L.get_skill_level(I.associated_skill)
@@ -182,40 +172,26 @@
 	perc += (user.STAINT - L.STAINT)*10	//but it's also mostly a mindgame
 	skill_factor = (ourskill - theirskill)/2
 
-	var/special_msg
-
 	if(L.has_status_effect(/datum/status_effect/debuff/exposed))
 		perc = 0
 
-	if(L.has_status_effect(/datum/status_effect/debuff/feinted))
-		perc = 0
-		special_msg = span_warning("Too soon! They were expecting it!")
-
-	if(!L.can_see_cone(user) && L.mind)
-		perc = 0
-		special_msg = span_warning("They need to see me for me to feint them!")
-
+	user.apply_status_effect(/datum/status_effect/debuff/feintcd)
 	perc = CLAMP(perc, 0, 90)
 
 	if(!prob(perc)) //feint intent increases the immobilize duration significantly
 		playsound(user, 'sound/combat/feint.ogg', 100, TRUE)
 		if(user.client?.prefs.showrolls)
 			to_chat(user, span_warning("[L.p_they(TRUE)] did not fall for my feint... [perc]%"))
-		user.apply_status_effect(/datum/status_effect/debuff/feintcd)
-		if(special_msg)
-			to_chat(user, special_msg)
 		return
 
 	if(L.has_status_effect(/datum/status_effect/buff/clash))
 		L.remove_status_effect(/datum/status_effect/buff/clash)
 		to_chat(user, span_notice("[L.p_their(TRUE)] Guard disrupted!"))
-	L.apply_status_effect(/datum/status_effect/debuff/exposed, feintdur)
+	L.apply_status_effect(/datum/status_effect/debuff/exposed, 7.5 SECONDS)
 	L.apply_status_effect(/datum/status_effect/debuff/clickcd, max(1.5 SECONDS + skill_factor, 2.5 SECONDS))
-	L.apply_status_effect(/datum/status_effect/debuff/feinted, 30 SECONDS + feintdur)
 	L.Immobilize(0.5 SECONDS)
 	L.stamina_add(L.stamina * 0.1)
 	L.Slowdown(2)
-	user.apply_status_effect(/datum/status_effect/debuff/feintcd, 30 SECONDS + feintdur)
 	to_chat(user, span_notice("[L.p_they(TRUE)] fell for my feint attack!"))
 	to_chat(L, span_danger("I fall for [user.p_their()] feint attack!"))
 	playsound(user, 'sound/combat/riposte.ogg', 100, TRUE)

@@ -15,7 +15,7 @@
 	outfit = /datum/outfit/job/roguetown/archivist
 	display_order = JDO_ARCHIVIST
 	give_bank_account = TRUE
-	min_pq = 1 // Please do not read smut while brewing bottle bombs. It upsets the maids when they have to scrape archivists off the ceiling.
+	min_pq = null //1 // Please do not read smut while brewing bottle bombs. It upsets the maids when they have to scrape archivists off the ceiling.
 	max_pq = null
 	round_contrib_points = 3
 
@@ -108,7 +108,6 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/refocusstudies)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/takeapprentice)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/learn)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/silence/archivist_silence)
 	if(H.age == AGE_OLD)
 		H.change_stat(STATKEY_SPD, -1)
 		H.change_stat(STATKEY_INT, 1)

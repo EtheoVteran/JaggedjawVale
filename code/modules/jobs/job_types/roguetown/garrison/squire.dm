@@ -17,7 +17,7 @@
 	outfit = /datum/outfit/job/roguetown/squire
 	display_order = JDO_SQUIRE
 	give_bank_account = TRUE
-	min_pq = -5 //squires aren't great but they can do some damage
+	min_pq = null //-5 //squires aren't great but they can do some damage
 	max_pq = null
 	round_contrib_points = 2
 
@@ -34,7 +34,7 @@
 	saiga_shoes = /obj/item/clothing/shoes/roguetown/horseshoes
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/storage/keyring/squire
-	cloak = /obj/item/clothing/cloak/tabard/stabard/surcoat/guard
+	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
 	id = /obj/item/scomstone/bad/garrison
 	job_bitflag = BITFLAG_GARRISON		//Move this role to garrison section later. Shouldn't be under youngroles for transparancy they are garrison.
 
@@ -42,7 +42,7 @@
 	. = ..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
-		if(istype(H.cloak, /obj/item/clothing/cloak/tabard/stabard/surcoat/guard))
+		if(istype(H.cloak, /obj/item/clothing/cloak/stabard/surcoat/guard))
 			var/obj/item/clothing/S = H.cloak
 			var/index = findtext(H.real_name, " ")
 			if(index)

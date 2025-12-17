@@ -15,8 +15,7 @@
 				if(loc.can_see_sky())
 					to_chat(H, span_userdanger("The moonlight scorns me... It is too late."))
 					owner.current.playsound_local(get_turf(owner.current), 'sound/music/wolfintro.ogg', 80, FALSE, pressure_affected = FALSE)
-					if(H.show_redflash())
-						H.flash_fullscreen("redflash3")
+					H.flash_fullscreen("redflash3")
 					transforming = world.time // timer
 
 	// Begin transformation
@@ -27,8 +26,7 @@
 			transformed = TRUE // Mark as transformed
 
 		else if (world.time >= transforming + 25 SECONDS) // Stage 2
-			if(H.show_redflash())
-				H.flash_fullscreen("redflash3")
+			H.flash_fullscreen("redflash3")
 			H.emote("agony", forced = TRUE)
 			to_chat(H, span_userdanger("UNIMAGINABLE PAIN!"))
 			H.Stun(30)
@@ -41,6 +39,9 @@
 
 	// Werewolf reverts to human form during the day
 	else if(transformed)
+		H.real_name = wolfname
+		H.name = wolfname
+
 		if(GLOB.tod != "night")
 			if(!untransforming)
 				untransforming = world.time // Start untransformation phase
@@ -52,8 +53,7 @@
 				untransforming = FALSE // Reset untransforming phase
 
 			else if (world.time >= untransforming) // Alert player
-				if(H.show_redflash())
-					H.flash_fullscreen("redflash1")
+				H.flash_fullscreen("redflash1")
 				to_chat(H, span_warning("Daylight shines around me... the curse begins to fade."))
 
 
@@ -89,12 +89,6 @@
 	W.gender = gender
 	W.regenerate_icons()
 	W.stored_mob = src
-
-	// Set the werewolf's name from the antagonist datum
-	var/datum/antagonist/werewolf/Were = mind.has_antag_datum(/datum/antagonist/werewolf/)
-	if(Were)
-		W.real_name = Were.wolfname
-		W.name = Were.wolfname
 	W.limb_destroyer = TRUE
 	W.ambushable = FALSE
 	W.cmode_music = 'sound/music/cmode/antag/combat_darkstar.ogg'
@@ -110,6 +104,15 @@
 	W.stored_experience = ensure_skills().skill_experience.Copy()
 	W.cmode_music_override = cmode_music_override
 	W.cmode_music_override_name = cmode_music_override_name
+	// CC Edit Start
+	// Transfer voregans and contents of them to the destination form
+	W.vore_organs = vore_organs.Copy()
+	W.vore_selected = vore_selected
+	for(var/obj/belly/B as anything in vore_organs)
+		B.forceMove(W)
+		B.owner = W
+	vore_organs.Cut()
+	// CC Edit End
 	mind.transfer_to(W)
 	skills?.known_skills = list()
 	skills?.skill_experience = list()
@@ -176,7 +179,15 @@
 	W.copy_known_languages_from(WA.stored_language)
 	skills?.known_skills = WA.stored_skills.Copy()
 	skills?.skill_experience = WA.stored_experience.Copy()
-
+	// CC Edit Start
+	// Transfer voregans and contents of them to the destination form
+	W.vore_organs = vore_organs.Copy()
+	W.vore_selected = vore_selected
+	for(var/obj/belly/B as anything in vore_organs)
+		B.forceMove(W)
+		B.owner = W
+	vore_organs.Cut()
+	// CC Edit End
 	W.RemoveSpell(new /obj/effect/proc_holder/spell/self/howl)
 	W.RemoveSpell(new /obj/effect/proc_holder/spell/self/claws)
 	W.RemoveSpell(new /obj/effect/proc_holder/spell/targeted/woundlick)

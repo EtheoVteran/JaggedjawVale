@@ -70,6 +70,14 @@
 	name = "Stripe"
 	icon_state = "stripe"
 
+//Taur markings
+/datum/sprite_accessory/tail_feature/taur
+	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER)
+
+/datum/sprite_accessory/tail_feature/taur/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
+    generic_gender_feature_adjust(appearance_list, organ, bodypart, owner, OFFSET_TAUR, OFFSET_TAUR_F)
+
+
 /datum/sprite_accessory/tail_feature/large_snake
-	icon = 'icons/mob/tails/large_snake_markings.dmi'
+	icon = 'modular_causticcove/icons/mob/tails/large_snake_markings.dmi'
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER)

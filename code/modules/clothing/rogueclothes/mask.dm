@@ -17,14 +17,6 @@
 	experimental_onhip = FALSE
 	var/overarmor = TRUE
 
-/obj/item/clothing/mask/rogue/attack_right(mob/user)
-	. = ..()
-
-	if(!adjustable && initial(flags_inv) & HIDEFACE)
-		flags_inv ^= HIDEFACE
-		to_chat(user, span_notice("I adjust mask to [flags_inv & HIDEFACE ? "conceal" : "reveal"] identity."))
-		user.update_inv_wear_mask()
-
 /obj/item/clothing/mask/rogue/AltRightClick(mob/user)
 	if(!istype(loc, /mob/living/carbon))
 		return
@@ -124,7 +116,6 @@
 	resistance_flags = FIRE_PROOF
 	body_parts_covered = EYES
 	anvilrepair = /datum/skill/craft/armorsmithing
-	adjustable = CAN_CADJUST
 	var/active_item = FALSE
 
 /obj/item/clothing/mask/rogue/spectacles/golden/equipped(mob/user, slot)
@@ -155,9 +146,6 @@
 		REMOVE_TRAIT(user, TRAIT_ENGINEERING_GOGGLES, "[type]")
 		user.mind.RemoveSpell(new /obj/effect/proc_holder/spell/invoked/engineeranalyze)
 		to_chat(user, span_notice("Time to stop working"))
-
-/obj/item/clothing/mask/rogue/spectacles/golden/ComponentInitialize()
-	AddComponent(/datum/component/adjustable_clothing, NECK, null, null, 'sound/foley/equip/rummaging-03.ogg', null, (UPD_HEAD|UPD_MASK))	//Standard mask
 
 /obj/item/clothing/mask/rogue/spectacles/Initialize()
 	..()
@@ -307,6 +295,7 @@
 	max_integrity = 100
 	resistance_flags = FIRE_PROOF
 	armor = ARMOR_PLATE
+	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT)
 	flags_inv = HIDEFACE|HIDESNOUT
 	body_parts_covered = FACE
 	block2add = FOV_BEHIND
@@ -323,6 +312,7 @@
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
 	resistance_flags = FIRE_PROOF
 	armor = ARMOR_PLATE
+	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT)
 	flags_inv = HIDEFACE|HIDESNOUT
 	body_parts_covered = FACE
 	block2add = FOV_BEHIND
@@ -342,10 +332,8 @@
 	icon_state = "ancientmask"
 	max_integrity = 75
 	color = "#bb9696"
-	chunkcolor = "#532e25"
 	smeltresult = /obj/item/ingot/aaslag
 	anvilrepair = null
-	prevent_crits = PREVENT_CRITS_NONE
 
 /obj/item/clothing/mask/rogue/facemask/copper
 	name = "copper mask"
@@ -553,6 +541,7 @@
 	max_integrity = 100
 	armor = ARMOR_PLATE
 	flags_inv = HIDEFACE|HIDESNOUT
+	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT)
 	sellprice = 0
 
 /obj/item/clothing/mask/rogue/lordmask/naledi/equipped(mob/user, slot)
@@ -580,6 +569,7 @@
 	max_integrity = 150
 	armor = ARMOR_PLATE
 	flags_inv = HIDEFACE|HIDESNOUT
+	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT)
 	sellprice = 0
 
 /obj/item/clothing/mask/rogue/exoticsilkmask

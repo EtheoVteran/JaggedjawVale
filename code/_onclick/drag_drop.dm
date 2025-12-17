@@ -135,8 +135,8 @@
 				if(mob.next_rmove > world.time)
 					return
 			mob.used_intent = mob.o_intent
-			if(mob.used_intent.get_chargetime() && mob.mmb_intent.can_charge(object) && !AD.blockscharging && !mob.in_throw_mode)
-				updateprogbar(object)
+			if(mob.used_intent.get_chargetime() && mob.mmb_intent.can_charge() && !AD.blockscharging && !mob.in_throw_mode)
+				updateprogbar()
 			else
 				mouse_pointer_icon = 'icons/effects/mousemice/human_attack.dmi'
 			return
@@ -156,12 +156,12 @@
 		if(!mob.mmb_intent)
 			mouse_pointer_icon = 'icons/effects/mousemice/human_looking.dmi'
 		else
-			if(mob.mmb_intent.get_chargetime() && mob.mmb_intent.can_charge(object) && !AD.blockscharging)
+			if(mob.mmb_intent.get_chargetime() && mob.mmb_intent.can_charge() && !AD.blockscharging)
 				if(mob.buckled)
 					mob.buckled.face_atom(object, location, control, params)
 				else
 					mob.face_atom(object, location, control, params)
-				updateprogbar(object)
+				updateprogbar()
 			else
 				mouse_pointer_icon = mob.mmb_intent.pointer
 		return
@@ -179,7 +179,7 @@
 		mob.atkswinging = "left"
 		mob.used_intent = mob.a_intent
 		if(mob.used_intent.get_chargetime() && !AD.blockscharging && !mob.in_throw_mode)
-			updateprogbar(object)
+			updateprogbar()
 		else
 			mouse_pointer_icon = 'icons/effects/mousemice/human_attack.dmi'
 		return
@@ -249,13 +249,13 @@
 	if(!isliving(mob))
 		return
 
-/client/proc/updateprogbar(atom/clicked_object)
+/client/proc/updateprogbar()
 	if(!mob)
 		return
 	if(!isliving(mob))
 		return
 	var/mob/living/L = mob
-	if(!L.used_intent.can_charge(clicked_object))
+	if(!L.used_intent.can_charge())
 		return
 	L.used_intent.prewarning()
 

@@ -11,6 +11,9 @@ GLOBAL_LIST_INIT(drowraider_aggro, world.file2list("strings/rt/drowaggrolines.tx
 	possible_rmb_intents = list()
 	var/is_silent = FALSE /// Determines whether or not we will scream our funny lines at people.
 
+	//Whilst smart, they prefer to not take risks and instead will utilize their weapons for special means of attack.
+	special_attacker = TRUE
+
 /mob/living/carbon/human/species/elf/dark/drowraider/ambush
 	aggressive=1
 	wander = TRUE
@@ -94,6 +97,9 @@ GLOBAL_LIST_INIT(drowraider_aggro, world.file2list("strings/rt/drowaggrolines.tx
 		real_name = pick(world.file2list("strings/rt/names/elf/elfdm.txt"))
 	update_hair()
 	update_body()
+	// Caustic edit
+	head.sellprice = 40 // Drow are dangerous! They're also dangerous to get to and, depending on location, like to run into acid vats. This accounts for that.
+	// Caustic edit end
 
 /mob/living/carbon/human/species/elf/dark/drowraider/npc_idle()
 	if(m_intent == MOVE_INTENT_SNEAK)

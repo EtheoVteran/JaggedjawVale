@@ -96,7 +96,7 @@
 
 /datum/customizer/organ/ears/goblin 
 	customizer_choices = list(/datum/customizer_choice/organ/ears/goblin)
-	allows_disabling = FALSE
+	allows_disabling = TRUE
 
 /datum/customizer_choice/organ/ears/halforc
 	name = "Half-Orc Ears"
@@ -111,7 +111,7 @@
 
 /datum/customizer/organ/ears/halforc
 	customizer_choices = list(/datum/customizer_choice/organ/ears/halforc)
-	allows_disabling = FALSE
+	allows_disabling = TRUE
 
 /datum/customizer/organ/ears/demihuman
 	customizer_choices = list(/datum/customizer_choice/organ/ears/demihuman)
@@ -169,7 +169,10 @@
 		/datum/sprite_accessory/ears/big/acrador_short,
 		/datum/sprite_accessory/ears/big/sandfox_large,
 		/datum/sprite_accessory/ears/lynx,
-		/datum/sprite_accessory/ears/zorzor
+		/datum/sprite_accessory/ears/zorzor,
+		//CC Start
+		/datum/sprite_accessory/ears/big/caustic/bunny_large
+		//CC End
 		)
 
 /datum/customizer/organ/ears/anthro
@@ -236,8 +239,11 @@
 		/datum/sprite_accessory/ears/big/acrador_short,
 		/datum/sprite_accessory/ears/big/sandfox_large,
 		/datum/sprite_accessory/ears/lynx,
-		/datum/sprite_accessory/ears/zorzor
-		)
+		/datum/sprite_accessory/ears/zorzor,
+		//CC Start
+		/datum/sprite_accessory/ears/big/caustic/bunny_large,
+		//CC End
+	)
 
 /datum/customizer/organ/ears/lizard
 	name = "Hood"
@@ -256,7 +262,7 @@
 
 /datum/customizer/organ/ears/tiefling
 	customizer_choices = list(/datum/customizer_choice/organ/ears/tiefling)
-	allows_disabling = FALSE
+	allows_disabling = TRUE
 
 /datum/customizer_choice/organ/ears/tiefling
 	name = "Tiefling Ears"

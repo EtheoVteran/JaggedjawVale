@@ -16,7 +16,7 @@
 			if("breathgasp")
 				used = list('sound/vo/male/gen/breathgasp (1).ogg','sound/vo/male/gen/breathgasp (2).ogg','sound/vo/male/gen/breathgasp (3).ogg')
 			if("burp")
-				used = 'sound/vo/male/gen/burp.ogg'
+				used = list('sound/vo/vore/burps/belch1.ogg','sound/vo/vore/burps/belch2.ogg','sound/vo/vore/burps/belch3.ogg','sound/vo/vore/burps/belch4.ogg','sound/vo/vore/burps/belch5.ogg','sound/vo/vore/burps/belch6.ogg','sound/vo/vore/burps/belch7.ogg','sound/vo/vore/burps/belch8.ogg','sound/vo/vore/burps/belch9.ogg','sound/vo/vore/burps/belch10.ogg','sound/vo/vore/burps/belch11.ogg','sound/vo/vore/burps/belch12.ogg','sound/vo/vore/burps/belch13.ogg','sound/vo/vore/burps/belch14.ogg','sound/vo/vore/burps/belch15.ogg')
 			if("choke")
 				used = 'sound/vo/male/gen/choke.ogg'
 			if("chuckle")
@@ -150,8 +150,6 @@
 				used = 'sound/vo/male/gen/strain.ogg'
 			if("yip")
 				used = list('sound/vo/yip.ogg', 'sound/vo/yip2.ogg', 'sound/vo/yip3.ogg')
-			if("oink")
-				used = list('modular/Creechers/sound/pig1.ogg', 'modular/Creechers/sound/pig2.ogg')
 			if("sexmoanlight")
 				used = list('sound/vo/male/gen/moan (1).ogg','sound/vo/male/gen/moan (2).ogg','sound/vo/male/gen/moan (3).ogg')
 			if("sexmoanhvy")

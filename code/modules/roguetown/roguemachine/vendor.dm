@@ -425,3 +425,26 @@
 		held_items[P]["NAME"] = P.name
 		held_items[P]["PRICE"] = 30
 	update_icon()
+
+/obj/structure/roguemachine/vendor/tower
+	keycontrol = "tower"
+
+/obj/structure/roguemachine/vendor/tower/Initialize()
+	. = ..()
+	for(var/X in list(
+		/obj/item/reformation_gem,
+		/obj/item/reformation_gem,
+		/obj/item/reformation_gem,
+		/obj/item/reformation_gem,
+		/obj/item/reformation_gem,
+		/obj/item/reformation_gem,
+		/obj/item/reformation_gem,
+		/obj/item/reformation_gem,
+		/obj/item/reformation_gem,
+		/obj/item/reformation_gem,))
+		var/obj/P = new X(src)
+		held_items[P] = list()
+		held_items[P]["NAME"] = P.name
+		held_items[P]["PRICE"] = 15
+	update_icon()
+	

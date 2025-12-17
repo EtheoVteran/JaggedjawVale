@@ -6,9 +6,8 @@
 	lord_verbs = list(
 		/mob/living/carbon/human/proc/punish_spawn
 	)
-	lord_traits = list(TRAIT_HEAVYARMOR, TRAIT_INFINITE_ENERGY, TRAIT_STRENGTH_UNCAPPED)
+	lord_traits = list(TRAIT_HEAVYARMOR, TRAIT_INFINITE_ENERGY)
 	lord_title = "Elder"
-	vitae_bonus = 500
 
 /datum/clan/eoran
 	name = "Vitabella Family"

@@ -19,7 +19,7 @@
 	advclass_cat_rolls = list(CTAG_SERGEANT = 20)
 
 	give_bank_account = TRUE
-	min_pq = 6
+	min_pq = null //6
 	max_pq = null
 	cmode_music = 'sound/music/combat_ManAtArms.ogg'
 	job_traits = list(TRAIT_GUARDSMAN, TRAIT_STEELHEARTED, TRAIT_MEDIUMARMOR)
@@ -35,7 +35,7 @@
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		if(ishuman(L))
-			if(istype(H.cloak, /obj/item/clothing/cloak/tabard/stabard/surcoat/guard))
+			if(istype(H.cloak, /obj/item/clothing/cloak/stabard/surcoat/guard))
 				var/obj/item/clothing/S = H.cloak
 				var/index = findtext(H.real_name, " ")
 				if(index)
@@ -47,7 +47,7 @@
 //All skills/traits are on the loadouts. All are identical. Welcome to the stupid way we have to make sub-classes...
 /datum/outfit/job/roguetown/sergeant
 	pants = /obj/item/clothing/under/roguetown/chainlegs
-	cloak = /obj/item/clothing/cloak/tabard/stabard/surcoat/guard
+	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
 	saiga_shoes = /obj/item/clothing/shoes/roguetown/horseshoes
@@ -89,7 +89,6 @@
 		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
 		/datum/skill/misc/athletics = SKILL_LEVEL_MASTER,	// We are basically identical to a regular MAA, except having better athletics to help us manage our order usage better
-		/datum/skill/misc/swimming = SKILL_LEVEL_EXPERT, //John Athlete apparently
 		/datum/skill/misc/riding = SKILL_LEVEL_NOVICE,
 		/datum/skill/misc/tracking = SKILL_LEVEL_APPRENTICE,	//Decent tracking akin to Skirmisher.
 	)
@@ -124,7 +123,6 @@
 			if("Flail & Shield")	//Tower-shield, higher durability wood shield w/ more coverage. Plus a steel flail; maybe.. less broken that a steel mace?
 				beltr = /obj/item/rogueweapon/flail/sflail
 				backl = /obj/item/rogueweapon/shield/tower
-				H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 4, TRUE)
 			if("Halberd")			//Halberd - basically exact same as MAA. It's a really valid build. Spear thrust + sword chop + bash.
 				r_hand = /obj/item/rogueweapon/halberd
 				backl = /obj/item/rogueweapon/scabbard/gwstrap

@@ -2,7 +2,7 @@
 	name = "Aristocrat"
 	tutorial = "You are a traveling noble visiting foreign lands. With wealth, come the poor, ready to pilfer you of your hard earned (inherited) coin, so tread lightly unless you want to meet a grizzly end."
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_NO_CONSTRUCT
+	allowed_races = RACES_ALL_KINDS //Caustic edit from RACES_NO_CONSTRUCT
 	outfit = /datum/outfit/job/roguetown/adventurer/noble
 	traits_applied = list(TRAIT_NOBLE)
 	class_select_category = CLASS_CAT_NOBLE
@@ -109,7 +109,7 @@
 
 	gloves = /obj/item/clothing/gloves/roguetown/chain
 	pants = /obj/item/clothing/under/roguetown/chainlegs
-	cloak = /obj/item/clothing/cloak/tabard/stabard
+	cloak = /obj/item/clothing/cloak/stabard
 	neck = /obj/item/clothing/neck/roguetown/bevor
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
@@ -189,7 +189,7 @@
 	to_chat(H, span_warning("You are a squire who has traveled far in search of a master to train you and a lord to knight you."))
 	head = /obj/item/clothing/head/roguetown/roguehood
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	cloak = /obj/item/clothing/cloak/tabard/stabard
+	cloak = /obj/item/clothing/cloak/stabard
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/iron
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather

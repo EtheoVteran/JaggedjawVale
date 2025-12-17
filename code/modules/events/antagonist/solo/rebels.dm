@@ -20,7 +20,7 @@
 	typepath = /datum/round_event/antagonist/solo/rebel
 	antag_datum = /datum/antagonist/prebel/head
 
-	weight = 1
+	weight = 0 //CC edit, automatic injection disabled
 
 	restricted_roles = DEFAULT_ANTAG_BLACKLISTED_ROLES
 

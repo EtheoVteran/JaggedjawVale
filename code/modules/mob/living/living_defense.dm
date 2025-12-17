@@ -60,7 +60,7 @@
 	if(!P.nodamage && on_hit_state != BULLET_ACT_BLOCK)
 		if(!apply_damage(P.damage, P.damage_type, def_zone, armor))
 			nodmg = TRUE
-			next_attack_msg += VISMSG_ARMOR_BLOCKED
+			next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
 		apply_effects(stun = P.stun, knockdown = P.knockdown, unconscious = P.unconscious, slur = P.slur, stutter = P.stutter, eyeblur = P.eyeblur, drowsy = P.drowsy, blocked = armor, stamina = P.stamina, jitter = P.jitter, paralyze = P.paralyze, immobilize = P.immobilize)
 		if(!nodmg)
 			if(P.dismemberment)
@@ -130,7 +130,7 @@
 			var/nodmg = FALSE
 			if(!apply_damage(I.throwforce, I.damtype, zone, armor))
 				nodmg = TRUE
-				next_attack_msg += VISMSG_ARMOR_BLOCKED
+				next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
 			if(!nodmg)
 				if(iscarbon(src))
 					var/obj/item/bodypart/affecting = get_bodypart(zone)
@@ -196,7 +196,7 @@
 
 //proc to upgrade a simple pull into a more aggressive grab.
 /mob/living/proc/grippedby(mob/living/carbon/user, instant = FALSE)
-	user.changeNext_move(CLICK_CD_TRACKING)
+	user.changeNext_move(CLICK_CD_GRABBING * 2 - user.STASPD)
 	var/skill_diff = 0
 	var/combat_modifier = 1
 	if(user.mind)
@@ -245,9 +245,9 @@
 			to_chat(user, span_warning("I struggle with [src]!"))
 		playsound(src.loc, 'sound/foley/struggle.ogg', 100, FALSE, -1)
 		user.Immobilize(2 SECONDS)
-		user.changeNext_move(CLICK_CD_TRACKING)
+		user.changeNext_move(2 SECONDS)
 		src.Immobilize(1 SECONDS)
-		src.changeNext_move(CLICK_CD_GRABBING)
+		src.changeNext_move(1 SECONDS)
 		if(user.badluck(5))
 			badluckmessage(user)
 			user.stop_pulling()
@@ -468,6 +468,8 @@
 
 //called when the mob receives a bright flash
 /mob/living/proc/flash_act(intensity = 1, override_blindness_check = 0, affect_silicon = 0, visual = 0, type = /atom/movable/screen/fullscreen/flash)
+	if(check_epilepsy())
+		return FALSE
 	if(HAS_TRAIT(src, TRAIT_NOFLASH))
 		return FALSE
 	if(get_eye_protection() < intensity && (override_blindness_check || !(HAS_TRAIT(src, TRAIT_BLIND))))

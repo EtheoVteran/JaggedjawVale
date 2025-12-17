@@ -171,11 +171,6 @@
 	cost = 90 // 2 Steel
 	contains = list(/obj/item/clothing/head/roguetown/helmet/bascinet/etruscan)
 
-/datum/supply_pack/rogue/armor_steel/helmet_knight_armet
-	name = "Helmet, Armet, Knight's"
-	cost = 90 // 2 Steel
-	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/knight/old)
-
 /datum/supply_pack/rogue/armor_steel/helmet_knight
 	name = "Helmet, Knight's"
 	cost = 90 // 2 Steel

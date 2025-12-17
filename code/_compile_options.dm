@@ -8,7 +8,7 @@
 //0 test
 //12 minutes norma
 //#define ROUNDTIMERBOAT (300 MINUTES)
-#define INITIAL_ROUND_TIMER (165 MINUTES)
+#define INITIAL_ROUND_TIMER (240 MINUTES)
 #define ROUND_EXTENSION_TIME (30 MINUTES)
 #define ROUND_END_TIME (15 MINUTES)
 #define ROUND_END_TIME_VERBAL "15 minutes"
@@ -77,7 +77,9 @@
 #define MAX_ATOM_OVERLAYS 100
 
 // Comment this to remove the PQ system
-#define USES_PQ
+//#define USES_PQ
+// Comment this to remove the SCOM restrictions
+//#define USES_SCOM_RESTRICTION
 // Comment this to remove traits based skill gating (The traits exist, but it will not have any effect)
-#define USES_TRAIT_SKILL_GATING
+//#define USES_TRAIT_SKILL_GATING
 

@@ -310,6 +310,9 @@
 	var/mov_name = A.name
 	for(var/i in contents)
 		var/atom/thing = i
+		if(isliving(thing) && isliving(A) && A != thing)
+			var/mob/living/livingA = A
+			livingA.spontaneous_vore_attackby(thing, livingA)
 		flags |= thing.intercept_zImpact(A, levels)
 		if(flags & FALL_STOP_INTERCEPTING)
 			break

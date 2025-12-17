@@ -111,6 +111,8 @@
 	I.pixel_y = 0
 	client.images += I
 	client.hidden_images += I
+	if(currentlystandardized)
+		refresh_standardized_sprite()
 	I.appearance_flags = RESET_TRANSFORM|KEEP_TOGETHER|PIXEL_SCALE
 	if(buckled)
 		var/image/IB = image(buckled, buckled)

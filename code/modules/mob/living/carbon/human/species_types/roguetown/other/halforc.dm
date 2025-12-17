@@ -87,6 +87,10 @@
 		/datum/customizer/organ/vagina/human_anthro,
 		/datum/customizer/organ/horns/tusks,
 		/datum/customizer/organ/ears/halforc,
+		//Caustic edit
+		/datum/customizer/organ/belly/human,
+		/datum/customizer/organ/butt/human,
+		//Caustic edit end
 		)
 	languages = list(
 		/datum/language/common,
@@ -118,7 +122,11 @@
 		"Crescent Fang" = SKIN_COLOR_CRESCENT_FANG,
 		"Murkwalker" = SKIN_COLOR_MURKWALKER,
 		"Shatterhorn" = SKIN_COLOR_SHATTERHORN,
-		"Spirit Crusher" = SKIN_COLOR_SPIRITCRUSHER
+		"Spirit Crusher" = SKIN_COLOR_SPIRITCRUSHER,
+		//Caustic edit
+		"Avalanche" = SKIN_COLOR_AVALANCHE,
+		"Grove-Ward" = SKIN_COLUR_GROVE_WARD
+		//Caustic edit end
 	)
 
 /datum/species/halforc/get_hairc_list()

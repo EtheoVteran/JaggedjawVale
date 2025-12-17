@@ -39,7 +39,9 @@
 /datum/mob_descriptor/penis/get_description(mob/living/described)
 	var/mob/living/carbon/human/H = described
 	var/obj/item/organ/penis/penis = H.getorganslot(ORGAN_SLOT_PENIS)
-	var/adjective
+	//Caustic Edit - Pull from Global rather than use a switch
+	var/adjective = find_key_by_value(GLOB.named_penis_sizes, penis.penis_size)
+	//Caustic End
 	var/arousal_modifier
 	switch(penis.penis_size)
 		if(1)
@@ -60,13 +62,15 @@
 		else
 			arousal_modifier = ", soft and flaccid"
 	var/used_name
-	if(penis.erect_state != ERECT_STATE_HARD && penis.sheath_type != SHEATH_TYPE_NONE)
+	if(penis.erect_state == ERECT_STATE_NONE && penis.sheath_type != SHEATH_TYPE_NONE)
 		switch(penis.sheath_type)
+			//Caustic Edit - Just account for bigger sizes
 			if(SHEATH_TYPE_NORMAL)
-				if(penis.penis_size == 3)
+				if(penis.penis_size >= 3)
 					used_name = "a fat sheath"
 				else
 					used_name = "a sheath"
+			//Caustic End
 			if(SHEATH_TYPE_SLIT)
 				used_name = "a genital slit"
 	else
@@ -98,15 +102,10 @@
 /datum/mob_descriptor/testicles/get_description(mob/living/described)
 	var/mob/living/carbon/human/H = described
 	var/obj/item/organ/testicles/testes = H.getorganslot(ORGAN_SLOT_TESTICLES)
-	var/adjective
-	switch(testes.ball_size)
-		if(1)
-			adjective = "a small"
-		if(2)
-			adjective = "an average"
-		if(3)
-			adjective = "a large"
+	//Caustic Edit - Pull from Global rather than use a switch
+	var/adjective = find_key_by_value(GLOB.named_ball_sizes, testes.ball_size)
 	return "[adjective] pair of balls"
+	//Caustic End
 
 /datum/mob_descriptor/vagina
 	name = "vagina"
@@ -178,18 +177,7 @@
 /datum/mob_descriptor/breasts/get_description(mob/living/described)
 	var/mob/living/carbon/human/H = described
 	var/obj/item/organ/breasts/breasts = H.getorganslot(ORGAN_SLOT_BREASTS)
-	var/adjective
-	switch(breasts.breast_size)
-		if(0)
-			adjective = "a flat"
-		if(1)
-			adjective = "a very small"
-		if(2)
-			adjective = "a small"
-		if(3)
-			adjective = "an average"
-		if(4)
-			adjective = "a large"
-		if(5)
-			adjective = "an enormous"
-	return "[adjective] pair of breasts"
+	//Caustic Edit - Pull from Global rather than use a switch
+	var/adjective = find_key_by_value(GLOB.named_breast_sizes, breasts.breast_size)
+	return "[adjective] sized breasts"
+	//Caustic End

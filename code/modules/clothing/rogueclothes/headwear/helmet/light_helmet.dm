@@ -1,29 +1,20 @@
-/obj/item/clothing/head/roguetown/armingcap
-	name = "arming cap"
-	desc = "A modest arming cap. It will stop a light blow."
+/obj/item/clothing/head/roguetown/paddedcap
+	name = "padded cap"
+	desc = "A modest arming cap."
 	icon_state = "armingcap"
 	item_state = "armingcap"
 	sleevetype = null
 	sleeved = null
 	body_parts_covered = HEAD|HAIR|EARS
-	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HEAD //Meant to be worn under helmets pmuch
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_NECK|ITEM_SLOT_HEAD
 	armor = ARMOR_PADDED_BAD
-	prevent_crits = PREVENT_CRITS_NONE
+	prevent_crits = list(BCLASS_CUT)
 	blocksound = SOFTHIT
 	max_integrity = ARMOR_INT_HELMET_CLOTH
 	color = "#463C2B"
 	sewrepair = TRUE
 	salvage_result = /obj/item/natural/fibers
 	salvage_amount = 2 // Major materials loss
-
-/obj/item/clothing/head/roguetown/armingcap/padded
-	name = "padded arming cap"
-	desc = "A padded up arming cap. It might even stop a mace!"
-	icon_state = "paddedarmingcap"
-	item_state = "paddedarmingcap"
-	armor = ARMOR_PADDED
-	prevent_crits = list(BCLASS_BLUNT, BCLASS_SMASH)
-	max_integrity = ARMOR_INT_HELMET_CLOTH + 60
 
 /obj/item/clothing/head/roguetown/helmet/leather
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
@@ -33,7 +24,7 @@
 	icon_state = "leatherhelm"
 	armor = ARMOR_LEATHER
 	sellprice = 10
-	prevent_crits = PREVENT_CRITS_NONE
+	prevent_crits = list(BCLASS_BLUNT, BCLASS_TWIST)
 	anvilrepair = null
 	smeltresult = null
 	sewrepair = TRUE
@@ -71,7 +62,7 @@
 	max_integrity = ARMOR_INT_HELMET_HARDLEATHER
 	sellprice = 15
 	body_parts_covered = HEAD|EARS|HAIR|NOSE
-	prevent_crits = PREVENT_CRITS_NONE
+	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
 	armor = ARMOR_LEATHER_GOOD
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
 	anvilrepair = null
@@ -85,7 +76,7 @@
 	desc = "An oddly shaped hat made of tightly-sewn leather, commonly worn by spellswords."
 	icon_state = "spellcasterhat"
 	item_state = "spellcasterhat"
-	prevent_crits = PREVENT_CRITS_NONE
+	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
 	armor = ARMOR_SPELLSINGER
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon = 'icons/effects/blood64.dmi'
@@ -108,7 +99,7 @@
 	dynamic_hair_suffix = ""
 	max_integrity = ARMOR_INT_HELMET_LEATHER
 	body_parts_covered = HEAD|HAIR|EARS
-	prevent_crits = PREVENT_CRITS_NONE
+	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
 	armor = ARMOR_SPELLSINGER // spellsinger hat stats
 	sewrepair = TRUE
 	resistance_flags = FIRE_PROOF

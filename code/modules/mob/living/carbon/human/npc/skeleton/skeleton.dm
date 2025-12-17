@@ -66,8 +66,12 @@
 		var/datum/outfit/OU = new skel_outfit
 		if(OU)
 			equipOutfit(OU)
+	// Caustic edit
+	var/obj/item/bodypart/head = get_bodypart(BODY_ZONE_HEAD)
+	head.sellprice = 20 //there's a LOT of these guys. May later change head prices depending on skeletype. Dread knights > nakeds.
+	// Caustic edit end
 
-/mob/living/carbon/human/species/skeleton/fully_heal(admin_revive = FALSE, break_restraints = FALSE)
+/mob/living/carbon/human/species/skeleton/fully_heal(admin_revive)
 	. = ..()
 	skeletonize()
 

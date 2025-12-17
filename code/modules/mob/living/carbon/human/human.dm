@@ -578,7 +578,7 @@
 		if(hud_used.zone_select)
 			hud_used.zone_select.update_icon()
 
-/mob/living/carbon/human/fully_heal(admin_revive = FALSE, break_restraints = FALSE)
+/mob/living/carbon/human/fully_heal(admin_revive = FALSE)
 	dna?.species.spec_fully_heal(src)
 	if(admin_revive)
 		regenerate_limbs()
@@ -586,7 +586,7 @@
 	spill_embedded_objects()
 	set_heartattack(FALSE)
 	drunkenness = 0
-	return ..()
+	..()
 
 /mob/living/carbon/human/check_weakness(obj/item/weapon, mob/living/attacker)
 	. = ..()
@@ -706,20 +706,37 @@
 			set_species(newtype)
 
 /mob/living/carbon/human/MouseDrop_T(atom/dragged, mob/living/user)
-	if(istype(dragged, /mob/living))
-		var/mob/living/target = dragged
-		if(stat == CONSCIOUS)
-			var/has_grab = FALSE
-			var/obj/item/grabbing/grab = get_active_held_item()
-			if(istype(grab) && grab.grabbed == target)
-				has_grab = TRUE
-			// If the target is grabbed and can be firemanned, we fireman carry them
-			if(has_grab && can_be_firemanned(target))
-				fireman_carry(target)
+	if(pulling == dragged && stat == CONSCIOUS)
+		if(isliving(dragged))
+			if(user.grab_state && user.voremode)
+				if(ismob(user.pulling))
+					vore_attackby(dragged, user)
+					user.vore_attackby(user, dragged, src) // User, Pulled, Predator target (which can be user, pulling, or src)
+					return TRUE
+			//Pick them up. Pick. Them. Up.
+			if(ishuman(dragged) && ishuman(user))
+				var/mob/living/carbon/human/userhuman = user
+				var/mob/living/carbon/human/targethuman = dragged
+				if(targethuman.small_enough(userhuman) && user.grab_state)
+					if(targethuman.attempt_scoop(userhuman))
+						return TRUE
+			//If they dragged themselves and we're currently aggressively grabbing them try to piggyback (not on cmode)
+			if(user == dragged && can_piggyback(target))
+				if(cmode)
+					to_chat(dragged, span_warning("[src] won't let you on!"))
+					return FALSE
+				piggyback(dragged)
 				return TRUE
-	else if(istype(dragged, /obj/item/bodypart/head/dullahan/))
-		var/obj/item/bodypart/head/dullahan/item_head = dragged
-		item_head.show_inv(user)
+			//If you dragged them to you and you're aggressively grabbing try to carry them
+			else if(user != dragged && can_be_firemanned(dragged))
+				var/obj/G = get_active_held_item()
+				if(G)
+					if(istype(G, /obj/item/grabbing))
+						fireman_carry(dragged)
+						return TRUE
+		else if(istype(dragged, /obj/item/bodypart/head/dullahan/))
+			var/obj/item/bodypart/head/dullahan/item_head = dragged
+			item_head.show_inv(user)
 	. = ..()
 
 /mob/living/carbon/human/RightMouseDrop_T(atom/dragged, mob/living/user)

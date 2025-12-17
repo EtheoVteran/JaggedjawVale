@@ -14,7 +14,7 @@
 	outfit = /datum/outfit/job/roguetown/orphan
 	display_order = JDO_ORPHAN
 	show_in_credits = FALSE
-	min_pq = -30
+	min_pq = null //-30
 	max_pq = null
 	round_contrib_points = 2
 
@@ -25,6 +25,7 @@
 		/datum/advclass/vagabond_original,
 		/datum/advclass/vagabond_beggar,
 		/datum/advclass/vagabond_courier,
+		/datum/advclass/vagabond_deprived,
 		/datum/advclass/vagabond_excommunicated,
 		/datum/advclass/vagabond_goatherd,
 		/datum/advclass/vagabond_mage,

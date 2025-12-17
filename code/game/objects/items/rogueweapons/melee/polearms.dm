@@ -211,7 +211,7 @@
 	wdefense_wbonus = 8	//13 when wielded.
 	bigboy = TRUE
 	gripsprite = TRUE
-	associated_skill = /datum/skill/combat/staves
+	associated_skill = /datum/skill/combat/polearms
 	anvilrepair = /datum/skill/craft/carpentry
 	resistance_flags = FLAMMABLE
 
@@ -245,11 +245,6 @@
 	gripsprite = FALSE
 	gripped_intents = null
 
-/obj/item/rogueweapon/woodstaff/polearm
-	name = "shillelagh"
-	desc = "A particularly long and sturdy walking stick with a variety of uses. It's heavier at one end, making it a little unbalanced."
-	associated_skill = /datum/skill/combat/polearms
-
 /obj/item/rogueweapon/woodstaff/aries/getonmobprop(tag)
 	. = ..()
 	if(tag)
@@ -262,9 +257,9 @@
 
 /obj/item/rogueweapon/spear
 	force = 20
-	force_wielded = 30
-	possible_item_intents = list(SPEAR_THRUST, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
-	gripped_intents = list(SPEAR_THRUST, SPEAR_CUT, SPEAR_BASH)
+	force_wielded = 25
+	possible_item_intents = list(/datum/intent/spear/thrust/militia, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
+	gripped_intents = list(/datum/intent/spear/thrust/militia, SPEAR_CUT, SPEAR_BASH)
 	name = "spear"
 	desc = "One of the oldest weapons still in use today, second only to the club. The lack of reinforcements along the shaft leaves it vulnerable to being split in two."
 	icon_state = "spear"
@@ -826,7 +821,7 @@
 		added_def = 2,\
 	)
 
-/obj/item/rogueweapon/halberd/glaive
+/obj/item/rogueweapon/halberd/glaive //This one is on the chopping block, but not yet.
 	possible_item_intents = list(/datum/intent/spear/thrust/eaglebeak, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
 	gripped_intents = list(/datum/intent/spear/thrust/glaive, /datum/intent/spear/cut/glaive, /datum/intent/axe/chop/scythe, SPEAR_BASH)
 	name = "glaive"
@@ -862,8 +857,8 @@
 /obj/item/rogueweapon/eaglebeak
 	force = 15
 	force_wielded = 30
-	possible_item_intents = list(/datum/intent/spear/bash/eaglebeak, /datum/intent/mace/smash/eaglebeak)
-	gripped_intents = list(/datum/intent/spear/bash/eaglebeak, /datum/intent/mace/smash/eaglebeak, /datum/intent/spear/thrust/eaglebeak)
+	possible_item_intents = list(/datum/intent/spear/thrust/eaglebeak, /datum/intent/spear/bash/eaglebeak)
+	gripped_intents = list(/datum/intent/spear/thrust/eaglebeak, /datum/intent/spear/bash/eaglebeak, /datum/intent/mace/smash/eaglebeak)
 	name = "eagle's beak"
 	desc = "A reinforced pole affixed with an ornate steel eagle's head, of which its beak is intended to pierce with great harm."
 	icon_state = "eaglebeak"
@@ -879,7 +874,7 @@
 	minstr = 11
 	smeltresult = /obj/item/ingot/steel
 	associated_skill = /datum/skill/combat/polearms
-	sharpness = IS_BLUNT
+	max_blade_int = 180
 	walking_stick = TRUE
 	wdefense = 5
 	wbalance = WBALANCE_HEAVY
@@ -904,6 +899,7 @@
 	force_wielded = 25
 	icon_state = "polehammer"
 	smeltresult = /obj/item/ingot/iron
+	max_blade_int = 150
 	sellprice = 40
 
 // A worse thrust for weapons specialized in other damage type like cut or blunt
@@ -911,8 +907,8 @@
 	penfactor = 20
 	damfactor = 0.9
 
-/datum/intent/spear/thrust/glaive
-	penfactor = 50
+/datum/intent/spear/thrust/glaive //Super high def and a better cut. Slightly worse thrust.
+	penfactor = 40
 	damfactor = 1.1
 
 /datum/intent/mace/smash/eaglebeak
@@ -937,9 +933,8 @@
 	force_wielded = 30
 	possible_item_intents = list(/datum/intent/sword/chop,/datum/intent/sword/strike) //bash is for nonlethal takedowns, only targets limbs
 	// Design Intent: I have a big fucking sword and I want to rend people in half.
-	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/thrust/zwei, /datum/intent/sword/strike/bad, /datum/intent/rend)
-	alt_intents = list(/datum/intent/sword/strike, /datum/intent/sword/bash, /datum/intent/effect/daze)
-	mordhau = TRUE
+	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/rend, /datum/intent/sword/thrust/zwei, /datum/intent/sword/strike/bad)
+	alt_intents = list(/datum/intent/effect/daze, /datum/intent/sword/strike, /datum/intent/sword/bash)
 	name = "greatsword"
 	desc = "Might be able to chop anything in half!"
 	icon_state = "gsw"
@@ -963,7 +958,6 @@
 	max_blade_int = 300
 	wdefense = 5
 	smelt_bar_num = 3
-	special = /datum/special_intent/greatsword_swing
 
 /obj/item/rogueweapon/greatsword/getonmobprop(tag)
 	. = ..()
@@ -1023,11 +1017,12 @@
 
 /obj/item/rogueweapon/greatsword/grenz
 	name = "steel zweihander"
+	desc = "Designed for the battlefield, this design is popular with mercenary companies, the most noteworthy of which being the Grenzelhoft Doppelsoldner."
 	icon_state = "steelzwei"
 	smeltresult = /obj/item/ingot/steel
-	smelt_bar_num = 3
 	max_blade_int = 240
 	wdefense = 4
+	smelt_bar_num = 3
 	force = 14
 	force_wielded = 35
 
@@ -1036,7 +1031,7 @@
 	desc = "A close relative of the Grenzelhoftian \"zweihander\", favored by Otavan nobility. The name comes from its unique, flame-shaped blade; a labor only surmountable by Psydonia's finest weaponsmiths."
 	icon_state = "steelflamberge"
 	max_blade_int = 180
-	max_integrity = 130
+	max_integrity = 130 //This looks kinda low to me.
 	wdefense = 6
 
 /obj/item/rogueweapon/greatsword/grenz/flamberge/malum
@@ -1109,7 +1104,7 @@
 	force_wielded = 30
 	icon_state = "psygsword"
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike)
-	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust/exe, /datum/intent/axe/chop, /datum/intent/rend)
+	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust/exe, /datum/intent/rend, /datum/intent/axe/chop)
 
 /obj/item/rogueweapon/greatsword/psygsword/relic/ComponentInitialize()
 	AddComponent(\
@@ -1221,8 +1216,7 @@
 	minstr = 8
 	smeltresult = /obj/item/ingot/steel
 	associated_skill = /datum/skill/combat/swords
-	max_blade_int = 400
-	max_integrity = 300
+	max_blade_int = 280 //Not adjusting this. 280 is PLENTY for a sword.
 	wdefense = 3
 	wdefense_wbonus = 6
 	smelt_bar_num = 2
@@ -1440,7 +1434,7 @@
 	force = 16
 	force_wielded = 30
 	possible_item_intents = list(/datum/intent/spear/cut/naginata, SPEAR_BASH) // no stab for you little chuddy, it's a slashing weapon
-	gripped_intents = list(/datum/intent/spear/cut/naginata,SPEAR_BASH, /datum/intent/rend/reach, PARTIZAN_PEEL)
+	gripped_intents = list(/datum/intent/rend/reach, /datum/intent/spear/cut/naginata, PARTIZAN_PEEL, SPEAR_BASH)
 	icon_state = "naginata"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	minstr = 7

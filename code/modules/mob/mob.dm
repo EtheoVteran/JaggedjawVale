@@ -830,6 +830,8 @@ GLOBAL_VAR_INIT(mobids, 1)
 					continue
 				if(overrides.len && (A in overrides))
 					continue
+				if(A.IsObscured())
+					continue
 				statpanel(listed_turf.name, null, A)
 
 
@@ -1278,7 +1280,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 /mob/verb/open_language_menu()
 	set name = "Open Language Menu"
 	set category = "IC"
-	set hidden = 0
+	set hidden = 1
 
 	var/datum/language_holder/H = get_language_holder()
 	H.open_language_menu(usr)
@@ -1288,16 +1290,24 @@ GLOBAL_VAR_INIT(mobids, 1)
 	if(HAS_TRAIT(src, TRAIT_NOHUNGER))
 		nutrition = NUTRITION_LEVEL_FULL
 	nutrition = max(0, nutrition + change)
-	if(nutrition > NUTRITION_LEVEL_FULL)
-		nutrition = NUTRITION_LEVEL_FULL
+	//Caustic edit
+	/*if(nutrition > NUTRITION_LEVEL_FULL)
+		nutrition = NUTRITION_LEVEL_FULL*/
+	if(nutrition > maxnutrition)
+		nutrition = maxnutrition
+	//Caustic edit end
 
 ///Force set the mob nutrition
 /mob/proc/set_nutrition(change) //Seriously fuck you oldcoders.
 	if(HAS_TRAIT(src, TRAIT_NOHUNGER))
 		nutrition = NUTRITION_LEVEL_FULL
 	nutrition = max(0, change)
-	if(nutrition > NUTRITION_LEVEL_FULL)
-		nutrition = NUTRITION_LEVEL_FULL
+	//Caustic edit
+	/*if(nutrition > NUTRITION_LEVEL_FULL)
+		nutrition = NUTRITION_LEVEL_FULL*/
+	if(nutrition > maxnutrition)
+		nutrition = maxnutrition
+	//Caustic edit end
 
 /mob/proc/adjust_hydration(change)
 	if(HAS_TRAIT(src, TRAIT_NOHUNGER))

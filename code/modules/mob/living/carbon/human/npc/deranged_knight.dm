@@ -30,6 +30,10 @@ GLOBAL_LIST_INIT(hedgeknight_aggro, world.file2list("strings/rt/hedgeknightaggro
 	var/forced_preset = "" // If set, force a specific preset instead of randomizing.
 	var/never_goon = FALSE // If TRUE, this DK will not spawn goons on creation.
 
+	//We are the biggest and baddest for boss fights... We're smart, and well trained.
+	smart_combatant = TRUE
+	special_attacker = TRUE
+
 /mob/living/carbon/human/species/human/northern/deranged_knight/retaliate(mob/living/L)
 	var/newtarg = target
 	.=..()
@@ -312,7 +316,7 @@ GLOBAL_LIST_INIT(hedgeknight_aggro, world.file2list("strings/rt/hedgeknightaggro
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/rogueweapon/sword/long
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
-	cloak = /obj/item/clothing/cloak/tabard/stabard/black
+	cloak = /obj/item/clothing/cloak/stabard/black
 
 /*
  * Goon preset

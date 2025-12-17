@@ -604,7 +604,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			return FALSE
 
 	var/is_nudist = HAS_TRAIT(H, TRAIT_NUDIST)
-	var/is_shirtless = HAS_TRAIT(H, TRAIT_SHIRTLESS)
 	var/is_inhumen = HAS_TRAIT(H, TRAIT_INHUMEN_ANATOMY)
 	var/num_arms = H.get_num_arms(FALSE)
 	var/num_legs = H.get_num_legs(FALSE)
@@ -642,7 +641,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(SLOT_BACK)
 			if(H.backr && H.backl)
 				return FALSE
-			if( !(I.slot_flags & ITEM_SLOT_BACK) )
+			if(!(I.slot_flags & ITEM_SLOT_BACK))
 				return FALSE
 			return equip_delay_self_check(I, H, bypass_equip_delay_self)
 		if(SLOT_BACK_R)
@@ -665,8 +664,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			if(H.wear_armor)
 				return FALSE
 			if(is_nudist)
-				return FALSE
-			if(is_shirtless)
 				return FALSE
 			if(I.blocking_behavior & BULKYBLOCKS)
 				if(H.cloak)
@@ -738,8 +735,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				return FALSE
 			if(is_inhumen)
 				return FALSE
-			if(is_shirtless)
-				return FALSE
 			if(!(I.slot_flags & ITEM_SLOT_HEAD))
 				return FALSE
 			if(!H.get_bodypart(BODY_ZONE_HEAD))
@@ -757,8 +752,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			if(H.wear_shirt)
 				return FALSE
 			if(is_nudist)
-				return FALSE
-			if(is_shirtless)
 				return FALSE
 			if(I.blocking_behavior & BULKYBLOCKS)
 				if(H.cloak)
@@ -1053,8 +1046,11 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.add_stress(/datum/stressevent/starving)
 			H.remove_stress_list(list(/datum/stressevent/stuffed,/datum/stressevent/peckish,/datum/stressevent/hungry))
 			H.apply_status_effect(/datum/status_effect/debuff/hungryt3)
-			if(prob(3))
-				playsound(get_turf(H), pick('sound/vo/hungry1.ogg','sound/vo/hungry2.ogg','sound/vo/hungry3.ogg'), 100, TRUE, -1)
+			//Cove edit start
+			if(!istype(H.loc, /obj/belly))
+			//Cove edit end
+				if(prob(3))
+					playsound(get_turf(H), pick('sound/vo/hungry1.ogg','sound/vo/hungry2.ogg','sound/vo/hungry3.ogg'), 100, TRUE, -1)
 
 	switch(H.hydration)
 //		if(HYDRATION_LEVEL_WATERLOGGED to INFINITY)
@@ -1227,7 +1223,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(!target.lying_attack_check(user))
 			return 0
 
-		var/armor_block = target.run_armor_check(selzone, "blunt", armor_penetration = BLUNT_DEFAULT_PENFACTOR, blade_dulling = user.used_intent.blade_class, damage = damage, intdamfactor = user.used_intent?.intent_intdamage_factor)
+		var/armor_block = target.run_armor_check(selzone, "blunt", armor_penetration = BLUNT_DEFAULT_PENFACTOR, blade_dulling = user.used_intent.blade_class, damage = damage)
 
 		target.lastattacker = user.real_name
 		if(target.mind)
@@ -1242,7 +1238,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 		if(!target.apply_damage(damage, user.dna.species.attack_type, affecting, armor_block))
 			nodmg = TRUE
-			target.next_attack_msg += VISMSG_ARMOR_BLOCKED
+			target.next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
 		else
 			affecting.bodypart_attacked_by(user.used_intent.blade_class, damage, user, selzone, crit_message = TRUE)
 			SEND_SIGNAL(target, COMSIG_ATOM_ATTACK_HAND, user)
@@ -1510,7 +1506,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			var/nodmg = FALSE
 			if(!target.apply_damage(damage, user.dna.species.attack_type, affecting, armor_block))
 				nodmg = TRUE
-				target.next_attack_msg += VISMSG_ARMOR_BLOCKED
+				target.next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
 			else
 				if(affecting)
 					affecting.bodypart_attacked_by(BCLASS_BLUNT, damage, user, user.zone_selected, crit_message = TRUE)
@@ -1623,7 +1619,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		var/armor_block = target.run_armor_check(selzone, "blunt", blade_dulling = BCLASS_BLUNT)
 		var/damage = user.get_punch_dmg()
 		if(!target.apply_damage(damage, user.dna.species.attack_type, affecting, armor_block))
-			target.next_attack_msg += VISMSG_ARMOR_BLOCKED
+			target.next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
 		else
 			affecting.bodypart_attacked_by(BCLASS_BLUNT, damage, user, selzone)
 		playsound(target, 'sound/combat/hits/kick/kick.ogg', 100, TRUE, -1)
@@ -1751,11 +1747,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		H.next_attack_msg.Cut()
 		if(!apply_damage(Iforce * weakness, I.damtype, def_zone, armor_block, H))
 			nodmg = TRUE
-			H.next_attack_msg += VISMSG_ARMOR_BLOCKED
-			var/obj/item/clothing/C = H.get_best_worn_armor(def_zone, I.d_type)	//this is kinda relying on the proc returnig the same as run_armor_check did. Clunky!
-			var/extra_msg = C.get_armor_integ()
-			if(extra_msg)
-				H.next_attack_msg += extra_msg
+			H.next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
 			if(I)
 				I.remove_bintegrity(1)
 				I.take_damage(1, BRUTE, I.d_type)
@@ -1905,13 +1897,12 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				if(damage_amount > 10 && !HAS_TRAIT(H, TRAIT_NOPAINSTUN))
 					H.Slowdown(clamp(damage_amount/10, 1, 5))
 					shake_camera(H, 1, 1)
-				if(H.show_redflash())
-					if(damage_amount < 10)
-						H.flash_fullscreen("redflash1")
-					else if(damage_amount < 20)
-						H.flash_fullscreen("redflash2")
-					else if(damage_amount >= 20)
-						H.flash_fullscreen("redflash3")
+				if(damage_amount < 10)
+					H.flash_fullscreen("redflash1")
+				else if(damage_amount < 20)
+					H.flash_fullscreen("redflash2")
+				else if(damage_amount >= 20)
+					H.flash_fullscreen("redflash3")
 			if(BP)
 				if(zone_sel)
 					zone_sel.flash_limb(BP.body_zone, "#FF0000")
@@ -1924,13 +1915,12 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			var/damage_amount = forced ? damage : damage * hit_percent * burnmod * H.physiology.burn_mod
 			if(damage_amount > 10 && prob(damage_amount))
 				H.emote("pain")
-			if(H.show_redflash())
-				if(damage_amount < 10)
-					H.flash_fullscreen("redflash1")
-				else if(damage_amount < 20)
-					H.flash_fullscreen("redflash2")
-				else if(damage_amount >= 20)
-					H.flash_fullscreen("redflash3")
+			if(damage_amount < 10)
+				H.flash_fullscreen("redflash1")
+			else if(damage_amount < 20)
+				H.flash_fullscreen("redflash2")
+			else if(damage_amount >= 20)
+				H.flash_fullscreen("redflash3")
 			if(BP)
 				if(zone_sel)
 					zone_sel.flash_limb(BP.body_zone, "#FF0000")

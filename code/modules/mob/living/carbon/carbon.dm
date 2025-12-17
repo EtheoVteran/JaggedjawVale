@@ -176,7 +176,11 @@
 			visible_message("<span class='danger'>[src] crashes into [victim]!",\
 				"<span class='danger'>I violently crash into [victim]!</span>")
 			playsound(src,"genblunt",100,TRUE)
-
+			var/nomprob
+			if(voremode)
+				nomprob = ((get_stat(STATKEY_LCK - 10) * 10) + ((get_stat(STATKEY_STR) - 10) * 10) + (get_stat(STATKEY_SPD)))
+				if(prob(nomprob))
+					spontaneous_vore_attackby(victim, src)
 
 
 //Throwing stuff
@@ -1003,31 +1007,37 @@
 		overlay_fullscreen("brute", /atom/movable/screen/fullscreen/brute, severity)
 	else
 		clear_fullscreen("brute")*/
-	if(show_redflash())
-		var/hurtdamage = ((get_complex_pain() / (STAWIL * 10)) * 100) //what percent out of 100 to max pain
-		if(hurtdamage > 5) //float
-			var/severity = 0
-			switch(hurtdamage)
-				if(5 to 20)
-					severity = 1
-				if(20 to 40)
-					severity = 2
-				if(40 to 60)
-					severity = 3
+
+	var/hurtdamage = ((get_complex_pain() / (STAWIL * 10)) * 100) //what percent out of 100 to max pain
+	if(hurtdamage > 5) //float
+		var/severity = 0
+		switch(hurtdamage)
+			if(5 to 20)
+				severity = 1
+			if(20 to 40)
+				severity = 2
+			if(40 to 60)
+				severity = 3
+				if(!check_epilepsy())
 					overlay_fullscreen("painflash", /atom/movable/screen/fullscreen/painflash)
-				if(60 to 80)
-					severity = 4
+			if(60 to 80)
+				severity = 4
+				if(!check_epilepsy())
 					overlay_fullscreen("painflash", /atom/movable/screen/fullscreen/painflash)
-				if(80 to 99)
-					severity = 5
+			if(80 to 99)
+				severity = 5
+				if(!check_epilepsy())
 					overlay_fullscreen("painflash", /atom/movable/screen/fullscreen/painflash)
-				if(99 to INFINITY)
-					severity = 6
+			if(99 to INFINITY)
+				severity = 6
+				if(!check_epilepsy())
 					overlay_fullscreen("painflash", /atom/movable/screen/fullscreen/painflash)
+		
+		if(!check_epilepsy())
 			overlay_fullscreen("brute", /atom/movable/screen/fullscreen/brute, severity)
-		else
-			clear_fullscreen("brute")
-			clear_fullscreen("painflash")
+	else
+		clear_fullscreen("brute")
+		clear_fullscreen("painflash")
 
 /mob/living/carbon/update_health_hud(shown_health_amount)
 	if(!client || !hud_used)
@@ -1066,7 +1076,10 @@
 			src.apply_status_effect(/datum/status_effect/buff/undermaidenbargainheal)
 			return
 		if(health <= HEALTH_THRESHOLD_DEAD && !HAS_TRAIT(src, TRAIT_NODEATH))
-			INVOKE_ASYNC(src, PROC_REF(emote), "deathgurgle")
+			//Cove edit start
+			if (!istype(loc, /obj/belly))
+			//Cove edit end
+				INVOKE_ASYNC(src, PROC_REF(emote), "deathgurgle")
 			death()
 			cure_blind(UNCONSCIOUS_BLIND)
 			return
@@ -1106,7 +1119,7 @@
 	update_hud_handcuffed()
 	update_mobility()
 
-/mob/living/carbon/fully_heal(admin_revive = FALSE, break_restraints = FALSE)
+/mob/living/carbon/fully_heal(admin_revive = FALSE)
 	if(reagents)
 		reagents.clear_reagents()
 		for(var/addi in reagents.addiction_list)
@@ -1128,13 +1141,12 @@
 		suiciding = FALSE
 		regenerate_limbs()
 		regenerate_organs()
-		if(reagents)
-			reagents.addiction_list = list()
-	if(break_restraints)
 		handcuffed = initial(handcuffed)
 		for(var/obj/item/restraints/R in contents) //actually remove cuffs from inventory
 			qdel(R)
 		update_handcuffed()
+		if(reagents)
+			reagents.addiction_list = list()
 	cure_all_traumas(TRAUMA_RESILIENCE_MAGIC)
 	..()
 	// heal ears after healing traits, since ears check TRAIT_DEAF trait

@@ -91,7 +91,7 @@
 	var/list/peopleknowme = list()
 
 	var/plevel_req = 0
-	var/min_pq = 0
+	var/min_pq = null //0
 	var/max_pq = 0
 	var/round_contrib_points = 0 //Each 10 contributor points counts as 1 PQ, up to 10 PQ.
 
@@ -231,10 +231,6 @@
 			H.mind.i_know_person(MF)
 
 	// Ready up bonus
-	if(H.mind)
-		if (HAS_TRAIT(H, TRAIT_EXPLOSIVE_SUPPLY))
-			H.mind.has_bomb = TRUE
-
 	if(!H.islatejoin)
 		H.adjust_triumphs(1)
 		H.apply_status_effect(/datum/status_effect/buff/foodbuff)

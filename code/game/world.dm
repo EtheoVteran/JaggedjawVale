@@ -107,7 +107,9 @@ GLOBAL_VAR(restart_counter)
 	HandleTestRun()
 #endif
 	update_status()
-
+	//Caustic edit
+	init_chomp_globals()
+	//Caustic edit end
 
 /world/proc/HandleTestRun()
 	//trigger things to run the whole process
@@ -194,8 +196,7 @@ GLOBAL_VAR(restart_counter)
 	start_log(GLOB.tgui_log)
 	start_log(GLOB.character_list_log)
 
-	var/latest_changelog = file("[global.config.directory]/../html/changelogs/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml")
-	GLOB.changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : 0 //for telling if the changelog has changed recently
+	GLOB.changelog_hash = md5('html/changelog.html') //for telling if the changelog has changed recently
 	if(fexists(GLOB.config_error_log))
 		fcopy(GLOB.config_error_log, "[GLOB.log_directory]/config_error.log")
 		fdel(GLOB.config_error_log)

@@ -81,6 +81,3 @@
 
 /obj/item/clothing/under/roguetown/loincloth/pink
 	color = "#b98ae3"
-
-/obj/item/clothing/under/roguetown/loincloth/deprived
-	color = "#464040"

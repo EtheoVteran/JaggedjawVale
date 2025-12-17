@@ -13,7 +13,7 @@
 	advclass_cat_rolls = list(CTAG_SENESCHAL = 20)
 	display_order = JDO_BUTLER
 	give_bank_account = TRUE
-	min_pq = 3
+	min_pq = null //3
 	max_pq = null
 	round_contrib_points = 3
 	job_subclasses = list(

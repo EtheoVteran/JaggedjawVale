@@ -2,7 +2,7 @@
 	name = "Hangyaku-Kounen"
 	tutorial = "Rebel. Outlaw. Failure. Once, you served the upper echelons of Kazengun society as more than just a 'knight'- you were a champion, a beacon of virtue, a legend in the making. Now you wander distant Psydonia, seeking a fresh start... or fresh coin, at least."
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_NO_CONSTRUCT //do they have constructs in kazengun?
+	allowed_races = ALL //do they have constructs in kazengun?	//CC EDIT - Allows all races to play
 	outfit = /datum/outfit/job/roguetown/mercenary/hangyaku
 	subclass_languages = list(/datum/language/kazengunese)
 	class_select_category = CLASS_CAT_KAZENGUN
@@ -152,7 +152,7 @@
 
 /datum/outfit/job/roguetown/mercenary/chonin/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
-	var/trades = list("Town Physician","Farmer","Tailor","Laborer","Merchant","Levy") //JMAN COMBAT SKILLS... AND TOWNER TRADES. GOD I HOPE THIS ISN'T A TERRIBLE IDEA.
+	var/trades = list("Town Physician","Farmer","Tailor","Laborer","Merchant","Levy","Ashigaru") //JMAN COMBAT SKILLS... AND TOWNER TRADES. GOD I HOPE THIS ISN'T A TERRIBLE IDEA. // Caustic Cove edit - Adds Ashigaru
 	var/trade_choice = input(H, "Choose your former trade.", "WHO ARE YOU?") as anything in trades
 	switch(trade_choice)
 		if("Town Physician") //alchemy and medicine. that's pretty strong as-is, so...
@@ -204,3 +204,11 @@
 			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/steel/kazengun, TRUE)
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BACK_R, TRUE)
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/kazengun, SLOT_BELT_R, TRUE)
+		if("Ashigaru") // Caustic Cove edit - A dishonorable weapon, only fit for a peasant! Or maybe that's just your enemies coping and seething because they're losing. :)
+			H.adjust_skillrank_up_to(/datum/skill/combat/firearms, SKILL_LEVEL_EXPERT, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/knives, SKILL_LEVEL_JOURNEYMAN, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/gun/ballistic/arquebus, SLOT_BACK_R, TRUE)
+			H.put_in_hands(new /obj/item/powderflask, TRUE)
+			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/steel/kazengun, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/kazengun, SLOT_BELT_R, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/quiver/bulletpouch/iron, SLOT_BELT_L, TRUE)

@@ -17,7 +17,7 @@
 	advclass_cat_rolls = list(CTAG_WATCH = 20)
 
 	give_bank_account = 16
-	min_pq = 1 //Introductory guard role, but still requires knowledge of escalation.
+	min_pq = null //1 //Introductory guard role, but still requires knowledge of escalation.
 	max_pq = null
 	round_contrib_points = 2
 
@@ -30,7 +30,7 @@
 	. = ..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
-		if(istype(H.cloak, /obj/item/clothing/cloak/tabard/stabard/guard))
+		if(istype(H.cloak, /obj/item/clothing/cloak/stabard/guard))
 			var/obj/item/clothing/S = H.cloak
 			var/index = findtext(H.real_name, " ")
 			if(index)
@@ -41,7 +41,7 @@
 
 /datum/outfit/job/roguetown/guardsman
 	pants = /obj/item/clothing/under/roguetown/chainlegs
-	cloak = /obj/item/clothing/cloak/tabard/stabard/guard
+	cloak = /obj/item/clothing/cloak/stabard/guard
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	shoes = /obj/item/clothing/shoes/roguetown/boots

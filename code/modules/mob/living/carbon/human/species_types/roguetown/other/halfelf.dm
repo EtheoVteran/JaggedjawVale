@@ -15,7 +15,7 @@
 	characteristics can be either more Elvish or more Humen, depending on which of their parents' genes \
 	are more predominant. In terms of cultural identity, a Half-Elf will typically choose to lean more \
 	towards either their Humen or Elvish heritages.<br>\
-	(+1 Constitution, +1 Perception)" 
+	(+1 Constitution, +1 Perception)"
 
 	skin_tone_wording = "Identity"
 	max_age = 250
@@ -72,6 +72,10 @@
 		/datum/customizer/organ/penis/anthro,
 		/datum/customizer/organ/breasts/human,
 		/datum/customizer/organ/vagina/human_anthro,
+		//Caustic edit
+		/datum/customizer/organ/belly/human,
+		/datum/customizer/organ/butt/human,
+		//Caustic edit end
 		)
 	body_marking_sets = list(
 		/datum/body_marking_set/none,

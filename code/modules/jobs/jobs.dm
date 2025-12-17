@@ -97,7 +97,6 @@ GLOBAL_LIST_INIT(church_positions, list(
 	"Templar",
 	"Druid",
 	"Martyr",
-	"Sexton",
 ))
 
 GLOBAL_LIST_INIT(inquisition_positions, list(
@@ -135,6 +134,9 @@ GLOBAL_LIST_INIT(peasant_positions, list(
 	"Beggar",
 	"Trader",
 	"Pilgrim",
+	"Bandit",
+	"Court Agent",
+	"Wretch",
 ))
 
 GLOBAL_LIST_INIT(mercenary_positions, list(
@@ -147,6 +149,7 @@ GLOBAL_LIST_INIT(youngfolk_positions, list(
 	"Apothecary",
 	"Smithy Apprentice",
 	"Magicians Associate",
+	"Churchling",
 	"Servant",
 	"Shophand",
 	"Vagabond",
@@ -160,6 +163,7 @@ GLOBAL_LIST_INIT(wanderer_positions, list(
 	"Assassin",
 	"Court Agent",
 	"Wretch",
+	"Wild Soul", //caustic edit
 ))
 
 GLOBAL_LIST_INIT(roguewar_positions, list(

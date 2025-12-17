@@ -7,6 +7,7 @@
 	blocksound = SOFTHIT
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	armor = ARMOR_PLATE
+	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
 	allowed_sex = list(MALE, FEMALE)
 	nodismemsleeves = TRUE
 	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE
@@ -16,11 +17,10 @@
 	armor_class = ARMOR_CLASS_MEDIUM //good idea suggested by lamaster
 	sleeved_detail = FALSE
 	boobed_detail = FALSE
-	chunkcolor = "#7d9097"
 
 /obj/item/clothing/suit/roguetown/armor/brigandine/Initialize()
 	. = ..()
-	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_PLATE_COAT_STEP, 6)
+	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_PLATE_COAT_STEP)
 
 /obj/item/clothing/suit/roguetown/armor/brigandine/attack_right(mob/user)
 	if(detail_tag)
@@ -37,7 +37,6 @@
 	if(ismob(loc))
 		var/mob/L = loc
 		L.update_inv_armor()
-	chunkcolor = pickedcolor
 
 /obj/item/clothing/suit/roguetown/armor/brigandine/update_icon()
 	cut_overlays()
@@ -114,7 +113,7 @@
 	body_parts_covered = COVERAGE_TORSO
 	armor = ARMOR_LEATHER_STUDDED
 	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE
-	smeltresult = /obj/item/ingot/iron
+	smeltresult = /obj/item/ingot/steel
 	equip_delay_self = 40
 	armor_class = ARMOR_CLASS_LIGHT//steel version of the studded leather armor now
 	w_class = WEIGHT_CLASS_BULKY

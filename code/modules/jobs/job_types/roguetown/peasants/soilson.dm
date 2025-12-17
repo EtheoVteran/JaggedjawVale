@@ -18,7 +18,7 @@
 	outfit = /datum/outfit/job/roguetown/farmer
 	display_order = 24
 	give_bank_account = TRUE
-	min_pq = -10
+	min_pq = null //-10
 	max_pq = null
 	round_contrib_points = 3
 
@@ -62,7 +62,7 @@
 
 /datum/outfit/job/roguetown/farmer/basic/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/cap
+	head = /obj/item/clothing/head/roguetown/armingcap
 	mask = /obj/item/clothing/head/roguetown/roguehood
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather

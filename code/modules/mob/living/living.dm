@@ -77,6 +77,7 @@
 //Generic Bump(). Override MobBump() and ObjBump() instead of this.
 /mob/living/Bump(atom/A)
 	if(..()) //we are thrown onto something
+		//spontaneous_vore_attackby(A, src) ^^^ read 3 lines above
 		return
 	if (buckled || now_pushing)
 		return
@@ -200,17 +201,6 @@
 			if(L.dir == get_dir(src, L))
 				self_points += 2
 
-			// Shields matter
-			var/list/obj/item/user_inhand = get_held_items()
-			var/list/obj/item/target_inhand = L.get_held_items()
-
-			for(var/obj/I in user_inhand)
-				if(istype(I, /obj/item/rogueweapon/shield))
-					self_points += 2
-			for(var/obj/I in target_inhand)
-				if(istype(I, /obj/item/rogueweapon/shield))
-					target_points += 2
-
 			// Randomize con roll from -1 to +1 to make it less consistent
 			self_points += rand(-1, 1)
 
@@ -236,7 +226,7 @@
 			if(self_points == target_points)
 				L.Knockdown(1)
 				Knockdown(30)
-			Immobilize(5)
+			Immobilize(10)
 			var/playsound = FALSE
 			if(L.apply_damage(15, BRUTE, "chest", L.run_armor_check("chest", "blunt", damage = 10)))
 				playsound = TRUE
@@ -250,10 +240,22 @@
 					visible_message(span_warning("[src] smashes into [L] with no headstart!"), span_warning("I charge into [L] too early!"))
 				if(clash_blocked)
 					visible_message(span_warning("[src] gets tripped by [L]!"), span_warning("I get tripped by [L]!"))
+					/*if(voremode)
+						if(prob(50))
+							vore_attack_instant(src, L, src) <-- TODO readd this
+						else
+							return TRUE*/
 			else
 				visible_message(span_warning("[src] charges into [L]!"), span_warning("I charge into [L]!"))
 			return TRUE
-
+	///Caustic edit
+	if(ishuman(M) && ishuman(src))
+		var/mob/living/carbon/human/srchuman = src
+		if(srchuman.handle_micro_bump_helping(M))
+			forceMove(M.loc)
+			now_pushing = FALSE
+			return TRUE
+	///Caustic edit end
 	//okay, so we didn't switch. but should we push?
 	//not if he's not CANPUSH of course
 	if(!(M.status_flags & CANPUSH))
@@ -630,8 +632,6 @@
 	if(pulling)
 		if(ismob(pulling))
 			var/mob/living/M = pulling
-			if(pulledby && pulledby == pulling)
-				reset_offsets("pulledby")
 			M.reset_offsets("pulledby")
 			reset_pull_offsets(pulling)
 			if(HAS_TRAIT(M, TRAIT_GARROTED))
@@ -650,7 +650,6 @@
 				if(I.grabbed == pulling)
 					dropItemToGround(I, silent = FALSE)
 	reset_offsets("pulledby")
-	reset_pull_offsets(src)
 	. = ..()
 
 	update_pull_movespeed()
@@ -718,6 +717,7 @@
 
 /mob/living/proc/setMaxHealth(newMaxHealth)
 	maxHealth = newMaxHealth
+
 
 // MOB PROCS //END
 
@@ -879,7 +879,7 @@
 /mob/living/proc/revive(full_heal = FALSE, admin_revive = FALSE)
 	SEND_SIGNAL(src, COMSIG_LIVING_REVIVE, full_heal, admin_revive)
 	if(full_heal)
-		fully_heal(admin_revive = admin_revive, break_restraints = admin_revive)
+		fully_heal(admin_revive = admin_revive)
 	if(stat == DEAD && (admin_revive || can_be_revived())) //in some cases you can't revive (e.g. no brain)
 		GLOB.dead_mob_list -= src  //If any more forms of revival are added, better to use a proc to do this - easier to search
 		GLOB.alive_mob_list += src
@@ -920,8 +920,11 @@
 		var/obj/item/item = i
 		SEND_SIGNAL(item, COMSIG_ITEM_WEARERCROSSED, AM, src)
 
-/// proc used to completely heal a mob. admin_revive = TRUE is used in other procs, for example mob/living/carbon/fully_heal()
-/mob/living/proc/fully_heal(admin_revive = FALSE, break_restraints = FALSE)
+
+
+//proc used to completely heal a mob.
+//admin_revive = TRUE is used in other procs, for example mob/living/carbon/fully_heal()
+/mob/living/proc/fully_heal(admin_revive = FALSE)
 	restore_blood()
 	setToxLoss(0, 0) //zero as second argument not automatically call updatehealth().
 	setOxyLoss(0, 0)
@@ -1837,6 +1840,7 @@
 			layer = initial(layer)
 	update_cone_show()
 	update_transform()
+	lying_prev = lying
 
 	// Movespeed mods based on arms/legs quantity
 	if(!get_leg_ignore())
@@ -2263,8 +2267,7 @@
 		if(ttime < 0)
 			ttime = 0
 
-	if(m_intent != MOVE_INTENT_SNEAK)
-		visible_message(span_info("[src] looks down through [T]."))
+	visible_message(span_info("[src] looks down through [T]."))
 
 	if(!do_after(src, ttime, target = src))
 		return

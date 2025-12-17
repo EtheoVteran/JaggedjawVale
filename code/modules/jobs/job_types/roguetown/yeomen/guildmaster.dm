@@ -7,7 +7,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	min_pq = 0
+	min_pq = null //0
 	selection_color = JCOLOR_YEOMAN
 
 	allowed_races = ACCEPTED_RACES
@@ -18,13 +18,13 @@
 	outfit = /datum/outfit/job/roguetown/guildmaster
 	selection_color = JCOLOR_YEOMAN
 	display_order = JDO_GUILDMASTER
-	give_bank_account = TRUE
-	min_pq = 5 // Higher PQ requirement as it is a leadership role. Not for total newbie.
+	give_bank_account = 25
+	min_pq = null //5 // Higher PQ requirement as it is a leadership role. Not for total newbie.
 	max_pq = null
 	round_contrib_points = 3
 	cmode_music = 'sound/music/cmode/towner/combat_retired.ogg'
 
-	job_traits = list(TRAIT_TRAINED_SMITH, TRAIT_SEEPRICES, TRAIT_SMITHING_EXPERT, TRAIT_SEWING_EXPERT, TRAIT_HOMESTEAD_EXPERT)
+	job_traits = list(TRAIT_TRAINED_SMITH, TRAIT_SEEPRICES, TRAIT_SMITHING_EXPERT, TRAIT_SEWING_EXPERT, TRAIT_HOMESTEAD_EXPERT, TRAIT_ARCYNE_T1)
 	// Guildmaster get way less gate due to their role
 
 	advclass_cat_rolls = list(CTAG_GUILDSMASTER = 2)
@@ -43,7 +43,8 @@
 		STATKEY_STR = 2,
 		STATKEY_CON = 2,
 		STATKEY_WIL = 2,
-		STATKEY_INT = 1
+		STATKEY_INT = 1,
+		STATKEY_PER = 2
 	)
 	subclass_skills = list(
 		/datum/skill/combat/axes = SKILL_LEVEL_JOURNEYMAN,
@@ -66,6 +67,8 @@
 		/datum/skill/craft/ceramics = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/craft/traps = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		//Caustic edit
+		/datum/skill/combat/crossbows = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/guildmaster
@@ -73,6 +76,7 @@
 
 /datum/outfit/job/roguetown/guildmaster/basic/pre_equip(mob/living/carbon/human/H)
 	H.adjust_blindness(-3)
+
 	head = /obj/item/clothing/head/roguetown/chaperon/noble/guildmaster
 	gloves = /obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith
 	if(H.mind)
@@ -94,9 +98,12 @@
 		belt = /obj/item/storage/belt/rogue/leather
 		beltl = /obj/item/storage/belt/rogue/pouch/coins/rich
 		beltr = /obj/item/storage/keyring/guildmaster
-	ADD_TRAIT(H, TRAIT_MASTER_CARPENTER, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_MASTER_MASON, TRAIT_GENERIC)
-	if(H.mind)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/enchant_weapon)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_weapon)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/conjure_armor)
+		ADD_TRAIT(H, TRAIT_MASTER_CARPENTER, TRAIT_GENERIC)		
+		ADD_TRAIT(H, TRAIT_MASTER_MASON, TRAIT_GENERIC)	
 		SStreasury.give_money_account(ECONOMIC_UPPER_CLASS, H, "Savings.")
 
 /datum/outfit/job/roguetown/guildmaster/choose_loadout(mob/living/carbon/human/H)

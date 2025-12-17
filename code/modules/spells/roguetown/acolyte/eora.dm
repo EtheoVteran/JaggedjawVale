@@ -436,7 +436,7 @@
 /obj/structure/eoran_pomegranate_tree
 	name = "pomegranate tree"
 	desc = "A mystical tree blessed by Eora."
-	icon = 'icons/obj/items/eora_tree.dmi'
+	icon = 'modular_azurepeak/icons/obj/items/eora_tree.dmi'
 	icon_state = "sprout"
 	anchored = TRUE
 	density = TRUE
@@ -861,7 +861,7 @@
 /obj/item/fruit_of_eora
 	name = "pomegranate"
 	desc = "A mystical pomegranate glowing with inner light. It feels warm to the touch."
-	icon = 'icons/obj/items/eora_pom.dmi'
+	icon = 'modular_azurepeak/icons/obj/items/eora_pom.dmi'
 	icon_state = "pom"
 	var/fruit_tier = 1
 	var/list/aril_types = list()
@@ -970,7 +970,7 @@
 /obj/item/reagent_containers/food/snacks/eoran_aril
 	name = "eoran aril"
 	desc = "A glowing seed from the fruit of Eora. It pulses with divine energy."
-	icon = 'icons/obj/items/eora_pom.dmi'
+	icon = 'modular_azurepeak/icons/obj/items/eora_pom.dmi'
 	dropshrink = 0.7
 	icon_state = "auric"
 	bitesize = 1
@@ -1009,30 +1009,22 @@
 	icon_state = "crimson"
 	effect_desc = "This fruit heals for a blood price."
 
-	var/heal_amount = 35
+	var/heal_amount = 45
 	var/blood_loss = 225
 
-/obj/item/reagent_containers/food/snacks/eoran_aril/crimson/Initialize()
-	. = ..()
-	blood_loss = BLOOD_VOLUME_NORMAL * 0.04
-
 /obj/item/reagent_containers/food/snacks/eoran_aril/crimson/apply_effects(mob/living/carbon/eater)
-	//Instant heal, but you can only eat a couple before the next will make you pass out.
+	//Instant heal, but you can only eat 2 before the next will make you pass out.
 	var/list/wCount = eater.get_wounds()
 	//No undead because they kinda don't have blood to give for this.
 	if(!eater.construct && !(eater.mob_biotypes & MOB_UNDEAD))
-		var/current_brute_loss = eater.getBruteLoss()
-		blood_loss += (eater.blood_volume * 0.1)
 		if(wCount.len > 0)
-			eater.heal_wounds(heal_amount + (current_brute_loss * 0.12))
+			eater.heal_wounds(heal_amount)
 			eater.update_damage_overlays()
-		// blood loss is equal to 4% max blood volume + 10% of current blood volume
-		// Regular healing is equal to 35 damage + 12% of current damage
 		eater.blood_volume = max(0, eater.blood_volume - blood_loss)
-		eater.adjustBruteLoss(-(heal_amount + (current_brute_loss * 0.12)), 0)
-		eater.adjustFireLoss(-(heal_amount + (eater.getFireLoss() * 0.12)), 0)
-		eater.adjustToxLoss(-(heal_amount + (eater.getToxLoss() * 0.12)), 0)
-		eater.adjustOxyLoss(-(heal_amount + (eater.getOxyLoss() * 0.12)), 0)
+		eater.adjustBruteLoss(-heal_amount, 0)
+		eater.adjustFireLoss(-heal_amount, 0)
+		eater.adjustOxyLoss(-heal_amount, 0)
+		eater.adjustToxLoss(-heal_amount, 0)
 		eater.adjustOrganLoss(ORGAN_SLOT_BRAIN, -heal_amount)
 		eater.adjustCloneLoss(-heal_amount, 0)
 
@@ -1240,7 +1232,7 @@
 /obj/item/reagent_containers/lux/eoran_aril
 	name = "incandescent aril"
 	desc = "A blindingly bright seed that radiates pure life energy. It imitates lux, the essence of life."
-	icon = 'icons/obj/items/eora_pom.dmi'
+	icon = 'modular_azurepeak/icons/obj/items/eora_pom.dmi'
 	icon_state = "incandescent"
 	dropshrink = 0.7
 
@@ -1258,7 +1250,7 @@
 /obj/item/reagent_containers/eoran_seed
 	name = "Satin aril"
 	desc = "A silky soft seed from Eora's sacred tree. It can be used to propagate her gift in fertile soil."
-	icon = 'icons/obj/items/eora_pom.dmi'
+	icon = 'modular_azurepeak/icons/obj/items/eora_pom.dmi'
 	icon_state = "roseate"
 
 /obj/item/reagent_containers/eoran_seed/afterattack(atom/target, mob/user, proximity_flag, click_parameters)

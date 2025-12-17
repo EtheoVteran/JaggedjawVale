@@ -19,7 +19,7 @@
 	display_order = JDO_WENCH
 	give_bank_account = TRUE
 	can_random = FALSE
-	min_pq = -10
+	min_pq = null //-10
 	max_pq = null
 	round_contrib_points = 2
 	advjob_examine = TRUE
@@ -66,7 +66,7 @@
 
 /datum/outfit/job/roguetown/nightmaiden/attendant/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/cap
+	head = /obj/item/clothing/head/roguetown/armingcap
 	neck = /obj/item/clothing/neck/roguetown/collar
 	beltl = /obj/item/roguekey/nightmaiden
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor

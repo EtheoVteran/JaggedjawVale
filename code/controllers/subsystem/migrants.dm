@@ -317,30 +317,17 @@ SUBSYSTEM_DEF(migrants)
 
 	for(var/client/client as anything in players)
 		var/base_priority = 0
-		var/triumph_bonus = 0
-		//Standard role preference priority
-		if(role_type in client.prefs.migrant.role_preferences)
-			base_priority = 1
-			triumph_bonus = get_triumph_selection_bonus(client, wave_type) //Only gains the Triumph Bonus if they want that role.
 
-		var/final_priority = base_priority + triumph_bonus
+		// Standard role preference priority
+		if(role_type in client.prefs.migrant.role_preferences)
+			base_priority = 100
+
+		var/final_priority = base_priority + 100 * get_triumph_selection_bonus(client, wave_type)
 
 		if(final_priority > 0)
 			triumph_weighted[client] = final_priority
 
-	//Check if all triumph_weighted values are equal
-	var/all_equal = TRUE
-	var/first_val = -1
-
-	if(length(triumph_weighted))
-		first_val = triumph_weighted[1]
-		for(var/client/client in triumph_weighted)
-			// Check if anything is not equal to the first value in the list
-			if(triumph_weighted[client] != first_val)
-				all_equal = FALSE
-				break
-
-	//Convert weighted list to prioritized list
+	// Convert weighted list back to prioritized list
 	while(length(triumph_weighted))
 		var/client/highest = null
 		var/highest_priority = 0
@@ -354,11 +341,8 @@ SUBSYSTEM_DEF(migrants)
 			priority += highest
 			triumph_weighted -= highest
 
-	//Shuffle only if all have equal priority
-	if(all_equal)
-		priority = shuffle(priority)
-
 	return priority
+
 
 /datum/controller/subsystem/migrants/proc/can_be_role(client/player, role_type)
 	var/datum/migrant_role/role = MIGRANT_ROLE(role_type)

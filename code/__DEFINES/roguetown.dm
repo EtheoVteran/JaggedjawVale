@@ -80,11 +80,13 @@ Balloon Alert / Floating Text defines
 	/datum/species/akula,\
 	/datum/species/anthromorph,\
 	/datum/species/demihuman,\
+	/datum/species/harpy,\
 	/datum/species/halforc,\
 
 #define RACES_SHUNNED \
 	/datum/species/anthromorphsmall,\
 	/datum/species/kobold,\
+	/datum/species/harpy,\
 	/datum/species/goblinp,\
 
 #define RACES_DESPISED \
@@ -143,6 +145,7 @@ Balloon Alert / Floating Text defines
 	/datum/species/anthromorph,\
 	/datum/species/anthromorphsmall,\
 	/datum/species/demihuman,\
+	/datum/species/harpy,\
 	/datum/species/halforc,\
 	/datum/species/orc,\
 	/datum/species/kobold,\
@@ -169,6 +172,7 @@ Balloon Alert / Floating Text defines
 	/datum/species/anthromorph,\
 	/datum/species/demihuman,\
 	/datum/species/halforc,\
+	/datum/species/harpy,\
 	/datum/species/construct/metal,\
 	/datum/species/dullahan,\
 )
@@ -186,6 +190,7 @@ Balloon Alert / Floating Text defines
 	/datum/species/dracon,\
 	/datum/species/anthromorph,\
 	/datum/species/demihuman,\
+	/datum/species/harpy,\
 	/datum/species/construct/metal,\
 	/datum/species/dullahan,\
 )
@@ -202,8 +207,6 @@ Balloon Alert / Floating Text defines
 #define NON_PSYDON_PATRONS list(/datum/patron/divine/undivided, /datum/patron/divine/astrata, /datum/patron/divine/noc, /datum/patron/divine/dendor, /datum/patron/divine/abyssor, /datum/patron/divine/ravox, /datum/patron/divine/necra, /datum/patron/divine/xylix, /datum/patron/divine/pestra, /datum/patron/divine/malum, /datum/patron/divine/eora, /datum/patron/inhumen/zizo, /datum/patron/inhumen/graggar, /datum/patron/inhumen/matthios, /datum/patron/inhumen/baotha)	//For lord/heir usage
 
 #define ALL_PATRONS  list(/datum/patron/divine/undivided, /datum/patron/divine/astrata, /datum/patron/divine/noc, /datum/patron/divine/dendor, /datum/patron/divine/abyssor, /datum/patron/divine/ravox, /datum/patron/divine/necra, /datum/patron/divine/xylix, /datum/patron/divine/pestra, /datum/patron/divine/malum, /datum/patron/divine/eora, /datum/patron/old_god, /datum/patron/inhumen/zizo, /datum/patron/inhumen/graggar, /datum/patron/inhumen/matthios, /datum/patron/inhumen/baotha)
-
-#define ALL_SLAYER_PATRONS list(/datum/patron/divine/malum, /datum/patron/divine/ravox)
 
 #define PLATEHIT "plate"
 #define CHAINHIT "chain"
@@ -295,6 +298,9 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define CTAG_SERGEANT		"CAT_SERGEANT"		// Sergeant class - Handles Sergeant class selector (weapons selection)
 #define CTAG_ROYALGUARD		"CAT_ROYALGUARD"	// Royal Guard class - Handles Royal Guard class selector
 #define CTAG_CONSORT		"CAT_CONSORT"		// Consort/Suitor subclasses
+//caustic edit
+#define CTAG_WILDSOUL 		"CAT_WILDSOUL" 		//Caustic class - handles Wild Soul classes
+//caustic edit end
 #define CTAG_MERCENARY		"CAT_MERCENARY"		// Mercenary class - Handles Mercenary class selector
 #define CTAG_HAND			"CAT_HAND"			// Hand class - Handles Hand class selector
 #define CTAG_TEMPLAR		"CAT_TEMPLAR"		// Templar class - Handles Templar class selector
@@ -353,6 +359,37 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define ARMOR_CLASS_LIGHT 1
 #define ARMOR_CLASS_MEDIUM 2
 #define ARMOR_CLASS_HEAVY 3
+
+//CC BEGIN
+
+/*
+	Defines the ratios for armors when calculating layered integrity damage. Higher values means a stronger ratio.
+
+	Ratios work by combining the values of both items and spreading damage across evenly. 
+	If you have an armor with an AC of "none", it will only convert a small portion of the total depending on the other item's weight.
+	
+	Ex:
+	(individual_armor / total_ratio)
+	AC_NONE+AC_MEDIUM = 80 total_ratio
+	20/80 = 25%
+	60/80 = 75%
+
+	The Medium Armor takes 75% damage, where the NONE takes only 25% of integrity damage. 
+	If you have 2 ratio's of the same amount, 50/50. 
+	Lets look at Heavy and Light. 
+
+	40+80 = 120
+	40/120 = 33%
+	80/120 = 66% -> Your Heavy Armor takes 66% of the damage, and 33% transfers under to your underarmor.
+*/
+#define AC_NONE_RATIO 20
+#define AC_LIGHT_RATIO 40
+#define AC_MEDIUM_RATIO 60
+#define AC_HEAVY_RATIO 80
+
+#define ARMOR_SHIELD TRUE //Used for armor types that are not meant to last permanently and act as an overshield across the entire body, I.E. Fateweaver/Dragonhide.
+
+//CC END
 
 /*
 	Defines for class select categories

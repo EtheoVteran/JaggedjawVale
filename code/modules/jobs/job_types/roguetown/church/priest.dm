@@ -18,8 +18,8 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	spawn_positions = 1
 	selection_color = JCOLOR_CHURCH
 	f_title = "Bishop"
-	allowed_races = RACES_NO_CONSTRUCT		//Too recent arrivals to ascend to priesthood.
-	allowed_patrons = ALL_DIVINE_PATRONS
+	allowed_races = RACES_NO_CONSTRUCT
+	allowed_patrons = list(/datum/patron/divine/undivided)
 	allowed_sexes = list(MALE, FEMALE)
 	tutorial = "The Divine is all that matters in a world of the immoral. The Weeping God abandoned us, and in his stead the TEN rule over us mortals--and you will preach their wisdom to any who still heed their will. The faithless are growing in number. It is up to you to shepherd them toward a Gods-fearing future; for you are a Bishop of the Holy See."
 	whitelist_req = FALSE
@@ -29,13 +29,13 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	outfit = /datum/outfit/job/roguetown/priest
 	display_order = JDO_PRIEST
 	give_bank_account = TRUE
-	min_pq = 5 // You should know the basics of things if you're going to lead the town's entire religious sector
+	min_pq = null //5 // You should know the basics of things if you're going to lead the town's entire religious sector
 	max_pq = null
 	round_contrib_points = 5
 
 	//No nobility for you, being a member of the clergy means you gave UP your nobility. It says this in many of the church tutorial texts.
 	virtue_restrictions = list(/datum/virtue/utility/noble)
-	job_traits = list(TRAIT_CHOSEN, TRAIT_RITUALIST, TRAIT_GRAVEROBBER, TRAIT_HOMESTEAD_EXPERT, TRAIT_MEDICINE_EXPERT)
+	job_traits = list(TRAIT_CHOSEN, TRAIT_RITUALIST, TRAIT_GRAVEROBBER, TRAIT_HOMESTEAD_EXPERT)
 	advclass_cat_rolls = list(CTAG_BISHOP = 2)
 	job_subclasses = list(
 		/datum/advclass/bishop
@@ -45,8 +45,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	name = "Bishop"
 	tutorial = "The Divine is all that matters in a world of the immoral. \
 	The Weeping God abandoned us, and in his stead the TEN rule over us mortals--and you will preach their wisdom to any who still heed their will. The faithless are growing in number. \
-	It is up to you to shepherd them toward a Gods-fearing future; for you are a Bishop of the Holy See. \
-	My closest patron may have blessed me, yet my allegiance remains true in harmonizing all 10 faiths."
+	It is up to you to shepherd them toward a Gods-fearing future; for you are a Bishop of the Holy See."
 	outfit = /datum/outfit/job/roguetown/priest/basic
 	subclass_languages = list(/datum/language/grenzelhoftian)
 	category_tags = list(CTAG_BISHOP)
@@ -60,7 +59,6 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	subclass_skills = list(
 		/datum/skill/combat/wrestling = SKILL_LEVEL_MASTER,
 		/datum/skill/combat/unarmed = SKILL_LEVEL_MASTER,
-		/datum/skill/combat/staves = SKILL_LEVEL_MASTER,
 		/datum/skill/combat/polearms = SKILL_LEVEL_MASTER,
 		/datum/skill/misc/reading = SKILL_LEVEL_LEGENDARY,
 		/datum/skill/misc/medicine = SKILL_LEVEL_EXPERT,
@@ -78,11 +76,12 @@ GLOBAL_LIST_EMPTY(heretical_players)
 /datum/outfit/job/roguetown/priest
 	job_bitflag = BITFLAG_HOLY_WARRIOR
 	has_loadout = TRUE
-	allowed_patrons = ALL_DIVINE_PATRONS	//We lock this cus head of church, acktully
+	allowed_patrons = list(/datum/patron/divine/undivided)	//We lock this cus head of church, acktully
 
 /datum/outfit/job/roguetown/priest/basic/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
+	neck = /obj/item/clothing/neck/roguetown/psicross/undivided
 	head = /obj/item/clothing/head/roguetown/priestmask
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/priest
 	pants = /obj/item/clothing/under/roguetown/tights/black
@@ -91,14 +90,14 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	id = /obj/item/clothing/ring/active/nomag
+	armor = /obj/item/clothing/suit/roguetown/shirt/robe/priest
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
 		/obj/item/needle/pestra = 1,
 		/obj/item/natural/worms/leech/cheele = 1, //little buddy
 		/obj/item/ritechalk = 1,
 		/obj/item/rogueweapon/huntingknife/idagger/steel/holysee = 1,	//Unique knife from the Holy See
-		/obj/item/rogueweapon/scabbard/sheath = 1,
-		/obj/item/clothing/neck/roguetown/psicross/undivided = 1
+		/obj/item/rogueweapon/scabbard/sheath = 1
 	)
 	H.AddComponent(/datum/component/wise_tree_alert)
 	if(H.age == AGE_OLD)
@@ -116,105 +115,6 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	H.mind?.AddSpell(new /obj/effect/proc_holder/spell/invoked/revive)
 	if(H.mind)
 		SStreasury.give_money_account(ECONOMIC_UPPER_CLASS, H, "Church Funding.")
-	switch(H.patron?.type)
-		if(/datum/patron/divine/undivided)
-			neck = /obj/item/clothing/neck/roguetown/psicross/undivided
-			wrists = /obj/item/clothing/wrists/roguetown/wrappings
-			shoes = /obj/item/clothing/shoes/roguetown/sandals
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/white
-			cloak = /obj/item/clothing/cloak/undivided
-			r_hand = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-		if(/datum/patron/divine/astrata)
-			l_hand = /obj/item/clothing/head/roguetown/roguehood/astrata
-			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
-			wrists = /obj/item/clothing/wrists/roguetown/wrappings
-			shoes = /obj/item/clothing/shoes/roguetown/sandals
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
-			cloak = /obj/item/clothing/cloak/undivided
-			r_hand = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-		if(/datum/patron/divine/noc)
-			l_hand = /obj/item/clothing/head/roguetown/roguehood/nochood
-			neck = /obj/item/clothing/neck/roguetown/psicross/noc
-			wrists = /obj/item/clothing/wrists/roguetown/nocwrappings
-			shoes = /obj/item/clothing/shoes/roguetown/sandals
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/noc
-			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-			cloak = /obj/item/clothing/cloak/undivided
-			r_hand = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-		if(/datum/patron/divine/abyssor)
-			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-			shoes = /obj/item/clothing/shoes/roguetown/sandals
-			pants = /obj/item/clothing/under/roguetown/tights
-			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
-			cloak = /obj/item/clothing/cloak/undivided
-			l_hand = /obj/item/clothing/head/roguetown/roguehood/abyssor
-			r_hand = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-		if(/datum/patron/divine/dendor)
-			l_hand = /obj/item/clothing/head/roguetown/dendormask
-			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
-			cloak = /obj/item/clothing/cloak/undivided
-			r_hand = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-		if(/datum/patron/divine/necra)
-			l_hand = /obj/item/clothing/head/roguetown/necrahood
-			neck = /obj/item/clothing/neck/roguetown/psicross/necra
-			shoes = /obj/item/clothing/shoes/roguetown/boots
-			pants = /obj/item/clothing/under/roguetown/trou/leather/mourning
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/necra
-			shirt = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
-			cloak = /obj/item/clothing/cloak/undivided
-			r_hand = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-		if(/datum/patron/divine/pestra)
-			neck = /obj/item/clothing/neck/roguetown/psicross/pestra
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/phys
-			l_hand = /obj/item/clothing/head/roguetown/roguehood/phys
-			shoes = /obj/item/clothing/shoes/roguetown/boots
-			pants = /obj/item/clothing/under/roguetown/trou/leather/mourning
-			cloak = /obj/item/clothing/cloak/undivided
-			r_hand = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-		if(/datum/patron/divine/eora)
-			l_hand = /obj/item/clothing/head/roguetown/eoramask
-			neck = /obj/item/clothing/neck/roguetown/psicross/eora
-			shoes = /obj/item/clothing/shoes/roguetown/sandals
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/eora
-			cloak = /obj/item/clothing/cloak/undivided
-			r_hand = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-		if(/datum/patron/divine/malum)
-			l_hand = /obj/item/clothing/head/roguetown/roguehood
-			neck = /obj/item/clothing/neck/roguetown/psicross/malum
-			shoes = /obj/item/clothing/shoes/roguetown/boots
-			wrists = /obj/item/clothing/wrists/roguetown/wrappings
-			pants = /obj/item/clothing/under/roguetown/trou
-			cloak = /obj/item/clothing/cloak/undivided
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
-			r_hand = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-		if(/datum/patron/divine/ravox)
-			l_hand = /obj/item/clothing/head/roguetown/roguehood
-			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
-			cloak = /obj/item/clothing/cloak/undivided
-			wrists = /obj/item/clothing/wrists/roguetown/wrappings
-			shoes = /obj/item/clothing/shoes/roguetown/boots
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/white
-			r_hand = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-		if(/datum/patron/divine/xylix)
-			l_hand = /obj/item/clothing/head/roguetown/roguehood
-			cloak = /obj/item/clothing/cloak/undivided
-			wrists = /obj/item/clothing/wrists/roguetown/wrappings
-			shoes = /obj/item/clothing/shoes/roguetown/sandals
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe
-			neck = /obj/item/clothing/neck/roguetown/luckcharm // For good luck, as Xylix would intend
-			H.cmode_music = 'sound/music/combat_jester.ogg'
-			var/datum/inspiration/I = new /datum/inspiration(H)
-			I.grant_inspiration(H, bard_tier = BARD_T2)
-			r_hand = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-		else
-			l_hand = /obj/item/clothing/head/roguetown/roguehood/astrata
-			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
-			wrists = /obj/item/clothing/wrists/roguetown/wrappings
-			shoes = /obj/item/clothing/shoes/roguetown/sandals
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
-			cloak = /obj/item/clothing/cloak/undivided
 
 /datum/outfit/job/roguetown/priest/basic/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
@@ -249,34 +149,6 @@ GLOBAL_LIST_EMPTY(heretical_players)
 			H.mind?.AddSpell(new chosen_miracle)
 			t3.Remove(t3_choice)
 			t3_count--
-	// -- Start of section for god specific bonuses --
-	if(H.patron?.type == /datum/patron/divine/undivided)
-		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
-	if(H.patron?.type == /datum/patron/divine/astrata)
-		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
-		H.cmode_music = 'sound/music/cmode/church/combat_astrata.ogg'
-	if(H.patron?.type == /datum/patron/divine/noc)
-		H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
-		if(H.mind)
-			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
-		ADD_TRAIT(H, TRAIT_ARCYNE_T1, TRAIT_GENERIC)
-	if(H.patron?.type == /datum/patron/divine/abyssor)
-		ADD_TRAIT(H, TRAIT_WATERBREATHING, TRAIT_GENERIC)
-	if(H.patron?.type == /datum/patron/divine/necra)
-		ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
-		ADD_TRAIT(H, TRAIT_SOUL_EXAMINE, TRAIT_GENERIC)
-		H.cmode_music = 'sound/music/cmode/church/combat_necra.ogg'
-	if(H.patron?.type == /datum/patron/divine/pestra)
-		ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
-	if(H.patron?.type == /datum/patron/divine/eora)
-		ADD_TRAIT(H, TRAIT_BEAUTIFUL, TRAIT_GENERIC)
-		ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC)
-		H.cmode_music = 'sound/music/cmode/church/combat_eora.ogg'
-	if(H.patron?.type == /datum/patron/divine/malum)
-		ADD_TRAIT(H, TRAIT_SMITHING_EXPERT, TRAIT_GENERIC)
-	if(H.patron?.type == /datum/patron/divine/ravox)
-		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
-		ADD_TRAIT(H, TRAIT_BATTLEMASTER, TRAIT_GENERIC)
 
 /datum/job/priest/vice //just used to change the priest title
 	title = "Vice Priest"
@@ -481,9 +353,6 @@ GLOBAL_LIST_EMPTY(heretical_players)
 
 		return TRUE
 
-	if (inputty in GLOB.excommunicated_players)
-		return //No stacking	
-
 	if (H.real_name == inputty)
 		if (!COOLDOWN_FINISHED(src, priest_apostasy))
 			to_chat(src, span_warning("You must wait until you can mark another."))
@@ -557,9 +426,6 @@ GLOBAL_LIST_EMPTY(heretical_players)
 				else
 					return
 		return
-
-	if (inputty in GLOB.apostasy_players)//This is an abysmal way of doing this but uhhhhhhhhhhhhhhhhhh yeah
-		return //No stacking
 
 	if (H.real_name == inputty)
 		if (!COOLDOWN_FINISHED(src, priest_excommunicate))
@@ -643,10 +509,6 @@ code\modules\admin\verbs\divinewrath.dm has a variant with all the gods so keep 
 
 			if (!COOLDOWN_FINISHED(src, priest_curse))
 				to_chat(src, span_warning("You must wait before invoking a curse again."))
-				return
-
-			if (H.mind.has_antag_datum(/datum/antagonist))
-				to_chat(src, span_warning("They are outside your grasp."))
 				return
 
 			//Check if we can curse this person.
