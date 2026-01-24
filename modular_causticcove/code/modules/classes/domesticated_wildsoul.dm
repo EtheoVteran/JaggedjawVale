@@ -1,7 +1,7 @@
-/datum/advclass/bogguardsman/wildsoul
+/datum/advclass/warden/wildsoul
 	name = "Domesticated Wildsoul"
 	tutorial = "You were once upon a time part of the wild. Now you have taken up the duty to protecting it, whenever because of the safety and curiosity of the settlement that you now serve, longing for a purpose, or merely being part of something greater and a concentrated effort, the safety of the roads for these fragile towners and traders rest in your hands and claws. Keep your cradle safe and free of riff raffs, together with your more civilized allies."
-	outfit = /datum/outfit/job/roguetown/bogguardsman/wildsoul
+	outfit = /datum/outfit/job/roguetown/warden/wildsoul
 	category_tags = list(CTAG_WARDEN)
 	traits_applied = list(TRAIT_CRITICAL_RESISTANCE, TRAIT_CIVILIZEDBARBARIAN, TRAIT_STRONGBITE, TRAIT_NATURAL_ARMOR) // Woodsman removed so it doesnt get applied twice. Feral removed, since theyre warden.
 	subclass_stats = list(
@@ -28,9 +28,9 @@
 		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE, // This should let them fry meat on fires.
 	)
 
-/datum/outfit/job/roguetown/bogguardsman/wildsoul
+/datum/outfit/job/roguetown/warden/wildsoul
 
-/datum/outfit/job/roguetown/bogguardsman/wildsoul/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/warden/wildsoul/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
 	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedanklets
@@ -38,7 +38,7 @@
 	H.skin_armor = new /obj/item/clothing/suit/roguetown/armor/skin_armor/natural_armor/dense(H)
 	beltl = /obj/item/rogueweapon/knuckles // A bit more civilized, why not?
 	beltr = /obj/item/signal_horn
-	neck = /obj/item/storage/keyring/guard
+	neck = /obj/item/storage/keyring/warden
 	give_feral_eyes(H)
 	if(H.mind)
 		var/helmets = list(
@@ -62,7 +62,7 @@
 			mask = hoods[hoodchoice]
 
 
-/datum/outfit/job/roguetown/bogguardsman/wildsoul/proc/give_feral_eyes(mob/living/carbon/human/man)
+/datum/outfit/job/roguetown/warden/wildsoul/proc/give_feral_eyes(mob/living/carbon/human/man)
 	var/obj/item/organ/eyes/eyes = man.getorganslot(ORGAN_SLOT_EYES)
 	var/color_one
 	var/color_two

@@ -184,6 +184,8 @@
 	STAPER = 15
 	pixel_x = -4
 
+	AIStatus = AI_OFF
+	can_have_ai = FALSE
 	ai_controller = /datum/ai_controller/mirespider_lurker
 	projectiletype = /obj/projectile/bullet/spider
 
@@ -193,6 +195,37 @@
 	check_friendly_fire = 1
 
 	var/list/mob/living/simple_animal/hostile/retaliate/rogue/mirespider/followers = list()
+
+/mob/living/simple_animal/hostile/rogue/mirespider_lurker/mushroom
+	icon = 'icons/mob/mirespider_shroom.dmi'
+	desc = "Mushroom!"
+	name = "mire lurker?"
+	icon_state = "mushroom"
+	icon_living = "mushroom"
+	icon_dead = "mushroom_dead"
+	health = MIRESPIDER_MUSHROOM_HEALTH
+	maxHealth = MIRESPIDER_MUSHROOM_HEALTH
+	pixel_x = -8
+
+	projectiletype = /obj/projectile/bullet/spider_shroom
+	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/spider = 2,
+						/obj/item/natural/hide = 2,
+						/obj/item/natural/silk = 1, 
+						/obj/item/reagent_containers/powder/ozium = 1,
+						/obj/item/alch/viscera = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/spider = 4,
+						/obj/item/natural/hide = 3,
+						/obj/item/natural/silk = 3, 
+						/obj/item/reagent_containers/powder/ozium = 2,
+						/obj/item/alch/viscera = 4,
+						/obj/item/natural/head/mirelurker = 1)
+	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/spider = 4,
+						/obj/item/natural/hide = 4,
+						/obj/item/natural/silk = 5, // You killed the mire lurker. You get all the figgy pudding . . .
+						/obj/item/reagent_containers/powder/ozium = 2,
+						/obj/item/reagent_containers/powder/herozium = 1,
+						/obj/item/alch/viscera = 4,
+						/obj/item/natural/head/mirelurker = 1)
 
 /mob/living/simple_animal/hostile/rogue/mirespider_lurker/Initialize()
 	. = ..()
@@ -264,6 +297,8 @@
 	STASPD = 12
 	STAPER = 7
 
+	AIStatus = AI_OFF
+	can_have_ai = FALSE
 	ai_controller = /datum/ai_controller/mirespider_paralytic
 
 /datum/intent/simple/bite/mirespider_paralytic

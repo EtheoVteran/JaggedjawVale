@@ -1,5 +1,7 @@
 /datum/sex_action/rimming
 	name = "Rim them"
+	intensity = 3
+	flipped = TRUE
 
 /datum/sex_action/rimming/shows_on_menu(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	if(user == target)

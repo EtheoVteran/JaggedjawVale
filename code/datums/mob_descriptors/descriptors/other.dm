@@ -20,7 +20,7 @@
 /datum/mob_descriptor/penis
 	name = "penis"
 	slot = MOB_DESCRIPTOR_SLOT_PENIS
-	verbage = "has"
+	verbage = "%HAVE%"
 	show_obscured = TRUE
 
 /datum/mob_descriptor/penis/can_describe(mob/living/described)
@@ -80,7 +80,7 @@
 /datum/mob_descriptor/testicles
 	name = "balls"
 	slot = MOB_DESCRIPTOR_SLOT_TESTICLES
-	verbage = "has"
+	verbage = "%HAVE%"
 	show_obscured = TRUE
 
 /datum/mob_descriptor/testicles/can_describe(mob/living/described)
@@ -110,7 +110,7 @@
 /datum/mob_descriptor/vagina
 	name = "vagina"
 	slot = MOB_DESCRIPTOR_SLOT_VAGINA
-	verbage = "has"
+	verbage = "%HAVE%"
 	show_obscured = TRUE
 
 /datum/mob_descriptor/vagina/can_describe(mob/living/described)
@@ -158,7 +158,7 @@
 /datum/mob_descriptor/breasts
 	name = "breasts"
 	slot = MOB_DESCRIPTOR_SLOT_BREASTS
-	verbage = "has"
+	verbage = "%HAVE%"
 	show_obscured = TRUE
 
 /datum/mob_descriptor/breasts/can_describe(mob/living/described)

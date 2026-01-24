@@ -15,7 +15,7 @@
 	min_pq = null //5 // We need you to be atleast kinda competent to do this. This is a soft antaggy sorta role. Also needs to know wtf a PSYDON is
 	max_pq = null
 	round_contrib_points = 2
-	advclass_cat_rolls = list(CTAG_INQUISITION = 20)
+	advclass_cat_rolls = list(CTAG_ORTHODOXIST = 20)
 	wanderer_examine = FALSE
 	advjob_examine = TRUE
 	give_bank_account = 15
