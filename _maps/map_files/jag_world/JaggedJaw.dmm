@@ -23,7 +23,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
 	deathsight_message = "somewhere within the walls of Pilgrim"
-	})
+	}),
 "aam" = (
 /obj/effect/spawner/lootdrop/roguetown/dungeon/medical,
 /turf/open/floor/rogue/wood,
@@ -125,7 +125,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "abv" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6
@@ -172,7 +172,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aco" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -233,7 +233,7 @@
 /turf/open/floor/rogue/woodturned,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "acQ" = (
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /turf/open/floor/carpet/royalblack,
@@ -389,7 +389,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aeG" = (
 /obj/structure/closet/crate/chest/lootbox,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/misc,
@@ -417,7 +417,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aeX" = (
 /obj/structure/flora/roguegrass/herb/rosa,
 /turf/open/floor/rogue/grass,
@@ -539,12 +539,12 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "afY" = (
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
 	deathsight_message = "somewhere within the walls of Pilgrim"
-	})
+	}),
 "agc" = (
 /obj/item/roguekey/custom{
 	lockid = "pizzard";
@@ -593,7 +593,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "agx" = (
 /obj/structure/mineral_door/wood/deadbolt{
 	dir = 4
@@ -609,7 +609,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "agA" = (
 /obj/item/clothing/cloak/cape/guard,
 /obj/item/clothing/cloak/cape/guard,
@@ -706,7 +706,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "ahl" = (
 /obj/structure/rack/rogue,
 /obj/item/clothing/suit/roguetown/armor/chainmail/bikini,
@@ -752,7 +752,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "ahI" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/glass/cup/silver{
@@ -1051,7 +1051,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "all" = (
 /obj/effect/landmark/chest_or_mimic/loot_chest,
 /turf/open/floor/rogue/naturalstone,
@@ -1191,7 +1191,7 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "amD" = (
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/dirt/road,
@@ -1522,13 +1522,13 @@
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aqn" = (
 /obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aqv" = (
 /obj/structure/fluff/nest,
 /obj/item/reagent_containers/food/snacks/crow,
@@ -1692,7 +1692,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "asN" = (
 /obj/structure/mineral_door/bars{
 	locked = 1;
@@ -1701,7 +1701,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "asU" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 5
@@ -1712,7 +1712,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "asW" = (
 /turf/open/floor/rogue/rooftop/green/north,
 /area/rogue/indoors/town/dwarfin)
@@ -1760,7 +1760,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
 	deathsight_message = "somewhere within the walls of Pilgrim"
-	})
+	}),
 "atf" = (
 /obj/structure/bars/tough,
 /turf/open/floor/rogue/concrete,
@@ -1797,7 +1797,7 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "atG" = (
 /obj/item/natural/stone,
 /turf/open/floor/rogue/naturalstone,
@@ -1967,7 +1967,7 @@
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "avk" = (
 /obj/structure/stairs{
 	dir = 1
@@ -1985,7 +1985,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "avz" = (
 /obj/machinery/light/rogue/candle/blue,
 /turf/open/floor/rogue/ruinedwood/herringbone,
@@ -2222,7 +2222,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "axQ" = (
 /obj/structure/rack/rogue/shelf/big{
 	icon_state = "shelf_biggest";
@@ -2314,7 +2314,7 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "ayG" = (
 /obj/effect/landmark/quest_spawner/medium,
 /turf/open/water/sewer,
@@ -2464,7 +2464,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "azQ" = (
 /obj/structure/flora/roguetree/stump{
 	pixel_x = -10;
@@ -2583,7 +2583,7 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aBr" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/bigrat/gethsmane,
 /turf/open/water/swamp/deep,
@@ -2709,7 +2709,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aCj" = (
 /obj/structure/fluff/railing/border/east,
 /obj/structure/flora/roguegrass,
@@ -2721,7 +2721,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aCl" = (
 /turf/open/floor/rogue/tile/masonic{
 	dir = 4
@@ -2824,7 +2824,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aDs" = (
 /obj/structure/bars/pipe{
 	dir = 1
@@ -2886,7 +2886,7 @@
 /turf/open/floor/rogue/woodturned,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aDY" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/item/clothing/cloak/templar/pestran,
@@ -2916,7 +2916,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aEm" = (
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/under/cave/scarymaze)
@@ -2982,7 +2982,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/steward{
 	deathsight_message = "somewhere within the walls of Pilgrim"
-	})
+	}),
 "aES" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
 /turf/open/floor/rogue/naturalstone,
@@ -3014,7 +3014,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aFy" = (
 /obj/structure/spider/stickyweb{
 	dir = 4
@@ -3383,7 +3383,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aJQ" = (
 /obj/structure/fluff/railing/border/west,
 /obj/structure/fluff/railing/corner{
@@ -3396,7 +3396,7 @@
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aJZ" = (
 /obj/structure/table/wood/crafted,
 /obj/structure/lever{
@@ -3476,7 +3476,7 @@
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aKS" = (
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /obj/structure/bed/rogue/shit,
@@ -3623,7 +3623,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aMG" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -3834,7 +3834,7 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/steward{
 	deathsight_message = "somewhere within the walls of Pilgrim"
-	})
+	}),
 "aOC" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
@@ -4076,7 +4076,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
 	deathsight_message = "somewhere within the walls of Pilgrim"
-	})
+	}),
 "aRL" = (
 /obj/machinery/light/rogue/forge,
 /turf/open/floor/rogue/blocks,
@@ -4195,7 +4195,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aSX" = (
 /obj/structure/stairs{
 	dir = 1
@@ -4415,7 +4415,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aVk" = (
 /obj/structure/chair/wood/rogue{
 	dir = 8
@@ -4581,7 +4581,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aWT" = (
 /obj/structure/fluff/railing/border/north,
 /obj/structure/fluff/railing/border/west,
@@ -4652,12 +4652,12 @@
 /turf/open/floor/rogue/concrete,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aXw" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "aXz" = (
 /obj/machinery/light/rogue/firebowl/off,
 /turf/open/floor/rogue/cobble,
@@ -4894,7 +4894,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bau" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors)
@@ -5005,13 +5005,13 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bbF" = (
 /obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bbI" = (
 /obj/effect/decal/cleanable/blood{
 	icon_state = "floor5-old"
@@ -5069,7 +5069,7 @@
 /turf/open/floor/rogue/tile,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bcf" = (
 /mob/living/carbon/human/species/npc/deadite,
 /turf/open/floor/rogue/cobble,
@@ -5097,7 +5097,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bcF" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
@@ -5206,7 +5206,7 @@
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bdv" = (
 /obj/effect/decal/mossy,
 /obj/structure/fluff/railing/border{
@@ -5815,13 +5815,13 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bjz" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bjI" = (
 /obj/structure/table/vtable/v2,
 /obj/machinery/light/rogue/candle/floorcandle,
@@ -5847,7 +5847,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bjW" = (
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/rogue/indoors/town/garrison)
@@ -5922,7 +5922,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bkK" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1
@@ -6074,7 +6074,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bmc" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -6086,7 +6086,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bme" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/carpet/purple,
@@ -6117,7 +6117,7 @@
 /turf/closed/wall/mineral/rogue/craftstone,
 /area/rogue/indoors/town/steward{
 	deathsight_message = "somewhere within the walls of Pilgrim"
-	})
+	}),
 "bmr" = (
 /obj/structure/fluff/sellsign{
 	name = "CONDEMNED BY THE HOLY SEE"
@@ -6178,7 +6178,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bmY" = (
 /obj/structure/hotspring/border/nine,
 /turf/open/floor/rogue/naturalstone,
@@ -6261,7 +6261,7 @@
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/town/steward{
 	deathsight_message = "somewhere within the walls of Pilgrim"
-	})
+	}),
 "bnU" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/cobble,
@@ -6540,7 +6540,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "brm" = (
 /turf/open/floor/rogue/greenstone/glyph1,
 /area/rogue/indoors/town/vault)
@@ -6732,7 +6732,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "btt" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/hexstone,
@@ -6803,7 +6803,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bur" = (
 /obj/effect/decal/wood/herringbone2{
 	dir = 4
@@ -6941,7 +6941,7 @@
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/steward{
 	deathsight_message = "somewhere within the walls of Pilgrim"
-	})
+	}),
 "bvb" = (
 /mob/living/carbon/human/species/human/northern/bog_deserters/better_gear,
 /turf/open/floor/rogue/cobble/mossy,
@@ -7210,7 +7210,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "byh" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/druidsgrove)
@@ -7238,7 +7238,7 @@
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
 	deathsight_message = "somewhere within the walls of Pilgrim"
-	})
+	}),
 "byE" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-sread"
@@ -7275,7 +7275,7 @@
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/exposed/town/keep{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bzd" = (
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/rogue/ruinedwood,
@@ -7292,7 +7292,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bzs" = (
 /obj/item/chair/stool/bar/rogue/crafted,
 /turf/open/floor/rogue/ruinedwood,
@@ -7330,7 +7330,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town{
 	deathsight_message = "the city of Azure Peak and all its bustling souls"
-	})
+	}),
 "bzR" = (
 /obj/structure/flora/roguegrass/water/reeds,
 /obj/structure/flora/roguegrass/water/reeds,
