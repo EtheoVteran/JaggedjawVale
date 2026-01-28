@@ -1300,7 +1300,9 @@
 	icon_state = "passage1"
 	},
 /turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "amq" = (
 /obj/item/flashlight/flare/torch,
 /turf/open/floor/rogue/naturalstone,
@@ -1756,7 +1758,9 @@
 /area/rogue/outdoors/beach/south)
 "arl" = (
 /turf/open/floor/rogue/grassred,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "arz" = (
 /turf/open/floor/rogue/churchrough,
 /area/rogue/indoors/inq/basement)
@@ -1963,7 +1967,9 @@
 "atf" = (
 /obj/structure/bars/tough,
 /turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "atj" = (
 /obj/structure/stairs{
 	dir = 1
@@ -1993,7 +1999,9 @@
 "atz" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "atF" = (
 /obj/structure/stairs/stone{
 	dir = 8
@@ -2551,7 +2559,9 @@
 /obj/structure/closet/crate/chest/neu,
 /obj/item/reagent_containers/glass/bottle/alchemical/spdpot,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ayo" = (
 /turf/closed/wall/mineral/rogue/stone/unbreakable,
 /area/rogue/indoors/cave/southern)
@@ -2617,7 +2627,9 @@
 "ayO" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/bow,
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ayP" = (
 /obj/machinery/light/rogue/campfire/densefire,
 /turf/open/floor/rogue/dirt,
@@ -3283,7 +3295,9 @@
 /obj/structure/table/wood/poor,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/wood,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "aED" = (
 /obj/structure/table/wood/long_table/right,
 /turf/open/floor/rogue/hexstone,
@@ -4322,7 +4336,9 @@
 "aPd" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/bow,
 /turf/open/floor/rogue/wood,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "aPg" = (
 /turf/open/water/swamp,
 /area/rogue/outdoors/mountains)
@@ -4817,7 +4833,9 @@
 "aUf" = (
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/grassred,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "aUh" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/carpet/red,
@@ -5086,7 +5104,9 @@
 	dir = 1;
 	icon_state = "plating2"
 	},
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "aWH" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/lava/acid,
@@ -5674,7 +5694,9 @@
 	lifetime = 14400
 	},
 /turf/open/water/bloody,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "bcu" = (
 /obj/structure/chair/wood/rogue/chair3,
 /turf/open/floor/rogue/wood,
@@ -7096,7 +7118,9 @@
 	})
 "boq" = (
 /turf/open/floor/rogue/metal/barograte,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "bot" = (
 /obj/effect/spawner/roguemap/stump,
 /turf/open/floor/rogue/dirt,
@@ -7383,7 +7407,9 @@
 "brz" = (
 /obj/structure/fluff/statue/knight/r,
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "brD" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -7404,7 +7430,9 @@
 	})
 "brH" = (
 /turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "brN" = (
 /obj/effect/decal/edge{
 	color = "#371A14";
@@ -7441,7 +7469,9 @@
 "brV" = (
 /obj/item/natural/rock,
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "bsb" = (
 /obj/machinery/light/rogue/forge{
 	pixel_y = 6
@@ -9090,7 +9120,9 @@
 	})
 "bJo" = (
 /turf/closed/wall/mineral/rogue/stone/blue_moss,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "bJw" = (
 /obj/structure/bars/pipe{
 	dir = 8;
@@ -10714,7 +10746,9 @@
 "bZP" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/bow,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "bZQ" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/cobble,
@@ -11140,9 +11174,6 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/shelter)
-"cds" = (
-/turf/open/floor/rogue/woodturned,
-/area/rogue/outdoors/beach/forest/south)
 "cdw" = (
 /obj/machinery/tanningrack,
 /obj/machinery/light/rogue/candle/blue/r,
@@ -13761,7 +13792,9 @@
 /area/rogue/under/cave/orcdungeon)
 "cDl" = (
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "cDo" = (
 /obj/effect/decal/cobbleedge,
 /turf/open/floor/rogue/cobblerock,
@@ -13936,7 +13969,9 @@
 "cFn" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "cFo" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grassred,
@@ -15329,7 +15364,9 @@
 "cSx" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "cSD" = (
 /obj/structure/mineral_door/wood,
 /obj/effect/decal/cleanable/blood/tracks{
@@ -15770,7 +15807,9 @@
 /area/rogue/outdoors/bog/south)
 "cXp" = (
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "cXu" = (
 /obj/structure/closet/crate/chest/inqreliquary{
 	locked = 1;
@@ -16229,7 +16268,9 @@
 "dbo" = (
 /obj/structure/fluff/statue/tdummy,
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "dbr" = (
 /obj/structure/table/wood/long_table,
 /obj/item/paper/scroll,
@@ -16825,7 +16866,9 @@
 	icon_state = "passage1"
 	},
 /turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "dht" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/cobble,
@@ -17928,7 +17971,9 @@
 /area/rogue/outdoors/woods/southwest)
 "drx" = (
 /turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "drC" = (
 /obj/structure/table/wood/large_table/north_west,
 /obj/item/cooking/platter/copper,
@@ -18537,7 +18582,9 @@
 "dxf" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "dxh" = (
 /turf/closed/wall/mineral/rogue/decowood,
 /area/rogue/under/town/basement{
@@ -19743,7 +19790,9 @@
 "dIN" = (
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "dIQ" = (
 /obj/structure/bars/pipe{
 	dir = 6;
@@ -20364,7 +20413,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "dPp" = (
 /obj/structure/chair/wood/rogue/chair3,
 /obj/machinery/light/rogue/candle/blue,
@@ -21491,7 +21542,9 @@
 "ebJ" = (
 /obj/machinery/light/rogue/candle/blue/r,
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ebQ" = (
 /obj/structure/bars{
 	max_integrity = 2000;
@@ -22094,7 +22147,9 @@
 /area/rogue/under/cave)
 "ehD" = (
 /turf/closed/wall/mineral/rogue/pipe,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ehF" = (
 /obj/machinery/light/rogue/campfire,
 /obj/effect/decal/cobble/mossy{
@@ -23856,7 +23911,9 @@
 	pixel_y = 5
 	},
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "eAi" = (
 /obj/effect/decal/cobbleedge{
 	pixel_y = 1
@@ -24589,14 +24646,18 @@
 	icon_state = "mush3"
 	},
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "eHK" = (
 /obj/structure/bed/rogue/inn/hay,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/cave/underhamlet)
 "eHO" = (
 /turf/open/water/swamp/deep,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "eHQ" = (
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/water/ocean/deep,
@@ -24643,7 +24704,9 @@
 /area/rogue/outdoors/rtfield)
 "eIk" = (
 /turf/open/floor/rogue/church,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "eIq" = (
 /obj/effect/decal/wood/herringbone2{
 	dir = 4
@@ -25284,7 +25347,9 @@
 "eOt" = (
 /obj/structure/bars/tough,
 /turf/closed/wall/mineral/rogue/pipe,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "eOu" = (
 /obj/structure/fermentation_keg/water,
 /turf/open/floor/rogue/blocks/flipped,
@@ -28008,7 +28073,9 @@
 	icon_state = "wooddir"
 	},
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "fqa" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/reagent_containers/food/snacks/grown/potato/rogue,
@@ -28312,7 +28379,9 @@
 "ftC" = (
 /obj/structure/ritualcircle/zizo,
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ftG" = (
 /obj/effect/decal/cobbleedge{
 	dir = 9
@@ -28376,7 +28445,9 @@
 /obj/structure/fluff/railing/wood,
 /obj/structure/fluff/railing/wood/west,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "fuk" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/item/reagent_containers/glass/bottle/rogue/wine,
@@ -28517,7 +28588,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "fvO" = (
 /obj/machinery/light/rogue/candle/blue/r,
 /obj/structure/bookcase/random/adult,
@@ -29253,7 +29326,9 @@
 "fDx" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "fDy" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -29302,7 +29377,9 @@
 "fDF" = (
 /obj/machinery/light/rogue/firebowl/standing/blue,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "fDK" = (
 /obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
 /turf/open/floor/rogue/ruinedwood,
@@ -29524,7 +29601,9 @@
 "fFO" = (
 /obj/item/reagent_containers/powder/moondust,
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "fFS" = (
 /obj/structure/flora/roguegrass/herb/rosa,
 /turf/open/floor/rogue/grass,
@@ -30286,7 +30365,9 @@
 "fOp" = (
 /obj/structure/table/wood,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "fOt" = (
 /obj/structure/bars{
 	color = "#755f48";
@@ -31574,7 +31655,9 @@
 "gbL" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "gbO" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -31698,7 +31781,9 @@
 "gcK" = (
 /obj/item/natural/rock,
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "gcM" = (
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
@@ -33115,7 +33200,9 @@
 "gpP" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "gpR" = (
 /obj/structure/fluff/sellsign{
 	name = "CONDEMNED BY THE HOLY SEE"
@@ -33976,7 +34063,9 @@
 "gzb" = (
 /obj/item/natural/rock,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "gzd" = (
 /obj/structure/fluff/railing/border/west,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -34720,7 +34809,9 @@
 /obj/item/natural/feather,
 /obj/effect/spawner/lootdrop/potion_ingredient,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "gGk" = (
 /obj/item/reagent_containers/food/snacks/crow{
 	dir = 8
@@ -35488,7 +35579,9 @@
 "gNF" = (
 /obj/structure/stairs/stone,
 /turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "gNG" = (
 /obj/item/natural/rock/salt,
 /turf/open/floor/rogue/cobble,
@@ -35942,7 +36035,9 @@
 	icon_state = "floor4-old"
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "gSt" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/cobble,
@@ -36151,7 +36246,9 @@
 /area/rogue/under/cave/his_vault)
 "gUe" = (
 /turf/open/water/river/flow/north,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "gUf" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -36341,7 +36438,9 @@
 "gWr" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/hellhound,
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "gWz" = (
 /turf/closed/wall/mineral/rogue/pipe,
 /area/rogue/under/cavewet/bogcaves/north)
@@ -36470,7 +36569,9 @@
 "gYk" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/bigrat,
 /turf/open/floor/rogue/blocks,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "gYl" = (
 /obj/structure/fluff/railing/corner/south_west,
 /obj/machinery/light/rogue/torchholder{
@@ -37309,11 +37410,15 @@
 /area/rogue/outdoors/beach/forest/hamlet)
 "hgq" = (
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "hgy" = (
 /obj/structure/flora/rogueshroom,
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "hgz" = (
 /obj/structure/fluff/railing/fence{
 	dir = 4
@@ -38953,7 +39058,9 @@
 	locked = 1
 	},
 /turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "huU" = (
 /obj/structure/fluff/walldeco/stone/bronze{
 	pixel_y = 32
@@ -38996,7 +39103,9 @@
 "hvn" = (
 /obj/structure/fluff/railing/wood/west,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "hvt" = (
 /obj/structure/hotspring/border/eight,
 /turf/open/floor/rogue/naturalstone,
@@ -39348,7 +39457,9 @@
 "hzz" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "hzF" = (
 /obj/structure/fluff/railing/border/west,
 /obj/structure/closet/crate/chest/wicker,
@@ -40115,7 +40226,9 @@
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /obj/structure/closet/crate/roguecloset,
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "hHW" = (
 /obj/structure/fluff/walldeco/painting/queen{
 	pixel_y = 32
@@ -42462,7 +42575,9 @@
 "ieM" = (
 /obj/structure/bars/passage,
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ieW" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/hexstone,
@@ -42988,7 +43103,9 @@
 "iks" = (
 /obj/item/clothing/neck/roguetown/psicross/inhumen/aalloy,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ikv" = (
 /obj/structure/floordoor/open{
 	name = "Dwarven Bridge";
@@ -43027,7 +43144,9 @@
 "ikA" = (
 /obj/structure/flora/shroomstump,
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ikB" = (
 /obj/structure/table/wood,
 /obj/item/rogueweapon/hammer/steel,
@@ -43874,7 +43993,9 @@
 "itJ" = (
 /obj/effect/decal/remains/saiga,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "itK" = (
 /obj/structure/fluff/clockwork/clockgolem_remains,
 /turf/open/floor/rogue/blocks,
@@ -44684,7 +44805,9 @@
 "iAM" = (
 /obj/structure/flora/roguegrass/bush/wall,
 /turf/open/floor/rogue/grassred,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "iAN" = (
 /obj/structure/bars/pipe{
 	dir = 8
@@ -45194,7 +45317,9 @@
 "iGl" = (
 /obj/structure/flora/rock/pile,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "iGo" = (
 /obj/effect/decal/carpet/kover_purple{
 	pixel_x = 16;
@@ -46338,7 +46463,9 @@
 "iRQ" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "iRV" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -48121,7 +48248,9 @@
 "jlT" = (
 /obj/structure/fluff/railing/wood/north,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "jlY" = (
 /obj/effect/decal/wood/herringbone,
 /turf/open/floor/rogue/dirt,
@@ -50336,7 +50465,9 @@
 /area/rogue/under/cavewet/bogcaves/south)
 "jHa" = (
 /turf/open/floor/rogue/wood,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "jHe" = (
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/double_pelt,
@@ -50389,7 +50520,9 @@
 /area/rogue/under/cave)
 "jHv" = (
 /turf/open/lava,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "jHw" = (
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/table/wood/large_table/south_west{
@@ -50425,7 +50558,9 @@
 "jHX" = (
 /obj/effect/spawner/lootdrop/roguetown/dungeon/misc,
 /turf/open/water/bloody,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "jHY" = (
 /turf/closed/mineral/random/rogue/high,
 /area/rogue/under/cave/fishmandungeon)
@@ -52505,7 +52640,9 @@
 /area/rogue/under/underdark)
 "kbY" = (
 /turf/closed/wall/mineral/rogue/pipe/line/four,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "kbZ" = (
 /obj/structure/closet/crate/chest,
 /obj/item/compost,
@@ -53673,7 +53810,9 @@
 /area/rogue/indoors/town/church/chapel)
 "kpa" = (
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "kpd" = (
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/wood,
@@ -54154,7 +54293,9 @@
 /obj/structure/ritualcircle/zizo,
 /obj/item/clothing/neck/roguetown/psicross/inhumen/aalloy,
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ktE" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/spider/mutated,
 /turf/open/floor/rogue/naturalstone,
@@ -54260,7 +54401,9 @@
 /turf/open/floor/rogue/metal{
 	dir = 4
 	},
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "kuu" = (
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/dragonden)
@@ -59441,7 +59584,9 @@
 	redstone_id = "dragonentry"
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "lul" = (
 /obj/structure/mineral_door/wood{
 	locked = 1;
@@ -59620,7 +59765,9 @@
 "lvC" = (
 /obj/effect/spawner/roguemap/stump,
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "lvD" = (
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/mountains/decap/minotaurfort)
@@ -61996,7 +62143,9 @@
 "lUi" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "lUl" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5;
@@ -62982,7 +63131,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/wood,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "mdB" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
@@ -63385,7 +63536,9 @@
 "mhN" = (
 /obj/structure/plasticflaps,
 /turf/open/water/bloody,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "mhT" = (
 /mob/living/carbon/human/species/skeleton/npc/mediumspread,
 /turf/open/floor/rogue/dirt/road,
@@ -63987,7 +64140,9 @@
 "mnM" = (
 /obj/machinery/light/rogue/firebowl/standing/blue,
 /turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "mnZ" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -65144,7 +65299,9 @@
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "mzk" = (
 /obj/effect/decal/edge_corner{
 	color = "#3f3f3f";
@@ -68489,7 +68646,9 @@
 "neR" = (
 /mob/living/carbon/human/species/skeleton/npc/mediumspread,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "neS" = (
 /obj/structure/closet/dirthole/closed/loot,
 /obj/structure/gravemarker{
@@ -70020,7 +70179,9 @@
 "ntu" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/watcher,
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ntw" = (
 /obj/structure/winch{
 	dir = 4;
@@ -70597,7 +70758,9 @@
 /area/rogue/indoors/cave/southern)
 "nzF" = (
 /turf/closed/mineral/rogue/bedrock,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "nzN" = (
 /obj/structure/mineral_door/wood{
 	icon_state = "wcr";
@@ -70652,7 +70815,9 @@
 	dir = 1;
 	icon_state = "plating2"
 	},
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "nAr" = (
 /obj/structure/table/wood/poor,
 /turf/open/floor/rogue/blocks,
@@ -71635,7 +71800,9 @@
 "nJB" = (
 /obj/structure/fluff/psycross/crafted,
 /turf/open/floor/rogue/church,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "nJC" = (
 /obj/structure/flora/roguetree/pine/dead,
 /turf/open/floor/rogue/grassyel,
@@ -72833,7 +73000,9 @@
 "nVj" = (
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "nVl" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -73884,7 +74053,9 @@
 "ofk" = (
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ofl" = (
 /obj/structure/flora/hotspring_rocks/grassy,
 /turf/open/floor/rogue/grassred,
@@ -73981,7 +74152,9 @@
 	})
 "ofZ" = (
 /turf/closed/wall/mineral/rogue/pipe/corners/four,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ogd" = (
 /obj/item/clothing/shoes/roguetown/boots/blacksteel/plateboots,
 /obj/structure/closet/crate/chest/gold{
@@ -73998,7 +74171,9 @@
 	name = "CONDEMNED BY THE HOLY SEE"
 	},
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ogr" = (
 /obj/structure/table/wood/large_table/middle_west,
 /obj/item/cooking/platter/silver,
@@ -76386,7 +76561,9 @@
 	})
 "oFn" = (
 /turf/closed/wall/mineral/rogue/pipe/corners/eight,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "oFu" = (
 /obj/structure/stairs,
 /turf/open/floor/rogue/tile,
@@ -76785,6 +76962,9 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/mountains)
+"oIl" = (
+/turf/open/floor/rogue/woodturned,
+/area/rogue/outdoors/beach/forest/south)
 "oIs" = (
 /obj/effect/decal/mossy,
 /turf/open/floor/rogue/cobble,
@@ -76854,7 +77034,9 @@
 /obj/item/grown/log/tree/stick,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "oJn" = (
 /obj/structure/table/wood/poor,
 /obj/item/storage/keyring,
@@ -77059,7 +77241,9 @@
 /turf/open/floor/rogue/metal{
 	dir = 4
 	},
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "oKP" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -77155,7 +77339,9 @@
 	},
 /obj/effect/spawner/trap,
 /turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "oLY" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -77839,7 +78025,9 @@
 /turf/open/floor/rogue/metal{
 	dir = 4
 	},
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "oRn" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5
@@ -81289,7 +81477,9 @@
 /area/rogue/under/cave/his_vault)
 "pBf" = (
 /turf/open/water/bloody,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "pBj" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/blocks,
@@ -82844,7 +83034,9 @@
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
 "pNI" = (
 /turf/open/floor/rogue/metal,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "pNL" = (
 /obj/machinery/light/rogue/torchholder/c{
 	dir = 1;
@@ -83860,7 +84052,9 @@
 	pixel_y = 10
 	},
 /turf/open/floor/rogue/metal/barograte/open,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "pXn" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -84060,7 +84254,9 @@
 "pYZ" = (
 /mob/living/carbon/human/species/skeleton/npc/mediumspread,
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "pZb" = (
 /turf/closed/wall/mineral/rogue/wooddark/vertical,
 /area/rogue/indoors/cave/underhamlet)
@@ -84122,7 +84318,9 @@
 /area/rogue/outdoors/rtfield)
 "pZC" = (
 /turf/closed/wall/mineral/rogue/pipe/line,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "pZM" = (
 /obj/structure/closet/crate/roguecloset/inn,
 /obj/item/paper/scroll,
@@ -84602,7 +84800,9 @@
 /area/rogue/outdoors/mountains)
 "qfO" = (
 /turf/open/floor/rogue/volcanic,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "qfQ" = (
 /turf/closed/wall/mineral/rogue/roofwall/innercorner/dir8,
 /area/rogue/indoors/town{
@@ -86267,7 +86467,9 @@
 "quT" = (
 /obj/structure/flora/roguetree/burnt,
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "quV" = (
 /obj/structure/fluff/railing/border/west,
 /obj/structure/fluff/railing/border/north,
@@ -86353,7 +86555,9 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "qvv" = (
 /obj/structure/rack/rogue/shelf,
 /obj/item/natural/bundle/stick{
@@ -87445,7 +87649,9 @@
 "qGM" = (
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "qGR" = (
 /obj/structure/table/wood/poor{
 	pixel_y = -4
@@ -87469,7 +87675,9 @@
 /turf/open/floor/rogue/metal{
 	dir = 4
 	},
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "qGZ" = (
 /obj/effect/decal/wood/herringbone{
 	dir = 1
@@ -89540,7 +89748,9 @@
 	})
 "rch" = (
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "rcm" = (
 /turf/closed/wall/mineral/rogue/roofwall/outercorner/dir1,
 /area/rogue/indoors/inq/office)
@@ -90439,7 +90649,9 @@
 /area/rogue/outdoors/woods/southeast)
 "rlP" = (
 /turf/closed/mineral/random/rogue/high,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "rlT" = (
 /obj/effect/decal/mossy{
 	dir = 4
@@ -91220,7 +91432,9 @@
 "ruD" = (
 /obj/structure/fluff/walldeco/wallshield,
 /turf/closed/wall/mineral/rogue/stone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ruG" = (
 /obj/effect/decal/remains/xeno,
 /turf/open/floor/rogue/blocks,
@@ -91685,7 +91899,9 @@
 "rzb" = (
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/water/swamp/deep,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "rzl" = (
 /obj/structure/fluff/railing/border/west{
 	dir = 4
@@ -91799,7 +92015,9 @@
 	pixel_x = -12
 	},
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "rAo" = (
 /obj/structure/fluff/walldeco/artificerflag,
 /turf/closed/wall/mineral/rogue/stonebrick,
@@ -94053,7 +94271,9 @@
 	})
 "rXw" = (
 /turf/closed/wall/mineral/rogue/stone/moss,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "rXx" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/cobblerock,
@@ -94426,7 +94646,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "sbg" = (
 /obj/structure/chair/bench/church/smallbench,
 /turf/open/floor/rogue/cobblerock,
@@ -96924,7 +97146,9 @@
 "swT" = (
 /obj/structure/roguewindow/stained/zizo,
 /turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "swV" = (
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
@@ -97140,7 +97364,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/churchmarble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "syk" = (
 /obj/structure/fluff/statue/knight/r,
 /turf/open/floor/rogue/blocks,
@@ -97634,7 +97860,9 @@
 	})
 "sDt" = (
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "sDz" = (
 /obj/structure/mineral_door/bars{
 	locked = 1;
@@ -98278,7 +98506,9 @@
 /obj/item/grown/log/tree/stick,
 /obj/item/rogueweapon/pick,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "sKC" = (
 /obj/machinery/light/rogue/candle/off/r,
 /mob/living/carbon/human/species/goblin/npc/hell,
@@ -100382,7 +100612,9 @@
 /area/rogue/indoors/town/church/chapel)
 "tgU" = (
 /turf/open/floor/rogue/blocks,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "tgW" = (
 /obj/structure/stairs/fancy/c{
 	dir = 1
@@ -100524,7 +100756,9 @@
 	icon_state = "mush2"
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "tin" = (
 /obj/structure/roguewindow/stained/yellow,
 /obj/structure/roguewindow/stained/silver,
@@ -101485,7 +101719,9 @@
 "trw" = (
 /obj/machinery/light/rogue/firebowl/standing/blue,
 /turf/open/floor/rogue/blocks,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "trD" = (
 /mob/living/carbon/human/species/skeleton/npc/easy,
 /turf/open/floor/rogue/church,
@@ -101499,7 +101735,9 @@
 "trI" = (
 /obj/structure/fluff/statue/knight,
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "trL" = (
 /mob/living/simple_animal/hostile/rogue/mirespider_lurker,
 /turf/open/floor/rogue/blocks/flipped,
@@ -101625,7 +101863,9 @@
 /area/rogue/indoors/town/church/chapel)
 "ttq" = (
 /turf/open/water/swamp,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ttt" = (
 /turf/open/floor/rogue/crawl_space,
 /area/rogue/under/cave/dungeon1/gethsmane)
@@ -101900,7 +102140,9 @@
 /area/rogue/under/cave/his_vault/puzzle)
 "twf" = (
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "twh" = (
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/grassyel,
@@ -104063,7 +104305,9 @@
 /obj/item/natural/feather,
 /obj/item/natural/feather,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "tRP" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
@@ -104633,7 +104877,9 @@
 "tXz" = (
 /mob/living/carbon/human/species/skeleton/npc/mediumspread,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "tXA" = (
 /obj/structure/fluff/walldeco/chains,
 /obj/structure/flora/roguegrass,
@@ -105776,7 +106022,9 @@
 /area/rogue/outdoors/mountains/decap)
 "uie" = (
 /turf/closed/wall/mineral/rogue/pipe/corners,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "uif" = (
 /turf/closed/wall/mineral/rogue/roofwall/middle{
 	dir = 8
@@ -107210,7 +107458,9 @@
 "uxb" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "uxc" = (
 /obj/structure/fluff/walldeco/bigpainting{
 	pixel_x = 2;
@@ -107512,7 +107762,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "uAh" = (
 /obj/machinery/light/rogue/campfire/fireplace,
 /turf/open/floor/rogue/cobblerock,
@@ -109165,7 +109417,9 @@
 /area/rogue/indoors/inq)
 "uPZ" = (
 /turf/closed/mineral/rogue/gem,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "uQf" = (
 /obj/structure/roguewindow/openclose/reinforced{
 	dir = 8
@@ -109645,7 +109899,9 @@
 	})
 "uUM" = (
 /turf/closed/mineral/rogue,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "uUV" = (
 /obj/effect/decal/remains/human,
 /obj/structure/fluff/walldeco/chains{
@@ -110403,7 +110659,9 @@
 "vca" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vcb" = (
 /obj/item/roguebin/water/gross,
 /turf/open/floor/rogue/metal,
@@ -110474,7 +110732,9 @@
 /area/rogue/under/cavewet/bogcaves/central)
 "vcH" = (
 /turf/closed/wall/mineral/rogue/stone/red_moss,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vcI" = (
 /turf/open/floor/rogue/tile/bfloorz,
 /area/rogue/indoors/town/manor{
@@ -110977,7 +111237,9 @@
 "vhk" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/dragon,
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vhm" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8;
@@ -111481,7 +111743,9 @@
 	})
 "vma" = (
 /turf/closed/wall/mineral/rogue/stone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vmg" = (
 /obj/machinery/light/rogue/campfire/create_campfire{
 	lifespan = 14400;
@@ -111661,7 +111925,9 @@
 	icon_state = "mush2"
 	},
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vnr" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/spider/mutated,
 /turf/open/floor/rogue/blocks,
@@ -112142,7 +112408,9 @@
 	icon_state = "chains3"
 	},
 /turf/open/water/bloody,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vsk" = (
 /obj/item/natural/rock/salt,
 /obj/structure/fluff/walldeco/stone/bronze{
@@ -112241,7 +112509,9 @@
 "vtw" = (
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vtB" = (
 /obj/structure/mineral_door/wood{
 	locked = 1;
@@ -112522,7 +112792,9 @@
 /turf/open/floor/rogue/metal{
 	icon_state = "plating2"
 	},
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vwk" = (
 /obj/structure/ladder,
 /turf/open/floor/rogue/blocks/flipped,
@@ -112848,7 +113120,9 @@
 "vyL" = (
 /obj/structure/flora/rock/pile,
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vyO" = (
 /obj/structure/table/wood,
 /obj/item/roguegear{
@@ -113420,7 +113694,9 @@
 "vEA" = (
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vEH" = (
 /turf/open/floor/rogue/wood/herringbone,
 /area/rogue/outdoors/mountains/decap/gunduzirak/bossarena)
@@ -113891,7 +114167,9 @@
 	icon_state = "floor6-old"
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vID" = (
 /obj/structure/table/wood/long_table/right,
 /obj/structure/fluff/walldeco/med{
@@ -114725,7 +115003,9 @@
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
 /turf/open/floor/rogue/blocks,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "vQJ" = (
 /obj/structure/table/church/m,
 /obj/machinery/light/rogue/candle/floorcandle/pink{
@@ -116933,7 +117213,9 @@
 "wlU" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "wmb" = (
 /obj/machinery/light/rogue/lanternpost,
 /turf/open/floor/rogue/grass,
@@ -118322,12 +118604,16 @@
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "wAJ" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/blocks,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "wAO" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf,
 /turf/open/floor/rogue/dirt,
@@ -118928,7 +119214,9 @@
 /area/rogue/indoors/town/church/chapel)
 "wGX" = (
 /turf/closed/mineral/rogue/coal,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "wGY" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -119719,7 +120007,9 @@
 	})
 "wOS" = (
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "wOU" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/blocks,
@@ -119827,7 +120117,9 @@
 /obj/structure/fluff/railing/wood/north,
 /obj/structure/fluff/railing/wood/west,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "wPL" = (
 /obj/structure/fluff/walldeco/rpainting/crown{
 	pixel_y = 32
@@ -122309,7 +122601,9 @@
 	name = "rusted bars"
 	},
 /turf/open/water/swamp/deep,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "xnZ" = (
 /obj/structure/flora/roguetree/pine,
 /turf/open/floor/rogue/snow,
@@ -123444,7 +123738,9 @@
 "xzg" = (
 /obj/structure/bookcase,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "xzh" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/grassred,
@@ -123508,7 +123804,9 @@
 "xzB" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/bigrat,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "xzC" = (
 /obj/structure/ladder,
 /turf/open/floor/rogue/dirt,
@@ -124477,7 +124775,9 @@
 "xIx" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/volcanic,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "xIy" = (
 /turf/closed/mineral/random/rogue/high,
 /area/rogue/indoors/cave/west)
@@ -124563,7 +124863,9 @@
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood/gibs/down,
 /turf/open/floor/rogue/grassred,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "xJL" = (
 /turf/open/floor/rogue/twig,
 /area/rogue/under/cave/dungeon1/gethsmane)
@@ -124810,7 +125112,9 @@
 	pixel_x = 8
 	},
 /turf/open/floor/rogue/church,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "xLM" = (
 /obj/effect/decal/mossy{
 	dir = 1
@@ -125090,7 +125394,9 @@
 "xOc" = (
 /obj/structure/flora/roguetree/pine/dead,
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "xOd" = (
 /obj/structure/closet/crate/chest,
 /turf/open/floor/rogue/dirt/road,
@@ -126394,7 +126700,9 @@
 /area/rogue/under/cave/dukecourt)
 "ybM" = (
 /turf/closed/wall/mineral/rogue/pipe/corners/one,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ybS" = (
 /obj/machinery/light/rogue/torchholder/l{
 	dir = 8
@@ -127251,7 +127559,9 @@
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap/stepbelow)
+/area/rogue/outdoors/mountains/decap/stepbelow{
+	deathsight_message = "a cavern aglow with orange light"
+	})
 "ymh" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/natural/bundle/cloth{
@@ -471619,22 +471929,22 @@ pFk
 gmG
 eKg
 uSI
-cds
-cds
+oIl
+oIl
 uIZ
 uIZ
 uIZ
-cds
+oIl
 uIZ
-cds
-cds
-cds
-cds
+oIl
+oIl
+oIl
+oIl
 uIZ
-cds
-cds
-cds
-cds
+oIl
+oIl
+oIl
+oIl
 uJf
 wvX
 wvX
