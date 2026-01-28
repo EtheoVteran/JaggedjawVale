@@ -8,7 +8,6 @@
 // END_PREFERENCES
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
-#include "_maps\JaggedJaw.dm"
 #include "_maps\templates\arcyne_fortress.dm"
 #include "code\__byond_version_compat.dm"
 #include "code\_compile_options.dm"
@@ -808,6 +807,7 @@
 #include "code\datums\sexcon2\sex_stress.dm"
 #include "code\datums\sexcon2\actions\__sex_action.dm"
 #include "code\datums\sexcon2\actions\_base_action.dm"
+#include "code\datums\sexcon2\actions\toy.dm"
 #include "code\datums\sexcon2\actions\masturbation\_base.dm"
 #include "code\datums\sexcon2\actions\masturbation\anus.dm"
 #include "code\datums\sexcon2\actions\masturbation\breasts.dm"
