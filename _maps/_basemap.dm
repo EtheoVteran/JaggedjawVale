@@ -7,6 +7,7 @@
 		#include "map_files\otherz\bandit_fortress.dmm"
 		#include "map_files\otherz\dungeon.dmm"
 		#include "map_files\otherz\vl_manor.dmm"
+		#include "map_files\jag_world\JaggedJaw.dmm"
 
 		#ifdef ALL_TEMPLATES
 			#include "templates.dm"
