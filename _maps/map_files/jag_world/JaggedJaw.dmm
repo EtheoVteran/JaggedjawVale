@@ -125,7 +125,7 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town{
-	deathsight_message = "the city of Azure Peak and all its bustling souls",
+	deathsight_message = "the city of Azure Peak and all its bustling souls"
 	})
 "abv" = (
 /obj/effect/decal/cobbleedge{
