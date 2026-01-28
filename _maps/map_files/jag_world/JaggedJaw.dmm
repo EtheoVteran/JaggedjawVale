@@ -22,7 +22,7 @@
 /obj/structure/fermentation_keg/water,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "aak" = (
 /obj/effect/decal/cleanable/blood/tracks,
@@ -485,7 +485,9 @@
 	},
 /obj/structure/table/wood,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "aff" = (
 /mob/living/carbon/human/species/skeleton/npc/hardspread,
 /turf/open/floor/rogue/carpet/lord/center,
@@ -603,7 +605,7 @@
 "afY" = (
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "agc" = (
 /obj/item/roguekey/custom{
@@ -1037,7 +1039,9 @@
 /obj/structure/rack/rogue/shelf,
 /obj/structure/table/wood/long_table,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ajM" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -1304,7 +1308,9 @@
 "amu" = (
 /obj/structure/fluff/railing/border/west,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "amv" = (
 /obj/structure/vine,
 /turf/open/floor/rogue/naturalstone,
@@ -1421,7 +1427,9 @@
 "anF" = (
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "anK" = (
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
 /obj/structure/rack/rogue,
@@ -1527,7 +1535,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "apk" = (
 /obj/effect/landmark/mapGenerator/rogue/mountain{
 	endTurfY = 380;
@@ -1948,7 +1958,7 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "atf" = (
 /obj/structure/bars/tough,
@@ -2166,7 +2176,9 @@
 	dir = 5
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "avb" = (
 /obj/structure/roguemachine/mail{
 	mailtag = "Knight Captain"
@@ -2515,7 +2527,9 @@
 "aye" = (
 /obj/structure/stairs,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ayi" = (
 /obj/machinery/light/rogue/campfire/fireplace,
 /obj/structure/fluff/grindwheel,
@@ -3323,7 +3337,7 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "aES" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
@@ -3344,7 +3358,9 @@
 "aFd" = (
 /obj/item/flashlight/flare/torch,
 /turf/open/floor/rogue/grass,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "aFg" = (
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/druidsgrove)
@@ -3813,7 +3829,9 @@
 	})
 "aKl" = (
 /turf/closed/wall/mineral/rogue/stone/moss,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "aKm" = (
 /obj/structure/stairs{
 	dir = 8
@@ -4260,7 +4278,7 @@
 "aOu" = (
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "aOC" = (
 /obj/effect/decal/cleanable/blood/tracks{
@@ -4533,7 +4551,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "aRL" = (
 /obj/machinery/light/rogue/forge,
@@ -5440,7 +5458,9 @@
 	})
 "bau" = (
 /turf/open/floor/rogue/dirt,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "bav" = (
 /obj/structure/roguemachine/withdraw{
 	pixel_x = -32;
@@ -5937,7 +5957,9 @@
 	pixel_y = 8
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "bew" = (
 /obj/structure/meathook,
 /obj/effect/decal/cleanable/blood/gibs/old,
@@ -6838,7 +6860,7 @@
 /obj/structure/roguewindow/harem3,
 /turf/closed/wall/mineral/rogue/craftstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "bmr" = (
 /obj/structure/fluff/sellsign{
@@ -7002,7 +7024,7 @@
 	},
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "bnU" = (
 /obj/structure/bed/rogue/shit,
@@ -7179,7 +7201,9 @@
 "bpz" = (
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "bpH" = (
 /obj/structure/closet/crate/drawer/random{
 	pixel_x = 1;
@@ -7343,7 +7367,9 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "brv" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -7552,7 +7578,9 @@
 /obj/machinery/light/rogue/hearth,
 /obj/item/reagent_containers/glass/bucket/pot,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "btz" = (
 /obj/machinery/light/rogue/forge,
 /turf/open/floor/rogue/blocks,
@@ -7763,7 +7791,7 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "bvb" = (
 /mob/living/carbon/human/species/human/northern/bog_deserters/better_gear,
@@ -8088,7 +8116,7 @@
 	},
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "byE" = (
 /obj/effect/decal/cobbleedge{
@@ -8284,7 +8312,9 @@
 "bAY" = (
 /obj/structure/flora/roguetree/stump/log,
 /turf/open/floor/rogue/grassred,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "bBd" = (
 /obj/item/reagent_containers/food/snacks/crow,
 /turf/open/transparent/openspace,
@@ -8689,7 +8719,7 @@
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "bEV" = (
 /obj/structure/fluff/walldeco/church/line{
@@ -9088,7 +9118,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "bJG" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -9180,7 +9212,7 @@
 /obj/structure/fluff/clock,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "bKv" = (
 /obj/effect/decal/edge{
@@ -9232,7 +9264,9 @@
 	})
 "bLg" = (
 /turf/open/floor/rogue/grass,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "bLi" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -9516,7 +9550,9 @@
 /area/rogue/under/cave/his_vault)
 "bOp" = (
 /turf/closed/wall/mineral/rogue/tent,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "bOr" = (
 /obj/structure/fluff/railing/border/west,
 /obj/effect/decal/edge{
@@ -9649,7 +9685,9 @@
 "bPG" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "bPH" = (
 /obj/structure/chair/stool/rogue,
 /obj/structure/fluff/railing/wood{
@@ -10092,7 +10130,9 @@
 /obj/structure/chair/stool/rogue,
 /obj/effect/landmark/start/courtagent,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "bTs" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/dirt/road,
@@ -10364,7 +10404,9 @@
 /area/rogue/outdoors/mountains/decap/minotaurfort)
 "bWp" = (
 /turf/closed/wall/mineral/rogue/wooddark,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "bWz" = (
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/floor/rogue/naturalstone,
@@ -10461,7 +10503,7 @@
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "bXy" = (
 /obj/machinery/light/rogue/candle/l,
@@ -10548,7 +10590,9 @@
 "bYG" = (
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "bYI" = (
 /obj/structure/handcart{
 	dir = 4
@@ -11096,6 +11140,9 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/shelter)
+"cds" = (
+/turf/open/floor/rogue/woodturned,
+/area/rogue/outdoors/beach/forest/south)
 "cdw" = (
 /obj/machinery/tanningrack,
 /obj/machinery/light/rogue/candle/blue/r,
@@ -11346,7 +11393,7 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "cfl" = (
 /turf/closed/wall/mineral/rogue/decostone/fluffstone,
@@ -11516,7 +11563,9 @@
 "cgV" = (
 /obj/item/chair/stool/bar/rogue/crafted,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "chm" = (
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/shelter)
@@ -11678,7 +11727,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "ciO" = (
 /turf/open/floor/rogue/churchbrick,
@@ -12355,7 +12404,9 @@
 	dir = 10
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "cpW" = (
 /obj/structure/roguemachine/withdraw,
 /turf/open/floor/rogue/blocks,
@@ -12476,7 +12527,7 @@
 	},
 /turf/open/water/bath,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "crk" = (
 /mob/living/carbon/human/species/skeleton/npc/medium,
@@ -12630,7 +12681,9 @@
 /obj/structure/fluff/railing/border,
 /obj/structure/rack/rogue/shelf/big,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ctc" = (
 /turf/open/floor/rogue/ruinedwood/platform,
 /area/rogue/indoors/town/manor{
@@ -12992,7 +13045,7 @@
 "cxq" = (
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "cxv" = (
 /obj/structure/closet/crate/roguecloset,
@@ -13072,7 +13125,9 @@
 /area/rogue/indoors/inq/basement)
 "cxQ" = (
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "cxX" = (
 /obj/structure/fluff/walldeco/mageguild{
 	name = "Azuria's University";
@@ -13104,7 +13159,9 @@
 "cyo" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "cyC" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/cobble/mossy,
@@ -13255,7 +13312,7 @@
 /obj/item/flint,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "czv" = (
 /obj/effect/decal/cobbleedge{
@@ -13270,7 +13327,9 @@
 /obj/machinery/tanningrack,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "czI" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/reagent_containers/glass/bucket,
@@ -13444,7 +13503,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "cAQ" = (
 /obj/structure/stairs{
 	dir = 1
@@ -13672,7 +13733,7 @@
 /obj/structure/roguewindow/openclose/reinforced,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "cCR" = (
 /obj/structure/table/wood,
@@ -14514,7 +14575,7 @@
 /obj/item/bouquet/salvia,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "cLa" = (
 /obj/structure/closet/crate/coffin/keylock/psydung,
@@ -14556,7 +14617,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "cLr" = (
 /obj/item/chair/rogue,
@@ -14653,7 +14714,9 @@
 "cMk" = (
 /obj/item/grown/log/tree/small,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "cMm" = (
 /obj/structure/flora/rock/pile,
 /turf/open/floor/rogue/naturalstone,
@@ -15539,7 +15602,9 @@
 "cVq" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "cVt" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/spider/stickyweb,
@@ -15683,7 +15748,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "cXf" = (
 /turf/closed/wall/mineral/rogue/decostone,
@@ -16128,7 +16193,9 @@
 	},
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "daR" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/potion_ingredient,
@@ -16212,7 +16279,9 @@
 "dbL" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "dbO" = (
 /obj/structure/chair/wood/rogue,
 /turf/open/floor/rogue/ruinedwood/herringbone_clear,
@@ -16408,7 +16477,9 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "dea" = (
 /obj/structure/table/vtable,
 /obj/item/toy/cards/deck,
@@ -16875,7 +16946,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "diw" = (
 /obj/effect/decal/cobbleedge{
@@ -17096,7 +17167,9 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "dkn" = (
 /obj/structure/chair/wood/rogue/chair5{
 	dir = 4
@@ -17291,7 +17364,9 @@
 "dmf" = (
 /obj/item/chair/stool/bar/rogue/crafted,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "dmo" = (
 /obj/structure/fluff/railing/border,
 /obj/effect/decal/cobble/mossy{
@@ -17534,7 +17609,9 @@
 "doN" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "doO" = (
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/cave/east)
@@ -19626,7 +19703,7 @@
 /obj/machinery/light/rogue/candle/r,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "dIe" = (
 /obj/effect/decal/remains/raccoon,
@@ -19696,7 +19773,7 @@
 /obj/structure/roguemachine/stockpile,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "dJb" = (
 /obj/machinery/light/rogue/torchholder/c,
@@ -20094,7 +20171,7 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "dNo" = (
 /obj/structure/toilet{
@@ -20306,7 +20383,9 @@
 "dPx" = (
 /obj/structure/fermentation_keg/random/beer,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "dPD" = (
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/inq)
@@ -20534,7 +20613,7 @@
 	},
 /turf/open/floor/rogue/tile/checkeralt,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "dRN" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/spider,
@@ -21881,7 +21960,7 @@
 /obj/machinery/gear_painter,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "egu" = (
 /obj/structure/stairs/stone{
@@ -21958,7 +22037,9 @@
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/reagent_containers/food/snacks/rogue/meat/coppiette,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ehf" = (
 /obj/effect/landmark/start/veteran,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -21979,7 +22060,9 @@
 "ehn" = (
 /obj/machinery/light/rogue/cauldron,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ehp" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grassred,
@@ -21990,7 +22073,9 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ehr" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -22245,7 +22330,9 @@
 	pixel_x = 32
 	},
 /turf/open/floor/rogue/churchrough,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ejy" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4;
@@ -22293,7 +22380,9 @@
 "ejY" = (
 /mob/living/carbon/human/species/skeleton/npc/easy,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ekb" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/ruinedwood/chevron,
@@ -22597,7 +22686,9 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "emU" = (
 /obj/machinery/light/rogue/firebowl/church,
 /turf/open/floor/rogue/church,
@@ -23502,7 +23593,9 @@
 /obj/item/grown/log/tree/stick,
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "exv" = (
 /obj/structure/stairs{
 	dir = 8
@@ -23606,7 +23699,9 @@
 	})
 "eyo" = (
 /turf/closed/wall/mineral/rogue/wooddark/vertical,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "eyq" = (
 /obj/structure/bed/rogue/bedroll,
 /turf/open/floor/rogue/naturalstone,
@@ -23908,7 +24003,9 @@
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/pelt,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "eBy" = (
 /obj/structure/roguewindow/stained/yellow,
 /turf/closed/wall/mineral/rogue/decostone/end/east{
@@ -24054,7 +24151,7 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "eCx" = (
 /obj/structure/fluff/signage{
@@ -25961,7 +26058,7 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "eWq" = (
 /obj/structure/bars/passage{
@@ -26077,7 +26174,7 @@
 /obj/item/clothing/head/roguetown/circlet,
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "eXF" = (
 /turf/closed/wall/mineral/rogue/stone,
@@ -26420,7 +26517,7 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "fbo" = (
 /obj/machinery/light/rogue/candle/l,
@@ -26471,7 +26568,9 @@
 	},
 /obj/structure/table/wood/poor,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "fbw" = (
 /obj/structure/stairs,
 /obj/structure/fluff/railing/border/west,
@@ -26640,7 +26739,9 @@
 "fdH" = (
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /turf/open/floor/rogue/twig,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "fdM" = (
 /obj/structure/mineral_door/wood{
 	locked = 1;
@@ -26675,7 +26776,9 @@
 "fdT" = (
 /obj/structure/table/wood/poor,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "fdV" = (
 /turf/closed/wall/mineral/rogue/decostone/center,
 /area/rogue/under/cave)
@@ -26807,7 +26910,7 @@
 /obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "ffF" = (
 /obj/structure/fluff/walldeco/alarm,
@@ -26820,7 +26923,7 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "ffT" = (
 /obj/effect/decal/edge_corner{
@@ -27207,7 +27310,7 @@
 	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "fiT" = (
 /obj/structure/flora/roguegrass/water/reeds,
@@ -27714,7 +27817,7 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "foG" = (
 /turf/closed/wall/mineral/rogue/tent{
@@ -28065,7 +28168,9 @@
 /area/rogue/outdoors/town/roofs)
 "frV" = (
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "frW" = (
 /obj/structure/fluff/railing/border/east,
 /obj/effect/decal/cobbleedge{
@@ -29003,7 +29108,7 @@
 /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "fBW" = (
 /obj/effect/decal/cobbleedge{
@@ -29873,7 +29978,7 @@
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "fKP" = (
 /obj/structure/chair/stool/rogue,
@@ -30128,12 +30233,12 @@
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "fNH" = (
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "fNJ" = (
 /obj/item/natural/bone,
@@ -30442,7 +30547,9 @@
 "fRD" = (
 /obj/machinery/light/rogue/torchholder/r,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "fRE" = (
 /obj/structure/stairs/stone{
 	dir = 8
@@ -30547,7 +30654,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "fSO" = (
 /obj/structure/bars/passage{
@@ -31092,7 +31199,7 @@
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "fYm" = (
 /obj/structure/fluff/walldeco/bigpainting/lake{
@@ -31291,7 +31398,7 @@
 /obj/machinery/light/rogue/candle/weak/r,
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "gat" = (
 /obj/structure/fluff/pillow/magenta{
@@ -31413,7 +31520,7 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "gbv" = (
 /obj/effect/decal/cobbleedge,
@@ -32055,7 +32162,9 @@
 /obj/structure/rack/rogue,
 /obj/item/flashlight/flare/torch/metal,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ghN" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -32740,7 +32849,7 @@
 /obj/structure/handcart,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "gnZ" = (
 /obj/effect/decal/cobbleedge{
@@ -33049,7 +33158,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "gqt" = (
 /obj/structure/bed/rogue/shit,
@@ -33264,7 +33373,9 @@
 /obj/structure/closet/crate/drawer,
 /obj/item/clothing/shoes/roguetown/boots/furlinedboots,
 /turf/open/floor/rogue/dirt,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "gth" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -33793,7 +33904,9 @@
 	dir = 5
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "gyv" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/troll,
 /turf/open/floor/rogue/naturalstone,
@@ -34037,7 +34150,7 @@
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "gAM" = (
 /obj/machinery/light/rogue/campfire/fireplace,
@@ -34851,7 +34964,7 @@
 "gIA" = (
 /turf/open/water/bath,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "gIC" = (
 /turf/open/floor/rogue/wood/nosmooth,
@@ -34862,7 +34975,9 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "gIL" = (
 /obj/structure/fluff/walldeco/stone/bronze{
 	pixel_x = -32
@@ -34881,7 +34996,7 @@
 	},
 /turf/open/floor/rogue/tile/checkeralt,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "gIS" = (
 /obj/structure/bed/rogue/inn/hay,
@@ -34976,7 +35091,9 @@
 /obj/effect/decal/remains/human,
 /obj/machinery/light/rogue/candle/l,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "gJQ" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 9
@@ -35074,7 +35191,9 @@
 "gKG" = (
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/twig,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "gKP" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5
@@ -35386,7 +35505,9 @@
 "gNM" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "gNP" = (
 /obj/effect/particle_effect/smoke{
 	lifetime = 14400
@@ -35577,7 +35698,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "gQa" = (
 /obj/structure/table/wood/poor/alt_alt,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/food,
@@ -36104,7 +36227,9 @@
 "gUV" = (
 /obj/effect/decal/cobbleedge,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "gUY" = (
 /obj/structure/vine,
 /turf/open/water/swamp/deep,
@@ -36381,7 +36506,7 @@
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "gYy" = (
 /turf/open/floor/rogue/churchmarble,
@@ -36517,7 +36642,9 @@
 "had" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hae" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6
@@ -36552,7 +36679,9 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hax" = (
 /obj/structure/fermentation_keg/beer,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -37562,7 +37691,9 @@
 	dir = 10
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hka" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/mountains/decap/gunduzirak/bossarena)
@@ -38342,7 +38473,7 @@
 /obj/item/roguebin/water,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "hqk" = (
 /mob/living/simple_animal/pet/cat/inn{
@@ -38890,7 +39021,9 @@
 	dir = 5
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hwf" = (
 /obj/structure/fluff/railing/border,
 /turf/open/transparent/openspace,
@@ -38920,7 +39053,9 @@
 "hww" = (
 /obj/structure/mineral_door/wood/window,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hwx" = (
 /turf/open/water/river/flow,
 /area/rogue/under/underdark/north)
@@ -39019,7 +39154,9 @@
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /obj/structure/fluff/walldeco/church/line,
 /turf/open/floor/rogue/church,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hxH" = (
 /obj/effect/decal/cobbleedge{
 	dir = 9
@@ -39059,7 +39196,9 @@
 "hxX" = (
 /obj/structure/table/wood/poor,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hxY" = (
 /obj/structure/hotspring/border/eleven,
 /turf/open/floor/rogue/grass,
@@ -39311,7 +39450,7 @@
 	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "hBb" = (
 /turf/closed/wall/mineral/rogue/wood,
@@ -39538,7 +39677,7 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "hDU" = (
 /obj/structure/fluff/railing/corner/south_west,
@@ -40185,7 +40324,7 @@
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "hJS" = (
 /obj/structure/standingbell{
@@ -40343,7 +40482,7 @@
 /obj/item/reagent_containers/food/snacks/grown/potato/rogue,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "hLq" = (
 /obj/effect/decal/remains/badger,
@@ -40709,7 +40848,9 @@
 /area/rogue/under/cave/mazedungeon)
 "hOi" = (
 /turf/closed/wall/mineral/rogue/stone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hOj" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 5
@@ -40930,7 +41071,9 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/twig,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hQN" = (
 /obj/structure/rack/rogue/shelf/big{
 	icon_state = "shelf_biggest";
@@ -40951,7 +41094,9 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hQW" = (
 /turf/open/floor/rogue/rooftop/green/north,
 /area/rogue/outdoors/beach/forest/north)
@@ -40981,7 +41126,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "hRp" = (
 /obj/structure/table/wood/long_table,
@@ -41557,11 +41702,15 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hWL" = (
 /obj/structure/fluff/walldeco/church/line,
 /turf/open/floor/rogue/church,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "hWT" = (
 /obj/structure/fluff/railing/border/east,
 /obj/structure/fluff/railing/border/north,
@@ -42380,7 +42529,9 @@
 "ift" = (
 /obj/machinery/light/rogue/oven/south,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ifu" = (
 /obj/machinery/light/rogue/candle/blue,
 /mob/living/carbon/human/species/skeleton/npc/medium,
@@ -42500,7 +42651,9 @@
 	mailtag = "Riverside Inn"
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "igK" = (
 /obj/machinery/light/rogue/firebowl,
 /turf/open/floor/rogue/naturalstone,
@@ -42768,7 +42921,9 @@
 /area/rogue/under/cave/licharena)
 "ijs" = (
 /turf/closed/wall/mineral/rogue/wooddark/end/east,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ijt" = (
 /obj/structure/bars/pipe{
 	dir = 5
@@ -43989,7 +44144,7 @@
 "iwr" = (
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "iwt" = (
 /obj/structure/flora/hotspring_rocks/small,
@@ -44294,7 +44449,7 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "iyB" = (
 /obj/structure/bars/cemetery,
@@ -44426,7 +44581,9 @@
 /area/rogue/outdoors/mountains)
 "izJ" = (
 /turf/closed/wall/mineral/rogue/decowood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "izK" = (
 /obj/machinery/light/rogue/lanternpost,
 /turf/open/floor/rogue/cobblerock{
@@ -44731,7 +44888,9 @@
 /obj/machinery/light/rogue/hearth,
 /obj/item/cooking/pan,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "iDu" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 6
@@ -45249,7 +45408,9 @@
 "iId" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "iIk" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/machinery/light/rogue/torchholder/r,
@@ -45367,7 +45528,9 @@
 "iJj" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/twig,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "iJm" = (
 /obj/machinery/light/rogue/candle/r,
 /obj/effect/decal/cleanable/debris/woody,
@@ -45428,7 +45591,9 @@
 "iJI" = (
 /obj/structure/table/wood/poor,
 /turf/open/floor/rogue/twig,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "iJT" = (
 /mob/living/carbon/human/species/goblin/npc/sea{
 	faction = list("orcs")
@@ -45593,7 +45758,7 @@
 	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "iLv" = (
 /obj/effect/decal/cleanable/blood{
@@ -45992,7 +46157,7 @@
 "iQm" = (
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "iQo" = (
 /obj/structure/fluff/railing/border,
@@ -46030,7 +46195,9 @@
 "iQR" = (
 /obj/structure/mineral_door/swing_door,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "iQS" = (
 /obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals,
 /turf/open/water/bath,
@@ -46459,7 +46626,9 @@
 /obj/structure/table/wood/poor,
 /obj/item/reagent_containers/glass/bottle/rogue/wine,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "iVe" = (
 /obj/structure/roguemachine/scomm{
 	pixel_y = -32
@@ -46693,7 +46862,7 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "iXG" = (
 /obj/effect/decal/cleanable/debris/stony,
@@ -46892,7 +47061,7 @@
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "jaa" = (
 /turf/open/floor/rogue/woodturned/nosmooth,
@@ -47057,7 +47226,7 @@
 	},
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "jca" = (
 /obj/item/roguebin/water/gross,
@@ -47371,7 +47540,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "jfr" = (
 /obj/structure/table/wood/long_table/mid/alt,
@@ -47681,7 +47850,7 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "jiJ" = (
 /obj/structure/stairs,
@@ -47716,7 +47885,9 @@
 	},
 /obj/structure/mineral_door/wood/deadbolt,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "jiR" = (
 /obj/machinery/light/rogue/candle{
 	pixel_y = -32
@@ -47759,7 +47930,9 @@
 	},
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /turf/open/floor/rogue/churchrough,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "jjh" = (
 /obj/effect/decal/cleanable/debris/glassy,
 /turf/open/floor/rogue/ruinedwood/herringbone,
@@ -47810,7 +47983,7 @@
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "jjX" = (
 /obj/structure/chair/bench/couch/r,
@@ -49610,7 +49783,9 @@
 "jAW" = (
 /obj/structure/fermentation_keg/random/water,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "jAZ" = (
 /obj/structure/table/wood/long_table/right,
 /obj/item/reagent_containers/food/snacks/rogue/meat/salami,
@@ -49929,7 +50104,9 @@
 "jEQ" = (
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "jEV" = (
 /obj/structure/fluff/littlebanners/bluewhite{
 	pixel_y = -6
@@ -50070,7 +50247,9 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "jGp" = (
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/grass,
@@ -50327,7 +50506,7 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "jIY" = (
 /obj/structure/fluff/railing/border/west{
@@ -50520,7 +50699,9 @@
 "jKc" = (
 /obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "jKd" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
@@ -50880,7 +51061,7 @@
 /obj/item/reagent_containers/glass/cup/ceramic/fancy,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "jNN" = (
 /obj/effect/decal/mossy{
@@ -50988,7 +51169,9 @@
 /obj/item/reagent_containers/glass/bottle/rogue/wine,
 /obj/structure/table/wood/poor,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "jOP" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -51953,7 +52136,9 @@
 "jYl" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "jYn" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -52228,7 +52413,7 @@
 /obj/machinery/light/rogue/oven/west,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "kbq" = (
 /obj/machinery/light/rogue/torchholder/r{
@@ -52811,7 +52996,7 @@
 /obj/structure/feedinghole,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "khh" = (
 /obj/structure/flora/roguetree,
@@ -52853,7 +53038,7 @@
 /obj/structure/fluff/railing/border/west,
 /turf/open/water/bath,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "khP" = (
 /mob/living/carbon/human/species/human/northern/searaider/ambush,
@@ -53103,7 +53288,7 @@
 /obj/machinery/light/rogue/candle/r,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "kkt" = (
 /obj/structure/spider/stickyweb,
@@ -53263,7 +53448,9 @@
 "klY" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "kma" = (
 /obj/structure/fluff/walldeco/rpainting/crown{
 	pixel_x = 32
@@ -53848,7 +54035,7 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "ksM" = (
 /obj/effect/decal/cleanable/blood,
@@ -54186,7 +54373,7 @@
 /obj/machinery/light/rogue/candle,
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "kvS" = (
 /obj/effect/landmark/chest_or_mimic/loot_chest,
@@ -54793,7 +54980,7 @@
 /obj/structure/table/wood/large_table/south_east,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "kBB" = (
 /obj/effect/spawner/lootdrop/roguetown/sewers,
@@ -54833,7 +55020,9 @@
 /obj/item/reagent_containers/food/snacks/rogue/meat/steak,
 /obj/item/reagent_containers/food/snacks/rogue/meat/steak,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "kCa" = (
 /obj/structure/roguewindow/openclose,
 /turf/open/floor/rogue/ruinedwood/herringbone,
@@ -54936,7 +55125,7 @@
 "kCX" = (
 /turf/closed/wall/mineral/rogue/craftstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "kDb" = (
 /obj/structure/rack/rogue,
@@ -55629,7 +55818,9 @@
 "kJi" = (
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/dirt,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "kJm" = (
 /turf/open/floor/rogue/rooftop/green/west{
 	dir = 4
@@ -56256,7 +56447,7 @@
 /obj/structure/roguemachine/steward,
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "kQA" = (
 /obj/structure/mineral_door/wood/fancywood{
@@ -56279,7 +56470,9 @@
 "kQM" = (
 /obj/structure/table/wood,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "kQU" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5;
@@ -56451,7 +56644,9 @@
 "kSZ" = (
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "kTl" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/structure/bed/rogue,
@@ -57187,7 +57382,9 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "kZo" = (
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/rogue/under/town/basement{
@@ -57216,7 +57413,9 @@
 /obj/structure/fluff/railing/border/east,
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "kZB" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -57448,7 +57647,9 @@
 /obj/structure/mineral_door/wood/window,
 /obj/effect/spawner/trap,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "lbO" = (
 /obj/structure/table/wood/large_table/south_west{
 	dir = 5;
@@ -57670,7 +57871,7 @@
 /obj/item/bedsheet/rogue/fabric_double,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "lej" = (
 /turf/open/floor/rogue/metal/barograte/open,
@@ -57744,7 +57945,9 @@
 /obj/item/reagent_containers/glass/cup/wooden,
 /obj/item/reagent_containers/glass/cup/wooden,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "leQ" = (
 /obj/structure/flora/rock/jungle,
 /turf/open/floor/rogue/grass,
@@ -58011,7 +58214,9 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "lhh" = (
 /obj/structure/roguewindow/stained/zizo{
 	opacity = 0
@@ -58347,7 +58552,7 @@
 /obj/structure/table/wood/large_table/south_west,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "lko" = (
 /obj/structure/table/wood{
@@ -58798,7 +59003,7 @@
 /obj/item/clothing/ring/signet,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "lpB" = (
 /obj/structure/mineral_door/wood/donjon{
@@ -58889,7 +59094,9 @@
 /obj/item/natural/feather,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "lqz" = (
 /obj/structure/chair/wood/rogue,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -59033,9 +59240,6 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/shelter/mountains/decap)
-"lsu" = (
-/turf/open/floor/rogue/woodturned,
-/area/rogue/outdoors/beach/forest/south)
 "lsx" = (
 /obj/effect/decal/remains/mole,
 /turf/open/floor/rogue/dirt,
@@ -59077,7 +59281,9 @@
 "lsN" = (
 /obj/structure/roguetent,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "lsT" = (
 /obj/structure/stairs{
 	dir = 1
@@ -59258,7 +59464,7 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "luv" = (
 /obj/structure/fluff/railing/wood,
@@ -59904,7 +60110,9 @@
 	dir = 6
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "lzH" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/woodturned,
@@ -60125,7 +60333,7 @@
 	},
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "lBZ" = (
 /obj/machinery/light/rogue/torchholder/hotspring/standing,
@@ -60246,7 +60454,9 @@
 	},
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "lDr" = (
 /obj/structure/table/wood,
 /obj/item/candle/gold/lit,
@@ -60302,7 +60512,9 @@
 "lDG" = (
 /obj/structure/stairs,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "lDH" = (
 /obj/structure/table/wood/long_table,
 /obj/item/storage/belt/rogue/surgery_bag/full{
@@ -60717,7 +60929,9 @@
 	})
 "lHN" = (
 /turf/closed/wall/mineral/rogue/stonebrick,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "lHX" = (
 /obj/machinery/anvil,
 /obj/item/rogueweapon/hammer/iron,
@@ -60733,7 +60947,9 @@
 "lIb" = (
 /obj/structure/stairs/stone,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "lIc" = (
 /obj/effect/decal/edge_corner{
 	color = "#3f3f3f"
@@ -60767,7 +60983,9 @@
 "lIr" = (
 /obj/structure/fluff/alch,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "lIs" = (
 /obj/structure/bars/pipe{
 	dir = 8
@@ -61171,7 +61389,7 @@
 /obj/machinery/light/rogue/candle,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "lMR" = (
 /obj/structure/ladder,
@@ -61321,7 +61539,7 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "lOz" = (
 /obj/effect/decal/cobbleedge{
@@ -61464,7 +61682,9 @@
 "lQu" = (
 /obj/structure/chair/wood/rogue/chair3,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "lQw" = (
 /obj/machinery/light/rogue/firebowl/church,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
@@ -62355,7 +62575,7 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "lZQ" = (
 /obj/structure/fluff/railing/fence{
@@ -63093,7 +63313,7 @@
 "mhx" = (
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "mhy" = (
 /obj/structure/fluff/walldeco/church/line{
@@ -63549,7 +63769,9 @@
 /obj/item/reagent_containers/glass/bowl,
 /obj/item/reagent_containers/glass/bowl,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "mlx" = (
 /obj/structure/fluff/pillow/black{
 	dir = 8
@@ -64347,7 +64569,9 @@
 "muc" = (
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "mud" = (
 /obj/item/natural/stone,
 /turf/open/floor/rogue/naturalstone,
@@ -64502,7 +64726,7 @@
 	},
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "mvr" = (
 /turf/closed/wall/mineral/rogue/roofwall/middle/dir8,
@@ -64675,7 +64899,9 @@
 /obj/structure/closet/crate/chest/neu,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "mwT" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -64988,7 +65214,9 @@
 "mAf" = (
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "mAg" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/naturalstone,
@@ -65920,7 +66148,9 @@
 "mIP" = (
 /obj/structure/stairs,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "mIQ" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f"
@@ -66384,7 +66614,9 @@
 "mMw" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "mMA" = (
 /obj/structure/closet/dirthole/grave,
 /turf/open/floor/rogue/dirt/road,
@@ -66693,7 +66925,7 @@
 /obj/structure/roguewindow/openclose/reinforced,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "mPG" = (
 /obj/structure/roguemachine/mail/r{
@@ -69401,7 +69633,7 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "nqf" = (
 /turf/open/floor/rogue/dirt,
@@ -70676,7 +70908,9 @@
 "nCk" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "nCl" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
@@ -70741,7 +70975,7 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "nCU" = (
 /obj/structure/flora/roguegrass/maneater/real,
@@ -71743,7 +71977,7 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "nNH" = (
 /mob/living/simple_animal/hostile/rogue/mirespider_lurker,
@@ -71962,7 +72196,9 @@
 	})
 "nPu" = (
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "nPE" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/woodturned,
@@ -72513,7 +72749,7 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "nUl" = (
 /obj/structure/mineral_door/wood/fancywood{
@@ -72676,7 +72912,9 @@
 	dir = 10
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "nWc" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
@@ -72739,7 +72977,9 @@
 	})
 "nWq" = (
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "nWy" = (
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/under/cave/orcdungeon)
@@ -72985,7 +73225,9 @@
 "nYG" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/dirt,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "nYN" = (
 /turf/open/floor/rogue/greenstone,
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
@@ -73482,7 +73724,7 @@
 /obj/structure/fluff/clock,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "odQ" = (
 /obj/structure/closet/crate/chest/old_crate,
@@ -74158,7 +74400,9 @@
 /area/rogue/outdoors/beach/north)
 "okx" = (
 /turf/open/floor/rogue/grassred,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "okz" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/troll/bog,
 /turf/open/water/swamp,
@@ -74252,7 +74496,7 @@
 /obj/structure/fermentation_keg/water,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "olD" = (
 /obj/structure/table/wood/long_table/right,
@@ -74701,7 +74945,7 @@
 /obj/structure/bookcase/random/reference,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "oqD" = (
 /obj/effect/landmark/chimeric_calyx_spawner/fifteen,
@@ -74986,7 +75230,9 @@
 	},
 /obj/item/chair/stool/bar/rogue,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "otq" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/naturalstone,
@@ -75128,7 +75374,7 @@
 "ove" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "ovf" = (
 /turf/open/floor/rogue/grass,
@@ -75409,7 +75655,7 @@
 /obj/item/roguekey/armory,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "oxH" = (
 /obj/structure/flora/ausbushes/ywflowers,
@@ -75543,7 +75789,9 @@
 "ozd" = (
 /obj/machinery/light/rogue/candle/l,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "oze" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/ruinedwood/chevron,
@@ -75790,7 +76038,9 @@
 "oBB" = (
 /obj/machinery/tanningrack,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "oBD" = (
 /turf/closed/mineral/rogue,
 /area/rogue/under/cavewet/bogcaves/west)
@@ -76243,7 +76493,7 @@
 /obj/structure/fluff/railing/border/east,
 /turf/open/water/bath,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "oGw" = (
 /obj/structure/stairs/stone{
@@ -76555,7 +76805,9 @@
 "oIG" = (
 /mob/living/carbon/human/species/skeleton/npc/easy,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "oIL" = (
 /obj/structure/closet/crate/drawer,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
@@ -76781,7 +77033,9 @@
 /obj/structure/closet/crate/drawer,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "oKF" = (
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter)
@@ -76830,7 +77084,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "oLa" = (
 /obj/structure/fluff/railing/border/west,
@@ -77311,7 +77565,9 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "oPk" = (
 /obj/structure/fluff/railing/border/west{
 	dir = 4
@@ -77334,7 +77590,7 @@
 "oPq" = (
 /turf/open/floor/rogue/rooftop/green/north,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "oPs" = (
 /turf/open/floor/carpet/red,
@@ -77591,7 +77847,9 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "oRp" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -77788,7 +78046,7 @@
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "oTK" = (
 /obj/machinery/light/rogue/candle/blue,
@@ -78941,7 +79199,7 @@
 /obj/structure/fluff/walldeco/bigpainting,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "pfr" = (
 /obj/structure/closet/crate/chest/lootbox,
@@ -79628,7 +79886,9 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "pmR" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/wood,
@@ -79778,7 +80038,7 @@
 /obj/machinery/light/rogue/candle,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "pol" = (
 /obj/effect/landmark/quest_spawner/hard,
@@ -79883,7 +80143,9 @@
 	})
 "pps" = (
 /turf/open/floor/rogue/churchrough,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ppv" = (
 /obj/structure/bed/rogue,
 /obj/item/bedsheet/rogue/pelt,
@@ -80399,7 +80661,9 @@
 /area/rogue/outdoors/bog/south)
 "puu" = (
 /turf/closed/wall/mineral/rogue/wood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "puH" = (
 /obj/structure/mirror{
 	pixel_y = 28
@@ -80903,7 +81167,7 @@
 /obj/item/roguekey/crier,
 /turf/open/floor/rogue/tile/tilerg,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "pzG" = (
 /turf/open/floor/rogue/cobblerock,
@@ -80940,7 +81204,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "pAd" = (
 /turf/closed/wall/mineral/rogue/wooddark/horizontal,
@@ -81185,7 +81449,9 @@
 	},
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "pCe" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grass,
@@ -81556,7 +81822,9 @@
 /obj/item/bedsheet/rogue/pelt,
 /obj/structure/bed/rogue/inn/wool,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "pFR" = (
 /obj/effect/landmark/chest_or_mimic/locked_or_trapped,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -81854,7 +82122,9 @@
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "pHI" = (
 /obj/effect/decal/cobbleedge,
 /turf/open/floor/rogue/blocks,
@@ -82377,7 +82647,9 @@
 /obj/item/flashlight/flare/torch/lantern,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "pMo" = (
 /obj/structure/fluff/pillow/magenta{
 	dir = 8
@@ -82689,7 +82961,7 @@
 /obj/structure/roguemachine/contractledger,
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "pPd" = (
 /obj/structure/flora/roguegrass,
@@ -83087,7 +83359,9 @@
 /obj/structure/fluff/railing/border/north,
 /obj/structure/table/wood,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "pSi" = (
 /obj/effect/decal/mossy{
 	dir = 1;
@@ -83141,7 +83415,7 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "pSJ" = (
 /obj/structure/fluff/railing/border/west,
@@ -83230,7 +83504,9 @@
 "pTI" = (
 /obj/structure/fluff/railing/border,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "pTK" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6;
@@ -83275,7 +83551,9 @@
 /obj/structure/closet/crate/drawer,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "pUB" = (
 /obj/effect/wisp/prestidigitation{
 	desc = "You're in the druidic grove, be wary";
@@ -83444,7 +83722,7 @@
 /obj/structure/closet/crate/chest/old_crate,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "pWc" = (
 /obj/item/reagent_containers/food/snacks/smallrat,
@@ -84720,7 +84998,9 @@
 "qiL" = (
 /obj/item/grown/log/tree/small,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "qiM" = (
 /obj/machinery/light/rogue/campfire/fireplace{
 	pixel_x = -32;
@@ -84852,7 +85132,9 @@
 /mob/living/carbon/human/species/skeleton/npc/easy,
 /obj/machinery/light/rogue/campfire/fireplace,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "qjP" = (
 /obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/woodturned/nosmooth,
@@ -85292,7 +85574,9 @@
 	locked = 1
 	},
 /turf/open/floor/rogue/twig,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "qoA" = (
 /obj/structure/chair/bench/coucha,
 /turf/open/floor/carpet/inn,
@@ -85993,7 +86277,9 @@
 "quY" = (
 /obj/structure/rack/rogue/shelf,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "qvc" = (
 /obj/structure/lever{
 	name = "Drawbridge";
@@ -86422,7 +86708,7 @@
 /obj/machinery/light/rogue/candle/l,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "qzv" = (
 /obj/structure/bars/pipe{
@@ -86941,7 +87227,7 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "qEK" = (
 /obj/structure/fluff/railing/corner,
@@ -87037,7 +87323,9 @@
 	dir = 9
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "qFH" = (
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/fabric_double,
@@ -87449,7 +87737,9 @@
 "qJK" = (
 /obj/structure/roguetent,
 /turf/open/floor/rogue/twig,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "qJM" = (
 /obj/structure/meathook,
 /obj/effect/decal/cleanable/blood,
@@ -87643,7 +87933,7 @@
 	},
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "qMb" = (
 /obj/effect/landmark/chest_or_mimic/loot_chest,
@@ -87824,7 +88114,9 @@
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/rogueweapon/hoe,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "qNY" = (
 /obj/effect/decal/mossy{
 	dir = 4
@@ -88157,7 +88449,9 @@
 	pixel_y = -6
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "qRs" = (
 /obj/machinery/light/rogue/candle/blue{
 	pixel_y = -32
@@ -88701,7 +88995,9 @@
 "qWE" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "qWI" = (
 /obj/effect/landmark/chest_or_mimic/loot_chest,
 /turf/open/floor/rogue/naturalstone,
@@ -89111,7 +89407,9 @@
 	})
 "rbb" = (
 /turf/closed/wall/mineral/rogue/wooddark/end/north,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rbd" = (
 /turf/closed/wall/mineral/rogue/decostone/mossy/end{
 	dir = 4
@@ -89315,7 +89613,7 @@
 	},
 /turf/open/floor/rogue/tile/checkeralt,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "rdb" = (
 /obj/structure/rack/rogue/shelf,
@@ -89649,7 +89947,7 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "rgu" = (
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
@@ -89940,7 +90238,9 @@
 "rjX" = (
 /obj/item/grown/log/tree/small,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rjY" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 10
@@ -90224,7 +90524,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rnh" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -90317,7 +90619,7 @@
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "rou" = (
 /obj/structure/stairs{
@@ -90610,7 +90912,9 @@
 "rro" = (
 /obj/item/roguebin/water,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rrv" = (
 /obj/effect/decal/cobbleedge{
 	pixel_y = 1
@@ -90865,7 +91169,7 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "rup" = (
 /obj/structure/fluff/railing/wood{
@@ -91616,7 +91920,7 @@
 	},
 /turf/closed/wall/mineral/rogue/craftstone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "rBx" = (
 /obj/structure/gate{
@@ -91646,7 +91950,9 @@
 /obj/structure/mineral_door/wood/fancywood,
 /obj/effect/spawner/trap,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rBJ" = (
 /obj/machinery/light/rogue/candle/l,
 /turf/open/floor/rogue/churchmarble,
@@ -91722,7 +92028,9 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rCi" = (
 /obj/effect/decal/edge_corner{
 	color = "#3f3f3f";
@@ -91857,7 +92165,9 @@
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rDR" = (
 /obj/structure/roguewindow,
 /obj/structure/curtain/brown,
@@ -92049,7 +92359,9 @@
 /area/rogue/under/cave/his_vault)
 "rFK" = (
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rFN" = (
 /obj/machinery/light/rogue/firebowl/standing/blue,
 /turf/open/floor/rogue/naturalstone,
@@ -92283,7 +92595,9 @@
 /obj/structure/table/wood/poor,
 /obj/item/reagent_containers/glass/cup/wooden,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rIR" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -92554,7 +92868,7 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "rLn" = (
 /obj/structure/fluff/railing/border/west,
@@ -92696,7 +93010,9 @@
 "rNu" = (
 /obj/structure/closet/crate/roguecloset,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rNx" = (
 /obj/structure/table/wood/poor,
 /obj/structure/mineral_door/wood/deadbolt/shutter{
@@ -92956,7 +93272,9 @@
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rPY" = (
 /obj/structure/bars,
 /turf/open/water/swamp,
@@ -93786,7 +94104,9 @@
 	})
 "rYi" = (
 /turf/closed/wall/mineral/rogue/wooddark/end/west,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "rYl" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -94322,7 +94642,9 @@
 "sdg" = (
 /obj/structure/fluff/walldeco/innsign,
 /turf/closed/wall/mineral/rogue/decowood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "sdi" = (
 /obj/structure/closet/crate/roguecloset/inn,
 /obj/item/rogueweapon/hoe/stone,
@@ -94414,7 +94736,9 @@
 /obj/effect/decal/cobbleedge,
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "sdZ" = (
 /mob/living/simple_animal/hostile/rogue/dragger,
 /turf/open/floor/rogue/wood,
@@ -95005,7 +95329,7 @@
 /obj/item/natural/feather,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "sjd" = (
 /mob/living/carbon/human/species/orc/npc/marauder,
@@ -95204,7 +95528,7 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "skP" = (
 /obj/machinery/light/rogue/candle/blue{
@@ -95481,7 +95805,9 @@
 "snE" = (
 /obj/machinery/light/rogue/campfire/fireplace,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "snG" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
@@ -96221,7 +96547,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "stl" = (
 /turf/open/water/cleanshallow,
@@ -96248,7 +96574,7 @@
 	},
 /turf/open/floor/rogue/tile/tilerg,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "sto" = (
 /obj/effect/decal/mossy{
@@ -96789,7 +97115,9 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "syf" = (
 /obj/item/natural/cloth{
 	pixel_x = 24;
@@ -96979,7 +97307,7 @@
 "szE" = (
 /turf/open/floor/rogue/tile/checkeralt,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "szQ" = (
 /obj/effect/landmark/chimeric_calyx_spawner/fifteen,
@@ -96999,7 +97327,7 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "szZ" = (
 /obj/structure/fluff/walldeco/rpainting/crown{
@@ -97853,7 +98181,9 @@
 "sJu" = (
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "sJy" = (
 /obj/structure/bed/rogue/inn/hay,
 /mob/living/carbon/human/species/goblin/npc/sea,
@@ -99183,7 +99513,9 @@
 "sXw" = (
 /obj/machinery/light/rogue/oven/east,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "sXz" = (
 /turf/open/floor/carpet/royalblack,
 /area/rogue/under/underdark/north)
@@ -100184,7 +100516,9 @@
 "til" = (
 /obj/item/grown/log/tree/small,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tim" = (
 /obj/structure/flora/rogueshroom{
 	icon_state = "mush2"
@@ -100996,13 +101330,17 @@
 /obj/structure/rack/rogue/shelf/big,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tqw" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tqx" = (
 /obj/item/natural/dirtclod,
 /turf/open/floor/rogue/naturalstone,
@@ -101060,7 +101398,9 @@
 "tqL" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/bow,
 /turf/open/floor/rogue/dirt,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tqM" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -101623,7 +101963,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "twL" = (
 /obj/structure/roguerock{
 	pixel_y = -12
@@ -101824,7 +102166,7 @@
 /obj/item/candle/gold/lit,
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "tyM" = (
 /obj/structure/mineral_door/wood/deadbolt{
@@ -102074,7 +102416,9 @@
 /area/rogue/outdoors/town/roofs)
 "tCb" = (
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tCd" = (
 /obj/structure/table/wood/long_table,
 /obj/item/candle/candlestick/gold/single/lit{
@@ -102216,7 +102560,9 @@
 /obj/structure/rack/rogue/shelf,
 /obj/structure/table/wood/long_table/right,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tDF" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/town/sewer{
@@ -102488,7 +102834,9 @@
 "tGn" = (
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tGo" = (
 /obj/structure/stairs/stone,
 /turf/open/floor/rogue/blocks/flipped,
@@ -102589,7 +102937,9 @@
 /obj/structure/fluff/railing/border/west,
 /mob/living/carbon/human/species/skeleton/npc/easy,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tHn" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/rogue/cobble,
@@ -102705,7 +103055,9 @@
 	pixel_x = -32
 	},
 /turf/open/floor/rogue/dirt,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tHY" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/item/reagent_containers/glass/bucket,
@@ -102877,7 +103229,7 @@
 /obj/structure/bookcase/random/archive,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "tJZ" = (
 /obj/structure/chair/wood/rogue{
@@ -102962,7 +103314,9 @@
 "tKS" = (
 /obj/structure/bed/rogue/inn/wooldouble,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tKU" = (
 /obj/structure/closet/dirthole/closed/loot,
 /obj/structure/gravemarker{
@@ -103105,7 +103459,9 @@
 "tMb" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/twig,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tMe" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
@@ -103261,7 +103617,9 @@
 	},
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tNr" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/outdoors/woods/southeast)
@@ -103590,7 +103948,9 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tRf" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8;
@@ -103661,7 +104021,7 @@
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "tRx" = (
 /obj/machinery/light/rogue/torchholder/l,
@@ -103669,7 +104029,9 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tRy" = (
 /obj/structure/flora/roguegrass/bush,
 /turf/open/floor/rogue/dirt,
@@ -104037,7 +104399,9 @@
 /obj/structure/table/wood,
 /obj/item/rogueweapon/huntingknife/stoneknife,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tVp" = (
 /turf/closed/wall/mineral/rogue/pipe/corners/four,
 /area/rogue/under/town/sewer{
@@ -104121,7 +104485,9 @@
 	},
 /mob/living/carbon/human/species/skeleton/npc/no_equipment,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "tWf" = (
 /obj/structure/standingbell{
 	name = "servantry service bell";
@@ -104789,7 +105155,9 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "uci" = (
 /obj/structure/flora/roguetree/stump/burnt,
 /turf/open/floor/rogue/grassred,
@@ -104799,7 +105167,9 @@
 /obj/item/reagent_containers/glass/cup/wooden,
 /obj/item/reagent_containers/glass/cup/wooden,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ucm" = (
 /obj/structure/roguemachine/atm{
 	location_tag = "Bathhouse";
@@ -105154,7 +105524,9 @@
 "ufn" = (
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ufq" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -106059,7 +106431,9 @@
 "uoE" = (
 /obj/structure/table/wood/large_table/south_west,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "uoU" = (
 /obj/structure/bars/passage{
 	redstone_id = "tourneybottom"
@@ -106477,7 +106851,7 @@
 /obj/structure/table/wood/large_table/north_east,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "utO" = (
 /obj/structure/closet/crate/chest,
@@ -106861,7 +107235,9 @@
 /obj/item/bedsheet/rogue/double_pelt,
 /obj/structure/bed/rogue/inn/wooldouble,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "uxt" = (
 /obj/machinery/light/roguestreet/midlamp{
 	pixel_y = 10
@@ -107502,7 +107878,9 @@
 "uDX" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "uDY" = (
 /obj/structure/fluff/railing/border/west,
 /obj/structure/roguemachine/scomm/r{
@@ -108048,7 +108426,7 @@
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "uJt" = (
 /obj/structure/floordoor/gatehatch/inner{
@@ -108085,7 +108463,9 @@
 "uJz" = (
 /obj/structure/bars/cemetery,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "uJB" = (
 /obj/machinery/light/rogue/torchholder{
 	dir = 8
@@ -108124,7 +108504,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "uJY" = (
 /obj/effect/decal/mossy{
 	dir = 8
@@ -108538,7 +108920,7 @@
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "uOb" = (
 /obj/structure/stairs{
@@ -109329,7 +109711,9 @@
 "uVF" = (
 /obj/machinery/light/rogue/chand,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "uVM" = (
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/town{
@@ -109490,7 +109874,9 @@
 "uXn" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "uXq" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
@@ -109626,7 +110012,7 @@
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "uYP" = (
 /obj/structure/fluff/walldeco/church/line{
@@ -109868,7 +110254,9 @@
 "vaC" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vaD" = (
 /turf/closed/wall/mineral/rogue/roofwall/innercorner/dir4,
 /area/rogue/outdoors/mountains)
@@ -109942,7 +110330,9 @@
 	},
 /obj/effect/spawner/lootdrop/valuable_candle_spawner,
 /turf/open/floor/rogue/church,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vbE" = (
 /obj/structure/mineral_door/bars{
 	locked = 1;
@@ -110021,7 +110411,9 @@
 "vci" = (
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vcj" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -111018,7 +111410,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "vlo" = (
 /obj/structure/fluff/railing/border/east,
@@ -111153,7 +111545,9 @@
 "vmB" = (
 /mob/living/carbon/human/species/goblin/npc/ambush,
 /turf/open/floor/rogue/twig,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vmD" = (
 /obj/structure/fluff/pillow/magenta{
 	pixel_x = -10
@@ -111440,7 +111834,9 @@
 "vpA" = (
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vpE" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -111656,7 +112052,9 @@
 "vrA" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vrC" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -111811,7 +112209,9 @@
 /area/rogue/under/cave/dukecourt)
 "vtg" = (
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vtj" = (
 /obj/item/roguebin/water/gross,
 /turf/open/floor/rogue/grasscold,
@@ -112531,7 +112931,9 @@
 "vzx" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vzA" = (
 /obj/structure/chair/bench/church/smallbench,
 /turf/open/floor/rogue/ruinedwood,
@@ -112611,7 +113013,9 @@
 "vAQ" = (
 /obj/machinery/light/rogue/candle/blue,
 /turf/open/floor/rogue/church,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vAR" = (
 /obj/structure/chair/bench/couchablack,
 /turf/open/floor/rogue/cobble,
@@ -112897,7 +113301,7 @@
 	},
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "vDn" = (
 /mob/living/simple_animal/hostile/rogue/deepone,
@@ -113210,7 +113614,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vGc" = (
 /obj/effect/landmark/start/monk,
 /turf/open/floor/rogue/churchmarble,
@@ -113305,7 +113711,9 @@
 /obj/structure/table/wood/poor,
 /obj/item/trash/candle,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vHe" = (
 /obj/machinery/light/rogue/hearth,
 /obj/item/cooking/pan,
@@ -113720,7 +114128,7 @@
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "vKG" = (
 /obj/effect/decal/cobbleedge{
@@ -114142,7 +114550,9 @@
 	dir = 5
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vOU" = (
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town{
@@ -114327,7 +114737,9 @@
 "vRa" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vRb" = (
 /turf/closed/mineral/rogue,
 /area/rogue/under/underdark)
@@ -114443,7 +114855,9 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vSD" = (
 /obj/structure/stairs/stone{
 	dir = 8
@@ -114931,7 +115345,9 @@
 "vXf" = (
 /mob/living/carbon/human/species/goblin/npc/ambush,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "vXm" = (
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/cobble,
@@ -115595,7 +116011,7 @@
 /obj/item/clothing/suit/roguetown/shirt/tunic/white,
 /turf/open/floor/rogue/tile/bath,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "wcX" = (
 /obj/structure/fluff/clock,
@@ -115638,7 +116054,7 @@
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "wdo" = (
 /obj/machinery/light/rogue/torchholder{
@@ -115983,7 +116399,9 @@
 	},
 /obj/item/flint,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "wgQ" = (
 /turf/closed/wall/mineral/rogue/stone/moss/unbreakable,
 /area/rogue/under/cave)
@@ -117898,7 +118316,7 @@
 	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "wAF" = (
 /obj/effect/decal/remains/human,
@@ -118491,7 +118909,7 @@
 "wGI" = (
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "wGL" = (
 /obj/structure/chair/wood/rogue/chair3{
@@ -118584,7 +119002,7 @@
 /obj/effect/landmark/start/steward,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "wHM" = (
 /obj/structure/bed/rogue/inn/hay,
@@ -119700,7 +120118,9 @@
 	})
 "wSI" = (
 /turf/open/floor/rogue/twig,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "wSL" = (
 /obj/structure/chair/bench/church/r,
 /turf/open/floor/rogue/churchmarble,
@@ -119819,7 +120239,9 @@
 "wTO" = (
 /obj/structure/rack/rogue,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "wTP" = (
 /obj/structure/fluff/wallclock/l,
 /turf/open/floor/carpet/red,
@@ -119917,7 +120339,9 @@
 /obj/structure/chair/wood/rogue/chair3,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "wUy" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/spider/mutated,
 /turf/open/floor/rogue/grassyel,
@@ -119966,7 +120390,7 @@
 /obj/machinery/light/rogue/candle/l,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "wUQ" = (
 /obj/structure/fluff/statue/knight,
@@ -120024,7 +120448,9 @@
 "wVC" = (
 /obj/machinery/light/rogue/campfire,
 /turf/open/floor/rogue/dirt,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "wVL" = (
 /obj/effect/decal/cleanable/blood/gibs/limb,
 /turf/open/floor/rogue/wood,
@@ -120311,7 +120737,7 @@
 "wYH" = (
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "wYJ" = (
 /obj/structure/fluff/railing/border,
@@ -121032,7 +121458,9 @@
 /area/rogue/under/cave)
 "xgc" = (
 /turf/closed/wall/mineral/rogue/wooddark/end,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "xgf" = (
 /turf/closed/wall/mineral/rogue/pipe/joint/four,
 /area/rogue/under/town/sewer{
@@ -121357,7 +121785,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "xiX" = (
 /obj/structure/vine{
@@ -121580,7 +122008,7 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "xlh" = (
 /obj/structure/spider/stickyweb{
@@ -121790,7 +122218,9 @@
 "xna" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/grass,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "xnd" = (
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 1
@@ -121830,7 +122260,9 @@
 "xnx" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/twig,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "xnz" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town{
@@ -122138,7 +122570,9 @@
 	icon_state = "cobbleedge-w"
 	},
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "xqx" = (
 /obj/structure/flora/roguegrass/water,
 /turf/open/water/swamp/deep,
@@ -122593,7 +123027,7 @@
 /obj/item/roguebin/water,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "xuK" = (
 /obj/structure/glowshroom,
@@ -122958,7 +123392,9 @@
 "xyy" = (
 /obj/structure/stairs/stone,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "xyM" = (
 /obj/structure/fluff/walldeco/painting/seraphina,
 /turf/closed/wall/mineral/rogue/decostone/long/east_west,
@@ -123296,7 +123732,7 @@
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "xBv" = (
 /obj/structure/stairs{
@@ -124197,7 +124633,9 @@
 "xKf" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "xKi" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -124496,7 +124934,9 @@
 /obj/structure/rack/rogue,
 /obj/item/clothing/shoes/roguetown/boots/furlinedboots,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "xMO" = (
 /obj/structure/stairs{
 	dir = 1
@@ -125211,7 +125651,7 @@
 /obj/item/hair_dye_cream,
 /turf/open/floor/rogue/tile/bath,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "xUF" = (
 /turf/open/transparent/openspace,
@@ -125369,7 +125809,7 @@
 /obj/structure/chair/wood/rogue,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/steward{
-	deathsight_message = "Within the walls of Pilgrim"
+	deathsight_message = "somewhere within the walls of Pilgrim"
 	})
 "xWh" = (
 /obj/structure/bed/rogue/inn/hay,
@@ -125573,7 +126013,9 @@
 /obj/item/grown/log/tree/stick,
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/dirt,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "xYB" = (
 /obj/structure/vine,
 /turf/open/floor/rogue/dirt,
@@ -125738,7 +126180,9 @@
 "yab" = (
 /obj/machinery/light/rogue/firebowl/standing/blue,
 /turf/open/floor/rogue/churchrough,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "yae" = (
 /obj/structure/table/wood/long_table/mid/alt,
 /turf/open/floor/rogue/wood,
@@ -125936,7 +126380,9 @@
 "ybC" = (
 /obj/structure/fluff/alch,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ybE" = (
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/under/town/basement{
@@ -125979,7 +126425,9 @@
 /obj/item/reagent_containers/glass/cup,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "ycn" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/spear/partizan,
@@ -126478,7 +126926,9 @@
 "yiD" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "yiH" = (
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/dirt/road,
@@ -126506,7 +126956,9 @@
 "yiQ" = (
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "yiU" = (
 /obj/structure/fluff/railing/border/west{
 	dir = 9
@@ -126695,7 +127147,9 @@
 "ykZ" = (
 /obj/machinery/light/rogue/hearth,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors{
+	deathsight_message = "an abandoned home"
+	})
 "yla" = (
 /turf/closed/wall/mineral/rogue/pipe{
 	icon_state = "iron_line"
@@ -471165,22 +471619,22 @@ pFk
 gmG
 eKg
 uSI
-lsu
-lsu
+cds
+cds
 uIZ
 uIZ
 uIZ
-lsu
+cds
 uIZ
-lsu
-lsu
-lsu
-lsu
+cds
+cds
+cds
+cds
 uIZ
-lsu
-lsu
-lsu
-lsu
+cds
+cds
+cds
+cds
 uJf
 wvX
 wvX
