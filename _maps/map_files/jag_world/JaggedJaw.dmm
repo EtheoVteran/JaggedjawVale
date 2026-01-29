@@ -6242,10 +6242,6 @@
 /obj/effect/spawner/lootdrop/potion_vitals,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/shelter)
-"boH" = (
-/obj/machinery/light/rogue/firebowl/standing/blue,
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains/decap)
 "boI" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -58725,10 +58721,6 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/lamia,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/bog/north)
-"mLm" = (
-/obj/structure/dungeon_entry/center,
-/turf/closed/mineral/rogue/bedrock,
-/area/rogue/outdoors/mountains/decap)
 "mLs" = (
 /obj/structure/fluff/walldeco/church/line{
 	layer = 3
@@ -82632,6 +82624,10 @@
 /obj/effect/decal/edge,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
+"rSD" = (
+/obj/structure/far_travel,
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/mountains/decap)
 "rSE" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -637764,7 +637760,7 @@ tqG
 tqG
 tqG
 tqG
-boH
+cjj
 cjj
 gDv
 gDv
@@ -638143,9 +638139,9 @@ qrO
 (97,1,5) = {"
 tqG
 tqG
-tqG
-tqG
-tqG
+rSD
+cjj
+cjj
 cjj
 gDv
 gDv
@@ -638525,9 +638521,9 @@ qrO
 (98,1,5) = {"
 tqG
 tqG
-tqG
-tqG
-mLm
+rSD
+cjj
+cjj
 cjj
 gDv
 gDv
@@ -638907,9 +638903,9 @@ qrO
 (99,1,5) = {"
 tqG
 tqG
-tqG
-tqG
-tqG
+rSD
+cjj
+cjj
 gDv
 cjj
 gDv
@@ -639292,7 +639288,7 @@ tqG
 tqG
 tqG
 tqG
-boH
+cjj
 cjj
 gDv
 gDv
