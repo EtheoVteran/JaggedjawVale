@@ -36,7 +36,7 @@ SUBSYSTEM_DEF(lighting)
 	var/processed = 0
 	var/queue_len = length(queue)
 	for (var/i in 1 to queue_len)
-		if(i > queue.len)
+		if(i > length(queue))
 			break
 		var/datum/light_source/L = queue[i]
 
@@ -61,7 +61,7 @@ SUBSYSTEM_DEF(lighting)
 	queue_len = length(queue)
 	processed = 0
 	for (var/i in 1 to queue_len)
-		if(i > queue.len)
+		if(i > length(queue))
 			break
 		var/datum/lighting_corner/C = queue[i]
 
@@ -86,7 +86,7 @@ SUBSYSTEM_DEF(lighting)
 	queue_len = length(queue)
 	processed = 0
 	for (var/i in 1 to queue_len)
-		if(i > queue.len)
+		if(i > length(queue))
 			break
 		var/atom/movable/lighting_object/O = queue[i]
 
