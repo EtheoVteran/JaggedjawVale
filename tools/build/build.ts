@@ -76,6 +76,20 @@ export const DmMapsIncludeTarget = new Juke.Target({
         .join("\n") + "\n";
     fs.writeFileSync("_maps/templates.dm", content);
   },
+});
+
+export const DungeonGeneratorIncludeTarget = new Juke.Target({
+  executes: async () => {
+    const folders = [
+      ...Juke.glob("_maps/dungeon_generator/**/*.dmm"),
+    ];
+    const content =
+      folders
+        .map((file) => file.replace("_maps/", ""))
+        .map((file) => `#include "${file}"`)
+        .join("\n") + "\n";
+    fs.writeFileSync("_maps/dungeons.dm", content);
+  }
 })
 
 export const DmTarget = new Juke.Target({
