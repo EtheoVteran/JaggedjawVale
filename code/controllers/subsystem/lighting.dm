@@ -35,7 +35,7 @@ SUBSYSTEM_DEF(lighting)
 		MC_SPLIT_TICK
 	var/list/queue = sources_queue
 	var/processed = 0
-	var/max_process = init_tick_checks ? 10000 : 500  // Balanced limit
+	var/max_process = init_tick_checks ? 5000 : 500  // Reduced init limit to prevent build timeouts
 	var/queue_size = length(queue)  // Cache size - don't process items added during this fire
 	
 	while(processed < queue_size && processed < max_process)
