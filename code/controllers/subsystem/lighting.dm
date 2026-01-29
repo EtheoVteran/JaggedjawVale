@@ -34,7 +34,6 @@ SUBSYSTEM_DEF(lighting)
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
 	var/list/queue = sources_queue
-	var/processed = 0
 	while(length(queue) > 0)
 		var/datum/light_source/L = queue[1]
 		if(!L)
@@ -42,7 +41,6 @@ SUBSYSTEM_DEF(lighting)
 
 		L.update_corners()
 		L.needs_update = LIGHTING_NO_UPDATE
-		processed++
 		queue.Cut(1, 2)
 
 		if(init_tick_checks)
