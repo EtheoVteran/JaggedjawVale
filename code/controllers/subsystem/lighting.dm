@@ -37,7 +37,9 @@ SUBSYSTEM_DEF(lighting)
 	while(i <= length(queue))
 		if(!queue || i > length(queue))
 			break
-		var/datum/light_source/L = queue[i]
+		var/datum/light_source/L = KEYBYINDEX(queue, i)
+		if(!L)
+			break
 
 		L.update_corners()
 
@@ -61,7 +63,9 @@ SUBSYSTEM_DEF(lighting)
 	while(i <= length(queue))
 		if(!queue || i > length(queue))
 			break
-		var/datum/lighting_corner/C = queue[i]
+		var/datum/lighting_corner/C = KEYBYINDEX(queue, i)
+		if(!C)
+			break
 
 		C.update_objects()
 		C.needs_update = FALSE
@@ -83,7 +87,9 @@ SUBSYSTEM_DEF(lighting)
 	while(i <= length(queue))
 		if(!queue || i > length(queue))
 			break
-		var/atom/movable/lighting_object/O = queue[i]
+		var/atom/movable/lighting_object/O = KEYBYINDEX(queue, i)
+		if(!O)
+			break
 
 		if (QDELETED(O))
 			i++
