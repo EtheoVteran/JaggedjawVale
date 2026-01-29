@@ -34,7 +34,10 @@ SUBSYSTEM_DEF(lighting)
 		MC_SPLIT_TICK
 	var/list/queue = sources_queue
 	var/processed = 0
-	for (var/i in 1 to length(queue))
+	var/queue_len = length(queue)
+	for (var/i in 1 to queue_len)
+		if(i > queue.len)
+			break
 		var/datum/light_source/L = queue[i]
 
 		L.update_corners()
@@ -55,8 +58,11 @@ SUBSYSTEM_DEF(lighting)
 		MC_SPLIT_TICK
 
 	queue = corners_queue
+	queue_len = length(queue)
 	processed = 0
-	for (var/i in 1 to length(queue))
+	for (var/i in 1 to queue_len)
+		if(i > queue.len)
+			break
 		var/datum/lighting_corner/C = queue[i]
 
 		C.update_objects()
@@ -77,8 +83,11 @@ SUBSYSTEM_DEF(lighting)
 		MC_SPLIT_TICK
 
 	queue = objects_queue
+	queue_len = length(queue)
 	processed = 0
-	for (var/i in 1 to length(queue))
+	for (var/i in 1 to queue_len)
+		if(i > queue.len)
+			break
 		var/atom/movable/lighting_object/O = queue[i]
 
 		if (QDELETED(O))
