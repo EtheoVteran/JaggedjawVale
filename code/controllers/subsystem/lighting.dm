@@ -35,10 +35,9 @@ SUBSYSTEM_DEF(lighting)
 		MC_SPLIT_TICK
 	var/list/queue = sources_queue
 	var/processed = 0
-	var/max_process = init_tick_checks ? 10000 : 1000  // Safety limit
-	var/queue_size = length(queue)
+	var/max_process = init_tick_checks ? 10000 : 500  // Balanced limit
 	
-	while(processed < queue_size && processed < max_process)
+	while(length(queue) > processed && processed < max_process)
 		var/datum/light_source/L = queue[processed + 1]
 		if(!L)
 			break
@@ -49,7 +48,7 @@ SUBSYSTEM_DEF(lighting)
 
 		if(init_tick_checks)
 			CHECK_TICK
-		else if (MC_TICK_CHECK)
+		else if (processed % 25 == 0 && MC_TICK_CHECK)  // Check every 25 items for smoother distribution
 			break
 	
 	if(processed > 0)
@@ -60,9 +59,8 @@ SUBSYSTEM_DEF(lighting)
 
 	queue = corners_queue
 	processed = 0
-	queue_size = length(queue)
 	
-	while(processed < queue_size && processed < max_process)
+	while(length(queue) > processed && processed < max_process)
 		var/datum/lighting_corner/C = queue[processed + 1]
 		if(!C)
 			break
@@ -73,7 +71,7 @@ SUBSYSTEM_DEF(lighting)
 		
 		if(init_tick_checks)
 			CHECK_TICK
-		else if (MC_TICK_CHECK)
+		else if (processed % 25 == 0 && MC_TICK_CHECK)
 			break
 	
 	if(processed > 0)
@@ -85,9 +83,8 @@ SUBSYSTEM_DEF(lighting)
 
 	queue = objects_queue
 	processed = 0
-	queue_size = length(queue)
 	
-	while(processed < queue_size && processed < max_process)
+	while(length(queue) > processed && processed < max_process)
 		var/atom/movable/lighting_object/O = queue[processed + 1]
 		if(!O)
 			break
@@ -103,7 +100,7 @@ SUBSYSTEM_DEF(lighting)
 		
 		if(init_tick_checks)
 			CHECK_TICK
-		else if (MC_TICK_CHECK)
+		else if (processed % 25 == 0 && MC_TICK_CHECK)
 			break
 	
 	if(processed > 0)
