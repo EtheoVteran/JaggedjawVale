@@ -348,7 +348,7 @@ SUBSYSTEM_DEF(timer)
 		SStimer.timer_id_dict[id] = src
 
 	var/flags_str = "UNKNOWN"
-	if(isnumber(flags))
+	if(isnum(flags))
 		flags_str = jointext(bitfield2list(flags, list("TIMER_UNIQUE", "TIMER_OVERRIDE", "TIMER_CLIENT_TIME", "TIMER_STOPPABLE", "TIMER_NO_HASH_WAIT", "TIMER_LOOP")), ", ")
 	
 	name = "Timer: [id] (\ref[src]), TTR: [timeToRun], Flags: [flags_str]"
