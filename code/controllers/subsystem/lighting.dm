@@ -35,6 +35,8 @@ SUBSYSTEM_DEF(lighting)
 	var/list/queue = sources_queue
 	var/i = 1
 	while(i <= length(queue))
+		if(!queue || i > length(queue))
+			break
 		var/datum/light_source/L = queue[i]
 
 		L.update_corners()
@@ -57,6 +59,8 @@ SUBSYSTEM_DEF(lighting)
 	queue = corners_queue
 	i = 1
 	while(i <= length(queue))
+		if(!queue || i > length(queue))
+			break
 		var/datum/lighting_corner/C = queue[i]
 
 		C.update_objects()
@@ -77,6 +81,8 @@ SUBSYSTEM_DEF(lighting)
 	queue = objects_queue
 	i = 1
 	while(i <= length(queue))
+		if(!queue || i > length(queue))
+			break
 		var/atom/movable/lighting_object/O = queue[i]
 
 		if (QDELETED(O))

@@ -27,8 +27,8 @@ would spawn and follow the beaker, even if it is carried or thrown.
 	return ..()
 
 /datum/effect_system/proc/set_up(n = 3, c = FALSE, loca)
-	if(n > 10)
-		n = 10
+	if(n > 5)
+		n = 5
 	number = n
 	cardinals = c
 	if(isturf(loca))
@@ -41,9 +41,9 @@ would spawn and follow the beaker, even if it is carried or thrown.
 
 /datum/effect_system/proc/start()
 	for(var/i in 1 to number)
-		if(total_effects > 20)
+		if(total_effects > 10)
 			return
-		addtimer(CALLBACK(src, PROC_REF(generate_effect)), i)
+		addtimer(CALLBACK(src, PROC_REF(generate_effect)), i, TIMER_STOPPABLE)
 
 /datum/effect_system/proc/generate_effect()
 	if(holder)
