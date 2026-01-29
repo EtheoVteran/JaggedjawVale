@@ -79,9 +79,13 @@ SUBSYSTEM_DEF(outdoor_effects)
 	return ..()
 
 /datum/controller/subsystem/outdoor_effects/proc/InitializeTurfs(list/targets)
-	for (var/z in SSmapping.levels_by_trait(ZTRAIT_STATION))
-		for (var/turf/T in block(locate(1,1,z), locate(world.maxx,world.maxy,z)))
-			GLOB.SUNLIGHT_QUEUE_WORK += T
+	set waitfor = 0
+	var/list/levels = SSmapping.levels_by_trait(ZTRAIT_STATION)
+	if(!levels)
+		return
+	for (var/z in levels)
+		var/list/turfs_to_add = block(locate(1,1,z), locate(world.maxx,world.maxy,z))
+		GLOB.SUNLIGHT_QUEUE_WORK += turfs_to_add
 
 
 /datum/controller/subsystem/outdoor_effects/proc/check_cycle()
