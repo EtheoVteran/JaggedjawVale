@@ -33,77 +33,70 @@ SUBSYSTEM_DEF(lighting)
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
 	var/list/queue = sources_queue
-	var/i = 1
-	while(i <= length(queue))
-		if(!queue || i > length(queue))
-			break
-		var/datum/light_source/L = KEYBYINDEX(queue, i)
+	var/processed = 0
+	while(length(queue))
+		var/datum/light_source/L = KEYBYINDEX(queue, 1)
 		if(!L)
 			break
 
 		L.update_corners()
-
 		L.needs_update = LIGHTING_NO_UPDATE
-
-		i++
+		processed++
 
 		if(init_tick_checks)
 			CHECK_TICK
 		else if (MC_TICK_CHECK)
 			break
-	if (i > 1)
-		queue.Cut(1, i)
-		i = 1
+	if (processed)
+		queue.Cut(1, processed)
+		processed = 0
 
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
 
 	queue = corners_queue
-	i = 1
-	while(i <= length(queue))
-		if(!queue || i > length(queue))
-			break
-		var/datum/lighting_corner/C = KEYBYINDEX(queue, i)
+	processed = 0
+	while(length(queue))
+		var/datum/lighting_corner/C = KEYBYINDEX(queue, 1)
 		if(!C)
 			break
 
 		C.update_objects()
 		C.needs_update = FALSE
-		i++
+		processed++
 		if(init_tick_checks)
 			CHECK_TICK
 		else if (MC_TICK_CHECK)
 			break
-	if (i > 1)
-		queue.Cut(1, i)
-		i = 1
+	if (processed)
+		queue.Cut(1, processed)
+		processed = 0
 
 
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
 
 	queue = objects_queue
-	i = 1
-	while(i <= length(queue))
-		if(!queue || i > length(queue))
-			break
-		var/atom/movable/lighting_object/O = KEYBYINDEX(queue, i)
+	processed = 0
+	while(length(queue))
+		var/atom/movable/lighting_object/O = KEYBYINDEX(queue, 1)
 		if(!O)
 			break
 
+		// Remove deleted objects from the queue and count as processed
 		if (QDELETED(O))
-			i++
+			processed++
 			continue
 
 		O.update()
 		O.needs_update = FALSE
-		i++
+		processed++
 		if(init_tick_checks)
 			CHECK_TICK
 		else if (MC_TICK_CHECK)
 			break
-	if (i > 1)
-		queue.Cut(1, i)
+	if (processed)
+		queue.Cut(1, processed)
 
 
 /datum/controller/subsystem/lighting/Recover()
