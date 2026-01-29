@@ -12,9 +12,5 @@
 			#include "templates.dm"
 		#endif
 
-		#ifdef ALL_DUNGEONS
-			#include "dungeons.dm"
-		#endif
-
 	#endif
 #endif
