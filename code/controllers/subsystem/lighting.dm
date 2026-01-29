@@ -35,7 +35,8 @@ SUBSYSTEM_DEF(lighting)
 		MC_SPLIT_TICK
 	var/list/queue = sources_queue
 	var/processed = 0
-	var/max_process = init_tick_checks ? 10000 : 1000  // Safety limit
+	// Higher init limit for faster startup, lower runtime limit for stability
+	var/max_process = init_tick_checks ? 15000 : 1000  // Safety limit
 	while(length(queue) > 0 && processed < max_process)
 		var/datum/light_source/L = queue[1]
 		if(!L)

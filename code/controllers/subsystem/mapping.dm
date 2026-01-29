@@ -83,12 +83,12 @@ SUBSYSTEM_DEF(mapping)
 		map_adjustment.on_mapping_init()
 		log_world("Applied '[map_adjustment.map_file_name]' map adjustment: on_mapping_init()")
 	loadWorld()
-	repopulate_sorted_areas()
+	// Deferred: repopulate_sorted_areas() - will be called after all z-levels are added
 	process_teleport_locs()			//Sets up the wizard teleport locations
 	preloadTemplates()
 	// Add the transit level
 	transit = add_new_zlevel("Transit/Reserved", list(ZTRAIT_RESERVED = TRUE))
-	repopulate_sorted_areas()
+	repopulate_sorted_areas()		// Only call once after all levels loaded
 	initialize_reserved_level(transit.z_value)
 	generate_z_level_linkages()
 	return ..()
@@ -195,9 +195,7 @@ SUBSYSTEM_DEF(mapping)
 
 	var/list/otherZ = list()
 
-	//#ifndef NO_DUNGEON
-	//otherZ += load_map_config("_maps/map_files/otherz/dungeon.json")
-	//#endif
+	// Dungeon map loading disabled - previously loaded "_maps/map_files/otherz/dungeon.json"
 
 	for(var/map_json in config.other_z)
 		otherZ += load_map_config(map_json)
