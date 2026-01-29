@@ -25,7 +25,7 @@ SUBSYSTEM_DEF(lighting)
 		initialized = TRUE
 
 	// During init, process all queued items without tick checks for speed
-	fire(FALSE, FALSE)
+	fire(FALSE, TRUE)
 
 	return ..()
 
