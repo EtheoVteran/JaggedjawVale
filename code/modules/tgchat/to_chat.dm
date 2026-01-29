@@ -31,7 +31,7 @@
 		target = GLOB.clients
 
 	// Build a message
-	var/message = list()
+	var/list/message = list()
 	if(type) message["type"] = type
 	if(text) message["text"] = text
 	if(html) message["html"] = html
@@ -77,7 +77,7 @@
 		target = GLOB.clients
 
 	// Build a message
-	var/message = list()
+	var/list/message = list()
 	if(type) message["type"] = type
 	if(text) message["text"] = text
 	if(html) message["html"] = html

@@ -1069,3 +1069,5 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 				carbon.emote("tremble") //This one really got to you.
 
 	qdel(src)
+
+#undef HAL_LINES_FILE
