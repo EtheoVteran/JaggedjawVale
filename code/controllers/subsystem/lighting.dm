@@ -34,6 +34,7 @@ SUBSYSTEM_DEF(lighting)
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
 	var/list/queue = sources_queue
+	var/processed
 	while(length(queue) > 0)
 		var/datum/light_source/L = queue[1]
 		if(!L)
