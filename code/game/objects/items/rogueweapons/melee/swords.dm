@@ -1145,8 +1145,8 @@
 /obj/item/rogueweapon/sword/short/gladius/decorated
 	name = "decorated gladius"
 	desc = "A beautiful depiction of justice, beflowered and besilked. The crimson engravings along its blade pay tribute to the ancient epics of Ravox's ascent to godlihood; for it was His wounding of the Sinistar's tentacled heart that forced the Archdevil to pause - first in disbelief, then in fascination."
-	icon_state = "gladiusdec"
-	sheathe_icon = "decgladius"
+	icon_state = "gladius" // TODO: Create gladiusdec sprite
+	sheathe_icon = "gladius" // TODO: Create gladiusdec sprite
 	max_integrity = 300
 	smeltresult = /obj/item/ingot/gold
 	sellprice = 100
@@ -2197,7 +2197,7 @@
 /obj/item/rogueweapon/sword/gold
 	name = "golden arming sword"
 	desc = "A heavenly arming sword, who's golden blade and besilked handle lays separated by a duocruciformic crossguard. This particular weapon seems to have innovatively combined the lethal cutting prowess of Psydonia's oldest weapon with the psychological damage of knowing that its wielder could likely bribe the Carriageman himself, and still chose to personally kill you."
-	icon_state = "goldsword"
+	icon_state = "sword1" // TODO: Create goldsword sprite
 	smeltresult = /obj/item/ingot/gold
 	force = 35
 	force_wielded = 40
@@ -2206,14 +2206,14 @@
 	max_blade_int = 50
 	anvilrepair = null //Ceremonial. This should break comedically easily, but still have just enough toughness to work with a few strikes.
 	sellprice = 300
-	sheathe_icon = "goldsword"
+	sheathe_icon = "sword1" // TODO: Create goldsword sprite
 	wbalance = WBALANCE_HEAVY
 
 /obj/item/rogueweapon/sword/gold/lordscepter
 	name = "\"Godshand\""
 	desc = "A royal arming sword, who's golden blade and besilked handle lays separated by a duocruciformic crossguard. Nestled within its glistening bosom is a shard of Astrata's divinity authority; when reason fails to rank amongst rage, let Her speak for you. ‎</br>‎‎ </br>'..And I will strike down upon thee with great vengeance and furious anger - those who would attempt to poison and destroy my brothers. And you will know that I am the Lord when I lay my vengeance upon thee!'"
-	icon_state = "goldswordking"
-	sheathe_icon = "goldswordking"
+	icon_state = "sword1" // TODO: Create goldswordking sprite
+	sheathe_icon = "sword1" // TODO: Create goldswordking sprite
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	minstr = 7
 	max_integrity = 250

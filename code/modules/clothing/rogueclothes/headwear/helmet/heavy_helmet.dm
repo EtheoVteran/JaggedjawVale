@@ -238,8 +238,8 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/aalloy
 	name = "decrepit bascinet"
 	desc = "A chipped greathelm of frayed bronze. The fittings squeal with nauseous annoyance, whenever you move to lift its half-rusted visor up and down. Add a feather to show the colors of your family or allegiance."
-	icon_state = "ancientknight"
-	item_state = "ancientknight"
+	icon_state = "knight" // TODO: Create ancientknight sprite
+	item_state = "knight" // TODO: Create ancientknight sprite
 	max_integrity = ARMOR_INT_HELMET_HEAVY_DECREPIT
 	smeltresult = /obj/item/ingot/aaslag
 	color = "#bb9696"
@@ -251,8 +251,8 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/paalloy
 	name = "ancient bascinet"
 	desc = "An ancient greathelm of polished gilbranze. There is no sight more haunting than that of a noble knight, long-succumbed to the undying forces of evylle. Add a feather to show the colors of your family or allegiance."
-	icon_state = "ancientknight"
-	item_state = "ancientknight"
+	icon_state = "knight" // TODO: Create ancientknight sprite
+	item_state = "knight" // TODO: Create ancientknight sprite
 	smeltresult = /obj/item/ingot/aaslag
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/fluted
