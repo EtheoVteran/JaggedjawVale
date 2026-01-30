@@ -24,8 +24,10 @@ SUBSYSTEM_DEF(lighting)
 		create_all_lighting_objects()
 		initialized = TRUE
 
-	// During init, process all queued items with higher limits for speed
-	fire(FALSE, TRUE)
+	// Force full initialization even if called after round start
+	// Process ALL queued items before returning
+	while(sources_queue.len || corners_queue.len || objects_queue.len)
+		fire(FALSE, TRUE)
 
 	return ..()
 

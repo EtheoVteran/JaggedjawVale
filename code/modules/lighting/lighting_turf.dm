@@ -137,9 +137,11 @@
 	lighting_corners_initialised = TRUE
 	if (!corners)
 		corners = list(null, null, null, null)
-
-	for (var/i = 1 to 4)
-		if (corners[i]) // Already have a corner on this direction.
-			continue
-
-		corners[i] = new/datum/lighting_corner(src, GLOB.LIGHTING_CORNER_DIAGONAL[i])
+		// Generate all 4 corners at once
+		for (var/i = 1 to 4)
+			corners[i] = new/datum/lighting_corner(src, GLOB.LIGHTING_CORNER_DIAGONAL[i])
+	else
+		// Fill in missing corners only
+		for (var/i = 1 to 4)
+			if (!corners[i])
+				corners[i] = new/datum/lighting_corner(src, GLOB.LIGHTING_CORNER_DIAGONAL[i])
