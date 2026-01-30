@@ -189,7 +189,7 @@
 /obj/item/rogueweapon/mace/gold
 	name = "golden mace"
 	desc = "A heavenly staff of besilked rosawood, crested with the golden sigil of royalty. Like the plump-bellied aristocrats who've surely commissioned this article's design, it is overbearingly heavy."
-	icon_state = "goldmace"
+	icon_state = "mace" // TODO: Create goldmace sprite
 	force = 35
 	force_wielded = 40
 	max_integrity = 50
@@ -957,7 +957,7 @@
 /obj/item/rogueweapon/mace/mushroom
 	name = "Lithmyc Mace"
 	desc = "A heavy mace forged from fungal-infused metals. Looks spiky!"
-	icon_state = "mushroom"
+	icon_state = "mace" // TODO: Create mushroom sprite
 	force = 18
 	force_wielded = 24
 	max_integrity = 500

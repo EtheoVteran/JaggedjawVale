@@ -1155,7 +1155,7 @@
 /obj/item/rogueweapon/sword/sabre/bronzekhopesh
 	name = "khopesh"
 	desc = "A sickle-shaped sword of Naledi origin that owes its design to a type of battle axe its ancient settlers once used - it represents a symbol of power and conquest. The glint along its bronzen edge shifts with every passing glance, yearning to be dulled-wet with the blood of long-extinct villains."
-	icon_state = "sabre" // TODO: Create bronzekhopesh sprite
+	icon_state = "cutlass" // TODO: Create bronzekhopesh sprite
 	force = 22
 	possible_item_intents = list(/datum/intent/sword/cut/sabre, /datum/intent/sword/thrust, /datum/intent/sword/chop/falx, /datum/intent/sword/peel)
 	max_integrity = 175
