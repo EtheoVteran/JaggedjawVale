@@ -37,10 +37,13 @@ SUBSYSTEM_DEF(lighting)
 	var/processed = 0
 	// Higher init limit for faster startup, lower runtime limit for stability
 	var/max_process = init_tick_checks ? 15000 : 1000  // Safety limit
-	while(length(queue) > 0 && processed < max_process)
+	while(length(queue) && processed < max_process)
+		if(!queue.len)
+			break
 		var/datum/light_source/L = queue[1]
 		if(!L)
-			break
+			queue.Cut(1, 2)
+			continue
 
 		L.update_corners()
 		L.needs_update = LIGHTING_NO_UPDATE
@@ -57,10 +60,13 @@ SUBSYSTEM_DEF(lighting)
 
 	queue = corners_queue
 	processed = 0
-	while(length(queue) > 0 && processed < max_process)
+	while(length(queue) && processed < max_process)
+		if(!queue.len)
+			break
 		var/datum/lighting_corner/C = queue[1]
 		if(!C)
-			break
+			queue.Cut(1, 2)
+			continue
 
 		C.update_objects()
 		C.needs_update = FALSE
@@ -77,10 +83,13 @@ SUBSYSTEM_DEF(lighting)
 
 	queue = objects_queue
 	processed = 0
-	while(length(queue) > 0 && processed < max_process)
+	while(length(queue) && processed < max_process)
+		if(!queue.len)
+			break
 		var/atom/movable/lighting_object/O = queue[1]
 		if(!O)
-			break
+			queue.Cut(1, 2)
+			continue
 
 		// Remove deleted objects from the queue and count as processed
 		if (QDELETED(O))
