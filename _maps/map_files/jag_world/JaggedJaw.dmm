@@ -103752,6 +103752,10 @@
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/churchrough,
 /area/rogue/indoors/inq/basement)
+"wny" = (
+/obj/structure/roguemachine/withdraw,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/church/chapel)
 "wnA" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/item/clothing/suit/roguetown/shirt/robe/abyssor,
@@ -409194,8 +409198,8 @@ tCg
 tCg
 tCg
 eGi
-wAS
-hyP
+mRq
+wny
 xZT
 jrV
 maR
@@ -410342,7 +410346,7 @@ mqY
 mRq
 mRq
 kNK
-dtO
+hyP
 goE
 hVt
 ohA
