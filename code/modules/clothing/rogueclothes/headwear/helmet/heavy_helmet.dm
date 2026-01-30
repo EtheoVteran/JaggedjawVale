@@ -18,8 +18,8 @@
 	name = "bronze barbute"
 	desc = "A greathelm of bronze, who's nasalguard and mandibles leave the wearer's face cloaked in darkness. The heroes of yore have long since passed, yet their blood still courses through the veins of Psydonia's children; you are no different. Quiff a feather to its skullcap to bare your allegience with pride."
 	body_parts_covered = FULL_HEAD
-	icon_state = "bronzebarbute"
-	item_state = "bronzebarbute"
+	icon_state = "knight" // TODO: Create bronzebarbute sprite
+	item_state = "knight" // TODO: Create bronzebarbute sprite
 	flags_inv = HIDEEARS|HIDEFACE|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor = ARMOR_PLATE_BRONZE
@@ -175,7 +175,7 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/sheriff/gold
 	name = "golden helmet"
 	desc = "A resplendant barbute, masterfully forged from pure gold. Its nasalguard is marked by a holy sigil, and its interior is fitted with a besilked arming cap. Even in absolute darkness, the polished surface sparkles with imbued sunlight."
-	icon_state = "goldbarbute"
+	icon_state = "knight" // TODO: Create goldbarbute sprite
 	armor = ARMOR_GOLD //Renders its wearer completely invulnerable to damage. The caveat is, however..
 	max_integrity = ARMOR_INT_SIDE_GOLD // ..is that it's extraordinarily fragile. To note, this is lower than even Decrepit-tier armor.
 	armor_class = ARMOR_CLASS_HEAVY //Ceremonial. Heavy is the head that bares the burden.
@@ -189,7 +189,7 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/sheriff/gold/king
 	name = "royal golden helmet"
 	desc = "A resplendant barbute, masterfully forged from pure gold. Its nasalguard is marked by a holy sigil, and its interior is fitted with a besilked arming cap. The dorpeled crown atop its brow invokes authority, be it misbegotten or endowed."
-	icon_state = "goldbarbute_crown"
+	icon_state = "knight" // TODO: Create goldbarbute_crown sprite
 	max_integrity = ARMOR_INT_SIDE_GOLDPLUS // Doubled integrity.
 	sellprice = 300
 
@@ -282,7 +282,7 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/gold
 	name = "golden knight's armet"
 	desc = "A resplendant armet, masterfully forged from pure gold. Hexagrammic etchings of a holy sigil line its visor, and its interior is fitted with a besilked arming cap. Even in absolute darkness, the polished surface sparkles with imbued sunlight."
-	icon_state = "goldknight"
+	icon_state = "knight" // TODO: Create goldknight sprite
 	armor = ARMOR_GOLD //Renders its wearer completely invulnerable to damage. The caveat is, however..
 	max_integrity = ARMOR_INT_SIDE_GOLD // ..is that it's extraordinarily fragile. To note, this is lower than even Decrepit-tier armor.
 	armor_class = ARMOR_CLASS_HEAVY //Ceremonial. Heavy is the head that bares the burden.
@@ -296,7 +296,7 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/gold/king
 	name = "royal golden armet"
 	desc = "A resplendant armet, masterfully forged from pure gold. Hexagrammic etchings of a holy sigil line its visor, and its interior is fitted with a besilked arming cap. The dorpeled crown atop its brow invokes authority, be it misbegotten or endowed."
-	icon_state = "goldknight_crown"
+	icon_state = "knight" // TODO: Create goldknight_crown sprite
 	max_integrity = ARMOR_INT_SIDE_GOLDPLUS // Doubled integrity.
 	sellprice = 300
 

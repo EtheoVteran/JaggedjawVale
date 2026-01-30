@@ -267,7 +267,7 @@
 
 /obj/item/needle/bronze
 	name = "bronze needle"
-	icon_state = "bronzeneedle"
+	icon_state = "needle" // TODO: Create bronzeneedle sprite
 	desc = "A deceptively long needle with a craned tip, laced for labors-a-plenety."
 	stringamt = 30
 	maxstring = 30
