@@ -360,8 +360,8 @@
 	GLOB.lordcolor -= src
 	return ..()
 
-/obj/item/clothing/cloak/tabard/retinue/captain //Because of his other snowflake cloak we can't actually use the naming normally.
-	name = "captain's tabard"
+/obj/item/clothing/cloak/tabard/retinue/banneret //Because of his other snowflake cloak we can't actually use the naming normally.
+	name = "knight banneret's tabard"
 
 
 /obj/item/clothing/cloak/tabard/crusader
@@ -481,10 +481,12 @@
 	color = "#4D1E49"
 	detail_color = "#A95650"
 
+/obj/item/clothing/cloak/tabard/black
+	color = CLOTHING_BLACK
 
-//////////////////////////
-/// SOLDIER TABARD
-////////////////////////
+//////////////////////
+/// SOLDIER TABARD ///
+//////////////////////
 
 
 /obj/item/clothing/cloak/tabard/stabard
@@ -501,7 +503,7 @@
 	name = "guard tabard"
 	desc = "A tabard with the lord's heraldic colors."
 	color = CLOTHING_AZURE
-	detail_tag = "_spl"
+	detail_tag = "_quad"
 	detail_color = CLOTHING_WHITE
 
 /obj/item/clothing/cloak/tabard/stabard/guard/Initialize()
@@ -564,9 +566,9 @@
 		L.update_inv_cloak()
 
 
-//////////////////////////
-/// SURCOATS
-////////////////////////
+////////////////
+/// SURCOATS ///
+////////////////
 
 
 /obj/item/clothing/cloak/tabard/stabard/surcoat
@@ -689,6 +691,17 @@
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 3
+
+/obj/item/clothing/cloak/darkcloak/minotaur
+	name = "minotaur cloak"
+	desc = "Minotaur fur and straw roughly sewn into a long mantle."
+	icon_state = "mino"
+	item_state = "mino"
+	salvage_result = /obj/item/natural/hide/cured
+	salvage_amount = 4
+
+/obj/item/clothing/cloak/darkcloak/minotaur/red
+	color = CLOTHING_RED
 
 /obj/item/clothing/cloak/apron
 	name = "apron"
@@ -1266,9 +1279,9 @@
 	name = "dragonscale necklace" //Who the hell put a NECKLACE in the CLOAKS file?
 	desc = "A blacksteel chain, laced through a dozen of the Hoardmaster's golden teeth. Atuned to the beating heart of Psydonia's financial systems, its true strength can only be harnessed by those who covet wealth above all else."
 	icon_state = "bktrinket"
-	max_integrity = 400 //Exceptionally strong, can be purchased multiple times, and provides a flat +2 to the entire statblock. If it gets destroyed in a fight, that's fair game. Reduced from the original value of 100,000.
-	armor = ARMOR_DRAGONSCALE
-	prevent_crits = PREVENT_CRITS_NONE
+	max_integrity = ARMOR_INT_SIDE_IRON //Iron gorget now.
+	armor = ARMOR_PLATE
+	prevent_crits = PREVENT_CRITS_ALL
 	blocksound = PLATEHIT
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
@@ -1288,7 +1301,6 @@
 		active_item = TRUE
 		if(user.mind.special_role == "Bandit")
 			to_chat(user, span_monkeyhive("Matthios empowers me! My body glistens with spiritual wealth!"))
-			//Caustic edit
 			user.change_stat(STATKEY_STR, 1)
 			user.change_stat(STATKEY_PER, 1)
 			user.change_stat(STATKEY_INT, 1)
@@ -1296,11 +1308,8 @@
 			user.change_stat(STATKEY_WIL, 1)
 			user.change_stat(STATKEY_SPD, 1)
 			user.change_stat(STATKEY_LCK, 1)
-			armor = getArmor("blunt" = 100, "slash" = 100, "stab" = 100, "piercing" = 100, "fire" = 50, "acid" = 0)
-			//Caustic edit end
 		else
 			to_chat(user, span_suicide("As I don the necklace, I feel my very worth draining away.."))
-			armor = getArmor("blunt" = 0, "slash" = 0, "stab" = 0, "piercing" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/neck/roguetown/blkknight/dropped(mob/living/user)
 	..()
@@ -1309,16 +1318,15 @@
 	active_item = FALSE
 	if(user.mind.special_role == "Bandit")
 		to_chat(user, span_monkeyhive("Golden sparks flutter from the teeth, before they fade away - and with it, the blessing of Matthios.."))
-		user.change_stat(STATKEY_STR, -2)
-		user.change_stat(STATKEY_PER, -2)
-		user.change_stat(STATKEY_INT, -2)
-		user.change_stat(STATKEY_CON, -2)
-		user.change_stat(STATKEY_WIL, -2)
-		user.change_stat(STATKEY_SPD, -2)
-		user.change_stat(STATKEY_LCK, -2)
+		user.change_stat(STATKEY_STR, -1)
+		user.change_stat(STATKEY_PER, -1)
+		user.change_stat(STATKEY_INT, -1)
+		user.change_stat(STATKEY_CON, -1)
+		user.change_stat(STATKEY_WIL, -1)
+		user.change_stat(STATKEY_SPD, -1)
+		user.change_stat(STATKEY_LCK, -1)
 	else
 		to_chat(user, span_suicide("..dripping down from the heavens, I feel my worth returning once more.."))
-		armor = getArmor("blunt" = 100, "slash" = 100, "stab" = 100, "piercing" = 100, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/suit/roguetown/armor/plate/blkknight
 	slot_flags = ITEM_SLOT_ARMOR
@@ -1601,8 +1609,8 @@
 	user.update_inv_cloak()
 	user.update_inv_armor()
 
-/obj/item/clothing/cloak/captain
-	name = "captain's cape"
+/obj/item/clothing/cloak/banneret
+	name = "knight banneret's cape"
 	desc = "A cape with a gold embroided heraldry of Azure."
 	icon = 'icons/roguetown/clothing/special/captain.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/captain.dmi'
@@ -1614,7 +1622,7 @@
 	detail_color = "#39404d"
 	sellprice = 45 //Stylish~
 
-/obj/item/clothing/cloak/captain/Initialize()
+/obj/item/clothing/cloak/banneret/Initialize()
 	. = ..()
 	if(GLOB.lordprimary)
 		lordcolor(GLOB.lordprimary, GLOB.lordsecondary)
@@ -1627,7 +1635,7 @@
 		var/mob/L = loc
 		L.update_inv_cloak()
 
-/obj/item/clothing/cloak/captain/Destroy()
+/obj/item/clothing/cloak/banneret/Destroy()
 	GLOB.lordcolor -= src
 	return ..()
 

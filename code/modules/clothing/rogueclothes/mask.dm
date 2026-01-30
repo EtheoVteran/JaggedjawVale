@@ -207,6 +207,30 @@
 	desc = "Runes and wards, meant for daemons; the gold has somehow rusted in unnatural, impossible agony. The gold is now worthless, but that is not why the Naledi wear them."
 	sellprice = 20
 
+////////////////////////
+// Triumph Exclusive! //
+////////////////////////
+
+//Purchasable via Triumphs. Blacklisted from the Stockpile and fitted with a reduced saleprice.
+/obj/item/clothing/mask/rogue/lordmask/triumph
+	name = "ornate golden halfmask"
+	desc = "An ornate halfmask of pure, glistening gold. What lies underneath to cradle the face: a besilked cushion, or cold alloys?"
+	sellprice = 33
+
+/obj/item/clothing/mask/rogue/facemask/goldmask/triumph
+	name = "ornate golden mask"
+	desc = "An ornate mask of pure, glistening gold. If you have no face to call your own, then can you truly call yourself humen at all?"
+	sellprice = 77
+	smeltresult = /obj/item/clothing/mask/rogue/lordmask/triumph
+
+/obj/item/clothing/mask/rogue/facemask/goldmaskc/triumph
+	name = "ornate golden mask"
+	desc = "An ornate mask of pure, glistening gold. If you have no face to call your own, then can you truly call yourself humen at all?"
+	sellprice = 77
+	smeltresult = /obj/item/clothing/mask/rogue/lordmask/triumph
+
+//
+
 /obj/item/clothing/mask/rogue/sack
 	name = "sack mask"
 	desc = "A brown sack with eyeholes cut into it."
@@ -451,8 +475,15 @@
 	icon_state = "steppemask_snout"
 
 /obj/item/clothing/mask/rogue/facemask/goldmask
-	name = "Gold Mask"
+	name = "gold mask"
 	icon_state = "goldmask"
+	max_integrity = 150
+	sellprice = 100
+	smeltresult = /obj/item/ingot/gold
+
+/obj/item/clothing/mask/rogue/facemask/goldmaskc
+	name = "gold mask"
+	icon_state = "goldmaskc"
 	max_integrity = 150
 	sellprice = 100
 	smeltresult = /obj/item/ingot/gold
@@ -565,22 +596,8 @@
 	flags_inv = HIDEFACE|HIDESNOUT
 	sellprice = 0
 
-/obj/item/clothing/mask/rogue/lordmask/naledi/equipped(mob/user, slot)
-	. = ..()
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(H.merctype == 14)	//Naledi
-			H.remove_status_effect(/datum/status_effect/debuff/lost_naledi_mask)
-			H.remove_stress(/datum/stressevent/naledimasklost)
-
-/obj/item/clothing/mask/rogue/lordmask/naledi/dropped(mob/user)
-	. = ..()
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(H.merctype == 14)	//Naledi
-			if(!istiefling(user)) //Funny exception
-				H.apply_status_effect(/datum/status_effect/debuff/lost_naledi_mask)
-				H.add_stress(/datum/stressevent/naledimasklost)
+/obj/item/clothing/mask/rogue/lordmask/naledi/ComponentInitialize()
+	AddComponent(/datum/component/armour_filtering/positive, TRAIT_NALEDI, "naledi_mask")
 
 /obj/item/clothing/mask/rogue/lordmask/naledi/sojourner
 	name = "sojourner's mask"

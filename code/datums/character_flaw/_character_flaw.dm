@@ -229,8 +229,10 @@ GLOBAL_LIST_INIT(averse_factions, list(
 			var/mob/living/carbon/P = user
 			if(cnt > 3)
 				P.add_stress(/datum/stressevent/crowd)
-			if(cnt == 0)
+			else if(cnt == 0)
 				P.add_stress(/datum/stressevent/nocrowd)
+			else
+				next_check = world.time + (interval * 6)	//we procced it successfully, so the delay is longer
 
 /datum/charflaw/finicky/apply_post_equipment(mob/user)
 	if(user.mind)
@@ -307,6 +309,7 @@ GLOBAL_LIST_INIT(averse_factions, list(
 		if(world.time > next_check)
 			next_check = world.time + interval
 			var/cnt = 0
+			var/distfound = FALSE
 			for(var/mob/living/carbon/human/L in get_hearers_in_view(2, user))
 				if(L == user)
 					continue
@@ -314,14 +317,19 @@ GLOBAL_LIST_INIT(averse_factions, list(
 					continue
 				var/dist = get_dist(L, user)
 				if(dist <= 1)
+					distfound = TRUE
+					user.remove_stress(/datum/stressevent/nopeople)
 					break
 				if(L.dna.species)
 					cnt++
 				if(cnt >= 2)
+					user.remove_stress(/datum/stressevent/nopeople)
 					break
 			var/mob/living/carbon/P = user
-			if(cnt < 1)
+			if(cnt < 1 && !distfound)
 				P.add_stress(/datum/stressevent/nopeople)
+			else
+				next_check = world.time + (interval * 6) //we procced it successfully, so the delay is longer
 
 /datum/charflaw/clingy/apply_post_equipment(mob/user)
 	if(user.mind)
@@ -626,6 +634,8 @@ GLOBAL_LIST_INIT(averse_factions, list(
 	insane_fool.hallucination = INFINITY
 	ADD_TRAIT(insane_fool, TRAIT_PSYCHOSIS, TRAIT_GENERIC)
 	insane_fool.adjust_triumphs(1)
+	if(insane_fool.patron?.type == /datum/patron/divine/abyssor) 
+	 insane_fool.grant_language(/datum/language/abyssal)
 
 /datum/charflaw/indebted
 	name = "Indebted"
@@ -658,7 +668,7 @@ GLOBAL_LIST_INIT(averse_factions, list(
 	var/alimony = minimum
 	if(bankamt > minimum)
 		if((bankamt * relative) > minimum)
-			alimony = bankamt * relative
+			alimony = round(bankamt * relative)
 		SStreasury.give_money_account(-alimony, deadbeat, "Debts")
 		next_alimony = world.time + interval
 	else
@@ -683,7 +693,7 @@ GLOBAL_LIST_INIT(averse_factions, list(
 	var/check_interval = 15 SECONDS
 	var/active_since
 	var/next_check = 0
-	var/check_range
+	var/check_range = 5
 
 /datum/charflaw/averse/flaw_on_life(mob/user)
 	if(is_active && world.time > next_check)
@@ -692,15 +702,33 @@ GLOBAL_LIST_INIT(averse_factions, list(
 			return
 		var/count = 0
 		for(var/mob/living/L in get_hearers_in_LOS(check_range, user, RECURSIVE_CONTENTS_CLIENT_MOBS))
-			if(L != user && L.stat != DEAD)
-				var/datum/job/J = SSjob.GetJob(L.job)
-				if(chosen_group & J.department_flag)
-					count++
-					if(count >= 2)
-						user.add_stress(/datum/stressevent/averse)
-					if(paid_triumphs)
-						triumph_refund(user)
+			if(check_aversion(user, L))
+				count++
+				if(count >= 2)
+					user.add_stress(/datum/stressevent/averse)
+					break
+				if(paid_triumphs)
+					triumph_refund(user)
 
+
+/datum/charflaw/averse/proc/check_aversion(mob/user, mob/target)
+	if(target == user || target.stat == DEAD)
+		return FALSE
+
+	if(!ishuman(target))
+		return FALSE
+
+	var/datum/job/J = SSjob.GetJob(target.job)
+	if(!J || !J.department_flag)
+		return FALSE
+
+	if(!chosen_group)
+		return FALSE
+
+	if(chosen_group & J.department_flag)
+		return TRUE
+
+	return FALSE
 
 /datum/charflaw/averse/proc/triumph_refund(mob/user)
 	var/time_since = world.time - active_since
@@ -728,30 +756,40 @@ GLOBAL_LIST_INIT(averse_factions, list(
 		CRASH("Invalid set_jobflag called from Averse charflaw using the faction:[faction].")
 
 /datum/charflaw/averse/proc/check_for_candidates(mob/user)
-	if(user.mind)
-		var/averse_found = FALSE
-		for(var/player in GLOB.player_list)
-			if(ishuman(player))
-				var/mob/living/L = player
-				var/datum/job/J = SSjob.GetJob(L.job)
-				if(chosen_group & J.department_flag)
-					averse_found = TRUE
+	if(!user || QDELETED(user) || !user.mind)
+		return
+
+	var/averse_found = FALSE
+	for(var/mob/living/player in GLOB.player_list)
+		if(player == user)
+			continue
+		if(!ishuman(player))
+			continue
+
+		var/datum/job/J = SSjob.GetJob(player.job)
+		if(!J || !J.department_flag)
+			continue
+		if(!chosen_group)
+			return FALSE
+
+		if(chosen_group & J.department_flag)
+			averse_found = TRUE
+			break
+	if(!averse_found)
+		var/list/options = list("Pick a Random Aversion", "Keep Current (-3 TRI)")
+		var/choice = input(user, "There are no viable candidates for your Aversion. What do you do?", "AVERSION ALERT") as anything in options
+		if(choice == "Keep Current (-3 TRI)" || !choice)
+			user.adjust_triumphs(-3)
+			paid_triumphs = TRUE
+		else if(choice == "Pick a Random Aversion")
+			var/new_aversion
+			var/max_attempts = 10
+			for(var/i = 1 to max_attempts)
+				new_aversion = pick(GLOB.averse_factions)
+				if(new_aversion != chosen_group)
+					to_chat(user, span_info("New Aversion selected: [new_aversion]"))
+					set_jobflag(new_aversion)
 					break
-		if(!averse_found)
-			var/list/options = list("Pick a Random Aversion", "Keep Current (-3 TRI)")
-			var/choice = input(user, "There are no viable candidates for your Aversion. What do you do?", "AVERSION ALERT") as anything in options
-			if(choice == "Keep Current (-3 TRI)" || !choice)
-				user.adjust_triumphs(-3)
-				paid_triumphs = TRUE
-			else if(choice == "Pick a Random Aversion")
-				var/new_aversion
-				var/max_attempts = 10
-				for(var/i = 1 to max_attempts)
-					new_aversion = pick(GLOB.averse_factions)
-					if(new_aversion != chosen_group)
-						to_chat(user, span_info("New Aversion selected: [new_aversion]"))
-						set_jobflag(new_aversion)
-						break
 
 
 /datum/charflaw/averse/apply_post_equipment(mob/user)
@@ -760,6 +798,8 @@ GLOBAL_LIST_INIT(averse_factions, list(
 			set_jobflag(user.client.prefs?.averse_chosen_faction)
 			is_active = TRUE
 			active_since = world.time
-	addtimer(CALLBACK(src, PROC_REF(check_for_candidates), user), 5 SECONDS)
+	if(is_active && user && !QDELETED(user))
+		addtimer(CALLBACK(src, PROC_REF(check_for_candidates), user), 5 SECONDS)
+
 
 
