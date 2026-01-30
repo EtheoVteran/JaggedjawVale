@@ -1,0 +1,4 @@
+{
+  // Increase language server timeout to prevent linter timeouts on large projects
+  "dreammaker.langserverTimeout": 300000
+}
