@@ -295,11 +295,14 @@ This allows the devs to draw whatever shape they want at the cost of it feeling 
 /// If you dynamically tweak the cooldown remember that it will /stay/ that way on this datum without
 /// refreshing it with Initial() somewhere.
 /datum/special_intent/proc/apply_cooldown(cd, override = FALSE)
+	var/cd_to_apply = cooldown
+	if(cd)
+		cd_to_apply = cd
 	if(override)
 		howner.remove_status_effect(/datum/status_effect/debuff/specialcd)
-		howner.apply_status_effect(/datum/status_effect/debuff/specialcd, cd)
+		howner.apply_status_effect(/datum/status_effect/debuff/specialcd, cd_to_apply)
 		return
-	howner.apply_status_effect(/datum/status_effect/debuff/specialcd, cd)
+	howner.apply_status_effect(/datum/status_effect/debuff/specialcd, cd_to_apply)
 
 ///A proc that attempts to deal damage to the target, simple mob or carbon. 
 ///Does /not/ crit. Respects armor, but CAN pen unless "no_pen" is set to TRUE. Each Special can have its own way of scaling damage.
@@ -1055,7 +1058,6 @@ tile_coordinates = list(list(1,1), list(-1,1), list(-1,-1), list(1,-1),list(0,0)
 #undef SPECIAL_AOE_AROUND_ORIGIN
 #undef CUSTOM_TIMER_INDEX
 
-
 /datum/special_intent/upper_cut // 1x1 combo finisher, exposed targets get knocked down and take alot of damage, others take low damage.
 	name = "Upper Cut"
 	desc = "Charge up a devastating strike infront of you, if the target is Exposed they will fall over and be flung back with tremendous damage, if not exposed they will be pushed slightly back.."
@@ -1119,3 +1121,15 @@ tile_coordinates = list(list(1,1), list(-1,1), list(-1,-1), list(1,-1),list(0,0)
 		animate(transform = prev_transform, time = 0)
 
 	..()
+
+/datum/special_intent/dagger_dash
+	name = "Dagger Dash"
+	desc = "Become quicker on your feet and pass through other beings for a short time. Boost scales with worn armor."
+	cooldown = 90 SECONDS
+	stamcost = 25
+
+/datum/special_intent/dagger_dash/process_attack()
+	SHOULD_CALL_PARENT(FALSE)
+	howner.apply_status_effect(/datum/status_effect/buff/dagger_dash)
+	playsound(howner, 'sound/combat/dagger_boost.ogg', 100, TRUE)
+	apply_cooldown()
