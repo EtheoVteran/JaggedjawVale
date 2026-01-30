@@ -70,6 +70,7 @@
 		/datum/customizer/bodypart_feature/face_detail,
 		/datum/customizer/bodypart_feature/underwear,
 		/datum/customizer/bodypart_feature/legwear,
+		/datum/customizer/bodypart_feature/piercing,
 		/datum/customizer/organ/horns/anthro,
 		//Caustic edit
 		// /datum/customizer/organ/tail/tiefling,

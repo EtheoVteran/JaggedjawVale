@@ -262,3 +262,12 @@ GLOBAL_LIST_INIT(taur_types, subtypesof(/obj/item/bodypart/taur))
 	taur_icon_state = "mammoth_s"
 
 	has_taur_color = TRUE
+
+/obj/item/bodypart/taur/goat
+	name = "Goat Legs"
+
+	offset_x = -16
+	taur_icon_state = "goat_s"
+	clip_mask_state = "clip_mask_goat"
+
+	has_taur_color = TRUE
