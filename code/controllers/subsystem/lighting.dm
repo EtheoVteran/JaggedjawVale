@@ -15,17 +15,17 @@ SUBSYSTEM_DEF(lighting)
 
 /datum/controller/subsystem/lighting/Initialize(timeofday)
 	if(!initialized)
-		if (CONFIG_GET(flag/starlight))
+		if(CONFIG_GET(flag/starlight))
 			for(var/I in GLOB.sortedAreas)
 				var/area/A = I
-				if (A.dynamic_lighting == DYNAMIC_LIGHTING_IFSTARLIGHT)
+				if(A.dynamic_lighting == DYNAMIC_LIGHTING_IFSTARLIGHT)
 					A.luminosity = 0
 
 		create_all_lighting_objects()
 		initialized = TRUE
 
-	// During init, process all queued items without tick checks for speed
-	fire(FALSE, FALSE)
+	// During init, process all queued items with higher limits for speed
+	fire(FALSE, TRUE)
 
 	return ..()
 

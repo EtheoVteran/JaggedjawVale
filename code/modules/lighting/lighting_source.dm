@@ -291,8 +291,7 @@
 	var/turf/T
 	var/datum/lighting_corner/C
 	var/corner_count = 0
-	// Lower limit during init for faster startup, prevents extreme corner creation
-	var/max_corners = SSlighting.initialized ? 5000 : 3000
+	var/max_corners = 5000  // Hard limit to prevent memory exhaustion
 	if (source_turf)
 		var/oldlum = source_turf.luminosity
 		source_turf.luminosity = CEILING(light_outer_range, 1)
