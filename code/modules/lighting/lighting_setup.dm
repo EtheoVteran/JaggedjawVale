@@ -10,6 +10,6 @@
 
 			new/atom/movable/lighting_object(T)
 			count++
-			// Check tick every 100 lighting objects instead of every single one
-			if(count % 100 == 0)
+			// Check tick every 500 lighting objects for faster initialization
+			if(count % 500 == 0)
 				CHECK_TICK

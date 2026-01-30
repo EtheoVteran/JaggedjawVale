@@ -36,10 +36,12 @@ SUBSYSTEM_DEF(lighting)
 	var/list/queue = sources_queue
 	var/processed = 0
 	// Higher init limit for faster startup, lower runtime limit for stability
-	var/max_process = init_tick_checks ? 15000 : 1000  // Safety limit
+	var/max_process = init_tick_checks ? 50000 : 1000  // Safety limit
+	var/check_every = init_tick_checks ? 500 : 50
 	while(processed < max_process && queue.len)
 		var/datum/light_source/L = queue[1]
-		queue.Cut(1, 2)
+		queue[1] = queue[queue.len]
+		queue.len--
 		if(!L)
 			continue
 
@@ -47,9 +49,9 @@ SUBSYSTEM_DEF(lighting)
 		L.needs_update = LIGHTING_NO_UPDATE
 		processed++
 
-		if(init_tick_checks)
+		if(init_tick_checks && (processed % check_every == 0))
 			CHECK_TICK
-		else if (MC_TICK_CHECK)
+		else if (!init_tick_checks && MC_TICK_CHECK)
 			break
 
 	if(!init_tick_checks)
@@ -59,16 +61,17 @@ SUBSYSTEM_DEF(lighting)
 	processed = 0
 	while(processed < max_process && queue.len)
 		var/datum/lighting_corner/C = queue[1]
-		queue.Cut(1, 2)
+		queue[1] = queue[queue.len]
+		queue.len--
 		if(!C)
 			continue
 
 		C.update_objects()
 		C.needs_update = FALSE
 		processed++
-		if(init_tick_checks)
+		if(init_tick_checks && (processed % check_every == 0))
 			CHECK_TICK
-		else if (MC_TICK_CHECK)
+		else if (!init_tick_checks && MC_TICK_CHECK)
 			break
 
 
@@ -79,7 +82,8 @@ SUBSYSTEM_DEF(lighting)
 	processed = 0
 	while(processed < max_process && queue.len)
 		var/atom/movable/lighting_object/O = queue[1]
-		queue.Cut(1, 2)
+		queue[1] = queue[queue.len]
+		queue.len--
 		if(!O)
 			continue
 
@@ -91,9 +95,9 @@ SUBSYSTEM_DEF(lighting)
 		O.update()
 		O.needs_update = FALSE
 		processed++
-		if(init_tick_checks)
+		if(init_tick_checks && (processed % check_every == 0))
 			CHECK_TICK
-		else if (MC_TICK_CHECK)
+		else if (!init_tick_checks && MC_TICK_CHECK)
 			break
 
 
