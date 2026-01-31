@@ -17,10 +17,8 @@ SUBSYSTEM_DEF(damoverlays)
 	while(currentrun.len)
 		var/mob/living/carbon/human/thing = currentrun[currentrun.len]
 		currentrun.len--
-		if (!thing || QDELETED(thing))
+		if(QDELETED(thing))
 			processing -= thing
-			if(MC_TICK_CHECK)
-				return
 			continue
 		if(istype(thing))
 			thing.update_damage_overlays_real()

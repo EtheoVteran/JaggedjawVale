@@ -36,10 +36,8 @@ PROCESSING_SUBSYSTEM_DEF(tracks)
 		var/obj/effect/track/T = currentrun[currentrun.len]
 		currentrun.len--
 
-		if (!T || QDELETED(T))
+		if(QDELETED(T))
 			processing -= T
-			if (MC_TICK_CHECK)
-				return
 			continue
 
 		if(world.time >= T.expiry_time)
@@ -80,7 +78,7 @@ PROCESSING_SUBSYSTEM_DEF(tracks)
 	return T
 
 /datum/controller/subsystem/processing/tracks/proc/recycle_track(obj/effect/track/T)
-	if(!T || QDELETED(T))
+	if(QDELETED(T))
 		return
 
 	var/list/pool

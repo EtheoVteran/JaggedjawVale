@@ -30,12 +30,9 @@ PROCESSING_SUBSYSTEM_DEF(iconupdates)
 	while(length(currentrun))
 		var/mob/living/carbon/thing = currentrun[length(currentrun)]
 		currentrun.len--
-		if (!thing || QDELETED(thing))
+		if(QDELETED(thing))
 			processing -= thing
-			if(MC_TICK_CHECK)
-				return
-			else
-				CHECK_TICK
+			CHECK_TICK
 			continue
 		
 		if(thing.pending_icon_updates)
@@ -53,11 +50,11 @@ PROCESSING_SUBSYSTEM_DEF(iconupdates)
 	if(!image_removal_schedule[I])
 		return
 
-	if(!I || QDELETED(I))
+	if(QDELETED(I))
 		var/list/client_schedule = image_removal_schedule[I]
 		if(client_schedule)
 			for(var/client/C as anything in client_schedule)
-				if(C && !QDELETED(C))
+				if(!QDELETED(C))
 					C.images -= I
 		image_removal_schedule -= I
 		return
@@ -71,7 +68,7 @@ PROCESSING_SUBSYSTEM_DEF(iconupdates)
 	var/list/clients_to_remove = list()
 
 	for(var/client/C as anything in client_schedule)
-		if(!C || QDELETED(C))
+		if(QDELETED(C))
 			clients_to_remove += C
 			continue
 
