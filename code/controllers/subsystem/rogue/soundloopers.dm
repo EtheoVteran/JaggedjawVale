@@ -72,7 +72,7 @@ SUBSYSTEM_DEF(soundloopers)
 
 	//Now we check how far away etc we are
 	for(var/datum/looping_sound/loop in played_loops)
-		if (!loop)
+		if(QDELETED(loop))
 			played_loops -= loop
 			continue
 		

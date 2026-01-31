@@ -4,6 +4,12 @@
 	if(notransform)
 		return
 
+	// Skip expensive processing for sleeping NPCs without clients
+	if(!client && ishuman(src))
+		var/mob/living/carbon/human/H = src
+		if(H.mode == NPC_AI_SLEEP)
+			return
+
 	if(damageoverlaytemp)
 		damageoverlaytemp = 0
 		update_damage_hud()
@@ -28,7 +34,8 @@
 		update_stamina() //needs to go before updatehealth to remove stamcrit
 		updatehealth()
 	if (times_fired % 3 == 0) // every 3rd tick, fire stress handler. it isn't time-critical, so we don't particularly need it to go EVERY tick
-		update_stress()
+		if(client) // Only process stress for players
+			update_stress()
 	handle_nausea()
 
 	handle_sleep()

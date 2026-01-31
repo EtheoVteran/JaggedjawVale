@@ -87,7 +87,8 @@
 			mob_timers["slo"] = null
 
 	if(dna?.species)
-		dna.species.spec_life(src) // for mutantraces
+		if(client || mode != NPC_AI_SLEEP) // Only process species life for players or active NPCs
+			dna.species.spec_life(src) // for mutantraces
 
 	//Update our name based on whether our face is obscured/disfigured
 	name = get_visible_name()

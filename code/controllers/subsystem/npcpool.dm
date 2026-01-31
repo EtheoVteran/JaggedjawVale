@@ -21,7 +21,7 @@ SUBSYSTEM_DEF(npcpool)
 		var/mob/living/simple_animal/SA = currentrun[currentrun.len]
 		--currentrun.len
 
-		if(!SA || SA.ckey || SA.notransform || SA.stat == DEAD)
+		if(QDELETED(SA) || SA.ckey || SA.notransform || SA.stat == DEAD)
 			continue
 		SA.handle_automated_action()
 		if(SA.stat != DEAD)
@@ -32,16 +32,12 @@ SUBSYSTEM_DEF(npcpool)
 			return
 
 /datum/controller/subsystem/npcpool/proc/handle_automated_action(mob/living/simple_animal/mobinput)
-	if(!mobinput)
-		return
 	if(QDELETED(mobinput))
 		return
 	mobinput.handle_automated_action()
 	mobinput.action_skip = FALSE
 
 /datum/controller/subsystem/npcpool/proc/handle_automated_movement(mob/living/simple_animal/mobinput)
-	if(!mobinput)
-		return
 	if(QDELETED(mobinput))
 		return
 	mobinput.handle_automated_movement()

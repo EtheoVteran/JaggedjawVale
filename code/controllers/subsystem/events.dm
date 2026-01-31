@@ -34,10 +34,10 @@ SUBSYSTEM_DEF(events)
 	while(currentrun.len)
 		var/datum/thing = currentrun[currentrun.len]
 		currentrun.len--
-		if(thing)
-			thing.process()
-		else
-			running.Remove(thing)
+		if(QDELETED(thing))
+			running -= thing
+			continue
+		thing.process()
 		if (MC_TICK_CHECK)
 			return
 

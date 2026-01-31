@@ -29,8 +29,6 @@ SUBSYSTEM_DEF(parallax)
 		var/client/processing_client = currentrun[currentrun.len]
 		currentrun.len--
 		if (QDELETED(processing_client) || !processing_client.eye)
-			if (MC_TICK_CHECK)
-				return
 			continue
 		var/atom/movable/movable_eye = processing_client.eye
 		if(!istype(movable_eye))
@@ -41,8 +39,6 @@ SUBSYSTEM_DEF(parallax)
 		//get the last movable holding the mobs eye
 
 		if(movable_eye == processing_client.movingmob)
-			if (MC_TICK_CHECK)
-				return
 			continue
 
 		//eye and the last recorded eye are different, and the last recorded eye isnt just the clients mob

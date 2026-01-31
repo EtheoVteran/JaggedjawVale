@@ -415,6 +415,10 @@
 		has_opaque_atom = TRUE // Make sure to do this before reconsider_lights(), incase we're on instant updates. Guaranteed to be on in this case.
 		reconsider_lights()
 
+/turf/Exited(atom/movable/AM, atom/newloc)
+	..()
+	SEND_SIGNAL(src, COMSIG_TURF_EXITED, AM, newloc)
+
 /turf/open/Entered(atom/movable/AM)
 	..()
 	//melting
