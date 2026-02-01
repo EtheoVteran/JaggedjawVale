@@ -1,0 +1,17 @@
+{
+    "map_name": "JaggedJaw World",
+    "map_path": "map_files/jag_world",
+    "map_file": ["JaggedJaw.dmm"],
+	"traits": [{"Name": "JaggedJaw World", "Up": true}, {"Up": true, "Down": true}, {"Up": true, "Down": true}, {"Up": true, "Down": true}, {"Down": true}],
+	"other_z": [
+		"_maps/map_files/otherz/vl_manor.json",
+		"_maps/map_files/otherz/bandit_fortress.json"
+	],
+	"space_empty_levels": 0,
+	"space_ruin_levels": 0,
+	"shuttles": {
+	    "cargo": "cargo_rogue",
+	    "whiteship": "whiteship_box",
+	    "emergency": "emergency_rogue"
+    }
+}

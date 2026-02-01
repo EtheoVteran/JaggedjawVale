@@ -13,7 +13,7 @@ SUBSYSTEM_DEF(hotspots)
 	while(currentrun.len)
 		var/obj/effect/hotspot/H = currentrun[currentrun.len]
 		currentrun.len--
-		if (H)
+		if(!QDELETED(H))
 			H.process()
 		else
 			hotspots -= H

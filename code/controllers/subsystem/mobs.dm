@@ -48,8 +48,8 @@ SUBSYSTEM_DEF(mobs)
 	while(currentrun.len)
 		var/mob/living/L = currentrun[currentrun.len]
 		currentrun.len--
-		if(!L || QDELETED(L))
-			GLOB.mob_living_list.Remove(L)
+		if(QDELETED(L))
+			GLOB.mob_living_list -= L
 			continue
 		if(L.stat != DEAD)
 			L.Life(seconds, times_fired)
@@ -77,8 +77,8 @@ SUBSYSTEM_DEF(mobs_dead)
 	while (currentrun.len)
 		var/mob/living/L = currentrun[currentrun.len]
 		currentrun.len--
-		if(!L || QDELETED(L))
-			GLOB.mob_living_list.Remove(L)
+		if(QDELETED(L))
+			GLOB.mob_living_list -= L
 			continue
 		if (L.stat == DEAD)
 			L.DeadLife()

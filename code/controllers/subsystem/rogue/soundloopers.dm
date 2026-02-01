@@ -26,10 +26,8 @@ SUBSYSTEM_DEF(soundloopers)
 	while (current.len)
 		var/datum/looping_sound/thing = current[current.len]
 		current.len--
-		if (!thing || !istype(thing) || QDELETED(thing))
+		if(QDELETED(thing))
 			processing -= thing
-			if (MC_TICK_CHECK)
-				return
 			continue
 
 		if(world.time > thing.starttime + thing.mid_length) //Make sure we don't try to trigger it while a loop is playing
@@ -74,7 +72,7 @@ SUBSYSTEM_DEF(soundloopers)
 
 	//Now we check how far away etc we are
 	for(var/datum/looping_sound/loop in played_loops)
-		if (!loop)
+		if(QDELETED(loop))
 			played_loops -= loop
 			continue
 		

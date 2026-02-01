@@ -31,9 +31,12 @@ SUBSYSTEM_DEF(movement)
 		currentrun = processing.Copy()
 
 	var/list/running = currentrun //Cache for... you've heard this before
-	while(running.len)
+	while(length(running))
 		var/datum/move_loop/loop = running[running.len]
 		running.len--
+		if(QDELETED(loop))
+			processing -= loop
+			continue
 		if(loop.timer <= canonical_time)
 			loop.process() //This shouldn't get nulls, if it does, runtime
 		if (MC_TICK_CHECK)

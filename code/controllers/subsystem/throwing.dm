@@ -28,8 +28,6 @@ SUBSYSTEM_DEF(throwing)
 		currentrun.len--
 		if (QDELETED(AM) || QDELETED(TT))
 			processing -= AM
-			if (MC_TICK_CHECK)
-				return
 			continue
 
 		TT.tick()

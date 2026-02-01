@@ -434,6 +434,10 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 
 
 /mob/living/simple_animal/handle_environment()
+	// Skip environment processing if we're godmode or dead
+	if(status_flags & GODMODE || stat == DEAD)
+		return
+	
 	var/atom/A = src.loc
 	if(isturf(A))
 		//ATMO/TURF/TEMPERATURE

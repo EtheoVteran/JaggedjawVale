@@ -18,10 +18,8 @@ SUBSYSTEM_DEF(crediticons)
 	while (currentrun.len)
 		var/mob/living/carbon/human/thing = currentrun[currentrun.len]
 		currentrun.len--
-		if (!thing || QDELETED(thing))
+		if(QDELETED(thing))
 			processing -= thing
-			if (MC_TICK_CHECK)
-				return
 			continue
 		thing.add_credit()
 		STOP_PROCESSING(SScrediticons, thing)

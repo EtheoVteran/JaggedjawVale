@@ -25,9 +25,7 @@ SUBSYSTEM_DEF(machines)
 	while(currentrun.len)
 		var/obj/machinery/thing = currentrun[currentrun.len]
 		currentrun.len--
-		if(!QDELETED(thing) && thing.process(seconds) != PROCESS_KILL)
-			continue
-		else
+		if(QDELETED(thing) || thing.process(seconds) == PROCESS_KILL)
 			processing -= thing
 		if (MC_TICK_CHECK)
 			return

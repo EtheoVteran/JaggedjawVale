@@ -17,16 +17,19 @@ SUBSYSTEM_DEF(lighting)
 
 /datum/controller/subsystem/lighting/Initialize(timeofday)
 	if(!initialized)
-		if (CONFIG_GET(flag/starlight))
+		if(CONFIG_GET(flag/starlight))
 			for(var/I in GLOB.sortedAreas)
 				var/area/A = I
-				if (A.dynamic_lighting == DYNAMIC_LIGHTING_IFSTARLIGHT)
+				if(A.dynamic_lighting == DYNAMIC_LIGHTING_IFSTARLIGHT)
 					A.luminosity = 0
 
 		create_all_lighting_objects()
 		initialized = TRUE
 
-	addtimer(CALLBACK(src, PROC_REF(deferred_initial_fire)), LIGHTING_INITIAL_FIRE_DELAY)
+	// Force full initialization even if called after round start
+	// Process ALL queued items before returning
+	while(sources_queue.len || corners_queue.len || objects_queue.len)
+		fire(FALSE, TRUE)
 
 	return ..()
 
@@ -40,49 +43,72 @@ SUBSYSTEM_DEF(lighting)
 	MC_SPLIT_TICK_INIT(3)
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
-
-	var/list/queue
-
-	queue = sources_queue
-	while(queue.len)
+	var/list/queue = sources_queue
+	var/processed = 0
+	// Higher init limit for faster startup, lower runtime limit for stability
+	var/max_process = init_tick_checks ? 50000 : 1000  // Safety limit
+	var/check_every = init_tick_checks ? 500 : 50
+	while(processed < max_process && queue.len)
 		var/datum/light_source/L = queue[1]
-		queue.Cut(1, 2)
+		queue[1] = queue[queue.len]
+		queue.len--
+		if(!L)
+			continue
+
 		L.update_corners()
 		L.needs_update = LIGHTING_NO_UPDATE
-		if(init_tick_checks)
+		processed++
+
+		if(init_tick_checks && (processed % check_every == 0))
 			CHECK_TICK
-		else if(MC_TICK_CHECK)
+		else if (!init_tick_checks && MC_TICK_CHECK)
 			break
 
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
 
 	queue = corners_queue
-	while(queue.len)
+	processed = 0
+	while(processed < max_process && queue.len)
 		var/datum/lighting_corner/C = queue[1]
-		queue.Cut(1, 2)
+		queue[1] = queue[queue.len]
+		queue.len--
+		if(!C)
+			continue
+
 		C.update_objects()
 		C.needs_update = FALSE
-		if(init_tick_checks)
+		processed++
+		if(init_tick_checks && (processed % check_every == 0))
 			CHECK_TICK
-		else if(MC_TICK_CHECK)
+		else if (!init_tick_checks && MC_TICK_CHECK)
 			break
+
 
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
 
 	queue = objects_queue
-	while(queue.len)
+	processed = 0
+	while(processed < max_process && queue.len)
 		var/atom/movable/lighting_object/O = queue[1]
-		queue.Cut(1, 2)
-		if(QDELETED(O))
+		queue[1] = queue[queue.len]
+		queue.len--
+		if(!O)
+			continue
+
+		// Remove deleted objects from the queue and count as processed
+		if (QDELETED(O))
+			processed++
 			continue
 		O.update()
 		O.needs_update = FALSE
-		if(init_tick_checks)
+		processed++
+		if(init_tick_checks && (processed % check_every == 0))
 			CHECK_TICK
-		else if(MC_TICK_CHECK)
+		else if (!init_tick_checks && MC_TICK_CHECK)
 			break
+
 
 /datum/controller/subsystem/lighting/Recover()
 	initialized = SSlighting.initialized

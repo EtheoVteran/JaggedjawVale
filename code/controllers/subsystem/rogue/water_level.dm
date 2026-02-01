@@ -18,10 +18,8 @@ SUBSYSTEM_DEF(waterlevel)
 	while(currentrun.len)
 		var/turf/open/thing = currentrun[currentrun.len]
 		currentrun.len--
-		if (!thing || QDELETED(thing))
+		if(QDELETED(thing))
 			processing -= thing
-			if (MC_TICK_CHECK)
-				return
 			continue
 		if(istype(thing))
 			if(thing.update_water())

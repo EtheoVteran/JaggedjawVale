@@ -19,12 +19,17 @@ SUBSYSTEM_DEF(adjacent_air)
 	return ..()
 
 /datum/controller/subsystem/adjacent_air/fire(resumed = FALSE, mc_check = TRUE)
+	if(!length(src.queue))
+		return
 
 	var/list/queue = src.queue
 
 	while (length(queue))
 		var/turf/currT = queue[1]
 		queue.Cut(1,2)
+
+		if(QDELETED(currT))
+			continue
 
 		currT.ImmediateCalculateAdjacentTurfs()
 

@@ -18,10 +18,8 @@ SUBSYSTEM_DEF(incone)
 	while (currentrun.len)
 		var/client/thing = currentrun[currentrun.len]
 		currentrun.len--
-		if (!thing || QDELETED(thing))
+		if(QDELETED(thing))
 			processing -= thing
-			if (MC_TICK_CHECK)
-				return
 			continue
 		thing.update_cone()
 		STOP_PROCESSING(SSincone, thing)

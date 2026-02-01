@@ -22,6 +22,9 @@ SUBSYSTEM_DEF(vis_overlays)
 		var/key = current_run[current_run.len]
 		var/obj/effect/overlay/vis/overlay = current_run[key]
 		current_run.len--
+		if(QDELETED(overlay))
+			vis_overlay_cache -= key
+			continue
 		if(!overlay.unused && !length(overlay.vis_locs))
 			overlay.unused = world.time
 		else if(overlay.unused && overlay.unused + overlay.cache_expiration < world.time)

@@ -17,10 +17,8 @@ SUBSYSTEM_DEF(humannpc)
 	while(current.len)
 		var/mob/living/carbon/human/thing = current[current.len]
 		current.len--
-		if (!thing || QDELETED(thing))
+		if(QDELETED(thing))
 			STOP_PROCESSING(src, thing)
-			if (MC_TICK_CHECK)
-				return
 			continue
 		try_process_ai(thing)
 		if (MC_TICK_CHECK)

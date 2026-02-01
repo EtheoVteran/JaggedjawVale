@@ -457,6 +457,8 @@
 				r += wordlist[i]
 			bit = bit << 1
 	else
+		if(!isnum(bitfield) || bitfield < 0)
+			return r
 		for(var/bit=1, bit<=65535, bit = bit << 1)
 			if(bitfield & bit)
 				r += bit

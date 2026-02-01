@@ -290,44 +290,63 @@
 	var/thing
 	var/turf/T
 	var/datum/lighting_corner/C
+	var/corner_count = 0
+	var/max_corners = 5000  // Hard limit to prevent memory exhaustion
 	if (source_turf)
 		var/oldlum = source_turf.luminosity
 		source_turf.luminosity = CEILING(light_outer_range, 1)
 		for(T in view(CEILING(light_outer_range, 1), source_turf))
+			if(corner_count >= max_corners)
+				break
 			for (thing in T.get_corners(source_turf))
 				C = thing
 				corners[C] = 0
+				corner_count++
+				if(corner_count >= max_corners)
+					break
 			turfs += T
 			var/turf/open/transparent/O = T
-			if(istype(O) && light_depth >= 1)
+			if(istype(O) && light_depth >= 1 && corner_count < max_corners)
 				var/turf/open/B = get_step_multiz(T, DOWN)
 				if(isopenturf(B))
 					for(thing in B.get_corners(source_turf))
 						C = thing
 						corners[C] = 0
+						corner_count++
+						if(corner_count >= max_corners)
+							break
 					turfs += B
-					if(light_depth > 1)
+					if(light_depth > 1 && corner_count < max_corners)
 						if(istype(B, /turf/open/transparent))
 							B = get_step_multiz(B, DOWN)
 							if(isopenturf(B))
 								for(thing in B.get_corners(source_turf))
 									C = thing
 									corners[C] = 0
+									corner_count++
+									if(corner_count >= max_corners)
+										break
 								turfs += B
-						if(light_depth > 2)
+						if(light_depth > 2 && corner_count < max_corners)
 							if(istype(B, /turf/open/transparent))
 								B = get_step_multiz(B, DOWN)
 								if(isopenturf(B))
 									for(thing in B.get_corners(source_turf))
 										C = thing
 										corners[C] = 0
+										corner_count++
+										if(corner_count >= max_corners)
+											break
 									turfs += B
-			if(light_height >= 1)
+			if(light_height >= 1 && corner_count < max_corners)
 				var/turf/open/B = get_step_multiz(T, UP)
 				if(istype(B, /turf/open/transparent))
 					for(thing in B.get_corners(source_turf))
 						C = thing
 						corners[C] = 0
+						corner_count++
+						if(corner_count >= max_corners)
+							break
 					turfs += B
 		source_turf.luminosity = oldlum
 

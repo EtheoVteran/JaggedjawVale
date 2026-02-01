@@ -189,7 +189,7 @@
 /obj/item/rogueweapon/mace/gold
 	name = "golden mace"
 	desc = "A heavenly staff of besilked rosawood, crested with the golden sigil of royalty. Like the plump-bellied aristocrats who've surely commissioned this article's design, it is overbearingly heavy."
-	icon_state = "goldmace"
+	icon_state = "mace" // TODO: Create goldmace sprite
 	force = 35
 	force_wielded = 40
 	max_integrity = 50
@@ -630,7 +630,7 @@
 	gripped_intents = null
 	name = "bronze warclub"
 	desc = "The warhammer's ancestral link, carved from a weightsome log and studded with bronze. Elven natureguards carry it to both honor their forefathers, and as a way to sunder those who'd ravage Dendor's bounties without thought-or-restraint; a toss from afar turns into a sundering hurlbat."
-	icon_state = "bronzeclub"
+	icon_state = "iwarhammer" // TODO: Create bronzeclub sprite
 	wbalance = WBALANCE_HEAVY
 	throwforce = 30
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 50, "embedded_fall_chance" = 20)
@@ -641,7 +641,7 @@
 /obj/item/rogueweapon/mace/warhammer/bronze/decorated
 	name = "decorated bronze warclub"
 	desc = "Flowers, silk, and gold caress this carved-and-spiked log; a honored totem who's roots trace back to the daes before Syon's impact. Myths speak of ancient elve-and-humen alike, wielding such bronzen bludgeons against the Archdevil's rampaging hordes."
-	icon_state = "bronzeclubdec"
+	icon_state = "iwarhammer" // TODO: Create bronzeclubdec sprite
 	smeltresult = /obj/item/ingot/gold
 	sellprice = 100
 	wdefense = 5
@@ -957,7 +957,7 @@
 /obj/item/rogueweapon/mace/mushroom
 	name = "Lithmyc Mace"
 	desc = "A heavy mace forged from fungal-infused metals. Looks spiky!"
-	icon_state = "mushroom"
+	icon_state = "mace" // TODO: Create mushroom sprite
 	force = 18
 	force_wielded = 24
 	max_integrity = 500

@@ -30,12 +30,34 @@
 	if(target == world)
 		target = GLOB.clients
 
-	// Build a message
-	var/message = list()
-	if(type) message["type"] = type
-	if(text) message["text"] = text
-	if(html) message["html"] = html
-	if(avoid_highlighting) message["avoidHighlighting"] = avoid_highlighting
+	// Build a message (defensive: bail if list allocation fails)
+	var/list/message = null
+	try
+		message = list()
+	catch
+		// Cannot allocate message list (low memory) — skip sending
+		return
+
+	if(type)
+		try
+			message["type"] = type
+		catch
+			return
+	if(text)
+		try
+			message["text"] = text
+		catch
+			return
+	if(html)
+		try
+			message["html"] = html
+		catch
+			return
+	if(avoid_highlighting)
+		try
+			message["avoidHighlighting"] = avoid_highlighting
+		catch
+			return
 
 	// send it immediately
 	SSchat.send_immediate(target, message)
@@ -77,7 +99,7 @@
 		target = GLOB.clients
 
 	// Build a message
-	var/message = list()
+	var/list/message = list()
 	if(type) message["type"] = type
 	if(text) message["text"] = text
 	if(html) message["html"] = html

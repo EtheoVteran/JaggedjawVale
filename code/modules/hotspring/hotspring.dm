@@ -60,6 +60,12 @@
 	if(!edge)
 		playsound(AM, pick('sound/foley/watermove (1).ogg','sound/foley/watermove (2).ogg'), 40, FALSE)
 
+/obj/structure/hotspring/Uncrossed(atom/movable/AM)
+	. = ..()
+	if(isliving(AM) && !edge)
+		var/mob/living/L = AM
+		L.update_icon()
+
 //Copying turf/water cleaning functionality here
 /obj/structure/hotspring/attack_right(mob/user)
 	if(isliving(user))

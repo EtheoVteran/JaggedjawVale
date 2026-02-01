@@ -267,14 +267,14 @@
 
 /obj/item/needle/bronze
 	name = "bronze needle"
-	icon_state = "bronzeneedle"
+	icon_state = "needle" // TODO: Create bronzeneedle sprite
 	desc = "A deceptively long needle with a craned tip, laced for labors-a-plenety."
 	stringamt = 30
 	maxstring = 30
 
 /obj/item/needle/aalloy
 	name = "decrepit needle"
-	icon_state = "aneedle"
+	icon_state = "needle"
 	desc = "This decrepit old needle doesn't seem helpful for much."
 	stringamt = 5
 	maxstring = 5

@@ -34,14 +34,16 @@ SUBSYSTEM_DEF(atoms)
 			var/atom/A = I
 			if(!(A.flags_1 & INITIALIZED_1))
 				InitAtom(I, mapload_arg)
-				CHECK_TICK
+				if(count % 50 == 0)  // Check tick less frequently
+					CHECK_TICK
 	else
 		count = 0
 		for(var/atom/A in world)
 			if(!(A.flags_1 & INITIALIZED_1))
 				InitAtom(A, mapload_arg)
 				++count
-				CHECK_TICK
+				if(count % 100 == 0)  // Check tick every 100 atoms instead of every atom
+					CHECK_TICK
 
 
 	pass(count)
@@ -52,6 +54,8 @@ SUBSYSTEM_DEF(atoms)
 		for(var/I in late_loaders)
 			var/atom/A = I
 			A.LateInitialize()
+			if(late_loaders.Find(I) % 50 == 0)
+				CHECK_TICK
 
 		late_loaders.Cut()
 

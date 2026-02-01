@@ -83,6 +83,8 @@
 		return 1
 
 /mob/living/proc/check_drowning()
+	if(stat == DEAD)
+		return
 	if(istype(loc, /turf/open/water))
 		handle_inwater(loc)
 

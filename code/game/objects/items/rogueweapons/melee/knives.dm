@@ -557,8 +557,8 @@
 /obj/item/rogueweapon/huntingknife/idagger/steel/rondel
 	name = "rondel dagger"
 	desc = "This is the traditional sidearm of a knight: a lightweight dagger of solid steel, well-balanced for delivering rapid thrusts that can shuck grapplers like oysters."
-	icon_state = "rondeldagger"
-	sheathe_icon = "dagger_trainer"
+	icon_state = "sdagger" // TODO: Create rondeldagger sprite
+	sheathe_icon = "sdagger" // TODO: Create rondeldagger sprite
 	possible_item_intents = list(/datum/intent/dagger/thrust/quick, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/cut)
 	wdefense = 4 //Slightly more defense than a regular dagger. Intended to function as a tool for countering grapplers or finishing off armored opponents with broken pieces.
 	smeltresult = /obj/item/ingot/steel

@@ -14,6 +14,8 @@ SUBSYSTEM_DEF(lobbymenu)
 	while(currentrun.len)
 		var/mob/dead/new_player/player = currentrun[currentrun.len]
 		currentrun.len--
+		if(QDELETED(player))
+			continue
 		if(player.client)
 			player.lobby_refresh()
 		if (MC_TICK_CHECK)

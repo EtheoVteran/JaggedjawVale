@@ -29,10 +29,8 @@ SUBSYSTEM_DEF(weather)
 	while(current_run.len)
 		var/atom/thing = current_run[current_run.len]
 		current_run.len--
-		if(!thing || QDELETED(thing))
+		if(QDELETED(thing))
 			processing -= thing
-			if (MC_TICK_CHECK)
-				return
 			continue
 		var/acted = FALSE
 		for(var/datum/weather/W in curweathers)
